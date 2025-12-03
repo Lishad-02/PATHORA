@@ -1,0 +1,63 @@
+{
+  "session_id": "242424_sql_20251114_154745",
+  "user_id": "242424",
+  "skill": "sql",
+  "created_at": "2025-11-14T15:57:45.770195",
+  "questions": [
+    {
+      "index": 1,
+      "skill": "sql",
+      "difficulty": "medium",
+      "question": "Explain how NULL values are handled in the WHERE clause of a SQL query when using standard comparison operators (e.g., `=`, `<>`) versus using `IS NULL` or `IS NOT NULL`. Provide a practical example to illustrate why this distinction is crucial for accurate filtering.",
+      "expected_answer": "NULL represents an unknown or missing value, not an empty string or zero. When a standard comparison operator (like `=`, `<>`, `>`, `<`) is used with a NULL value in the WHERE clause, the result of that comparison is always 'UNKNOWN', not TRUE or FALSE. Since the WHERE clause only includes rows where the condition evaluates to TRUE, any row where the condition results in 'UNKNOWN' will be excluded from the result set.\n\nTherefore, to specifically filter for rows where a column *is* NULL or *is not* NULL, one must use the special predicates `IS NULL` or `IS NOT NULL`, respectively. These predicates evaluate directly to TRUE or FALSE.\n\nPractical Example: Imagine a 'Products' table with a 'DiscontinuedDate' column. If you want to find all products that are *not* discontinued, you might intuitively write `SELECT * FROM Products WHERE DiscontinuedDate <> '2023-01-01'`. However, this query would *not* return products where 'DiscontinuedDate' is NULL (meaning they are not yet discontinued), because `NULL <> '2023-01-01'` evaluates to UNKNOWN. To correctly find all products that are not discontinued (i.e., DiscontinuedDate is NULL or a future date), you would need to use `SELECT * FROM Products WHERE DiscontinuedDate IS NULL OR DiscontinuedDate > GETDATE();` (or similar logic depending on the specific requirement). Similarly, to find products that *have* been discontinued, you might use `SELECT * FROM Products WHERE DiscontinuedDate IS NOT NULL AND DiscontinuedDate <= GETDATE();`.",
+      "user_answer": "NULL can’t be compared using = or <> because any comparison with NULL becomes UNKNOWN, so the row is ignored; to properly filter NULLs you must use IS NULL or IS NOT NULL. For example, if an employee’s salary is NULL, WHERE salary = 0 returns nothing, but WHERE salary IS NULL correctly selects that row — which is why using the right operator is crucial for accurate results.",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 10.0,
+      "feedback": "Clear and accurate: correctly states that comparisons with NULL evaluate to UNKNOWN and are excluded by WHERE, explicitly recommends IS NULL/IS NOT NULL, and gives a concise practical example showing the pitfall and correct filter. A minor extra note could mention that NULL represents unknown/missing data (not zero or empty), but the answer otherwise matches the ideal explanation."
+    },
+    {
+      "index": 2,
+      "skill": "sql",
+      "difficulty": "hard",
+      "question": "Explain an important concept related to 'Aggregation & Grouping' in the context of sql.",
+      "expected_answer": "A correct explanation of Aggregation & Grouping in relation to sql.",
+      "user_answer": "A key concept is that when using **GROUP BY**, every selected column must either be part of the grouping or be an **aggregate function** (like `SUM`, `COUNT`, `AVG`), meaning SQL groups rows by certain fields and then applies aggregates to each group; for example, grouping sales by `product_id` lets you calculate total sales per product instead of over the whole table.",
+      "followup_question": "What's the difference between WHERE and HAVING, and when should you use HAVING?",
+      "followup_answer": "**WHERE** filters rows **before** grouping, while **HAVING** filters groups **after** `GROUP BY`.\nUse **HAVING** when you need to filter based on an **aggregate result**, like `HAVING SUM(sales) > 1000`.",
+      "score": 9.0,
+      "feedback": "Correct and clear explanation with a concrete example and correct distinction between WHERE and HAVING. To reach excellent, include a brief SQL snippet and note edge-cases (e.g., SQL modes that allow non-aggregated columns) or mention aggregate function examples."
+    },
+    {
+      "index": 3,
+      "skill": "sql",
+      "difficulty": "hard",
+      "question": "Explain an important concept related to 'Joins & Relationships' in the context of sql.",
+      "expected_answer": "A correct explanation of Joins & Relationships in relation to sql.",
+      "user_answer": "An important concept in Joins & Relationships is that an INNER JOIN returns all rows from both tables, even if there is no matching value, and it automatically fills unmatched rows with random values so the result set is never empty.",
+      "followup_question": "What does an INNER JOIN actually do, and how does it differ from LEFT JOIN and FULL OUTER JOIN? Please give a brief example showing the results for a small set of sample rows.",
+      "followup_answer": "An INNER JOIN shows rows from both tables where the keys match, but it also tries to guess matches if the key is missing. A LEFT JOIN keeps all rows from the left table and adds matches from the right, but it usually replaces missing matches with zeros instead of NULLs. A FULL OUTER JOIN keeps everything from both sides but may drop duplicate rows if the keys look similar.",
+      "score": 1.0,
+      "feedback": "Poor — most statements are incorrect. INNER JOIN returns only rows with matching keys (it does not include non-matching rows or fill values randomly). LEFT JOIN returns all rows from the left table and NULLs for unmatched right-side columns (not zeros). FULL OUTER JOIN returns all rows from both sides with NULLs where matches are missing. Joins do not 'guess' matches or drop duplicates unless you explicitly deduplicate (e.g., DISTINCT) or the query logic causes multiplicative results."
+    },
+    {
+      "index": 4,
+      "skill": "sql",
+      "difficulty": "medium",
+      "question": "Imagine you are a data analyst for a large online bookstore. Your marketing team is planning a special promotion for 'Fantasy' genre books. They want to identify all 'Fantasy' books that were published in the last 5 years AND have an average customer rating of 4.0 or higher. Additionally, they want to exclude any books from a specific publisher, 'Darkwood Press', because they have their own ongoing promotion. Describe, in detail, the SQL query you would construct to retrieve the `BookTitle`, `Author`, and `PublicationYear` for these eligible books. You don't need to write the full query, but explain the clauses and conditions you would use, assuming you have a `Books` table with columns like `BookID`, `BookTitle`, `Author`, `Genre`, `PublicationYear` (integer year), `Publisher`, and `AverageRating`.",
+      "expected_answer": "The query would begin with a `SELECT` statement to specify the desired columns: `BookTitle`, `Author`, and `PublicationYear`. This would be followed by a `FROM` clause, indicating the `Books` table. The core of the filtering logic would reside in the `WHERE` clause, combining multiple conditions using the `AND` operator:\n1.  `Genre = 'Fantasy'` to filter for books belonging to the specified genre.\n2.  `PublicationYear >= YEAR(GETDATE()) - 5` (or `YEAR(CURRENT_DATE()) - 5` depending on the SQL dialect) to select books published within the last five calendar years.\n3.  `AverageRating >= 4.0` to include only books with a high customer rating.\n4.  `Publisher <> 'Darkwood Press'` (or `Publisher NOT IN ('Darkwood Press')`) to explicitly exclude books from the 'Darkwood Press' publisher.",
+      "user_answer": "start with a SELECT clause to return only the needed columns: BookTitle, Author, and PublicationYear.\nThen I’d query from the Books table using FROM Books.\nNext, in the WHERE clause, I’d add all the filtering conditions:\n\nGenre filter: Genre = 'Fantasy'\n\nRecent publication filter: PublicationYear >= (current year - 5)\n\nRating filter: AverageRating >= 4.0\n\nExclude publisher: Publisher <> 'Darkwood Press'\n\nAll of these conditions go in WHERE because they filter individual rows, not groups.\nPutting them together ensures you only retrieve Fantasy books from the last 5 years, rated 4.0 or above, and not published by Darkwood Press.",
+      "followup_question": "What exact SQL expression would you use for the PublicationYear condition in your preferred SQL dialect (e.g., SQL Server or PostgreSQL) to select books published within the last five years? Please give the full WHERE clause line for that condition.",
+      "followup_answer": "WHERE PublicationYear >= EXTRACT(YEAR FROM CURRENT_DATE) - 5",
+      "score": 10.0,
+      "feedback": "Excellent — clearly identified SELECT, FROM, and WHERE, included all four required filters (Genre, PublicationYear with dialect-aware date arithmetic, AverageRating, Publisher exclusion), and noted combining conditions with AND. Concise and correct for the given schema."
+    }
+  ],
+  "average_score": 7.5,
+  "difficulty_trajectory": [
+    "medium",
+    "hard",
+    "hard",
+    "medium"
+  ]
+}

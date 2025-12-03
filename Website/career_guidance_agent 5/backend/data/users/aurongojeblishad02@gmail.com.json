@@ -1,0 +1,184 @@
+{
+  "email": "aurongojeblishad02@gmail.com",
+  "name": "LISHAD",
+  "profile": {
+    "job_category": "SWE",
+    "role": "Frontend Developer",
+    "region": "Global",
+    "duration_months": 6,
+    "preference": "python"
+  },
+  "recommended_skills": {
+    "core_skills": {
+      "fundamentals": [
+        {
+          "name": "Python",
+          "reason": "High-frequency, versatile backend language useful for services, scripting and interviews."
+        },
+        {
+          "name": "JavaScript",
+          "reason": "Foundational language for web development and required for frontend engineering roles."
+        },
+        {
+          "name": "HTML",
+          "reason": "Essential markup language for building web pages and UIs."
+        },
+        {
+          "name": "CSS",
+          "reason": "Core styling skills required to build usable, accessible interfaces."
+        },
+        {
+          "name": "Data Structures",
+          "reason": "Fundamental for writing efficient code and passing technical interviews."
+        },
+        {
+          "name": "Algorithms",
+          "reason": "Core for problem-solving and technical assessments in interviews."
+        },
+        {
+          "name": "Object-Oriented Programming",
+          "reason": "Important paradigm for writing modular, maintainable code — applies across languages."
+        },
+        {
+          "name": "JSON",
+          "reason": "Primary data interchange format for web APIs and frontend-backend integration."
+        }
+      ],
+      "frameworks_and_runtime": [
+        {
+          "name": "React",
+          "reason": "Most in-demand frontend framework; key for building production UIs and portfolio projects."
+        },
+        {
+          "name": "TypeScript",
+          "reason": "Adds type safety to JS, widely used with React in production — improves code quality and employability."
+        }
+      ],
+      "databases": [
+        {
+          "name": "SQL",
+          "reason": "Fundamental for storing and querying relational data; expected knowledge for many roles."
+        }
+      ],
+      "version_control_and_ci_cd": [
+        {
+          "name": "Git",
+          "reason": "Essential version control tool for collaboration and code management."
+        },
+        {
+          "name": "Github",
+          "reason": "Primary platform for hosting projects and demonstrating work to employers; learn GitHub workflows."
+        },
+        {
+          "name": "CI/CD",
+          "reason": "Fundamental for automated testing and deployments; basic pipelines boost productivity and resume strength."
+        }
+      ]
+    },
+    "supporting_skills": {
+      "testing_and_debugging": [
+        {
+          "name": "Software testing",
+          "reason": "General testing knowledge ensures product quality and is expected in teams."
+        },
+        {
+          "name": "Unit Testing",
+          "reason": "Practice that catches regressions early; important for both frontend and backend codebases."
+        },
+        {
+          "name": "Jest",
+          "reason": "Standard testing framework for JavaScript/React unit tests — practical to learn for frontend roles."
+        },
+        {
+          "name": "Debugging",
+          "reason": "Essential daily skill for diagnosing and fixing issues quickly across stacks."
+        }
+      ],
+      "api_and_networking": [
+        {
+          "name": "REST",
+          "reason": "Most common API style; critical for frontend-backend integration and interview knowledge."
+        },
+        {
+          "name": "APIs (general)",
+          "reason": "Understanding how to design, consume, and test APIs is vital for full-stack interactions."
+        },
+        {
+          "name": "HTTP",
+          "reason": "Protocol fundamentals (status codes, headers, methods) are important for debugging and APIs."
+        }
+      ],
+      "deployment_and_cloud": [
+        {
+          "name": "Docker",
+          "reason": "Containerization for consistent dev and deployment environments — widely used and practical to learn."
+        },
+        {
+          "name": "AWS (basics)",
+          "reason": "Familiarity with core cloud concepts (S3, EC2, managed services) is valuable for deployments and interviews."
+        },
+        {
+          "name": "Linux (basics)",
+          "reason": "Basic comfort with the Linux command line helps with servers, containers, and dev tooling."
+        }
+      ]
+    },
+    "advanced_skills": {
+      "architecture_and_design": [
+        {
+          "name": "Microservices (conceptual)",
+          "reason": "High-level understanding of microservice architecture helps when integrating with backend teams; focus on concepts rather than full mastery."
+        },
+        {
+          "name": "Design principles (component design, SRP, SOLID)",
+          "reason": "Crucial for building maintainable systems and for interview system-design discussions at a basic level."
+        }
+      ],
+      "data_and_ai_integration": [
+        {
+          "name": "Basic data handling and integration",
+          "reason": "Being able to fetch, transform, and display data (from SQL/REST/JSON) is necessary for most roles."
+        }
+      ],
+      "security_and_scalability": [
+        {
+          "name": "Scalability & performance basics",
+          "reason": "Understand caching, performance bottlenecks and client/server-side optimization at a high level."
+        },
+        {
+          "name": "Security basics (auth, CORS, OWASP top 10 awareness)",
+          "reason": "Fundamental security knowledge that reduces common vulnerabilities and is often checked in interviews or code reviews."
+        }
+      ]
+    },
+    "professional_skills": {
+      "communication": [
+        {
+          "name": "Communication",
+          "reason": "Clear written and verbal communication is essential for teamwork, interviews, and documenting work."
+        }
+      ],
+      "project_management": [
+        {
+          "name": "Agile (basic workflows)",
+          "reason": "Understanding Agile rituals and how teams plan work is expected in most engineering environments."
+        },
+        {
+          "name": "Jira (basic)",
+          "reason": "Common tool for tracking work in Agile teams; basic familiarity aids onboarding."
+        }
+      ],
+      "problem_solving": [
+        {
+          "name": "Problem-solving mindset / interview practice",
+          "reason": "Regular practice with coding problems, system thinking, and explaining trade-offs is crucial to pass interviews."
+        }
+      ]
+    }
+  },
+  "completed_skills": [],
+  "learning_path": {},
+  "assessment_history": [],
+  "chat_history": [],
+  "last_session": "2025-10-22T22:53:45.648309Z"
+}

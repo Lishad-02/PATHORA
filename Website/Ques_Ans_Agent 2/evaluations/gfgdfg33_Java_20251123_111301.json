@@ -1,0 +1,63 @@
+{
+  "session_id": "gfgdfg33_Java_20251123_111301",
+  "user_id": "gfgdfg33",
+  "skill": "Java",
+  "created_at": "2025-11-23T11:19:32.707527",
+  "questions": [
+    {
+      "index": 1,
+      "skill": "Java",
+      "difficulty": "medium",
+      "question": "Which of the following is most likely to explicitly request that the JVM perform a Full GC?",
+      "expected_answer": "B) System.gc() — Calling System.gc() (or Runtime.getRuntime().gc()) is an explicit request to the JVM to perform garbage collection; in HotSpot this is commonly treated as a request for a Full GC unless explicit GC is disabled.",
+      "user_answer": "i dont know",
+      "followup_question": "Would you like me to explain why System.gc() requests a Full GC and how JVM flags like -XX:+DisableExplicitGC affect its behavior?",
+      "followup_answer": "i dont know",
+      "score": 0.0,
+      "feedback": "Candidate did not provide an answer. Correct answer is B) System.gc(), which explicitly requests GC and is commonly treated as a Full GC in HotSpot unless explicit GC is disabled."
+    },
+    {
+      "index": 2,
+      "skill": "Java",
+      "difficulty": "easy",
+      "question": "Debug the following Java method that is intended to insert a new row into a database. Identify the bug and provide a corrected version of the method.\n\n```java\nimport java.sql.Connection;\nimport java.sql.DriverManager;\nimport java.sql.PreparedStatement;\nimport java.sql.SQLException;\n\npublic class UserDao {\n    public void addUser(String name, int age) throws SQLException {\n        Connection conn = DriverManager.getConnection(\"jdbc:postgresql://localhost:5432/mydb\", \"user\", \"pass\");\n        String sql = \"INSERT INTO users (name, age) VALUES (?, ?)\";\n        PreparedStatement ps = conn.prepareStatement(sql);\n        ps.setString(1, name);\n        ps.setInt(2, age);\n        ps.executeQuery(); // <-- there's a bug here\n        ps.close();\n        conn.close();\n    }\n}\n```",
+      "expected_answer": "The bug: executeQuery() is used for SELECT statements and will throw an exception for INSERT. Use executeUpdate() for INSERT/UPDATE/DELETE. Also improve resource handling (try-with-resources) to ensure statements/connections are closed.\n\nCorrected code:\n\n```java\nimport java.sql.Connection;\nimport java.sql.DriverManager;\nimport java.sql.PreparedStatement;\nimport java.sql.SQLException;\n\npublic class UserDao {\n    public void addUser(String name, int age) throws SQLException {\n        String sql = \"INSERT INTO users (name, age) VALUES (?, ?)\";\n        try (Connection conn = DriverManager.getConnection(\"jdbc:postgresql://localhost:5432/mydb\", \"user\", \"pass\");\n             PreparedStatement ps = conn.prepareStatement(sql)) {\n            ps.setString(1, name);\n            ps.setInt(2, age);\n            int rows = ps.executeUpdate(); // use executeUpdate for INSERT\n            // optionally check rows to confirm insertion\n        }\n    }\n}\n```",
+      "user_answer": "public void addUser(String name, int age) throws SQLException {\n    Connection conn = DriverManager.getConnection(\n        \"jdbc:postgresql://localhost:5432/mydb\", \"user\", \"pass\");\n\n    String sql = \"INSERT INTO users (name, age) VALUES (?, ?)\";\n    PreparedStatement ps = conn.prepareStatement(sql);\n    ps.setString(1, name);\n    ps.setInt(2, age);\n\n    ps.executeUpdate(); // fixed\n\n    ps.close();\n    conn.close();\n}",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 8.0,
+      "feedback": "Correctly identified the bug and replaced executeQuery() with executeUpdate(), which fixes the immediate issue. The answer works but would be improved by using try-with-resources to ensure the Connection and PreparedStatement are closed even on exceptions and optionally checking the returned row count from executeUpdate()."
+    },
+    {
+      "index": 3,
+      "skill": "Java",
+      "difficulty": "medium",
+      "question": "Describe how you would use Java 8 Streams, lambdas, and Optional together to process a List<Person> and collect all present (non-missing) email addresses into a Set<String>, skipping missing/null emails. Explain which stream operations and Optional methods you'd use and show a short Java 8-compatible code example.",
+      "expected_answer": "Use a stream from the list, transform each Person to its email representation, filter out missing values, and collect results into a Set to remove duplicates. If Person.getEmail() returns a nullable String, use map to extract the String and filter(Objects::nonNull). If getEmail() returns Optional<String>, keep a Stream<Optional<String>> then filter(Optional::isPresent) and map(Optional::get) to unwrap. Key operations: stream(), map(), filter(), flatMap (optional), and collect(Collectors.toSet()). Use lambdas or method references for brevity. Example Java 8-compatible snippets:\n\n```\n// Case A: getEmail() returns a nullable String\nSet<String> emails = people.stream()\n    .map(Person::getEmail)            // Stream<String>\n    .filter(Objects::nonNull)         // remove nulls\n    .collect(Collectors.toSet());\n\n// Case B: getEmail() returns Optional<String>\nSet<String> emails = people.stream()\n    .map(Person::getEmail)            // Stream<Optional<String>>\n    .filter(Optional::isPresent)      // keep present optionals\n    .map(Optional::get)               // unwrap to Stream<String>\n    .collect(Collectors.toSet());\n```\n\nNotes: use method references (Person::getEmail, Optional::isPresent, Optional::get) or equivalent lambdas. For large streams prefer avoiding Optional::get without a prior isPresent check; the flatMap pattern (flatMap(o -> o.isPresent() ? Stream.of(o.get()) : Stream.empty())) is another Java 8-safe way to unwrap Optionals. Collecting to a Set removes duplicates and handles empty results gracefully.",
+      "user_answer": "Approach\n\nStart with a List<User> (or any object containing email info).\n\nUse a Stream to iterate over the list.\n\nFor each element, wrap the email in an Optional to safely handle nulls.\n\nUse flatMap(Optional::stream) (Java 9+) or a filter to only keep present values.\n\nCollect results into a Set to remove duplicates.\n\nKey Java 8 Methods\n\nstream() → to create a stream from a list\n\nmap() → extract the email from each object\n\nfilter(Objects::nonNull) → skip null emails (since Optional::stream is Java 9+)\n\ncollect(Collectors.toSet()) → gather into a Set",
+      "followup_question": "Does your Person/User.getEmail() return a nullable String or an Optional<String>? (Please provide one short Java 8 code example for that case.)",
+      "followup_answer": "import java.util.*;\nimport java.util.stream.*;\n\nclass User {\n    private Optional<String> email;\n    public User(String email) { this.email = Optional.ofNullable(email); }\n    public Optional<String> getEmail() { return email; }\n}\n\npublic class EmailCollector {\n    public static void main(String[] args) {\n        List<User> users = Arrays.asList(\n            new User(\"alice@example.com\"),\n            new User(null),\n            new User(\"bob@example.com\")\n        );\n\n        Set<String> emails = users.stream()\n            .map(User::getEmail)        // Stream<Optional<String>>\n            .flatMap(Optional::stream)  // flatten only present values\n            .collect(Collectors.toSet());\n\n        System.out.println(emails);\n    }\n}",
+      "score": 8.0,
+      "feedback": "Clear explanation of stream/map/filter/collect and handling of nullable vs Optional emails, and mentions deduplication by Set. Minor flaw: the provided runnable code uses Optional::stream (Java 9+). For strict Java 8 compatibility the Optional case should use filter(Optional::isPresent) + map(Optional::get) or a flatMap with a ternary producing Stream.empty() / Stream.of(value)."
+    },
+    {
+      "index": 4,
+      "skill": "Java",
+      "difficulty": "hard",
+      "question": "Explain how Java's try-with-resources handles exceptions thrown in the try block and exceptions thrown while closing the resource. Which exception is ultimately propagated, what are \"suppressed exceptions\", how can they be accessed, and how does this behavior differ from manually closing resources in a finally block?",
+      "expected_answer": "When using try-with-resources, if the try block throws an exception (the primary exception) and then closing the resource throws another exception, the exception thrown while closing is not propagated on its own. Instead it is recorded as a suppressed exception on the primary exception. The primary exception is the one that is thrown out of the try-with-resources statement. If the try block completes normally and only the close() throws, then that close() exception is propagated as the primary exception.\n\nSuppressed exceptions are additional Throwable instances attached to a primary Throwable to avoid losing information about errors that occurred during cleanup. You can access them by calling Throwable.getSuppressed(), which returns an array of suppressed Throwables. You can also programmatically attach suppressed exceptions with Throwable.addSuppressed(Throwable).\n\nDifference from manually closing in finally: when you manually close a resource in a finally block and the close() throws while an earlier exception is already being thrown, the close() exception can overwrite or hide the original exception unless you explicitly catch it and reattach it. Prior to try-with-resources (Java 7), developers had to catch close() exceptions in the finally block and either log them or add them to the original exception manually (using addSuppressed) to avoid losing the original cause. try-with-resources automates this: it ensures the original exception is propagated and any exceptions from closing are recorded as suppressed, preventing accidental loss of the primary error.",
+      "user_answer": "i dont know",
+      "followup_question": "Would you like me to explain how try-with-resources handles primary and suppressed exceptions and how to access them (getSuppressed/addSuppressed)?",
+      "followup_answer": "pass the queation",
+      "score": 0.0,
+      "feedback": "Candidate did not answer (responses: 'i dont know' / 'pass the queation'). Missing explanation of primary vs. suppressed exceptions, which exception is propagated, how to access suppressed exceptions via Throwable.getSuppressed()/addSuppressed(), and the contrast with manual finally-based closing (risk of hiding the original exception)."
+    }
+  ],
+  "average_score": 4.0,
+  "difficulty_trajectory": [
+    "medium",
+    "easy",
+    "medium",
+    "hard"
+  ]
+}

@@ -1,0 +1,632 @@
+```json
+{
+  "curriculum": [
+    {
+      "skill": "Computer Science fundamentals",
+      "subtopics": [
+        "Time/Space Complexity (Big O)",
+        "Basic OS concepts (processes, threads)",
+        "Memory management basics",
+        "Networking basics (OSI model, TCP/IP conceptual)"
+      ],
+      "difficulty": 2,
+      "importance": "core",
+      "suggested_hours": 20,
+      "depends_on": []
+    },
+    {
+      "skill": "Object-Oriented Programming",
+      "subtopics": [
+        "Classes & Objects",
+        "Inheritance, Polymorphism",
+        "Encapsulation, Abstraction",
+        "Design Principles (SOLID basics)"
+      ],
+      "difficulty": 2,
+      "importance": "core",
+      "suggested_hours": 25,
+      "depends_on": []
+    },
+    {
+      "skill": "Data Structures",
+      "subtopics": [
+        "Arrays, Linked Lists, Stacks, Queues",
+        "Hash Maps",
+        "Trees (basic)",
+        "Graphs (basic)"
+      ],
+      "difficulty": 3,
+      "importance": "core",
+      "suggested_hours": 30,
+      "depends_on": [
+        "Computer Science fundamentals"
+      ]
+    },
+    {
+      "skill": "Algorithms",
+      "subtopics": [
+        "Sorting (Bubble, Merge, Quick)",
+        "Searching (Binary, DFS, BFS)",
+        "Recursion",
+        "Dynamic Programming (basic concepts)",
+        "Greedy Algorithms (basic)"
+      ],
+      "difficulty": 3,
+      "importance": "core",
+      "suggested_hours": 40,
+      "depends_on": [
+        "Data Structures",
+        "Computer Science fundamentals"
+      ]
+    },
+    {
+      "skill": "Software Development (practices)",
+      "subtopics": [
+        "Code readability, Modularity",
+        "Design patterns (basic)",
+        "Code reviews",
+        "Documentation, Maintainability principles"
+      ],
+      "difficulty": 2,
+      "importance": "core",
+      "suggested_hours": 20,
+      "depends_on": [
+        "Object-Oriented Programming"
+      ]
+    },
+    {
+      "skill": "Linux basics",
+      "subtopics": [
+        "Basic commands (ls, cd, mkdir, rm, cp, mv)",
+        "File system navigation, Permissions",
+        "Process management (ps, kill)",
+        "Shell scripting (basic)"
+      ],
+      "difficulty": 2,
+      "importance": "core",
+      "suggested_hours": 15,
+      "depends_on": []
+    },
+    {
+      "skill": "Python",
+      "subtopics": [
+        "Syntax & Data Types",
+        "Control Flow, Functions",
+        "Modules & Packages",
+        "Error Handling",
+        "Standard Library usage"
+      ],
+      "difficulty": 2,
+      "importance": "core",
+      "suggested_hours": 40,
+      "depends_on": [
+        "Object-Oriented Programming"
+      ]
+    },
+    {
+      "skill": "Git",
+      "subtopics": [
+        "Basic commands (add, commit, push, pull)",
+        "Branching & Merging",
+        "Conflict Resolution",
+        "Remote repositories (GitHub/GitLab)",
+        "Pull Requests/Merge Requests"
+      ],
+      "difficulty": 2,
+      "importance": "core",
+      "suggested_hours": 15,
+      "depends_on": []
+    },
+    {
+      "skill": "HTTP & JSON",
+      "subtopics": [
+        "HTTP methods (GET, POST, PUT, DELETE)",
+        "Status codes, Headers",
+        "Request/Response cycle",
+        "JSON syntax, Data serialization/deserialization"
+      ],
+      "difficulty": 2,
+      "importance": "supporting",
+      "suggested_hours": 10,
+      "depends_on": [
+        "Python"
+      ]
+    },
+    {
+      "skill": "REST APIs",
+      "subtopics": [
+        "Principles of REST",
+        "Resource identification, Statelessness",
+        "API design best practices",
+        "Idempotency, API versioning"
+      ],
+      "difficulty": 3,
+      "importance": "supporting",
+      "suggested_hours": 20,
+      "depends_on": [
+        "HTTP & JSON",
+        "Python",
+        "Software Development (practices)"
+      ]
+    },
+    {
+      "skill": "FastAPI",
+      "subtopics": [
+        "Routes & Path Operations",
+        "Request & Response Models (Pydantic)",
+        "Dependency Injection",
+        "Middleware",
+        "Authentication (basic JWT), Testing FastAPI apps"
+      ],
+      "difficulty": 3,
+      "importance": "core",
+      "suggested_hours": 30,
+      "depends_on": [
+        "Python",
+        "REST APIs",
+        "Object-Oriented Programming"
+      ]
+    },
+    {
+      "skill": "SQL (relational fundamentals)",
+      "subtopics": [
+        "SELECT, INSERT, UPDATE, DELETE statements",
+        "Joins (INNER, LEFT, RIGHT)",
+        "Data types, Constraints (PRIMARY KEY, FOREIGN KEY)",
+        "Basic schema design"
+      ],
+      "difficulty": 2,
+      "importance": "core",
+      "suggested_hours": 25,
+      "depends_on": []
+    },
+    {
+      "skill": "PostgreSQL",
+      "subtopics": [
+        "Installation & Setup, psql client",
+        "Advanced data types, Indexes, Views",
+        "Stored procedures (basic), Transactions"
+      ],
+      "difficulty": 3,
+      "importance": "core",
+      "suggested_hours": 20,
+      "depends_on": [
+        "SQL (relational fundamentals)"
+      ]
+    },
+    {
+      "skill": "NoSQL (concepts and MongoDB basics)",
+      "subtopics": [
+        "Document vs. Relational, Use cases for NoSQL",
+        "MongoDB CRUD operations",
+        "Basic indexing",
+        "Aggregation pipeline (conceptual)"
+      ],
+      "difficulty": 2,
+      "importance": "core",
+      "suggested_hours": 15,
+      "depends_on": [
+        "SQL (relational fundamentals)"
+      ]
+    },
+    {
+      "skill": "Unit testing (pytest)",
+      "subtopics": [
+        "Test functions, Assertions",
+        "Fixtures, Mocks & Patches",
+        "Test coverage",
+        "pytest CLI"
+      ],
+      "difficulty": 3,
+      "importance": "supporting",
+      "suggested_hours": 20,
+      "depends_on": [
+        "Python",
+        "FastAPI"
+      ]
+    },
+    {
+      "skill": "Software testing (integration/basic E2E)",
+      "subtopics": [
+        "Integration test strategies",
+        "Mocking external services",
+        "Basic E2E concepts",
+        "Test environments, Test data management"
+      ],
+      "difficulty": 3,
+      "importance": "supporting",
+      "suggested_hours": 15,
+      "depends_on": [
+        "Unit testing (pytest)",
+        "FastAPI"
+      ]
+    },
+    {
+      "skill": "Debugging & Troubleshooting",
+      "subtopics": [
+        "Using IDE debuggers",
+        "Logging, Error messages interpretation",
+        "Stack traces",
+        "Reproducing bugs, Problem isolation"
+      ],
+      "difficulty": 3,
+      "importance": "supporting",
+      "suggested_hours": 15,
+      "depends_on": [
+        "Python",
+        "Software Development (practices)"
+      ]
+    },
+    {
+      "skill": "TDD (conceptual)",
+      "subtopics": [
+        "Red-Green-Refactor cycle",
+        "Benefits of TDD",
+        "Writing tests first",
+        "Design implications of TDD"
+      ],
+      "difficulty": 2,
+      "importance": "supporting",
+      "suggested_hours": 5,
+      "depends_on": [
+        "Unit testing (pytest)",
+        "Software Development (practices)"
+      ]
+    },
+    {
+      "skill": "Docker",
+      "subtopics": [
+        "Dockerfile syntax, Building images",
+        "Running containers",
+        "Docker Compose (basic)",
+        "Volumes, Networks"
+      ],
+      "difficulty": 3,
+      "importance": "core",
+      "suggested_hours": 25,
+      "depends_on": [
+        "Linux basics",
+        "FastAPI"
+      ]
+    },
+    {
+      "skill": "CI/CD (practical pipelines)",
+      "subtopics": [
+        "CI/CD concepts",
+        "GitHub Actions/GitLab CI syntax",
+        "Building & testing stages",
+        "Deployment stages",
+        "Artifacts, Environment variables"
+      ],
+      "difficulty": 3,
+      "importance": "core",
+      "suggested_hours": 20,
+      "depends_on": [
+        "Git",
+        "Docker",
+        "Unit testing (pytest)",
+        "Software testing (integration/basic E2E)"
+      ]
+    },
+    {
+      "skill": "AWS (core services: EC2, S3, RDS, IAM)",
+      "subtopics": [
+        "EC2 instances (launch, connect)",
+        "S3 buckets (storage, permissions)",
+        "RDS (PostgreSQL setup)",
+        "IAM (users, roles, policies)",
+        "VPC (conceptual)"
+      ],
+      "difficulty": 3,
+      "importance": "supporting",
+      "suggested_hours": 30,
+      "depends_on": [
+        "Docker",
+        "PostgreSQL",
+        "Linux basics"
+      ]
+    },
+    {
+      "skill": "Terraform (basic IaC)",
+      "subtopics": [
+        "HCL syntax",
+        "Resources, Providers",
+        "Variables, Outputs",
+        "`terraform init/plan/apply/destroy` workflow"
+      ],
+      "difficulty": 3,
+      "importance": "supporting",
+      "suggested_hours": 20,
+      "depends_on": [
+        "AWS (core services: EC2, S3, RDS, IAM)"
+      ]
+    },
+    {
+      "skill": "Container deployment (Docker + basic orchestration concepts)",
+      "subtopics": [
+        "Deploying Docker containers to cloud (e.g., ECS Fargate basic)",
+        "Load balancing concepts",
+        "Scaling concepts",
+        "Basic Kubernetes concepts (pods, deployments, services - conceptual)"
+      ],
+      "difficulty": 3,
+      "importance": "supporting",
+      "suggested_hours": 15,
+      "depends_on": [
+        "Docker",
+        "AWS (core services: EC2, S3, RDS, IAM)",
+        "CI/CD (practical pipelines)"
+      ]
+    },
+    {
+      "skill": "Node.js (basic familiarity)",
+      "subtopics": [
+        "JavaScript basics (ES6+)",
+        "npm/yarn",
+        "Express.js (basic routing)",
+        "Asynchronous programming (callbacks, promises, async/await)"
+      ],
+      "difficulty": 2,
+      "importance": "supporting",
+      "suggested_hours": 20,
+      "depends_on": [
+        "HTTP & JSON"
+      ]
+    },
+    {
+      "skill": "TypeScript (basic)",
+      "subtopics": [
+        "Types (primitives, interfaces, types)",
+        "Type inference",
+        "Compiling TS",
+        "Basic generics",
+        "Integrating with Node.js"
+      ],
+      "difficulty": 2,
+      "importance": "supporting",
+      "suggested_hours": 15,
+      "depends_on": [
+        "Node.js (basic familiarity)"
+      ]
+    },
+    {
+      "skill": "GraphQL (conceptual)",
+      "subtopics": [
+        "Query language basics",
+        "Schema Definition Language (SDL)",
+        "Resolvers (conceptual)",
+        "Pros and cons vs. REST"
+      ],
+      "difficulty": 2,
+      "importance": "supporting",
+      "suggested_hours": 10,
+      "depends_on": [
+        "REST APIs"
+      ]
+    },
+    {
+      "skill": "Software Architecture (foundations)",
+      "subtopics": [
+        "Architectural styles (Monolith, Microservices, Serverless - conceptual)",
+        "Design principles (separation of concerns)",
+        "Trade-offs",
+        "Documentation (ADRs)"
+      ],
+      "difficulty": 4,
+      "importance": "advanced",
+      "suggested_hours": 25,
+      "depends_on": [
+        "Software Development (practices)",
+        "FastAPI",
+        "PostgreSQL",
+        "AWS (core services: EC2, S3, RDS, IAM)"
+      ]
+    },
+    {
+      "skill": "Microservices (basic concepts)",
+      "subtopics": [
+        "Service boundaries",
+        "Communication patterns (sync/async)",
+        "Data consistency challenges",
+        "Service discovery (conceptual)",
+        "API Gateway (conceptual)"
+      ],
+      "difficulty": 3,
+      "importance": "advanced",
+      "suggested_hours": 15,
+      "depends_on": [
+        "Software Architecture (foundations)",
+        "REST APIs"
+      ]
+    },
+    {
+      "skill": "Distributed Systems (core concepts)",
+      "subtopics": [
+        "CAP theorem",
+        "Consistency models",
+        "Fault tolerance",
+        "Concurrency issues",
+        "Message queues (conceptual)"
+      ],
+      "difficulty": 4,
+      "importance": "advanced",
+      "suggested_hours": 20,
+      "depends_on": [
+        "Computer Science fundamentals",
+        "Microservices (basic concepts)"
+      ]
+    },
+    {
+      "skill": "Security fundamentals (auth, secrets management)",
+      "subtopics": [
+        "Authentication (JWT, OAuth2 concepts)",
+        "Authorization (RBAC concepts)",
+        "Hashing & Encryption basics",
+        "Secrets management (environment variables, AWS Secrets Manager conceptual)",
+        "Common vulnerabilities (OWASP Top 10 basics)"
+      ],
+      "difficulty": 3,
+      "importance": "advanced",
+      "suggested_hours": 20,
+      "depends_on": [
+        "FastAPI",
+        "HTTP & JSON"
+      ]
+    },
+    {
+      "skill": "Caching & performance (Redis basics)",
+      "subtopics": [
+        "Caching strategies (LRU, LFU)",
+        "Cache invalidation",
+        "Redis data structures (strings, hashes, lists)",
+        "Using Redis for caching in FastAPI"
+      ],
+      "difficulty": 3,
+      "importance": "advanced",
+      "suggested_hours": 15,
+      "depends_on": [
+        "FastAPI",
+        "HTTP & JSON"
+      ]
+    },
+    {
+      "skill": "System performance monitoring (observability basics)",
+      "subtopics": [
+        "Metrics (CPU, memory, network, latency)",
+        "Logging (structured logging)",
+        "Tracing (conceptual)",
+        "Alerting",
+        "Tools (Prometheus/Grafana basics, ELK stack conceptual)"
+      ],
+      "difficulty": 3,
+      "importance": "advanced",
+      "suggested_hours": 15,
+      "depends_on": [
+        "FastAPI",
+        "Container deployment (Docker + basic orchestration concepts)"
+      ]
+    },
+    {
+      "skill": "System Design (practice)",
+      "subtopics": [
+        "Requirements gathering",
+        "Estimations (QPS, storage)",
+        "Component identification, API design",
+        "Database choices, Scaling strategies",
+        "Trade-off analysis"
+      ],
+      "difficulty": 4,
+      "importance": "advanced",
+      "suggested_hours": 30,
+      "depends_on": [
+        "Software Architecture (foundations)",
+        "Microservices (basic concepts)",
+        "Distributed Systems (core concepts)",
+        "AWS (core services: EC2, S3, RDS, IAM)",
+        "Caching & performance (Redis basics)",
+        "Security fundamentals (auth, secrets management)"
+      ]
+    },
+    {
+      "skill": "Data pipelines (basic)",
+      "subtopics": [
+        "ETL/ELT concepts",
+        "Data sources & sinks",
+        "Batch vs. Streaming (conceptual)",
+        "Basic data transformation",
+        "Orchestration tools (Airflow conceptual)"
+      ],
+      "difficulty": 3,
+      "importance": "advanced",
+      "suggested_hours": 15,
+      "depends_on": [
+        "SQL (relational fundamentals)",
+        "NoSQL (concepts and MongoDB basics)",
+        "Python"
+      ]
+    },
+    {
+      "skill": "Basic analytics/AI integration",
+      "subtopics": [
+        "Consuming ML APIs",
+        "Data formats for ML (JSON, CSV)",
+        "Basic feature engineering (conceptual)",
+        "Model deployment patterns (conceptual)",
+        "Ethical considerations (basic)"
+      ],
+      "difficulty": 3,
+      "importance": "advanced",
+      "suggested_hours": 15,
+      "depends_on": [
+        "Python",
+        "REST APIs",
+        "Data pipelines (basic)"
+      ]
+    },
+    {
+      "skill": "Communication",
+      "subtopics": [
+        "Technical writing (documentation, comments)",
+        "Verbal presentation",
+        "Active listening",
+        "Giving/receiving feedback",
+        "Cross-functional communication"
+      ],
+      "difficulty": 3,
+      "importance": "professional",
+      "suggested_hours": 10,
+      "depends_on": []
+    },
+    {
+      "skill": "Problem solving mindset",
+      "subtopics": [
+        "Analytical thinking",
+        "Breaking down complex problems",
+        "Root cause analysis",
+        "Algorithmic thinking",
+        "Creative solutions"
+      ],
+      "difficulty": 4,
+      "importance": "professional",
+      "suggested_hours": 10,
+      "depends_on": [
+        "Computer Science fundamentals",
+        "Algorithms"
+      ]
+    },
+    {
+      "skill": "Teamwork & collaboration",
+      "subtopics": [
+        "Version control collaboration",
+        "Pair programming",
+        "Conflict resolution",
+        "Contributing to shared goals",
+        "Empathy"
+      ],
+      "difficulty": 3,
+      "importance": "professional",
+      "suggested_hours": 10,
+      "depends_on": [
+        "Git",
+        "Communication"
+      ]
+    },
+    {
+      "skill": "Agile (Scrum basics) and Jira familiarity",
+      "subtopics": [
+        "Scrum roles (Scrum Master, Product Owner, Dev Team)",
+        "Ceremonies (Sprint Planning, Daily Scrum, Review, Retrospective)",
+        "User stories, Backlog management",
+        "Jira interface basics"
+      ],
+      "difficulty": 2,
+      "importance": "professional",
+      "suggested_hours": 10,
+      "depends_on": [
+        "Teamwork & collaboration"
+      ]
+    }
+  ],
+  "notes": "The curriculum is structured to build knowledge incrementally, starting with foundational computer science concepts and core programming skills. It progresses through essential backend development, including web frameworks, databases, and version control, before integrating quality assurance practices like testing and debugging. Deployment and cloud infrastructure are introduced next, leveraging prior knowledge of containerization and CI/CD. Secondary languages and API patterns are placed where they can be understood in context. Finally, advanced topics like software architecture, distributed systems, system design, security, and performance optimization are covered, building upon the entire preceding stack. Professional skills are integrated throughout the learning journey, emphasizing their continuous development alongside technical competencies."
+}
+```

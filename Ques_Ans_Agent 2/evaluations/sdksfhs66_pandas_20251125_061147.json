@@ -1,0 +1,63 @@
+{
+  "session_id": "sdksfhs66_pandas_20251125_061147",
+  "user_id": "sdksfhs66",
+  "skill": "pandas",
+  "created_at": "2025-11-25T06:27:46.975227",
+  "questions": [
+    {
+      "index": 1,
+      "skill": "pandas",
+      "difficulty": "medium",
+      "question": "In pandas, explain the difference between melt and pivot (or pivot_table). When would you use each? Provide a short example that converts a small wide DataFrame to long with melt and then back to wide with pivot.",
+      "expected_answer": "melt: converts a DataFrame from wide to long (\"unpivot\"). You keep one or more identifier columns (id_vars) and turn other columns into rows. Use melt when you want a tidy/long format for plotting or group operations.\n\npivot / pivot_table: convert long to wide. pivot reshapes rows into columns and requires that the index/column pair be unique; pivot_table can aggregate when duplicates exist (you supply an aggregation function).\n\nUse melt to go from wide->long, pivot/pivot_table to go long->wide.\n\nExample (round-trip):\n```python\nimport pandas as pd\n\ndf = pd.DataFrame({\n    'id': [1, 2],\n    'year_2020': [100, 150],\n    'year_2021': [110, 160]\n})\n\n# Wide -> long\ndf_long = pd.melt(df, id_vars=['id'], var_name='year', value_name='value')\n# df_long:\n#    id       year  value\n# 0   1  year_2020    100\n# 1   2  year_2020    150\n# 2   1  year_2021    110\n# 3   2  year_2021    160\n\n# Long -> wide\ndf_wide = df_long.pivot(index='id', columns='year', values='value').reset_index()\n# df_wide:\n# year  id  year_2020  year_2021\n# 0      1        100        110\n# 1      2        150        160\n```\n\nNotes: use pivot_table with aggfunc if there are duplicate id/year rows; use stack/unstack when working with MultiIndex column/index levels.",
+      "user_answer": "i basically dont know",
+      "followup_question": "Would you like a brief explanation and a runnable example that demonstrates using pd.melt to go wide->long and pd.pivot (or pivot_table) to go back to wide?",
+      "followup_answer": "i also dont know it",
+      "score": 0.0,
+      "feedback": "No correct content provided. The candidate did not answer the question. Expected: melt = wide->long (use id_vars to keep identifiers); pivot/pivot_table = long->wide (pivot requires unique index/column pairs; pivot_table can aggregate via aggfunc). Also expected a runnable round-trip example showing pd.melt then .pivot/.pivot_table. Recommend studying pandas.melt and pandas.pivot_table and practicing a simple wide->long->wide conversion."
+    },
+    {
+      "index": 2,
+      "skill": "pandas",
+      "difficulty": "easy",
+      "question": "The following pandas code is intended to add a column 'avg_sales' with the average sales per store to the original DataFrame, but it produces incorrect NaN values. Find and fix the bug.\n\n```python\nimport pandas as pd\n\ndf = pd.DataFrame({\n    'store': ['A','A','B','B','B'],\n    'sales': [100,150,200,250,300]\n})\n\n# Buggy code\ndf['avg_sales'] = df.groupby('store')['sales'].agg('mean')\nprint(df)\n```\n",
+      "expected_answer": "The bug is that groupby(...).agg('mean') returns a Series indexed by the group keys (store), not aligned with the original DataFrame's row index, so assigning it directly produces NaNs. Use transform('mean') to get a Series aligned to the original rows.\n\nCorrected code:\n\n```python\nimport pandas as pd\n\ndf = pd.DataFrame({\n    'store': ['A','A','B','B','B'],\n    'sales': [100,150,200,250,300]\n})\n\n# Fixed code using transform to align results to original rows\ndf['avg_sales'] = df.groupby('store')['sales'].transform('mean')\nprint(df)\n```\n\nResulting output:\n\nstore  sales  avg_sales\n0     A    100      125.0\n1     A    150      125.0\n2     B    200      250.0\n3     B    250      250.0\n4     B    300      250.0\n",
+      "user_answer": "sfdsf\nfdgd\nddfdjffx",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 0.0,
+      "feedback": "The response is unrelated to the question and does not address the bug. The correct fix is to use df.groupby('store')['sales'].transform('mean') so the resulting Series aligns with the original rows; using agg('mean') returns a Series indexed by group keys and causes NaNs when assigned directly."
+    },
+    {
+      "index": 3,
+      "skill": "pandas",
+      "difficulty": "easy",
+      "question": "Given the following Python code using pandas, what does the printed DataFrame look like?\n\n```python\nimport pandas as pd\n\nleft = pd.DataFrame({'id': [1, 2, 3], 'name': ['Alice', 'Bob', 'Carol']})\nright = pd.DataFrame({'id': [2, 3, 4], 'age': [30, 25, 40]})\n\nresult = pd.merge(left, right, on='id', how='inner')\nprint(result)\n```\n\nChoose one:\nA) \n   id   name  age\n0   2    Bob   30\n1   3  Carol   25\n\nB) \n   id   name   age\n0   1  Alice   NaN\n1   2    Bob  30.0\n2   3  Carol  25.0\n\nC) \n   id   name   age\n0   1  Alice   NaN\n1   2    Bob  30.0\n2   3  Carol  25.0\n3   4    NaN  40.0\n\nD) \n   id   name\n0   1  Alice\n1   2    Bob\n2   3  Carol\n3   2    Bob\n4   3  Carol\n5   4    NaN",
+      "expected_answer": "A) The inner merge returns only rows with matching 'id' in both DataFrames, yielding:\n   id   name  age\n0   2    Bob   30\n1   3  Carol   25",
+      "user_answer": "sf,asjdbnadfk\nsjfbsjfsj\ndfdfdsf",
+      "followup_question": "Which option (A/B/C/D) is correct, and in one sentence explain why an inner merge returns that result?",
+      "followup_answer": "xdfdsdfadsza\nfdfdf   \ngdfsds\n    sfsfdsdf\nfdsfdsfds",
+      "score": 0.0,
+      "feedback": "Did not select option A and provided irrelevant text instead of an explanation. Expected: A — an inner join returns only rows with matching 'id' in both DataFrames."
+    },
+    {
+      "index": 4,
+      "skill": "pandas",
+      "difficulty": "easy",
+      "question": "In pandas, explain the difference between pd.merge and pd.concat and give a simple rule for when to use each.",
+      "expected_answer": "pd.merge performs database-style joins using one or more key columns or indexes (e.g., inner/left/right/outer joins). It aligns rows based on matching key values and is used when you want to combine related information from two tables on a common column (for example, joining customers and orders on customer_id). pd.concat stacks or appends DataFrame objects along an axis (axis=0 to add rows, axis=1 to add columns) and aligns on the opposite axis (by index when stacking rows). It is used when you need to combine datasets by placing them next to each other or appending rows (for example, concatenating monthly sales files). Simple rule: use merge for key-based relational joins; use concat to stack or append DataFrames.",
+      "user_answer": "Map<String, List<String>> result = people.stream()\n    .filter(p -> p.getAge() > 18)\n    .collect(Collectors.toMap(\n        Person::getCity,\n        p -> new ArrayList<>(Arrays.asList(p.getName())),\n        (list1, list2) -> { list1.addAll(list2); return list1; }\n    ));",
+      "followup_question": "Please explain the difference between pd.merge and pd.concat in pandas and give a simple rule for when to use each.",
+      "followup_answer": "Map<String, Employee> oldestByDept = employees.stream()\n    .collect(Collectors.groupingBy(\n        Employee::getDept,\n        Collectors.collectingAndThen(\n            Collectors.reducing((e1, e2) -> e1.getAge() >= e2.getAge() ? e1 : e2),\n            Optional::get\n        )\n    ));",
+      "score": 0.0,
+      "feedback": "Irrelevant answer: both responses are Java Stream code and do not address pandas pd.merge vs pd.concat. The candidate failed to explain that pd.merge does key-based joins (inner/left/right/outer) and pd.concat stacks/appends along an axis and aligns on the other axis; simple rule: use merge for relational joins on keys, concat to stack/append DataFrames."
+    }
+  ],
+  "average_score": 0.0,
+  "difficulty_trajectory": [
+    "medium",
+    "easy",
+    "easy",
+    "easy"
+  ]
+}

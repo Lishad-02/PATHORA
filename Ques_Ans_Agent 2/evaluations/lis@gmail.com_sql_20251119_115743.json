@@ -1,0 +1,63 @@
+{
+  "session_id": "lis@gmail.com_sql_20251119_115743",
+  "user_id": "lis@gmail.com",
+  "skill": "sql",
+  "created_at": "2025-11-19T12:10:17.431932",
+  "questions": [
+    {
+      "index": 1,
+      "skill": "sql",
+      "difficulty": "medium",
+      "question": "Explain the basic concept of 'Transactions and concurrency control' in the context of sql.",
+      "expected_answer": "A simple beginner-friendly explanation of Transactions and concurrency control related to sql.",
+      "user_answer": "In SQL, a transaction is a group of operations treated as a single unit that must fully succeed or fully fail (ACID: Atomicity, Consistency, Isolation, Durability). Concurrency control ensures that when multiple users access or modify the database at the same time, their transactions don’t interfere with each other. It uses techniques like locking, isolation levels, and timestamp ordering to keep data correct and avoid problems like dirty reads or lost updates.",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 8.0,
+      "feedback": "Clear and concise answer that correctly defines transactions (with ACID) and gives the main concurrency-control techniques and common anomalies. To reach an excellent level you could add a small example (e.g., two concurrent transfers) and briefly mention other anomalies like phantom reads and how different isolation levels address them."
+    },
+    {
+      "index": 2,
+      "skill": "sql",
+      "difficulty": "hard",
+      "question": "You have an accounts table (id, balance). Two concurrent transactions run this application-level logic to withdraw money:\n\n-- Transaction A\nBEGIN;\nSELECT balance FROM accounts WHERE id = 1; -- returns 100\n-- app computes new_balance = balance - 50\nUPDATE accounts SET balance = 50 WHERE id = 1;\nCOMMIT;\n\n-- Transaction B (runs concurrently)\nBEGIN;\nSELECT balance FROM accounts WHERE id = 1; -- also returns 100\n-- app computes new_balance = balance - 30\nUPDATE accounts SET balance = 70 WHERE id = 1;\nCOMMIT;\n\nExplain the bug that can occur here and provide a minimal code change (SQL) to prevent the lost-update when these transactions run concurrently. Keep the fix simple and entry-level.",
+      "expected_answer": "Bug: a lost update occurs because both transactions read the same initial balance and then write based on stale reads (read-then-write without synchronization). Minimal fixes (any one is acceptable):\n\nOption 1 — row lock (pessimistic): Acquire a lock when reading so the second transaction waits:\nBEGIN;\nSELECT balance FROM accounts WHERE id = 1 FOR UPDATE; -- locks row\n-- app computes new_balance = balance - 50\nUPDATE accounts SET balance = new_balance WHERE id = 1;\nCOMMIT;\n\nOption 2 — atomic update (no separate read): let the DB do the arithmetic so writes are not based on stale client state:\nBEGIN;\nUPDATE accounts SET balance = balance - 50 WHERE id = 1;\nCOMMIT;\n\nOption 3 — optimistic check: include the old value in WHERE and verify one row affected:\nBEGIN;\n-- assuming old_balance is what the app read\nUPDATE accounts SET balance = 50 WHERE id = 1 AND balance = 100;\n-- check affected_rows = 1 else retry\nCOMMIT;\n\nAny of these prevents the lost-update; the simplest is using SELECT ... FOR UPDATE or using an atomic UPDATE statement.",
+      "user_answer": "BEGIN;\nSELECT balance FROM accounts WHERE id = 1 FOR UPDATE;\n-- app computes new_balance = balance - X\nUPDATE accounts SET balance = new_balance WHERE id = 1;\nCOMMIT;",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 8.0,
+      "feedback": "The SQL shown is a correct, minimal fix—SELECT ... FOR UPDATE will lock the row and prevent the lost-update race. However, the answer did not explicitly name or explain the bug (lost update) or mention that the app should handle wait/retry semantics or alternatives like an atomic UPDATE. Overall the fix is valid but a brief explanation and note about retry/alternatives would make it ideal."
+    },
+    {
+      "index": 3,
+      "skill": "sql",
+      "difficulty": "hard",
+      "question": "Explain why you must use HAVING instead of WHERE when filtering on an aggregate. Give a concise SQL example (table: employees(id, department, salary)) that returns departments with average salary > 70000, and state the relevant part of SQL execution order that makes HAVING necessary.",
+      "expected_answer": "WHERE filters individual rows before aggregation and therefore cannot use aggregate functions (e.g., AVG, SUM). HAVING filters groups after aggregation and can use aggregates. Example:\nSELECT department, AVG(salary) AS avg_salary\nFROM employees\nGROUP BY department\nHAVING AVG(salary) > 70000;\nRelevant execution order (simplified): FROM -> WHERE -> GROUP BY -> aggregate computation -> HAVING -> SELECT -> ORDER BY. Because aggregation happens before HAVING, HAVING can reference aggregates while WHERE cannot.",
+      "user_answer": "SELECT department, AVG(salary) AS avg_salary\nFROM employees\nGROUP BY department\nHAVING AVG(salary) > 70000;",
+      "followup_question": "Briefly explain why HAVING must be used instead of WHERE when filtering on aggregates, and state the relevant part of SQL execution order (e.g., FROM -> WHERE -> GROUP BY -> aggregation -> HAVING -> SELECT).",
+      "followup_answer": "must use HAVING instead of WHERE when filtering on aggregates because WHERE is evaluated before the data is grouped and aggregated, so aggregates like AVG(), SUM(), or COUNT() do not exist yet.\nHAVING runs after the grouping and aggregation, so it can filter based on those computed aggregate values.",
+      "score": 8.0,
+      "feedback": "Good: Correctly explains that WHERE is evaluated before grouping and cannot use aggregates, and that HAVING runs after grouping so it can filter on aggregates. Provides the correct example query. Would be excellent if you explicitly listed the SQL execution order (e.g., FROM -> WHERE -> GROUP BY -> aggregation -> HAVING -> SELECT)."
+    },
+    {
+      "index": 4,
+      "skill": "sql",
+      "difficulty": "hard",
+      "question": "Given a table sales(id INT, salesperson_id INT, sale_date DATE, amount NUMERIC), write a single SQL query using window functions that returns: id, salesperson_id, sale_date, amount, month (first day of the sale month), sale_rank (the rank of the sale within that salesperson for that month ordered by amount DESC, ties broken arbitrarily), and running_total (cumulative sum of amount per salesperson ordered by sale_date).",
+      "expected_answer": "SELECT\n  id,\n  salesperson_id,\n  sale_date,\n  amount,\n  DATE_TRUNC('month', sale_date) AS month,\n  ROW_NUMBER() OVER (PARTITION BY salesperson_id, DATE_TRUNC('month', sale_date) ORDER BY amount DESC) AS sale_rank,\n  SUM(amount) OVER (PARTITION BY salesperson_id ORDER BY sale_date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS running_total\nFROM sales\nORDER BY salesperson_id, sale_date;",
+      "user_answer": "SELECT\n    id,\n    salesperson_id,\n    sale_date,\n    amount,\n    DATE_TRUNC('month', sale_date)::date AS month,\n    RANK() OVER (\n        PARTITION BY salesperson_id, DATE_TRUNC('month', sale_date)\n        ORDER BY amount DESC\n    ) AS sale_rank,\n    SUM(amount) OVER (\n        PARTITION BY salesperson_id\n        ORDER BY sale_date\n        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW\n    ) AS running_total\nFROM sales;",
+      "followup_question": "Did you intend to use ROW_NUMBER() instead of RANK() so tied amounts get unique (arbitrarily ordered) ranks within each salesperson/month?",
+      "followup_answer": "SELECT\n  id,\n  salesperson_id,\n  sale_date,\n  amount,\n  DATE_TRUNC('month', sale_date)::date AS month,\n  ROW_NUMBER() OVER (\n    PARTITION BY salesperson_id, DATE_TRUNC('month', sale_date)\n    ORDER BY amount DESC\n  ) AS sale_rank,\n  SUM(amount) OVER (\n    PARTITION BY salesperson_id\n    ORDER BY sale_date\n    ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW\n  ) AS running_total\nFROM sales;",
+      "score": 9.0,
+      "feedback": "Final follow-up matches the expected solution: DATE_TRUNC month, ROW_NUMBER partitioned by salesperson and month ordered by amount DESC, and SUM(...) OVER partitioned by salesperson with ORDER BY sale_date and proper frame. Main answer initially used RANK() (minor issue) but was corrected. You could add an ORDER BY salesperson_id, sale_date in the outer query if a deterministic output ordering is desired."
+    }
+  ],
+  "average_score": 8.25,
+  "difficulty_trajectory": [
+    "medium",
+    "hard",
+    "hard",
+    "hard"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "session_id": "itn009_SQL_20251126_104918",
+  "user_id": "itn009",
+  "skill": "SQL",
+  "created_at": "2025-11-26T10:52:38.737732",
+  "questions": [
+    {
+      "index": 1,
+      "skill": "SQL",
+      "difficulty": "medium",
+      "question": "In a table with millions of rows, explain how creating an index on a frequently queried column (e.g., customer_id) improves SELECT performance, and describe two trade-offs or downsides of adding that index.",
+      "expected_answer": "An index (commonly a B-tree) lets the database find matching rows by traversing the index instead of scanning every row, which reduces I/O and speeds up WHERE, JOIN and ORDER BY operations on that column. The index can also enable index-only (covering) scans if the query can be satisfied from the index alone. Two trade-offs: (1) Storage and maintenance overhead — indexes consume disk space and must be updated on INSERT/UPDATE/DELETE, which slows write performance. (2) Choice and effectiveness — an index on a low-cardinality column or on columns not used by queries gives little benefit and can increase planner complexity; too many indexes increase update cost and fragmentation.",
+      "user_answer": "do not know",
+      "followup_question": "Would you like me to explain how indexes improve SELECT performance and their main trade-offs, or would you prefer to try answering the question again now?",
+      "followup_answer": "dont know",
+      "score": 1.0,
+      "feedback": "No substantive answer provided. Candidate did not explain how indexes (e.g., B-tree traversal) avoid full table scans or enable index-only scans, nor mention trade-offs such as extra storage use, slower INSERT/UPDATE/DELETE due to index maintenance, or limited benefit for low-cardinality columns."
+    },
+    {
+      "index": 2,
+      "skill": "SQL",
+      "difficulty": "easy",
+      "question": "Review the following SQL transaction sequence. Identify the bug that can lead to locks being held and blocking other sessions, and explain the minimal change to fix it.",
+      "expected_answer": "The transaction is never completed (no COMMIT or ROLLBACK), so locks from the two UPDATEs remain held and can block other sessions. Fix by adding COMMIT after the updates (or ROLLBACK on error):\n\nSTART TRANSACTION;\nUPDATE ...;\nUPDATE ...;\nCOMMIT;",
+      "user_answer": "dont know",
+      "followup_question": "What minimal change would you make to the transaction to prevent locks from being held and blocking other sessions?",
+      "followup_answer": "dont know",
+      "score": 2.0,
+      "feedback": "Candidate did not identify the bug: the transaction is never completed (missing COMMIT/ROLLBACK), leaving locks held and blocking others. Minimal fix: add COMMIT after the UPDATEs (and use ROLLBACK on error)."
+    },
+    {
+      "index": 3,
+      "skill": "SQL",
+      "difficulty": "easy",
+      "question": "In SQL, what is the primary benefit of creating an index on a column that is frequently used in WHERE clauses?",
+      "expected_answer": "Faster SELECT queries by reducing the number of rows scanned.",
+      "user_answer": "pass the question",
+      "followup_question": "What is the primary benefit of creating an index on a column frequently used in WHERE clauses?",
+      "followup_answer": "pass",
+      "score": 1.0,
+      "feedback": "Responses are non-informative and do not state that indexes speed up SELECTs by reducing the number of rows scanned; they show no understanding of the benefit or trade-offs (e.g., write overhead, extra storage)."
+    },
+    {
+      "index": 4,
+      "skill": "SQL",
+      "difficulty": "easy",
+      "question": "In SQL, which JOIN produces the Cartesian product (every row of table A paired with every row of table B)?",
+      "expected_answer": "CROSS JOIN",
+      "user_answer": "i am unable",
+      "followup_question": "Would you like me to explain the correct answer (CROSS JOIN) and show an example query demonstrating the Cartesian product?",
+      "followup_answer": "i said do not know",
+      "score": 0.0,
+      "feedback": "Candidate did not provide the correct answer. Expected 'CROSS JOIN' — the join that returns every possible pair of rows from both tables; candidate indicated they did not know."
+    }
+  ],
+  "average_score": 1.0,
+  "difficulty_trajectory": [
+    "medium",
+    "easy",
+    "easy",
+    "easy"
+  ]
+}

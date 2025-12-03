@@ -1,0 +1,50 @@
+{
+  "session_id": "jjj@gmail.com_.net_20251114_061451",
+  "user_id": "jjj@gmail.com",
+  "skill": ".net",
+  "created_at": "2025-11-14T06:24:39.443471",
+  "questions": [
+    {
+      "index": 1,
+      "skill": ".net",
+      "difficulty": "medium",
+      "question": "In C# asynchronous programming, explain the primary purpose of the `async` and `await` keywords. Provide a practical example where their use significantly benefits application performance or responsiveness.",
+      "expected_answer": "The `async` keyword marks a method as asynchronous, enabling the use of the `await` keyword within it. `await` is used to pause the execution of the `async` method until the awaited `Task` completes, *without blocking the calling thread*. This is particularly beneficial for I/O-bound operations, such as making a web API call or querying a database, as it allows the application (e.g., a UI or web server) to remain responsive and process other requests while waiting for the I/O operation to finish.",
+      "user_answer": "The async keyword is used to mark a method as asynchronous, indicating that it may contain one or more await expressions and that its execution can be suspended without blocking the calling thread. The primary purpose of await is to asynchronously wait for a Task to complete; when encountered, it pauses the execution of the async method, returns control to the caller (e.g., the UI thread), and allows the application to continue responding to user input or other operations. This mechanism is crucial for application responsiveness and scalability, particularly when performing long-running, I/O-bound operations like network requests or file access, as it efficiently utilizes system resources by not tying up a thread unnecessarily.\nThe practical example is performing a long-running, I/O-bound operation like fetching data from a web API",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 10.0,
+      "feedback": "Excellent — clear, accurate explanation of both async (marks a method for await) and await (non-blocking wait that returns control to the caller). The provided practical example (fetching data from a web API) directly ties to UI responsiveness and scalability for I/O-bound work, matching the expected answer."
+    },
+    {
+      "index": 2,
+      "skill": ".net",
+      "difficulty": "hard",
+      "question": "In an ASP.NET Core application, you have a service `MyScopedService` registered as `Scoped` that internally depends on another `IDisposable` service, `MyDisposableDependency`. Explain how the ASP.NET Core DI container manages the lifecycle and disposal of `MyScopedService` and its `MyDisposableDependency` within a single request scope. What are the potential pitfalls if `MyDisposableDependency` itself creates and manages unmanaged resources, and how would you ensure proper cleanup?",
+      "expected_answer": "The ASP.NET Core DI container creates `MyScopedService` and `MyDisposableDependency` once per client request. Both instances are tracked by the container and will be disposed of automatically by the container at the end of that specific request's scope. If `MyDisposableDependency` manages unmanaged resources, it must implement the full `IDisposable` pattern, including a finalizer, to ensure deterministic cleanup of unmanaged resources even if `Dispose()` is not explicitly called (e.g., due to an unhandled exception preventing the scope from completing normally) or if a consumer fails to call `Dispose()` directly.",
+      "user_answer": "The ASP.NET Core DI container ensures that both MyScopedService and its dependent MyDisposableDependency are instantiated just once per application lifetime since MyScopedService is scoped. This means they are reused across multiple requests, improving performance. When the application shuts down, the container automatically recognizes that both services implement IDisposable and calls their Dispose() methods.\nThe pitfall when MyDisposableDependency manages unmanaged resources is that the automatic disposal by the DI container only calls Dispose() for the top-level service (MyScopedService), leaving the dependency's unmanaged resources to be cleaned up manually. To solve this, you need to explicitly call MyDisposableDependency.Dispose() from within the Dispose() method of MyScopedService to ensure a cascading cleanup, otherwise, you'll risk memory leaks of the unmanaged resources.",
+      "followup_question": "Does the ASP.NET Core DI container dispose all IDisposable instances it created within a scope or only the top-level resolved service? Also, describe the correct IDisposable pattern you would implement in MyDisposableDependency if it owns unmanaged resources.",
+      "followup_answer": "The ASP.NET Core DI container is smart and disposes of only the top-level service that was explicitly requested from the container (e.g., MyScopedService). It assumes that the top-level service is responsible for knowing about and manually calling Dispose() on all the dependencies it received, like MyDisposableDependency. If you forget to call MyDisposableDependency.Dispose() inside MyScopedService's Dispose() method, those resources, particularly unmanaged ones, will be leaked until the garbage collector runs later.",
+      "score": 2.0,
+      "feedback": "The answers show critical misunderstandings. Scoped services are created once per request (not once per application lifetime) and the built-in DI container tracks and disposes all IDisposable services it created within that request scope — you should NOT normally manually Dispose injected dependencies. The correct nuance about unmanaged resources is noted: implement the full IDisposable pattern (Dispose(bool) + finalizer if needed) so unmanaged resources are reliably cleaned up. Fix the lifecycle/disposal misconceptions and rely on the container to dispose tracked disposables at the end of the scope."
+    },
+    {
+      "index": 3,
+      "skill": ".net",
+      "difficulty": "medium",
+      "question": "In ASP.NET Core, explain the key differences between `AddScoped`, `AddTransient`, and `AddSingleton` when registering services with the Dependency Injection container, and provide a typical use case for each.",
+      "expected_answer": "<ul><li><b>AddTransient:</b> A new instance is created every time the service is requested. Ideal for lightweight, stateless services.</li><li><b>AddScoped:</b> A new instance is created once per client request (or scope). Best for services that need to maintain state within a single request, like a database context.</li><li><b>AddSingleton:</b> A single instance is created the first time it's requested and reused for the entire application lifetime. Suitable for services that are expensive to create or need to share state across the application, such as a configuration service or a logger.</li></ul>",
+      "user_answer": "AddTransient generates a new instance every time the service is requested, fitting best for lightweight, stateless utilities; AddScoped creates one instance per HTTP request (scope), making it ideal for managing request-specific state like a database context; and AddSingleton creates a single instance reused across the entire application lifetime, suitable for global shared resources such as caching or configuration settings.",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 10.0,
+      "feedback": "Accurate and concise: the candidate correctly defines AddTransient, AddScoped, and AddSingleton and gives appropriate, practical use cases for each (stateless utilities, per-request state like DbContext, and application-wide shared resources). Answer demonstrates a solid understanding of ASP.NET Core DI lifetimes."
+    }
+  ],
+  "average_score": 7.333333333333333,
+  "difficulty_trajectory": [
+    "medium",
+    "hard",
+    "medium"
+  ]
+}

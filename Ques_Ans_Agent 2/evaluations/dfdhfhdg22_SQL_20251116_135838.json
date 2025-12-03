@@ -1,0 +1,63 @@
+{
+  "session_id": "dfdhfhdg22_SQL_20251116_135838",
+  "user_id": "dfdhfhdg22",
+  "skill": "SQL",
+  "created_at": "2025-11-16T14:06:48.474681",
+  "questions": [
+    {
+      "index": 1,
+      "skill": "SQL",
+      "difficulty": "medium",
+      "question": "Given table orders(order_id INT PRIMARY KEY, customer_id INT, order_date DATETIME, status VARCHAR(20), total_amount DECIMAL(10,2)), optimize this query by writing one or two SQL statements to create index(es) that will make it fast. Query: SELECT order_id, order_date, total_amount FROM orders WHERE customer_id = 42 AND status = 'shipped' ORDER BY order_date DESC LIMIT 10; Briefly explain your choice in one sentence.",
+      "expected_answer": "CREATE INDEX idx_orders_cust_status_date ON orders (customer_id, status, order_date);\n-- If your DB supports included columns (to make the index covering):\n-- CREATE INDEX idx_orders_cust_status_date_inc ON orders (customer_id, status, order_date) INCLUDE (order_id, total_amount);\n\nExplanation: The composite index (customer_id, status, order_date) matches the WHERE filters and the ORDER BY, allowing an index range scan and avoiding an expensive filesort; adding order_id and total_amount as included columns makes the index covering so the engine can satisfy the SELECT from the index alone.",
+      "user_answer": "CREATE INDEX idx_customer_status_date \nON orders (customer_id, status, order_date DESC);",
+      "followup_question": "Which additional columns (if any) would you include to make this index covering for the query, and why?",
+      "followup_answer": "",
+      "score": 8.0,
+      "feedback": "The composite index on (customer_id, status, order_date) (you specified order_date DESC) is the right idea and will speed the WHERE + ORDER BY. However you didn't mention making the index covering by including order_id and total_amount, and note that DESC in the index may be unnecessary or behave differently across RDBMSs. Add included columns to avoid lookups and a one-sentence explanation of why the index helps."
+    },
+    {
+      "index": 2,
+      "skill": "SQL",
+      "difficulty": "hard",
+      "question": "Given a table sales(sale_id INT, seller_id INT, sale_date DATE, amount DECIMAL), write a single SQL query that returns for every sale: seller_id, month (YYYY-MM), sale_date, amount, rank_in_month (1 = highest amount for that seller in that month) and bonus_eligible (true if rank_in_month <= 2). Order results by seller_id, month, rank_in_month.",
+      "expected_answer": "SELECT seller_id,\n       to_char(month, 'YYYY-MM') AS month,\n       sale_date,\n       amount,\n       rank_in_month,\n       (rank_in_month <= 2) AS bonus_eligible\nFROM (\n  SELECT seller_id,\n         sale_date,\n         amount,\n         date_trunc('month', sale_date) AS month,\n         row_number() OVER (PARTITION BY seller_id, date_trunc('month', sale_date)\n                            ORDER BY amount DESC, sale_date ASC) AS rank_in_month\n  FROM sales\n) t\nORDER BY seller_id, month, rank_in_month;",
+      "user_answer": "SELECT \n    seller_id,\n    TO_CHAR(sale_date, 'YYYY-MM') AS month,\n    sale_date,\n    amount,\n    ROW_NUMBER() OVER (\n        PARTITION BY seller_id\n        ORDER BY amount DESC\n    ) AS rank_in_month,\n    CASE \n        WHEN ROW_NUMBER() OVER (\n            PARTITION BY seller_id\n            ORDER BY amount DESC\n        ) <= 2 THEN TRUE\n        ELSE FALSE\n    END AS bonus_eligible\nFROM sales\nORDER BY seller_id, month, rank_in_month;",
+      "followup_question": "How would you change your query to partition by both seller and month and add the sale_date tie-breaker so ranking is per seller per month and deterministic?",
+      "followup_answer": "",
+      "score": 3.0,
+      "feedback": "The query uses ROW_NUMBER() but mis-partitions: it ranks across all time per seller rather than per seller+month, so rank_in_month is incorrect. It also omits the tie-breaker (sale_date ASC) for deterministic ordering and redundantly computes ROW_NUMBER() twice for bonus_eligible. The month formatting is fine, but you should partition by the month (e.g., date_trunc('month', sale_date)) and include the tie-breaker."
+    },
+    {
+      "index": 3,
+      "skill": "SQL",
+      "difficulty": "medium",
+      "question": "Given these tables: employees(emp_id, name, dept_id), departments(dept_id, dept_name), assignments(emp_id, project_id). Write an SQL query that returns distinct emp_id, name, dept_name for employees who are either assigned to at least one project OR whose department is 'Sales'. Use JOINs and a set operation (UNION); do not use OR or subqueries.",
+      "expected_answer": "SELECT e.emp_id, e.name, d.dept_name\nFROM employees e\nJOIN assignments a ON e.emp_id = a.emp_id\nLEFT JOIN departments d ON e.dept_id = d.dept_id\nUNION\nSELECT e.emp_id, e.name, d.dept_name\nFROM employees e\nJOIN departments d ON e.dept_id = d.dept_id\nWHERE d.dept_name = 'Sales';",
+      "user_answer": "SELECT e.emp_id, e.name, d.dept_name\nFROM employees e\nJOIN assignments a ON e.emp_id = a.emp_id\nJOIN departments d ON e.dept_id = d.dept_id\n\nUNION\n\nSELECT e.emp_id, e.name, d.dept_name\nFROM employees e\nJOIN departments d ON e.dept_id = d.dept_id\nWHERE d.dept_name = 'Sales';",
+      "followup_question": "Why did you use an INNER JOIN to departments in the first SELECT rather than a LEFT JOIN, and how would the result change for employees who are assigned to a project but have no department record or a NULL dept_id?",
+      "followup_answer": "",
+      "score": 8.0,
+      "feedback": "The query is correct in using JOINs and UNION and returns the required columns; UNION will also remove duplicates from multiple assignments. One minor issue: the first part uses an INNER JOIN to departments, so employees who are assigned but have a NULL or missing dept record would be excluded — the expected answer used LEFT JOIN to avoid that edge case."
+    },
+    {
+      "index": 4,
+      "skill": "SQL",
+      "difficulty": "hard",
+      "question": "Which ANSI SQL isolation level prevents dirty reads and non-repeatable reads but can still allow phantom reads?",
+      "expected_answer": "C) REPEATABLE READ",
+      "user_answer": "The ANSI SQL isolation level is REPEATABLE READ.\n\nPrevents: dirty reads and non-repeatable reads\n\nAllows: phantom reads",
+      "followup_question": "Why does REPEATABLE READ prevent non-repeatable reads but still allow phantom reads — and how does SERIALIZABLE address phantom reads?",
+      "followup_answer": "",
+      "score": 8.0,
+      "feedback": "Correctly selects REPEATABLE READ and states which phenomena it prevents and allows. The answer is concise and accurate but minimal — it would be stronger with a brief explanation of *why* REPEATABLE READ prevents non-repeatable reads yet can still allow phantom reads."
+    }
+  ],
+  "average_score": 6.75,
+  "difficulty_trajectory": [
+    "medium",
+    "hard",
+    "medium",
+    "hard"
+  ]
+}

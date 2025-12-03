@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Career Guidance System – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #020617;
+      color: #e5e7eb;
+      min-height: 100vh;
+    }
+
+    .page-wrapper {
+      min-height: 100vh;
+      background: radial-gradient(circle at 10% 0%, #1e293b 0, transparent 55%), radial-gradient(circle at 90% 0%, #434a5c 0, transparent 55%), radial-gradient(circle at 0% 80%, #576da1 0, transparent 55%), radial-gradient(circle at 100% 80%, #000000 0, transparent 55%), linear-gradient(135deg, #020617 0%, #020617 30%, #020617 55%, #020617 100%);
+      overflow-x: hidden;
+    }
+
+    .max-width {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 24px 80px;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0 30px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-logo-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.9);
+    }
+
+    .nav-logo-circle span {
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .nav-brand-text {
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    .nav-center {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      font-size: 13px;
+    }
+
+    .nav-center a {
+      text-decoration: none;
+      color: #9ca3af;
+      padding-bottom: 3px;
+      position: relative;
+    }
+
+    .nav-center a:hover {
+      color: #e5e7eb;
+    }
+
+    .nav-center a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #60a5fa, #0ea5e9);
+      transition: width 0.25s ease;
+    }
+
+    .nav-center a:hover::after {
+      width: 100%;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+      padding: 40px 0 120px;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-right {
+        text-align: center;
+        margin-left: 0 !important;
+      }
+    }
+
+    .hero-left {
+      max-width: 600px;
+    }
+
+    .hero-kicker {
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      font-size: clamp(32px, 4vw, 42px);
+      font-weight: 600;
+      color: #f9fafb;
+      margin-bottom: 18px;
+    }
+
+    .hero-subtitle {
+      font-size: 13px;
+      color: #cbd5f5;
+      max-width: 520px;
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-cta-primary {
+      padding: 12px 28px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 0 0, #60a5fa, transparent 55%), linear-gradient(135deg, #1d4ed8, #3b82f6);
+      border: none;
+      color: #e5f2ff;
+      font-size: 13px;
+      cursor: pointer;
+      box-shadow: 0 15px 35px rgba(37, 99, 235, 0.6);
+    }
+
+    .hero-cta-secondary {
+      padding: 11px 26px;
+      border-radius: 999px;
+      background: #f9fafb;
+      color: #020617;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.55);
+    }
+
+    .hero-cta-secondary span.arrow {
+      width: 22px;
+      height: 22px;
+      background: #020617;
+      color: #fff;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 20px;
+      margin-top: 24px;
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    .hero-meta-dot {
+      width: 6px;
+      height: 6px;
+      background: #22c55e;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+    }
+
+    /* LOGO */
+    .hero-right img {
+      width: 349px;
+      max-width: 100%;
+      border-radius: 20px;
+      filter: drop-shadow(0px 0px 25px rgba(59, 130, 246, 0.45));
+      animation: fadeIn 1.2s ease-in-out;
+      margin-left: 105px;
+      margin-top: 51px;
+    }
+
+    .hero-btn-link {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* HOVER EFFECTS */
+    .hero-cta-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.8);
+    }
+
+    .hero-cta-secondary:hover {
+      transform: translateY(-3px);
+      background: #ffffff;
+      box-shadow: 0 16px 35px rgba(255, 255, 255, 0.4);
+    }
+
+    .hero-cta-secondary:hover .arrow {
+      background: #1e293b;
+    }
+
+
+    /* ----------- FIXED: PATHORA NEON BOX IMMEDIATELY UNDER LOGO ----------- */
+    .logo-name {
+      margin-left: 160px;
+      margin-top: 0px;
+      /* ↓ ↓ ↓ FIXED SPACING HERE ↓ ↓ ↓ */
+      padding: 10px 26px;
+      font-size: 42px;
+      font-weight: 600;
+      font-style: italic;
+
+      background: rgba(240, 236, 236, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+
+      border-radius: 15px;
+      display: inline-block;
+
+      color: transparent;
+      background-image: linear-gradient(90deg, #eaedf3, #f5f5f5, #e9edf1);
+      -webkit-background-clip: text;
+
+      text-shadow:
+        0 0 8px rgba(249, 251, 252, 0.7),
+        0 0 22px rgba(244, 244, 244, 0.4),
+        0 0 32px rgba(246, 250, 253, 0.3);
+
+      animation: neonGlow 2.3s infinite alternate ease-in-out, fadeIn 1.4s ease-in-out;
+      letter-spacing: 2px;
+    }
+
+
+    /* ============================= */
+    /*      MOBILE RESPONSIVE FIX    */
+    /* ============================= */
+
+    @media (max-width: 768px) {
+
+      .navbar {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .nav-center {
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      /* HERO STACK */
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 20px 0 60px;
+      }
+
+      .hero-left {
+        margin: 0 auto;
+      }
+
+      .hero-title {
+        font-size: 26px;
+        line-height: 1.3;
+      }
+
+      .hero-subtitle {
+        font-size: 12.5px;
+        max-width: 100%;
+      }
+
+      /* CTA Buttons full width */
+      .hero-ctas {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .hero-cta-primary,
+      .hero-cta-secondary {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+
+      /* META TEXT STACK */
+      .hero-meta {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+
+      /* LOGO FIXES */
+      .hero-right img {
+        margin: 30px auto 10px auto !important;
+        width: 250px;
+      }
+
+      /* Neon NAME adjust */
+      .logo-name {
+        margin: 0 auto;
+        margin-top: 10px;
+        font-size: 30px;
+        padding: 8px 18px;
+      }
+    }
+
+     
+    /*for resonsive design on very small devices*/
+    /* EXTRA SMALL DEVICES (Phones < 480px) */
+    @media (max-width: 480px) {
+
+      .hero-title {
+        font-size: 22px;
+      }
+
+      .hero-cta-primary,
+      .hero-cta-secondary {
+        padding: 12px 20px;
+        font-size: 12px;
+      }
+
+      .hero-right img {
+        width: 200px;
+      }
+
+      .logo-name {
+        font-size: 26px;
+      }
+    }
+/* ============================= END HERE */
+
+
+    @keyframes neonGlow {
+      0% {
+        text-shadow: 0 0 6px rgba(94, 165, 255, 0.65), 0 0 14px rgba(94, 165, 255, 0.45);
+      }
+
+      100% {
+        text-shadow: 0 0 16px rgba(94, 165, 255, 1), 0 0 30px rgba(94, 165, 255, 0.55);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="max-width">
+
+      <!-- NAVBAR -->
+      <header class="navbar">
+        <div class="nav-left">
+          <div class="nav-logo-circle"><span>+</span></div>
+          <div class="nav-brand-text">SYSTEMIC CINEMATIC</div>
+        </div>
+
+        <nav class="nav-center">
+          <a href="homepage.html">Home</a>
+          <a href="#">Overview</a>
+          <a href="#">Workflow</a>
+          <a href="#">Features</a>
+          <a href="#">Insights</a>
+          <a href="#">Contact</a>
+        </nav>
+      </header>
+
+      <!-- HERO -->
+      <section class="hero">
+
+        <!-- LEFT CONTENT -->
+        <div class="hero-left">
+          <div class="hero-kicker">AI-POWERED CAREER INTELLIGENCE</div>
+          <h1 class="hero-title">AI Career Guidance System for SWE & Data Analyst Jobs</h1>
+          <p class="hero-subtitle">
+            Powered by LLMs, real-world job data, and adaptive skill evaluation. Get personalized skill recommendations
+            and assess your knowledge with our intelligent AI agents.
+          </p>
+
+          <!-- Inside HERO CTAS -->
+          <div class="hero-ctas">
+
+            <!-- PRIMARY BUTTON WITH LINK + HOVER -->
+            <a href="system.html" class="hero-cta-primary hero-btn-link">Access the System</a>
+
+            <!-- SECONDARY BUTTON WITH LINK + HOVER -->
+            <a href="demo.html" class="hero-cta-secondary hero-btn-link">
+              Watch Demo <span class="arrow">→</span>
+            </a>
+
+          </div>
+
+
+          <div class="hero-meta">
+            <div style="display:flex; flex-direction:column; gap:4px;">
+
+              <!-- Line 1 -->
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span class="hero-meta-dot"></span>
+                <span>Software Engineering & Data Analyst · Real job data</span>
+              </div>
+
+              <!-- Line 2 -->
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span class="hero-meta-dot"></span>
+                <span>LLM-driven recommendations · Prompt engineering</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: LOGO + NEON NAME -->
+        <div class="hero-right">
+          <img src="sample_logo3_cs499.png" alt="System Logo">
+          <div class="logo-name">Pathora</div>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{
+  "session_id": "llllll666_sql_20251116_210626",
+  "user_id": "llllll666",
+  "skill": "sql",
+  "created_at": "2025-11-16T21:12:50.273416",
+  "questions": [
+    {
+      "index": 4,
+      "skill": "sql",
+      "difficulty": "medium",
+      "question": "Briefly explain the main differences between a subquery and a Common Table Expression (CTE). Give a short SQL example that shows the same logic written once as a subquery and once as a CTE, and state one situation where a CTE is preferable.",
+      "expected_answer": "A subquery is a SELECT nested inside another query (in the WHERE, FROM, or SELECT). A CTE is defined with WITH name AS ( ... ) before the main query. Differences: CTEs improve readability by naming intermediate results, can be referenced multiple times in the main query, and make complex queries easier to understand. Example: Subquery:\nSELECT c.customer_id, c.name\nFROM customers c\nJOIN (SELECT customer_id, COUNT(*) AS orders_count FROM orders GROUP BY customer_id) o\n  ON c.customer_id = o.customer_id\nWHERE o.orders_count > 5;\nAs a CTE:\nWITH orders_count AS (\n  SELECT customer_id, COUNT(*) AS orders_count FROM orders GROUP BY customer_id\n)\nSELECT c.customer_id, c.name\nFROM customers c\nJOIN orders_count o ON c.customer_id = o.customer_id\nWHERE o.orders_count > 5;\nWhen preferable: use a CTE when the intermediate result is used more than once or to make a long query easier to read and maintain.",
+      "user_answer": "Differences:\n\nA subquery is nested inside a query and exists only in that context.\n\nA CTE (WITH clause) defines a named temporary result set that can be referenced multiple times in the main query or for readability.",
+      "followup_question": "Please provide a short SQL example that shows the same logic once as a subquery and once as a CTE (e.g., joining customers to an aggregated orders subquery/CTE).",
+      "followup_answer": "Subquery version: SELECT c.id, c.name, o.total_spent\nFROM customers c\nJOIN (\n    SELECT customer_id, SUM(amount) AS total_spent\n    FROM orders\n    WHERE order_date >= '2023-01-01' AND order_date < '2024-01-01'\n    GROUP BY customer_id\n) o ON c.id = o.customer_id;\n\n\nCTE version: WITH customer_totals AS (\n    SELECT customer_id, SUM(amount) AS total_spent\n    FROM orders\n    WHERE order_date >= '2023-01-01' AND order_date < '2024-01-01'\n    GROUP BY customer_id\n)\nSELECT c.id, c.name, ct.total_spent\nFROM customers c\nJOIN customer_totals ct ON c.id = ct.customer_id;",
+      "score": 10.0,
+      "feedback": "Excellent — clear, accurate definitions; both subquery and CTE examples are correct and equivalent; and the stated reason (readability and reuse of intermediate results) is concrete and appropriate."
+    }
+  ],
+  "average_score": 10.0,
+  "difficulty_trajectory": [
+    "medium"
+  ]
+}

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Career Guidance System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #020617;
+      color: #e5e7eb;
+      min-height: 100vh;
+    }
+
+    .page-wrapper {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 10% 0%, #1e293b 0, transparent 55%),
+        radial-gradient(circle at 90% 0%, #1d4ed8 0, transparent 55%),
+        radial-gradient(circle at 0% 80%, #0f172a 0, transparent 55%),
+        radial-gradient(circle at 100% 80%, #1e40af 0, transparent 55%),
+        linear-gradient(135deg, #020617 0%, #020617 30%, #020617 55%, #020617 100%);
+      color: #f9fafb;
+      overflow-x: hidden;
+    }
+
+    .max-width {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 24px 80px;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0 30px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-logo-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.9);
+    }
+
+    .nav-logo-circle span {
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .nav-brand-text {
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    .nav-center {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+
+    .nav-center a {
+      text-decoration: none;
+      color: #9ca3af;
+      position: relative;
+      padding-bottom: 3px;
+    }
+
+    .nav-center a:hover {
+      color: #e5e7eb;
+    }
+
+    .nav-center a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #60a5fa, #0ea5e9);
+      transition: width 0.25s ease;
+    }
+
+    .nav-center a:hover::after {
+      width: 100%;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-ghost-btn {
+      font-size: 12px;
+      color: #cbd5f5;
+      cursor: pointer;
+      background: transparent;
+      border-radius: 999px;
+      padding: 7px 18px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-primary-btn {
+      font-size: 12px;
+      color: #020617;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 999px;
+      padding: 8px 22px;
+      border: none;
+      background: linear-gradient(135deg, #f9fafb, #e5e7eb);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.45);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      align-items: center;
+      gap: 40px;
+      padding: 40px 0 120px;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-bottom: 60px;
+      }
+    }
+
+    .hero-left {
+      max-width: 600px;
+      z-index: 2;
+    }
+
+    .hero-kicker {
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      font-size: clamp(32px, 4vw, 42px);
+      line-height: 1.15;
+      font-weight: 600;
+      color: #f9fafb;
+      margin-bottom: 18px;
+    }
+
+    .hero-subtitle {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #cbd5f5;
+      max-width: 520px;
+      margin-bottom: 28px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-cta-primary {
+      border-radius: 999px;
+      padding: 12px 28px;
+      background: radial-gradient(circle at 0 0, #60a5fa, transparent 55%),
+                  linear-gradient(135deg, #1d4ed8, #3b82f6);
+      border: none;
+      font-size: 13px;
+      font-weight: 500;
+      color: #e5f2ff;
+      cursor: pointer;
+      box-shadow: 0 15px 35px rgba(37, 99, 235, 0.6);
+    }
+
+    .hero-cta-secondary {
+      border-radius: 999px;
+      padding: 11px 26px;
+      background: #f9fafb;
+      color: #020617;
+      font-size: 13px;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.55);
+    }
+
+    .hero-cta-secondary span.arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: #020617;
+      color: #f9fafb;
+      font-size: 13px;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-top: 24px;
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    .hero-meta-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+    }
+
+    /* HERO RIGHT GRAPH */
+    .hero-right {
+      position: relative;
+      min-height: 320px;
+    }
+
+    .hero-orbit-line {
+      position: absolute;
+      inset: -40px -60px;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .hero-orbit-line svg path {
+      stroke: rgba(148, 163, 184, 0.4);
+      stroke-width: 1.2;
+      fill: none;
+    }
+
+    .hero-bubble {
+      position: absolute;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 0%, #60a5fa 0, #1d4ed8 45%, #0f172a 100%);
+      width: 120px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #e5f2ff;
+      box-shadow:
+        0 18px 35px rgba(15, 23, 42, 0.9),
+        0 0 0 1px rgba(148, 163, 184, 0.55);
+    }
+
+    .hero-bubble.small {
+      width: 90px;
+      height: 90px;
+      background: radial-gradient(circle at 20% 0%, #38bdf8 0, #0ea5e9 50%, #0f172a 100%);
+    }
+
+    .hero-bubble-label {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.85;
+      margin-bottom: 4px;
+    }
+
+    .hero-bubble-title {
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .hero-bubble-note {
+      font-size: 9px;
+      opacity: 0.8;
+      margin-top: 3px;
+    }
+
+    /* positions to match sample roughly */
+    .bubble-main-top {
+      top: 0;
+      right: 40px;
+    }
+
+    .bubble-main-bottom {
+      bottom: 0;
+      right: 0;
+    }
+
+    .bubble-small-middle {
+      top: 42%;
+      right: 25%;
+    }
+
+    .bubble-small-bottom {
+      bottom: 18%;
+      left: 15%;
+    }
+
+    @media (max-width: 900px) {
+      .hero-right {
+        min-height: 280px;
+        margin-top: -20px;
+      }
+      .bubble-main-top {
+        top: 10px;
+        right: 10px;
+      }
+      .bubble-main-bottom {
+        bottom: 10px;
+        right: 35px;
+      }
+      .bubble-small-middle {
+        top: 45%;
+        right: 35%;
+      }
+      .bubble-small-bottom {
+        left: 5%;
+      }
+    }
+
+    /* LOWER WAVE SECTION */
+    .lower-wrapper {
+      position: relative;
+      margin-top: -40px;
+      padding-bottom: 80px;
+    }
+
+    .wave-overlay {
+      position: absolute;
+      inset: auto -120px -80px -120px;
+      height: 220px;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(148, 163, 184, 0.15) 0, transparent 55%),
+        radial-gradient(circle at 80% 10%, rgba(59, 130, 246, 0.35) 0, transparent 55%),
+        linear-gradient(135deg, #0f172a 0, #020617 55%, #020617 100%);
+      clip-path: ellipse(70% 80% at 50% 0%);
+      z-index: 1;
+      opacity: 0.9;
+    }
+
+    .system-section {
+      position: relative;
+      z-index: 2;
+      margin-top: 60px;
+      background: linear-gradient(180deg, #e5e7eb 0%, #f9fafb 40%);
+      border-top-left-radius: 32px;
+      border-top-right-radius: 32px;
+      box-shadow: 0 -18px 40px rgba(15, 23, 42, 0.7);
+      padding: 54px 60px 70px;
+      color: #020617;
+    }
+
+    @media (max-width: 768px) {
+      .system-section {
+        padding: 40px 26px 56px;
+        border-radius: 26px 26px 0 0;
+      }
+    }
+
+    .system-heading {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .system-heading h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #020617;
+    }
+
+    .system-heading h2 span {
+      color: #1d4ed8;
+    }
+
+    .system-heading p {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #4b5563;
+      max-width: 540px;
+      margin-inline: auto;
+      line-height: 1.8;
+    }
+
+    .system-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 900px) {
+      .system-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .step-card {
+      background: #f9fafb;
+      border-radius: 20px;
+      padding: 20px 18px 18px;
+      box-shadow: 0 16px 30px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .step-card::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -30px;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle at 30% 0%, #bfdbfe 0, transparent 60%);
+      opacity: 0.8;
+    }
+
+    .step-number {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: #1d4ed8;
+      color: #f9fafb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.55);
+    }
+
+    .step-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #020617;
+      margin-bottom: 6px;
+    }
+
+    .step-text {
+      font-size: 12px;
+      color: #4b5563;
+      line-height: 1.7;
+    }
+
+    /* subtle white curves on the left */
+    .background-lines {
+      position: absolute;
+      inset: 120px auto auto 0;
+      width: 55%;
+      pointer-events: none;
+      opacity: 0.25;
+    }
+
+    .background-lines svg path {
+      stroke: rgba(148, 163, 184, 0.35);
+      stroke-width: 1.1;
+      fill: none;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .nav-center {
+        display: none;
+      }
+      .nav-right {
+        margin-left: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div class="page-wrapper">
+  <div class="background-lines">
+    <svg viewBox="0 0 600 400" preserveAspectRatio="none">
+      <path d="M-40 330 C 150 260, 260 220, 520 80" />
+      <path d="M-60 360 C 140 280, 280 240, 560 110" />
+      <path d="M-80 390 C 120 310, 300 260, 580 140" />
+    </svg>
+  </div>
+
+  <div class="max-width">
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="nav-left">
+        <div class="nav-logo-circle"><span>+</span></div>
+        <div class="nav-brand-text">SYSTEMIC CINEMATIC</div>
+      </div>
+
+      <nav class="nav-center">
+        <a href="#">Home</a>
+        <a href="#">Overview</a>
+        <a href="#">Workflow</a>
+        <a href="#">Features</a>
+        <a href="#">Insights</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <div class="nav-right">
+        <button class="nav-ghost-btn">Sign in</button>
+        <button class="nav-primary-btn">Upload Data</button>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-kicker">AI-POWERED CAREER INTELLIGENCE</div>
+        <h1 class="hero-title">AI Career Guidance System</h1>
+        <p class="hero-subtitle">
+          SkillSensei analyzes real-world job data and your personal learning preferences to
+          recommend the right skills, build a focused learning roadmap, and evaluate your
+          progress through adaptive question–answer sessions.
+        </p>
+
+        <div class="hero-ctas">
+          <button class="hero-cta-primary">
+            Start Skill Assessment
+          </button>
+          <button class="hero-cta-secondary">
+            Watch Demo
+            <span class="arrow">→</span>
+          </button>
+        </div>
+
+        <div class="hero-meta">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="hero-meta-dot"></span>
+            <span>Real job data · SWE &amp; Data Analyst</span>
+          </div>
+          <span>LLM-driven recommendations · Prompt engineering</span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <!-- Curved connection lines -->
+        <div class="hero-orbit-line">
+          <svg viewBox="0 0 400 400" preserveAspectRatio="none">
+            <path d="M40 360 C 180 320, 260 260, 360 80" />
+            <path d="M20 330 C 170 280, 250 220, 360 60" />
+            <path d="M90 360 C 220 300, 300 240, 380 110" />
+          </svg>
+        </div>
+
+        <!-- Top main bubble -->
+        <div class="hero-bubble bubble-main-top">
+          <div class="hero-bubble-label">Module</div>
+          <div class="hero-bubble-title">Personalized<br>Skill Mapping</div>
+          <div class="hero-bubble-note">From live job data</div>
+        </div>
+
+        <!-- Bottom main bubble -->
+        <div class="hero-bubble bubble-main-bottom">
+          <div class="hero-bubble-label">Module</div>
+          <div class="hero-bubble-title">Adaptive<br>Skill Evaluation</div>
+          <div class="hero-bubble-note">Dynamic Q&amp;A loops</div>
+        </div>
+
+        <!-- Middle small bubble -->
+        <div class="hero-bubble small bubble-small-middle">
+          <div class="hero-bubble-label">Output</div>
+          <div class="hero-bubble-title">Learning<br>Path</div>
+        </div>
+
+        <!-- Bottom small bubble -->
+        <div class="hero-bubble small bubble-small-bottom">
+          <div class="hero-bubble-label">Insight</div>
+          <div class="hero-bubble-title">Career-fit<br>Score</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOWER SECTION WITH WAVE & SYSTEM WORKS -->
+    <div class="lower-wrapper">
+      <div class="wave-overlay"></div>
+
+      <section class="system-section">
+        <div class="system-heading">
+          <h2>How <span>&gt; System Works</span></h2>
+          <p>
+            Our AI pipeline combines prompt-engineered LLMs with real job postings to map your
+            goals, recommend essential skills, and generate a realistic learning plan that fits
+            your available time and preferred role.
+          </p>
+        </div>
+
+        <div class="system-steps">
+          <article class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-title">Profile &amp; Goal Intake</div>
+            <p class="step-text">
+              You share your background, preferred role (frontend, backend, data analyst, etc.),
+              and preparation time. The system builds a tailored persona for precise guidance.
+            </p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-title">Skill Recommendation Engine</div>
+            <p class="step-text">
+              Using curated job data and LLM reasoning, the agent selects only the most impactful
+              skills and tools for your target role, removing unnecessary or low-impact topics.
+            </p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-title">Learning Plan &amp; Evaluation</div>
+            <p class="step-text">
+              A month-by-month learning roadmap is generated with checkpoints. Adaptive
+              question–answer sessions then test your knowledge and update your readiness level.
+            </p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+</body>
+</html>

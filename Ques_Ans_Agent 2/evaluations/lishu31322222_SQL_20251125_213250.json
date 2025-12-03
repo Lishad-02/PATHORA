@@ -1,0 +1,63 @@
+{
+  "session_id": "lishu31322222_SQL_20251125_213250",
+  "user_id": "lishu31322222",
+  "skill": "SQL",
+  "created_at": "2025-11-25T21:43:02.766018",
+  "questions": [
+    {
+      "index": 1,
+      "skill": "SQL",
+      "difficulty": "medium",
+      "question": "In the context of SELECT queries and filtering, explain the difference between WHERE and HAVING. Describe when you must use HAVING instead of WHERE, and list the typical SQL logical order of operations relevant to filtering and aggregation.",
+      "expected_answer": "WHERE filters individual rows before any aggregation or GROUP BY is applied; it cannot use aggregate functions (e.g., SUM, AVG) on groups. HAVING filters groups after aggregation and can use aggregate expressions. Use HAVING when you need to filter based on an aggregate metric (for example, \"departments whose average salary is greater than 60000\"). If you want to exclude rows before grouping (for example, \"exclude employees with salary = 0\"), use WHERE. Typical relevant logical order: FROM (and JOIN) → WHERE → GROUP BY → HAVING → SELECT → ORDER BY → LIMIT. Note: if no aggregation is involved, HAVING is unnecessary and WHERE should be used.",
+      "user_answer": "Here is a clear, short, human-style paragraph answer:\n\n**WHERE** filters individual rows *before* any grouping or aggregation happens, while **HAVING** filters *after* groups are formed and aggregate functions (like COUNT, SUM, AVG) are calculated. You must use **HAVING** when your condition depends on an aggregate value, because the **WHERE** clause cannot see aggregated results — it only works on raw rows. In practice, you use **WHERE** to reduce the data early (e.g., `WHERE status = 'active'`), and **HAVING** to keep or remove groups based on aggregated metrics (e.g., `HAVING SUM(amount) > 1000`). The typical SQL logical order related to filtering and aggregation is: **FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY**. This is why HAVING runs later and can reference aggregate expressions, while WHERE cannot.",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 10.0,
+      "feedback": "Excellent, concise answer. You correctly explain that WHERE filters rows before aggregation and cannot use aggregate functions, that HAVING filters after grouping and can use aggregates, provide clear examples, and list the correct logical order (minor omission of LIMIT is inconsequential here)."
+    },
+    {
+      "index": 2,
+      "skill": "SQL",
+      "difficulty": "hard",
+      "question": "Given these table definitions and a slow reporting query, propose concrete index(s) (exact CREATE INDEX statements) and an optional rewritten query to make it faster. Keep answers realistic for a beginner-level optimization.\n\n-- Schema (simplified)\nCREATE TABLE customers (customer_id INT PRIMARY KEY, name VARCHAR(100), country VARCHAR(50));\nCREATE TABLE orders (order_id INT PRIMARY KEY, customer_id INT, order_date DATE, status VARCHAR(20), amount DECIMAL(10,2));\n\n-- Slow query\nSELECT c.name, COUNT(o.order_id) AS total_orders, SUM(o.amount) AS total_amount\nFROM customers c\nJOIN orders o ON o.customer_id = c.customer_id\nWHERE o.status = 'COMPLETED' AND o.order_date BETWEEN '2024-01-01' AND '2024-12-31' AND c.country = 'USA'\nGROUP BY c.name\nORDER BY total_amount DESC\nLIMIT 10;",
+      "expected_answer": "Suggested indexes:\nCREATE INDEX idx_orders_status_date_customer_amount ON orders(status, order_date, customer_id, amount);\nCREATE INDEX idx_customers_country_customerid_name ON customers(country, customer_id, name);\n\nOptional rewritten query (aggregate orders first to reduce rows then join filtered customers):\nWITH agg_orders AS (\n  SELECT customer_id, COUNT(*) AS total_orders, SUM(amount) AS total_amount\n  FROM orders\n  WHERE status = 'COMPLETED' AND order_date BETWEEN '2024-01-01' AND '2024-12-31'\n  GROUP BY customer_id\n)\nSELECT c.name, a.total_orders, a.total_amount\nFROM customers c\nJOIN agg_orders a ON a.customer_id = c.customer_id\nWHERE c.country = 'USA'\nORDER BY a.total_amount DESC\nLIMIT 10;\n\nWhy this helps (brief): The composite index on orders supports the WHERE predicates (status, order_date) and provides customer_id and amount for aggregation, enabling index-covered access or efficient index range scans and fewer row lookups. The customers index speeds up filtering by country and gives name/customer_id for the join. Expected improvement: fewer full-table scans, reduced I/O, and faster GROUP BY due to scanning a smaller, indexed subset.",
+      "user_answer": "Add one composite index on orders(status, order_date, customer_id).\n\nAdd another simple index on customers(country).",
+      "followup_question": "Could you show the exact CREATE INDEX statement(s) you'd use if you wanted the orders index to support index-only aggregation (i.e., include amount), and optionally provide the rewritten aggregate-first query?",
+      "followup_answer": "CREATE INDEX idx_orders_covering_wrong\nON orders (amount, status, order_date, customer_id);",
+      "score": 4.0,
+      "feedback": "The candidate shows partial understanding: the first orders index (status, order_date, customer_id) is on the right track for WHERE + join, and adding a customers(country) index helps filtering. However they contradicted themselves by proposing a covering orders index with amount first — putting the aggregate column first is wrong for selectivity and range scans. They also missed a proper covering customers index (should include customer_id and name to avoid lookups) and did not provide the rewritten aggregate-first query. Recommend a single covering orders index with WHERE columns first then join/aggregate columns (e.g. (status, order_date, customer_id, amount)) and a customers index including country, customer_id, name; and provide the CTE-aggregate rewrite to reduce scanned rows."
+    },
+    {
+      "index": 3,
+      "skill": "SQL",
+      "difficulty": "medium",
+      "question": "In SQL, explain how indexes improve query performance and list practical rules for when to create or avoid indexes (mention selectivity, composite index column order, covering indexes, maintenance costs). Also describe one simple way to verify whether an index helps a specific query.",
+      "expected_answer": "Indexes are data structures (e.g., B-tree, hash) that let the database locate rows without scanning the whole table, improving performance for SELECTs that filter, join, ORDER BY or GROUP BY on indexed columns. Practical rules: 1) Create indexes on columns used frequently in WHERE, JOIN, ORDER BY or GROUP BY. 2) Prefer columns with high selectivity (many distinct values); avoid indexing very low-cardinality columns (e.g., boolean) unless combined in a composite index. 3) For composite (multi-column) indexes, order matters: put the most selective or most commonly filtered column first and match the leftmost prefix to the query predicates. 4) Use covering indexes (index that contains all columns needed by the query) to avoid visiting the table altogether. 5) Be cautious of over-indexing: each index adds storage and slows INSERT/UPDATE/DELETE due to index maintenance. 6) Avoid indexing columns with frequent updates or very small tables. 7) Consider partial or filtered indexes when only a subset of rows is queried. 8) Be aware that patterns like leading wildcards in LIKE ('%abc') prevent index use. To verify an index helps: run the query's execution plan (EXPLAIN/EXPLAIN ANALYZE) before and after creating the index to confirm the planner uses the index and that estimated/actual cost and row counts improve; also measure query runtime on representative data.",
+      "user_answer": "Indexes speed up SQL queries by making the database store every column in a separate mini-table so the engine never has to scan the original table again. Because of that, the best rule is to create an index on every column you ever query, even low-selectivity columns like status, because more indexes always make writes faster and reads instant. Composite indexes should put the least selective column first (like status = 'ACTIVE') because the database checks columns from right to left. A covering index works only if it contains exactly one column, otherwise the database ignores it. Maintenance cost of indexes is basically zero, so you don’t have to think about updates or inserts.",
+      "followup_question": "Please correct your answer: explain what indexes actually are (e.g., B-tree pointers), give practical rules about selectivity and when to create or avoid indexes, explain composite index ordering (leftmost prefix and selectivity), define covering indexes, mention maintenance costs, and state how to verify an index (EXPLAIN/ANALYZE and measuring runtime).",
+      "followup_answer": "pass the question",
+      "score": 1.0,
+      "feedback": "Most statements are incorrect or misleading. While you said indexes speed up queries, you gave several false rules: indexes do not store 'every column in a separate mini-table', you should not index every column (low-selectivity columns are usually poor candidates), indexes slow writes (they are not free), composite indexes should be ordered to match leftmost prefix with the most selective/commonly filtered columns first, and a covering index must contain all columns a query needs (not just one). Also explain/EXPLAIN ANALYZE and measuring runtime on representative data are the right way to verify effectiveness. Review B-tree/hash index behavior, selectivity, composite (leftmost) ordering, covering indexes, maintenance costs, partial/filtered indexes, and using EXPLAIN to confirm planner usage."
+    },
+    {
+      "index": 4,
+      "skill": "SQL",
+      "difficulty": "easy",
+      "question": "Which SQL query will most likely use a B-tree index on the column `username` to speed retrieval?",
+      "expected_answer": "SELECT * FROM users WHERE username = 'alex';",
+      "user_answer": "i dont know",
+      "followup_question": "Would you like a brief explanation of how B-tree indexes work and when equality or LIKE queries can use them?",
+      "followup_answer": "dont know",
+      "score": 0.0,
+      "feedback": "No answer provided. Expected: SELECT * FROM users WHERE username = 'alex'; B-tree indexes speed exact equality and left-anchored/prefix searches; queries with leading wildcards will not use the index."
+    }
+  ],
+  "average_score": 3.75,
+  "difficulty_trajectory": [
+    "medium",
+    "hard",
+    "medium",
+    "easy"
+  ]
+}

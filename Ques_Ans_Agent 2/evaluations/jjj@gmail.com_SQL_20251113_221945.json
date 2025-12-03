@@ -1,0 +1,50 @@
+{
+  "session_id": "jjj@gmail.com_SQL_20251113_221945",
+  "user_id": "jjj@gmail.com",
+  "skill": "SQL",
+  "created_at": "2025-11-13T22:27:35.679828",
+  "questions": [
+    {
+      "index": 1,
+      "skill": "SQL",
+      "difficulty": "medium",
+      "question": "Given two tables: `Orders` (OrderID, CustomerID, OrderDate, TotalAmount) and `Customers` (CustomerID, CustomerName, City). Write a SQL query to retrieve the `CustomerName` and the `TotalOrders` count for all customers who have placed more than 3 orders. Order the results by `TotalOrders` in descending order.",
+      "expected_answer": "```sql\nSELECT\n    c.CustomerName,\n    COUNT(o.OrderID) AS TotalOrders\nFROM\n    Customers c\nJOIN\n    Orders o ON c.CustomerID = o.CustomerID\nGROUP BY\n    c.CustomerID, c.CustomerName\nHAVING\n    COUNT(o.OrderID) > 3\nORDER BY\n    TotalOrders DESC;\n```",
+      "user_answer": "SELECT\n    C.CustomerName,\n    COUNT(O.OrderID) AS TotalOrders\nFROM\n    Customers C\nJOIN\n    Orders O ON C.CustomerID = O.CustomerID\nGROUP BY\n    C.CustomerName\nHAVING\n    COUNT(O.OrderID) > 3\nORDER BY\n    TotalOrders DESC;",
+      "followup_question": "Why might grouping by CustomerName alone be problematic, and how would you modify the query to ensure you count orders per distinct customer even if multiple customers share the same name?",
+      "followup_answer": "Grouping solely by CustomerName is problematic because multiple distinct customers might share the same name (e.g., two people named \"John Smith\"). This would incorrectly aggregate the orders of all people with that name under a single count.",
+      "score": 9.0,
+      "feedback": "Mostly correct — the query uses JOIN, COUNT, HAVING and ORDER BY appropriately. The only issue is grouping by CustomerName alone, which can merge distinct customers who share a name; you correctly identified this in the follow-up. To fully fix, GROUP BY C.CustomerID, C.CustomerName (or include CustomerID in the select) as in the ideal answer."
+    },
+    {
+      "index": 2,
+      "skill": "SQL",
+      "difficulty": "hard",
+      "question": "Given a table `transactions` with columns `user_id` (INT) and `transaction_date` (DATE), write a SQL query to find, for each user, the longest consecutive streak of days they made at least one transaction. If a user has no transactions, they should not appear in the result.",
+      "expected_answer": "```sql\nWITH UserDailyTransactions AS (\n    SELECT DISTINCT\n        user_id,\n        transaction_date\n    FROM\n        transactions\n),\nStreaks AS (\n    SELECT\n        user_id,\n        transaction_date,\n        DATE_SUB(transaction_date, INTERVAL ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY transaction_date) DAY) AS streak_group\n    FROM\n        UserDailyTransactions\n),\nStreakLengths AS (\n    SELECT\n        user_id,\n        streak_group,\n        COUNT(transaction_date) AS current_streak_length\n    FROM\n        Streaks\n    GROUP BY\n        user_id,\n        streak_group\n)\nSELECT\n    user_id,\n    MAX(current_streak_length) AS longest_streak\nFROM\n    StreakLengths\nGROUP BY\n    user_id\nORDER BY\n    user_id;\n```",
+      "user_answer": "WITH RankedDates AS (\n    -- 1. Assign a sequential row number for each distinct transaction date per user\n    SELECT DISTINCT\n        user_id,\n        transaction_date,\n        ROW_NUMBER() OVER(PARTITION BY user_id ORDER BY transaction_date) AS rn\n    FROM \n        transactions\n),\nStreakGroups AS (\n    -- 2. Group consecutive days (where date - rn is constant) and count the streak length\n    SELECT\n        user_id,\n        COUNT(*) AS StreakLength\n    FROM\n        RankedDates\n    GROUP BY\n        user_id,\n        (transaction_date - rn) -- Creates a stable group ID for consecutive dates\n)\n-- 3. Find the maximum length among all streaks for each user\nSELECT\n    user_id,\n    MAX(StreakLength) AS LongestStreak\nFROM\n    StreakGroups\nGROUP BY\n    user_id\nORDER BY\n    LongestStreak DESC;",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 10.0,
+      "feedback": "Correct solution: you identify the gaps-and-islands pattern, deduplicate dates, use ROW_NUMBER() and date arithmetic to form streak groups, then aggregate to get each user's longest streak. The only minor note is a portability/detail: some SQL dialects require DATE_SUB or INTERVAL syntax instead of directly subtracting an integer from a DATE."
+    },
+    {
+      "index": 3,
+      "skill": "SQL",
+      "difficulty": "hard",
+      "question": "Briefly explain the core idea of 'SQL'.",
+      "expected_answer": "A basic but correct explanation of SQL.",
+      "user_answer": "SQL, or Structured Query Language, is the core language used to manage and manipulate NoSQL databases. It's a procedural language that tells the database exactly how to process data through functions and loops. Its main purpose is defining the logical structure of JSON and XML documents and ensuring eventual consistency in distributed systems.",
+      "followup_question": "Briefly define what SQL is and explain whether it is declarative or procedural, and how it relates to relational versus NoSQL databases.",
+      "followup_answer": "SQL, or Standard Query Language, is the core language used to manage and manipulate NoSQL databases. It's a procedural language that tells the database exactly how to process data through functions and loops. Its main purpose is defining the logical structure of JSON and XML documents and ensuring eventual consistency in distributed systems.",
+      "score": 1.0,
+      "feedback": "Incorrect. SQL is Structured Query Language (declarative), used to query and manipulate relational databases (tables) with statements like SELECT/INSERT/UPDATE/DELETE and DDL — not a procedural language for NoSQL, nor primarily for defining JSON/XML or ensuring eventual consistency."
+    }
+  ],
+  "average_score": 6.666666666666667,
+  "difficulty_trajectory": [
+    "medium",
+    "hard",
+    "hard"
+  ]
+}

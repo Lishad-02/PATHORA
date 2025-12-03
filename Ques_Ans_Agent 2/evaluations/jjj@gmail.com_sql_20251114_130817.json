@@ -1,0 +1,63 @@
+{
+  "session_id": "jjj@gmail.com_sql_20251114_130817",
+  "user_id": "jjj@gmail.com",
+  "skill": "sql",
+  "created_at": "2025-11-14T13:16:00.896789",
+  "questions": [
+    {
+      "index": 1,
+      "skill": "sql",
+      "difficulty": "medium",
+      "question": "Given two tables, `Orders` (order_id INT, customer_id INT, order_date DATE, total_amount DECIMAL) and `Customers` (customer_id INT, customer_name VARCHAR, region VARCHAR), write a SQL query to find the names of customers who have placed more than 5 orders, along with their average order amount. Order the results by average order amount in descending order.",
+      "expected_answer": "```sql\nSELECT\n    c.customer_name,\n    AVG(o.total_amount) AS average_order_amount\nFROM\n    Customers c\nJOIN\n    Orders o ON c.customer_id = o.customer_id\nGROUP BY\n    c.customer_id, c.customer_name\nHAVING\n    COUNT(o.order_id) > 5\nORDER BY\n    average_order_amount DESC;\n```",
+      "user_answer": "SELECT\n    C.customer_name,\n    AVG(O.total_amount) AS average_order_amount\nFROM\n    Customers C\nJOIN\n    Orders O ON C.customer_id = O.customer_id\nGROUP BY\n    C.customer_id, C.customer_name\nHAVING\n    COUNT(O.order_id) > 5\nORDER BY\n    average_order_amount DESC;",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 10.0,
+      "feedback": "Correct and complete SQL. The query uses JOIN, GROUP BY, AVG, COUNT, HAVING, and ORDER BY correctly, with appropriate aliases and syntax matching the expected solution. It will return customer names with more than 5 orders ordered by average order amount descending."
+    },
+    {
+      "index": 2,
+      "skill": "sql",
+      "difficulty": "hard",
+      "question": "Briefly explain the core idea of 'sql'.",
+      "expected_answer": "A basic but correct explanation of sql.",
+      "user_answer": "SQL, or Structured Query Language, is the core language used to manage and manipulate NoSQL databases. It's a procedural language that tells the database exactly how to process data through functions and loops.",
+      "followup_question": "Which type of databases is SQL primarily used with, and is SQL declarative or procedural? Briefly explain the difference.",
+      "followup_answer": "Declarative: You specify what data you want (the desired result set) without defining how to retrieve it. The database engine handles the procedural steps (like indexing, joining, and ordering) for efficient execution.\n\nProcedural: You specify how to achieve a result by defining a sequence of steps or logic (common in languages like Python or Java).",
+      "score": 3.0,
+      "feedback": "Mixed response: the follow-up correctly identifies SQL as a declarative language (you state what you want and the engine decides how to get it), but the main answer contains significant errors — SQL is for relational databases (not \"NoSQL\"), and is not inherently procedural with functions/loops (procedural extensions like PL/SQL exist). Overall shows partial understanding but important misconceptions."
+    },
+    {
+      "index": 3,
+      "skill": "sql",
+      "difficulty": "medium",
+      "question": "Given two tables, `orders` (columns: `order_id`, `customer_id`, `order_date`, `total_amount`) and `customers` (columns: `customer_id`, `customer_name`, `region`), write a SQL query to find the total sales amount for each `region` for orders placed in the last 90 days. The result should display the `region` and its corresponding `total_sales`.",
+      "expected_answer": "```sql\nSELECT\n    c.region,\n    SUM(o.total_amount) AS total_sales\nFROM\n    orders o\nJOIN\n    customers c ON o.customer_id = c.customer_id\nWHERE\n    o.order_date >= DATE('now', '-90 days') -- Syntax may vary by SQL dialect (e.g., GETDATE() - 90, CURRENT_DATE - INTERVAL '90 days')\nGROUP BY\n    c.region\nORDER BY\n    total_sales DESC;\n```",
+      "user_answer": "SELECT\n    C.region,\n    SUM(O.total_amount) AS total_sales\nFROM\n    orders O\nJOIN\n    customers C ON O.customer_id = C.customer_id\nWHERE\n    O.order_date >= DATE('now', '-90 days') -- For SQLite, use a database-specific date function\n    -- For PostgreSQL: O.order_date >= CURRENT_DATE - INTERVAL '90 days'\n    -- For SQL Server: O.order_date >= DATEADD(day, -90, GETDATE())\n    -- For MySQL: O.order_date >= DATE_SUB(CURDATE(), INTERVAL 90 DAY)\nGROUP BY\n    C.region\nORDER BY\n    total_sales DESC;",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 10.0,
+      "feedback": "Correct and complete: the query properly joins orders to customers, filters orders in the last 90 days (with appropriate dialect notes), aggregates with SUM(), groups by region, and orders results. The dialect-specific comments are helpful and show awareness of cross-DB differences."
+    },
+    {
+      "index": 4,
+      "skill": "sql",
+      "difficulty": "hard",
+      "question": "Briefly explain the core idea of 'sql'.",
+      "expected_answer": "A basic but correct explanation of sql.",
+      "user_answer": "dont know",
+      "followup_question": "Can you briefly explain what SQL is used for and provide a simple example SELECT query showing how to retrieve data from a table?",
+      "followup_answer": "pass the ques",
+      "score": 0.0,
+      "feedback": "No explanation provided. Candidate did not attempt to describe SQL; insufficient knowledge/did not engage. Recommend reviewing SQL basics (purpose, relational model, declarative queries/CRUD) and re-evaluating."
+    }
+  ],
+  "average_score": 5.75,
+  "difficulty_trajectory": [
+    "medium",
+    "hard",
+    "medium",
+    "hard"
+  ]
+}
