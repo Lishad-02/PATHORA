@@ -1,0 +1,196 @@
+{
+    "core_skills": {
+        "fundamentals": [
+            {
+                "name": "JavaScript",
+                "reason": "Highest market frequency for backend (Node.js) and essential for full-stack roles; core language to build backend services."
+            },
+            {
+                "name": "TypeScript",
+                "reason": "Adds type-safety to JavaScript, increases code quality and employability for backend roles using Node.js."
+            },
+            {
+                "name": "OOP (Object-Oriented Programming)",
+                "reason": "Fundamental programming paradigm to structure backend code and reason about system design."
+            },
+            {
+                "name": "Data Structures",
+                "reason": "Essential for writing efficient code and understanding performance characteristics of backend logic."
+            },
+            {
+                "name": "Algorithms",
+                "reason": "Needed for problem solving, technical interviews and building performant features."
+            },
+            {
+                "name": "SQL",
+                "reason": "Core skill for interacting with relational databases used in most backend jobs."
+            }
+        ],
+        "frameworks_and_runtime": [
+            {
+                "name": "Node.js",
+                "reason": "Primary runtime to build JavaScript backend services; large job market and quick to get production-ready."
+            },
+            {
+                "name": "Express.js",
+                "reason": "Lightweight, widely used Node.js framework to build RESTful APIs quickly and commonly expected by employers."
+            },
+            {
+                "name": "RESTful API design",
+                "reason": "Primary API paradigm employers expect; fundamental for backend/frontend integration."
+            }
+        ],
+        "databases": [
+            {
+                "name": "MySQL",
+                "reason": "High market frequency and a common relational database to demonstrate SQL skills in production apps."
+            },
+            {
+                "name": "PostgreSQL",
+                "reason": "Highly relevant relational DB with advanced features; keep as alternative/secondary RDBMS (helps employability)."
+            },
+            {
+                "name": "MongoDB",
+                "reason": "Popular NoSQL option for document models; useful as a complementary skill for certain projects."
+            },
+            {
+                "name": "Redis",
+                "reason": "In-memory store used for caching and sessions; useful for performance improvements and interview topics."
+            },
+            {
+                "name": "Database Design",
+                "reason": "Important conceptual skill (normalization, indexing, transactions) required regardless of chosen DB engine."
+            }
+        ],
+        "version_control_and_ci_cd": [
+            {
+                "name": "CI/CD (concepts) + GitHub Actions",
+                "reason": "Automated testing/build/deploy pipelines are expected in modern teams; GitHub Actions is accessible to set up."
+            }
+        ]
+    },
+    "supporting_skills": {
+        "testing_and_debugging": [
+            {
+                "name": "Unit Testing",
+                "reason": "Ensures code quality and is frequently required in job tasks and interviews; frameworks like Jest or Mocha for Node.js."
+            },
+            {
+                "name": "Integration Testing",
+                "reason": "Verifies interactions across components (APIs + DB) and shows maturity in real-world apps."
+            },
+            {
+                "name": "Debugging",
+                "reason": "Practical skill for diagnosing issues locally and in production; essential for day-to-day engineering."
+            }
+        ],
+        "api_and_networking": [
+            {
+                "name": "API Testing (Postman / curl)",
+                "reason": "Practical tools to test and document APIs; expected in development and debugging workflows."
+            },
+            {
+                "name": "JWT (JSON Web Tokens)",
+                "reason": "Common authentication method for stateless APIs; important to implement secure auth flows."
+            },
+            {
+                "name": "OAuth2 (basic concepts)",
+                "reason": "Widely used delegated authorization standard; know basics for integrations (login with Google, etc.)."
+            }
+        ],
+        "deployment_and_cloud": [
+            {
+                "name": "Docker",
+                "reason": "Containerization for consistent deployments and local development parity; widely expected by employers."
+            },
+            {
+                "name": "AWS (core services: EC2, S3, RDS, IAM)",
+                "reason": "Major cloud provider; understanding basic deployment and managed services is essential for backend roles."
+            },
+            {
+                "name": "Linux (command-line basics)",
+                "reason": "Server OS where backend code runs; know file system, processes, logs and basic networking."
+            }
+        ]
+    },
+    "advanced_skills": {
+        "architecture_and_design": [
+            {
+                "name": "SOLID Principles",
+                "reason": "Design principles that improve maintainability and are commonly referenced in interviews and code reviews."
+            },
+            {
+                "name": "Design Patterns",
+                "reason": "Reusable solutions for common problems; helpful for architecture discussions and code quality."
+            },
+            {
+                "name": "Microservices (concepts)",
+                "reason": "Understand when and why to split services; basic pros/cons and inter-service communication patterns are valuable."
+            },
+            {
+                "name": "CLEAN Architecture / MVC",
+                "reason": "Architectural patterns that support testability and separation of concerns; keep as guiding principles."
+            }
+        ],
+        "data_and_ai_integration": [
+            {
+                "name": "LLM / AI-awareness",
+                "reason": "Familiarity with integrating LLM APIs (prompting, latency, safety) is increasingly useful but not core—retain as awareness/mini-project work."
+            }
+        ],
+        "security_and_scalability": [
+            {
+                "name": "Authentication & Authorization best practices",
+                "reason": "Critical for building secure backends (password storage, JWT, OAuth flows, role checks)."
+            },
+            {
+                "name": "Caching and performance (Redis, query optimization)",
+                "reason": "Essential for building scalable, responsive systems and often asked about in interviews."
+            },
+            {
+                "name": "Performance Optimization",
+                "reason": "Understanding bottlenecks and how to measure and optimize is important for production systems."
+            }
+        ]
+    },
+    "professional_skills": {
+        "communication": [
+            {
+                "name": "Technical Documentation",
+                "reason": "Writing clear README, API docs, and design notes is essential for team handoff and hiring visibility."
+            },
+            {
+                "name": "Code Review etiquette",
+                "reason": "Crucial for collaborating in teams, improving code quality, and demonstrating professionalism."
+            },
+            {
+                "name": "Effective verbal communication",
+                "reason": "Explaining design decisions, blockers, and trade-offs during interviews and team meetings is required."
+            }
+        ],
+        "project_management": [
+            {
+                "name": "Agile / Scrum basics",
+                "reason": "Most teams use Agile practices; knowing sprints, standups and user stories eases team onboarding."
+            },
+            {
+                "name": "Jira (or ticketing tools)",
+                "reason": "Familiarity with an issue tracker is practical for day-to-day workflows."
+            },
+            {
+                "name": "SDLC (Software Development Life Cycle)",
+                "reason": "Understanding stages from requirements to production helps with planning and delivery, but is covered through practice."
+            }
+        ],
+        "problem_solving": [
+            {
+                "name": "Algorithmic problem solving (interview prep)",
+                "reason": "Necessary to clear technical interviews—practice with coding problems and system troubleshooting."
+            },
+            {
+                "name": "Debugging mindset & incident response",
+                "reason": "Being able to triage, reproduce and fix production issues quickly is highly valued."
+            }
+        ]
+    }
+}

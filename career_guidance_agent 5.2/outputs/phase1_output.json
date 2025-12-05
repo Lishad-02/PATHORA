@@ -1,0 +1,308 @@
+{
+    "core_skills": [
+        {
+            "name": "JavaScript",
+            "reason": "High frequency (34) and essential for Node.js backend development, a popular choice in the market."
+        },
+        {
+            "name": "Python",
+            "reason": "High frequency (20) and widely used for backend development with frameworks like Django and Flask."
+        },
+        {
+            "name": "PHP",
+            "reason": "High frequency (17) and a dominant language for web backend development, especially with Laravel."
+        },
+        {
+            "name": "Java",
+            "reason": "High frequency (17) and a robust choice for enterprise-level backend systems, often with Spring Boot."
+        },
+        {
+            "name": "C#",
+            "reason": "High frequency (13) and crucial for backend development using the .Net Core framework."
+        },
+        {
+            "name": ".Net Core",
+            "reason": "Highest frequency backend framework (33), indicating strong market demand for C# backend roles."
+        },
+        {
+            "name": "Laravel",
+            "reason": "High frequency backend framework (18), essential for PHP backend roles."
+        },
+        {
+            "name": "Node.js",
+            "reason": "High frequency runtime (13) for JavaScript backend development, often paired with Express.js."
+        },
+        {
+            "name": "Spring Boot",
+            "reason": "Medium frequency (5) but a leading framework for Java backend development, making it a core skill."
+        },
+        {
+            "name": "Django",
+            "reason": "Medium frequency (4) but a prominent framework for Python backend development, making it a core skill."
+        },
+        {
+            "name": "RESTful API",
+            "reason": "Highest frequency API design paradigm (32), fundamental for building web services and backend communication."
+        },
+        {
+            "name": "JSON",
+            "reason": "Fundamental data interchange format (2) for modern web APIs, essential for backend communication, despite lower explicit frequency."
+        },
+        {
+            "name": "MySQL",
+            "reason": "Highest frequency relational database (40), a cornerstone for many backend applications."
+        },
+        {
+            "name": "PostgreSQL",
+            "reason": "High frequency relational database (15), known for its robustness and advanced features."
+        },
+        {
+            "name": "SQL",
+            "reason": "Fundamental language (7) for interacting with relational databases, a must-have for backend developers."
+        },
+        {
+            "name": "MSSQL",
+            "reason": "High combined frequency (7+7+3=17 for MSSQL, SQL Server, MS SQL) for Microsoft's relational database, common in enterprise environments."
+        },
+        {
+            "name": "Database Design",
+            "reason": "Fundamental concept (2) for creating efficient and scalable backend data storage solutions, crucial for any backend role."
+        },
+        {
+            "name": "Git",
+            "reason": "Highest frequency skill overall (41), absolutely essential for version control in any software engineering role."
+        },
+        {
+            "name": "Github",
+            "reason": "High frequency platform (10) for hosting Git repositories and collaborating on projects."
+        },
+        {
+            "name": "AWS",
+            "reason": "High frequency cloud provider (22), essential for deploying and managing backend services in the cloud."
+        },
+        {
+            "name": "Azure",
+            "reason": "High frequency cloud provider (13), another major platform for cloud-based backend infrastructure."
+        },
+        {
+            "name": "GCP",
+            "reason": "High frequency cloud provider (12), completing the trio of major cloud platforms for backend deployment."
+        },
+        {
+            "name": "Docker",
+            "reason": "High frequency containerization tool (14), crucial for modern, portable, and scalable backend deployments."
+        },
+        {
+            "name": "CI/CD",
+            "reason": "High frequency practice (15) for automating the software delivery pipeline, essential for efficient backend development."
+        },
+        {
+            "name": "Linux",
+            "reason": "Essential operating system (4) for server environments where backend applications are typically deployed, despite lower explicit frequency."
+        },
+        {
+            "name": "OOP",
+            "reason": "High frequency (16) and a fundamental programming paradigm for structuring backend code."
+        },
+        {
+            "name": "Problem Solving",
+            "reason": "Fundamental skill (3) for any software engineer, crucial for tackling complex backend challenges, despite lower explicit frequency."
+        },
+        {
+            "name": "Algorithms",
+            "reason": "Fundamental computer science concept (2) for optimizing backend logic and performance, despite lower explicit frequency."
+        },
+        {
+            "name": "Data Structures",
+            "reason": "Fundamental computer science concept (2) for efficient data handling in backend systems, despite lower explicit frequency."
+        },
+        {
+            "name": "Agile",
+            "reason": "High frequency methodology (10) for software development, widely adopted in backend teams."
+        },
+        {
+            "name": "Unit Testing",
+            "reason": "Essential testing practice (8) for ensuring the quality and reliability of backend code."
+        },
+        {
+            "name": "Debugging",
+            "reason": "Essential skill (5) for identifying and resolving issues in backend applications."
+        },
+        {
+            "name": "SOLID",
+            "reason": "Important design principles (5) for creating maintainable and scalable backend software."
+        },
+        {
+            "name": "Design Patterns",
+            "reason": "Fundamental concept (3) for building robust and reusable backend architectures, despite lower explicit frequency."
+        }
+    ],
+    "optional_skills": [
+        {
+            "name": "TypeScript",
+            "reason": "High frequency (12) and provides type safety for JavaScript backends, enhancing code quality and maintainability."
+        },
+        {
+            "name": "Kotlin",
+            "reason": "Medium frequency (5) and a modern language gaining traction for backend development, especially with Spring Boot."
+        },
+        {
+            "name": "Express.js",
+            "reason": "Lower frequency (2) but a very common and lightweight framework for Node.js backend development."
+        },
+        {
+            "name": "Hibernate",
+            "reason": "Lower frequency (2) but a popular Object-Relational Mapping (ORM) framework for Java, often used with Spring Boot."
+        },
+        {
+            "name": "JPA",
+            "reason": "Lower frequency (2) but the Java Persistence API, a standard for ORM in Java applications."
+        },
+        {
+            "name": "Entity Framework",
+            "reason": "Lower frequency (2) but the primary ORM for .Net Core applications."
+        },
+        {
+            "name": "CodeIgniter",
+            "reason": "Lower frequency (2) but a lightweight PHP framework, still used in some projects."
+        },
+        {
+            "name": "Ruby on Rails",
+            "reason": "Lower frequency (2) but a full-stack framework for Ruby, known for its convention over configuration."
+        },
+        {
+            "name": "GraphQL",
+            "reason": "Medium frequency (6) and a modern alternative to REST for API design, offering more flexible data fetching."
+        },
+        {
+            "name": "Postman",
+            "reason": "Medium frequency (5) and a widely used tool for testing and developing APIs."
+        },
+        {
+            "name": "JWT",
+            "reason": "Lower frequency (3) but a common standard for secure authentication in web applications."
+        },
+        {
+            "name": "OAuth2",
+            "reason": "Lower frequency (2) but a widely used authorization framework for secure access to resources."
+        },
+        {
+            "name": "SOAP",
+            "reason": "Lower frequency (2) but an older API standard still found in enterprise and legacy systems."
+        },
+        {
+            "name": "Payment Gateways",
+            "reason": "Lower frequency (2) but a specific integration skill crucial for e-commerce and financial backend systems."
+        },
+        {
+            "name": "MongoDB",
+            "reason": "High frequency NoSQL database (11), offering flexibility for certain data models, complementary to relational databases."
+        },
+        {
+            "name": "Redis",
+            "reason": "Lower frequency (2) but a popular in-memory data store used for caching, session management, and real-time features."
+        },
+        {
+            "name": "Oracle",
+            "reason": "Medium frequency (6) and an enterprise-grade relational database, common in large organizations."
+        },
+        {
+            "name": "Stored Procedures",
+            "reason": "Lower frequency (3) but useful for encapsulating database logic and improving performance."
+        },
+        {
+            "name": "Kubernetes",
+            "reason": "Medium frequency (7) and a powerful container orchestration tool, valuable for managing large-scale backend deployments."
+        },
+        {
+            "name": "Firebase",
+            "reason": "Medium frequency (5) and a Backend-as-a-Service platform, often used for rapid development and mobile backends."
+        },
+        {
+            "name": "Terraform",
+            "reason": "Lower frequency (2) but an Infrastructure as Code (IaC) tool, valuable for automating cloud resource provisioning."
+        },
+        {
+            "name": "Jenkins",
+            "reason": "Medium frequency (8) and a popular open-source automation server for CI/CD pipelines."
+        },
+        {
+            "name": "GitLab CI",
+            "reason": "Lower frequency (2) but an integrated CI/CD solution within GitLab, useful for teams using GitLab."
+        },
+        {
+            "name": "SSH",
+            "reason": "Lower frequency (1) but essential for secure remote access to backend servers."
+        },
+        {
+            "name": "Microservices",
+            "reason": "Medium frequency (5) and a modern architectural style for building scalable and independently deployable backend services."
+        },
+        {
+            "name": "MVC",
+            "reason": "Medium frequency (9) and a common architectural pattern for structuring web applications."
+        },
+        {
+            "name": "CLEAN Architecture",
+            "reason": "Lower frequency (4) but a valuable architectural approach for building maintainable and testable backend systems."
+        },
+        {
+            "name": "DevOps",
+            "reason": "Lower frequency (3) but an important set of practices for improving collaboration and automation in software delivery."
+        },
+        {
+            "name": "Ansible",
+            "reason": "Lower frequency (3) but a popular automation engine for configuration management and application deployment."
+        },
+        {
+            "name": "Azure DevOps",
+            "reason": "Lower frequency (2) but Microsoft's platform for DevOps practices, useful for Azure-centric environments."
+        },
+        {
+            "name": "Performance Optimization",
+            "reason": "Lower frequency (3) but a crucial skill for building efficient and scalable backend systems."
+        },
+        {
+            "name": "Code Review",
+            "reason": "Lower frequency (3) but an essential practice for maintaining code quality and sharing knowledge within a team."
+        },
+        {
+            "name": "Technical Documentation",
+            "reason": "Lower frequency (3) but important for clarity, maintainability, and onboarding in backend projects."
+        },
+        {
+            "name": "API Testing",
+            "reason": "Lower frequency (2) but crucial for ensuring the correctness and reliability of backend APIs."
+        },
+        {
+            "name": "Integration Testing",
+            "reason": "Lower frequency (2) but important for verifying interactions between different backend components or services."
+        },
+        {
+            "name": "Performance Testing",
+            "reason": "Lower frequency (2) but essential for evaluating the responsiveness and stability of backend systems under load."
+        },
+        {
+            "name": "Jira",
+            "reason": "Medium frequency (7) and a widely used tool for project management and issue tracking in software development."
+        },
+        {
+            "name": "SDLC",
+            "reason": "Medium frequency (5) and understanding the Software Development Life Cycle is key for structured development."
+        },
+        {
+            "name": "Scrum",
+            "reason": "Medium frequency (4) and a popular Agile framework for managing complex software projects."
+        }
+    ],
+    "emerging_skills": [
+        {
+            "name": "LLM",
+            "reason": "Lower frequency (3) but represents an emerging and rapidly growing area in AI, with increasing backend integration needs for serving and interacting with large language models."
+        },
+        {
+            "name": "Web3",
+            "reason": "Lower frequency (2) but represents an emerging paradigm for decentralized applications, potentially opening new backend opportunities in blockchain and DApp development."
+        }
+    ]
+}

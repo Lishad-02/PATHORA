@@ -1,0 +1,394 @@
+{
+    "overview": "12-month, full-coverage backend-focused software engineer roadmap (5 hours/day). Starts with JavaScript fundamentals and builds through TypeScript, data structures & algorithms, Node.js/Express, databases, testing, deployment, security, performance and architecture. Includes 3 progressive projects (starter API, full-stack service, capstone microservices+AI), ongoing interview prep and soft-skill development. Monthly load ~150 hours (≈5h/day).",
+    "plan": [
+        {
+            "month": 1,
+            "theme": "JavaScript fundamentals & environment setup",
+            "skills_focus": [
+                "JavaScript",
+                "Linux (command-line basics)",
+                "Code Review etiquette"
+            ],
+            "topics": [
+                "Variables, data types, operators",
+                "Control flow (conditionals, loops)",
+                "Functions, scope, closures",
+                "File system navigation and basic commands (cd, ls, pwd)",
+                "Git basics and branching workflow"
+            ],
+            "estimated_hours": 150,
+            "objectives": [
+                "Write clean JavaScript programs and small scripts",
+                "Use Git (commit, branch, merge) and work in terminal",
+                "Understand closure and scope confidently"
+            ],
+            "projects": [
+                "Set up dev environment and a personal GitHub repo; implement 5 small JS utilities (CLI scripts or algorithms) documented in README"
+            ],
+            "resources": [
+                "MDN JavaScript guide",
+                "You Don't Know JS (book) or equivalent",
+                "Pro Git book / Git official docs",
+                "Linux command-line tutorials (e.g., linuxjourney.com)"
+            ]
+        },
+        {
+            "month": 2,
+            "theme": "JS advanced features + TypeScript intro + OOP basics",
+            "skills_focus": [
+                "JavaScript (ES6+ features)",
+                "TypeScript (basics)",
+                "OOP (Object-Oriented Programming)"
+            ],
+            "topics": [
+                "Arrays, objects, ES6+ (let/const, arrow functions, destructuring, modules)",
+                "Classes, objects, instances",
+                "Inheritance, encapsulation, basic design principles",
+                "TypeScript: basic types, interfaces, type aliases, tsconfig setup"
+            ],
+            "estimated_hours": 150,
+            "objectives": [
+                "Use modern JS features idiomatically",
+                "Model code with classes and OOP concepts",
+                "Gradually convert JS modules to TypeScript and catch type errors"
+            ],
+            "projects": [
+                "Convert earlier utilities to TypeScript, add type definitions and unit tests (small functions)"
+            ],
+            "resources": [
+                "TypeScript official handbook",
+                "ES6+ overview (MDN)",
+                "OOP tutorials in JS/TS (articles, short courses)"
+            ]
+        },
+        {
+            "month": 3,
+            "theme": "Data Structures & core algorithms (practical)",
+            "skills_focus": [
+                "Data Structures",
+                "Algorithms (intro)",
+                "Debugging"
+            ],
+            "topics": [
+                "Arrays, Linked Lists, Stacks, Queues, Hash Maps/Tables",
+                "Time and space complexity (Big O)",
+                "Sorting and searching basics (bubble, merge, quick, binary search)",
+                "Debugging techniques and using console/VS Code debugger"
+            ],
+            "estimated_hours": 150,
+            "objectives": [
+                "Implement core data structures and analyze algorithm complexity",
+                "Debug JS/Node apps using breakpoints and logs",
+                "Solve basic algorithmic problems using learned DS"
+            ],
+            "projects": [
+                "Project 1 (start): Build a small REST API skeleton that exposes endpoints to practice data operations (CRUD) and integrates with in-memory data structures"
+            ],
+            "resources": [
+                "Grokking Algorithms (book) or equivalent",
+                "LeetCode/Educative practice for DS basics",
+                "VS Code debugging docs"
+            ]
+        },
+        {
+            "month": 4,
+            "theme": "Algorithms deepening + TypeScript & unit testing",
+            "skills_focus": [
+                "Algorithms (recursion, DP, graph traversal)",
+                "TypeScript (advanced types)",
+                "Unit Testing",
+                "Debugging"
+            ],
+            "topics": [
+                "Recursion, iteration patterns",
+                "Graph traversal (BFS, DFS)",
+                "Basic dynamic programming",
+                "TypeScript: generics, unions/intersections, type guards",
+                "Unit testing with Jest/Mocha, mocks and test-driven concepts"
+            ],
+            "estimated_hours": 150,
+            "objectives": [
+                "Solve medium-level algorithm problems and explain complexity",
+                "Write well-typed TypeScript modules and unit tests",
+                "Adopt a TDD mindset for small modules"
+            ],
+            "projects": [
+                "Continue Project 1: add typed service layer in TypeScript and unit tests for core logic; demonstrate test coverage"
+            ],
+            "resources": [
+                "LeetCode / HackerRank practice",
+                "TypeScript Deep Dive (book/online)",
+                "Jest official docs and tutorials"
+            ]
+        },
+        {
+            "month": 5,
+            "theme": "Backend fundamentals: Node.js, Express, REST APIs",
+            "skills_focus": [
+                "Node.js",
+                "Express.js",
+                "RESTful API design",
+                "SQL (intro)"
+            ],
+            "topics": [
+                "Node event loop, modules, npm/yarn",
+                "Express routing, middleware, request/response patterns",
+                "HTTP methods and status codes, resource modeling",
+                "Basic SQL: SELECT/INSERT/UPDATE/DELETE, WHERE, JOIN concepts"
+            ],
+            "estimated_hours": 150,
+            "objectives": [
+                "Build a REST API in Node/Express with well-designed routes",
+                "Understand and apply standard HTTP semantics and status codes",
+                "Perform CRUD operations against a relational DB via SQL"
+            ],
+            "projects": [
+                "Project 1 (finish): Deploy a basic Express API with persistent storage (choose a simple DB), documented endpoints and Postman collection"
+            ],
+            "resources": [
+                "Node.js official docs",
+                "Express.js guide",
+                "REST best practices articles",
+                "SQLZoo / Mode Analytics SQL tutorials"
+            ]
+        },
+        {
+            "month": 6,
+            "theme": "Databases: relational & NoSQL + testing APIs",
+            "skills_focus": [
+                "Database Design",
+                "MySQL",
+                "PostgreSQL",
+                "MongoDB",
+                "API Testing (Postman / curl)",
+                "Integration Testing (intro)"
+            ],
+            "topics": [
+                "Relational model and ER diagrams, normalization",
+                "Installing and connecting to MySQL/Postgres from Node.js",
+                "MongoDB document model and Mongoose basics",
+                "API testing with Postman and curl",
+                "Integration tests for endpoints (Supertest)"
+            ],
+            "estimated_hours": 150,
+            "objectives": [
+                "Design normalized relational schemas and map to Node.js models",
+                "Integrate one relational DB and one NoSQL DB into apps",
+                "Write integration tests for API endpoints that exercise DB interactions"
+            ],
+            "projects": [
+                "Project 2 (start): Design and implement a small full-stack service (e.g., task manager) using Express + Postgres (or MySQL) and add optional MongoDB-backed feature (e.g., activity logs)"
+            ],
+            "resources": [
+                "Official Postgres / MySQL docs",
+                "MongoDB university beginner course",
+                "Postman learning center",
+                "Supertest + Jest integration examples"
+            ]
+        },
+        {
+            "month": 7,
+            "theme": "Authentication, security & caching",
+            "skills_focus": [
+                "RESTful API design",
+                "JWT (JSON Web Tokens)",
+                "OAuth2 (basic concepts)",
+                "Authentication & Authorization best practices",
+                "Redis"
+            ],
+            "topics": [
+                "JWT structure, signing/verifying tokens, refresh token flows",
+                "OAuth2 roles and common grant types (conceptual integration)",
+                "Password hashing (bcrypt), secure token handling, OWASP Top 10 awareness",
+                "Redis data structures and caching patterns"
+            ],
+            "estimated_hours": 150,
+            "objectives": [
+                "Implement secure stateless authentication with JWT and refresh tokens",
+                "Understand OAuth2 flows and when to use them",
+                "Use Redis for caching or session storage in Node apps"
+            ],
+            "projects": [
+                "Project 2 (continue): Add authentication (JWT) to service, role-based access control, and integrate Redis for session cache or rate limiting"
+            ],
+            "resources": [
+                "Auth0/Okta quickstarts",
+                "jsonwebtoken & bcrypt npm docs",
+                "Redis official docs and node-redis examples",
+                "OWASP Top 10 summary"
+            ]
+        },
+        {
+            "month": 8,
+            "theme": "Deployment basics: Linux + Docker + CI/CD",
+            "skills_focus": [
+                "Linux (advanced command-line usage)",
+                "Docker",
+                "CI/CD (concepts) + GitHub Actions",
+                "AWS (intro)"
+            ],
+            "topics": [
+                "Server management basics (SSH, processes, logs)",
+                "Dockerfile best practices, images/containers, Docker Compose",
+                "Build-test-deploy pipelines, GitHub Actions workflow syntax",
+                "Deploying containerized Node apps to a simple cloud (intro to EC2/S3/RDS)"
+            ],
+            "estimated_hours": 150,
+            "objectives": [
+                "Containerize Node.js applications and run locally/in Compose",
+                "Create CI pipelines to run tests and build Docker images",
+                "Deploy a simple containerized app to a cloud VM or managed service"
+            ],
+            "projects": [
+                "Project 2 (deploy): Containerize the service, add GitHub Actions pipeline for tests/build, deploy to a small AWS instance or managed container service"
+            ],
+            "resources": [
+                "Docker official docs and sample Node Dockerfiles",
+                "GitHub Actions docs and marketplace examples",
+                "AWS free-tier tutorials for EC2/RDS/S3",
+                "Linux server administration guides"
+            ]
+        },
+        {
+            "month": 9,
+            "theme": "Architecture: SOLID, patterns and clean design",
+            "skills_focus": [
+                "SOLID Principles",
+                "Design Patterns",
+                "CLEAN Architecture / MVC",
+                "Microservices (concepts)"
+            ],
+            "topics": [
+                "SOLID principles applied in TypeScript/Node",
+                "Common design patterns (Factory, Adapter, Strategy)",
+                "Separation of concerns and layered architecture (entities, use cases, controllers)",
+                "Monolith vs microservices trade-offs and service boundaries"
+            ],
+            "estimated_hours": 150,
+            "objectives": [
+                "Refactor codebases to follow SOLID and improve testability",
+                "Design maintainable service boundaries and identify when to split components",
+                "Document architectural decision records (ADRs) for key choices"
+            ],
+            "projects": [
+                "Project 3 (start): Plan a capstone: multi-service design for a scalable system (specs, ADRs). Begin implementing 1 service with clean architecture and patterns."
+            ],
+            "resources": [
+                "Clean Architecture books/articles",
+                "Refactoring and Design Patterns resources",
+                "Domain-Driven Design primers",
+                "Example microservices tutorials"
+            ]
+        },
+        {
+            "month": 10,
+            "theme": "Performance, caching & cloud services",
+            "skills_focus": [
+                "Caching and performance (Redis, query optimization)",
+                "Performance Optimization",
+                "AWS (core services: EC2, S3, RDS, IAM)"
+            ],
+            "topics": [
+                "Cache invalidation strategies, N+1 problem, EXPLAIN plans",
+                "Profiling Node.js apps (CPU/memory), identifying bottlenecks",
+                "Connection pooling, load-testing concepts and tools",
+                "Using RDS, S3; IAM basics and secure cloud credentials"
+            ],
+            "estimated_hours": 150,
+            "objectives": [
+                "Profile and optimize a Node service; improve database query performance",
+                "Implement caching to reduce latency and database load",
+                "Deploy services with basic cloud best practices and IAM least privilege"
+            ],
+            "projects": [
+                "Project 3 (continue): Implement multiple services, introduce caching, run load tests, and deploy services to AWS (RDS for DB, S3 for assets)"
+            ],
+            "resources": [
+                "pg_explain / MySQL EXPLAIN guides",
+                "Clinic.js / Node profiling tools",
+                "Artillery or k6 for load testing",
+                "AWS official tutorials and Well-Architected basics"
+            ]
+        },
+        {
+            "month": 11,
+            "theme": "Observability, advanced testing, AI-awareness & professional skills",
+            "skills_focus": [
+                "Integration Testing",
+                "API Testing",
+                "LLM / AI-awareness",
+                "Technical Documentation",
+                "Code Review etiquette",
+                "Effective verbal communication",
+                "Agile / Scrum basics",
+                "Jira, SDLC"
+            ],
+            "topics": [
+                "Writing integration and end-to-end tests; test setup/teardown",
+                "Postman scripting and advanced API testing",
+                "Basic LLM concepts and prompt engineering; integrating LLM APIs in backends",
+                "Writing README, OpenAPI/Swagger docs and ADRs",
+                "Code review best practices, presenting technical work, sprint ceremonies and ticketing"
+            ],
+            "estimated_hours": 150,
+            "objectives": [
+                "Have comprehensive test suites (unit + integration) for services",
+                "Document APIs (OpenAPI) and architecture decisions",
+                "Integrate a simple LLM-powered feature and understand safety/latency concerns",
+                "Demonstrate clear communication in PRs and team rituals"
+            ],
+            "projects": [
+                "Project 3 (continue): Add integration tests and LLM integration (e.g., summary or suggestions service), finalize docs and ADRs; perform internal code reviews"
+            ],
+            "resources": [
+                "OpenAPI/Swagger tools",
+                "Postman docs and Newman (CLI) for CI",
+                "OpenAI/Hugging Face API guides",
+                "Atlassian Agile tutorials and Jira beginner guides"
+            ]
+        },
+        {
+            "month": 12,
+            "theme": "Capstone polish, interview prep & career readiness",
+            "skills_focus": [
+                "Algorithmic problem solving (interview prep)",
+                "Debugging mindset & incident response",
+                "Microservices (applied)",
+                "CI/CD (advanced)",
+                "Final soft skills"
+            ],
+            "topics": [
+                "LeetCode-style practice: two-pointers, sliding window, backtracking, advanced complexity",
+                "Incident response: reproduce, isolate, root cause analysis and post-mortems",
+                "Service discovery, API Gateway basics, inter-service communication patterns",
+                "Advanced GitHub Actions pipelines: testing, build, deploy and canary/rollbacks",
+                "Mock interviews, presenting portfolio and behavioral story prep"
+            ],
+            "estimated_hours": 150,
+            "objectives": [
+                "Complete capstone system with automated CI/CD and deployment",
+                "Be able to solve medium-to-hard algorithmic problems under time constraints",
+                "Prepare a portfolio, write strong README/ADRs, and rehearse behavioral interviews"
+            ],
+            "projects": [
+                "Project 3 (finish): Complete and deploy capstone (multi-service app with CI/CD, monitoring, LLM feature); prepare a walkthrough, demo script and technical write-up",
+                "Career prep: 6-8 mock interviews (algorithms + system design) and revision plan"
+            ],
+            "resources": [
+                "LeetCode / Interviewing.io / Pramp for mock interviews",
+                "System Design Primer",
+                "GitHub Actions advanced examples",
+                "SRE incident response templates and post-mortem guides"
+            ]
+        }
+    ],
+    "tips": [
+        "Treat the plan as a living document: adjust weekly based on progress and energy.",
+        "Block a consistent daily time slot (5 hours) and protect it; prioritize deep work stretches.",
+        "Keep one ongoing project active throughout months (the capstone) and incrementally add features—projects cement learning.",
+        "Use the last day of each week for review: consolidate notes, update README/ADRs, and write 3 key takeaways.",
+        "Schedule weekly algorithm practice (3–4 focused problems) after month 4; increase intensity in last 3 months.",
+        "Automate small habits: CI run on every PR, daily journaling of what you learned, and a weekly demo to a peer or mentor.",
+        "Rest and recovery matter: take one full day off per week to avoid burnout and improve retention."
+    ]
+}
