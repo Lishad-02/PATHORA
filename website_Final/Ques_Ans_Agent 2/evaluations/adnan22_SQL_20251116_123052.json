@@ -1,0 +1,63 @@
+{
+  "session_id": "adnan22_SQL_20251116_123052",
+  "user_id": "adnan22",
+  "skill": "SQL",
+  "created_at": "2025-11-16T12:42:00.223737",
+  "questions": [
+    {
+      "index": 1,
+      "skill": "SQL",
+      "difficulty": "medium",
+      "question": "Given a table Orders(order_id, customer_id, amount), which SQL query returns each customer_id with their total order amount, but only for customers whose total exceeds 1000, sorted by total descending?",
+      "expected_answer": "A",
+      "user_answer": "SELECT customer_id, SUM(amount) AS total_amount\nFROM Orders\nGROUP BY customer_id\nHAVING SUM(amount) > 1000\nORDER BY total_amount DESC;",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 10.0,
+      "feedback": "Correct. The query properly uses GROUP BY customer_id with SUM(amount) to compute totals, HAVING to filter aggregated totals > 1000, and ORDER BY total_amount DESC to sort results as requested."
+    },
+    {
+      "index": 2,
+      "skill": "SQL",
+      "difficulty": "hard",
+      "question": "Given tables employees(id, name, dept_id) and departments(id, name), the intent is: list all employees with their department name, exclude employees who are in department 'HR', but still include employees who have no department (dept_id NULL). The developer wrote this query which returns no employees without a department. Find the bug and provide a corrected query.\n\nBuggy query:\nSELECT e.id, e.name, d.name AS department\nFROM employees e\nLEFT JOIN departments d ON e.dept_id = d.id\nWHERE d.name <> 'HR';",
+      "expected_answer": "Bug: the WHERE d.name <> 'HR' turns the LEFT JOIN into an effective INNER JOIN by filtering out rows where d.name IS NULL (employees without a department). Fix by allowing NULLs in the WHERE check.\n\nCorrected query:\nSELECT e.id, e.name, d.name AS department\nFROM employees e\nLEFT JOIN departments d ON e.dept_id = d.id\nWHERE d.name IS NULL OR d.name <> 'HR';",
+      "user_answer": "SELECT e.id, e.name, d.name AS department\nFROM employees e\nLEFT JOIN departments d \n    ON e.dept_id = d.id \n   AND d.name <> 'HR';",
+      "followup_question": "For an employee whose dept_id points to a department named 'HR', will your query include or exclude that employee in the result — and why?",
+      "followup_answer": "They would still be included, because the JOIN condition only affects matching, not whether the employee row appears. Since it’s a LEFT JOIN, the employee row comes through anyway even if the department is HR — it will just show the HR department name.",
+      "score": 2.0,
+      "feedback": "Incorrect. Moving d.name <> 'HR' into the ON (their main answer) does not exclude employees who are in HR — it simply prevents a match so those employees still appear with NULL department. Their follow-up claiming the HR name would still show is also wrong (the department columns become NULL). Correct fix is to allow NULLs in the WHERE, e.g. WHERE d.name IS NULL OR d.name <> 'HR'."
+    },
+    {
+      "index": 3,
+      "skill": "SQL",
+      "difficulty": "medium",
+      "question": "Explain how GROUP BY works in SQL: when you should use it, what can appear in the SELECT list with aggregates, and how HAVING differs from WHERE.",
+      "expected_answer": "GROUP BY groups result rows by the values of one or more columns so you can compute aggregate values (SUM, COUNT, AVG, MIN, MAX) per group. Use GROUP BY when you want summary rows instead of individual rows (for example, total sales per store). In the SELECT list, any column that is not wrapped in an aggregate function must be included in the GROUP BY clause (SQL standard behavior) so each selected non-aggregated column has a single value per group. WHERE filters input rows before grouping; HAVING filters groups after aggregates are computed and can reference aggregate expressions.",
+      "user_answer": "`GROUP BY` groups rows that share the same values so you can apply aggregate functions like SUM or COUNT to each group; in the SELECT list you can only include the grouped columns and aggregate expressions, nothing else, and the difference between WHERE and HAVING is that WHERE filters individual rows **before** the grouping happens, while HAVING filters the **groups after** the aggregates are calculated.",
+      "followup_question": "Write a short SQL query that groups sales by store, computes total sales per store, and uses HAVING to return only stores with total_sales > 1000.",
+      "followup_answer": "SELECT store_id, SUM(amount) AS total_sales\nFROM sales\nGROUP BY store_id\nHAVING SUM(amount) > 1000;",
+      "score": 10.0,
+      "feedback": "Excellent — correctly explained GROUP BY purpose, named aggregate functions (SUM, COUNT), stated that non-aggregated SELECT columns must appear in GROUP BY, clearly distinguished WHERE (pre-group) from HAVING (post-aggregate), and provided a correct, concise example."
+    },
+    {
+      "index": 4,
+      "skill": "SQL",
+      "difficulty": "hard",
+      "question": "Write a SQL query that returns, for each department in the employees table (columns: id, name, department, salary, hire_date), the single employee with the highest salary. If two employees in the same department share the highest salary, return the one with the most recent hire_date; if still tied, choose the smaller id. Return columns id, name, department, salary, hire_date. Use standard SQL.",
+      "expected_answer": "WITH ranked AS (\n  SELECT id, name, department, salary, hire_date,\n         ROW_NUMBER() OVER (PARTITION BY department\n                            ORDER BY salary DESC, hire_date DESC, id ASC) AS rn\n  FROM employees\n)\nSELECT id, name, department, salary, hire_date\nFROM ranked\nWHERE rn = 1;",
+      "user_answer": "SELECT id, name, department, salary, hire_date\nFROM (\n    SELECT *,\n           ROW_NUMBER() OVER (\n               PARTITION BY department\n               ORDER BY salary DESC, hire_date DESC, id ASC\n           ) AS rn\n    FROM employees\n) t\nWHERE rn = 1;",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 10.0,
+      "feedback": "Correct solution. The query uses ROW_NUMBER() partitioned by department with ORDER BY salary DESC, hire_date DESC, id ASC and selects rn = 1, producing a single deterministic row per department and returning the required columns."
+    }
+  ],
+  "average_score": 8.0,
+  "difficulty_trajectory": [
+    "medium",
+    "hard",
+    "medium",
+    "hard"
+  ]
+}

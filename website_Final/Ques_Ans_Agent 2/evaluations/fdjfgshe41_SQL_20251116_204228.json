@@ -1,0 +1,37 @@
+{
+  "session_id": "fdjfgshe41_SQL_20251116_204228",
+  "user_id": "fdjfgshe41",
+  "skill": "SQL",
+  "created_at": "2025-11-16T20:48:18.640248",
+  "questions": [
+    {
+      "index": 1,
+      "skill": "SQL",
+      "difficulty": "medium",
+      "question": "You have a table orders(order_id PRIMARY KEY, customer_id, order_date, status, total_amount). Which SQL statement would you create to optimize this query and why?\n\nSELECT order_id, customer_id, total_amount\nFROM orders\nWHERE customer_id = 12345 AND status = 'shipped'\nORDER BY order_date DESC\nLIMIT 10;",
+      "expected_answer": "CREATE INDEX idx_orders_cust_status_date ON orders(customer_id, status, order_date);\n-- This composite index lets the database filter by customer_id and status quickly and provides rows already ordered by order_date so the ORDER BY + LIMIT can be satisfied from the index with fewer row reads. If your RDBMS supports included columns (e.g., SQL Server), add total_amount as an included column to make it a covering index: CREATE INDEX idx_orders_cover ON orders(customer_id, status, order_date) INCLUDE (total_amount);",
+      "user_answer": "CREATE INDEX idx_orders_cust_status_date\nON orders (customer_id, status, order_date DESC);",
+      "followup_question": "Which database engine are you targeting (e.g., PostgreSQL, MySQL, SQL Server), and would you add total_amount as an included column to make this a covering index?",
+      "followup_answer": "For the example I gave, it’s MySQL (InnoDB) or a general ANSI SQL approach.",
+      "score": 8.0,
+      "feedback": "You proposed the correct composite index (customer_id, status, order_date DESC) which addresses both the WHERE and ORDER BY. However you didn’t explain how the index speeds filtering/ordering or mention making it a covering index by including total_amount (or using INCLUDE on DBs that support it). Also note DB-specific behavior for DESC ordering in indexes (and how InnoDB/other engines handle index ordering)."
+    },
+    {
+      "index": 3,
+      "skill": "SQL",
+      "difficulty": "hard",
+      "question": "Given tables employees(id, name, dept_id), departments(id, name), and projects(emp_id, project_name), this query is intended to return every employee with their department name and the number of projects they have (including employees with zero projects). Identify the bug and provide a corrected query.\n\nBuggy query:\nSELECT e.id, e.name, d.name AS dept, COUNT(p.project_name) AS project_count\nFROM employees e\nLEFT JOIN departments d ON e.dept_id = d.id\nLEFT JOIN projects p ON e.id = p.emp_id\nWHERE p.emp_id IS NOT NULL\nGROUP BY e.id, e.name, d.name;",
+      "expected_answer": "Bug: The WHERE p.emp_id IS NOT NULL turns the LEFT JOIN to projects into an effective INNER JOIN, excluding employees with zero projects. Corrected query (remove the WHERE):\n\nSELECT e.id, e.name, d.name AS dept, COUNT(p.project_name) AS project_count\nFROM employees e\nLEFT JOIN departments d ON e.dept_id = d.id\nLEFT JOIN projects p ON e.id = p.emp_id\nGROUP BY e.id, e.name, d.name;\n\nExplanation: With the WHERE filtering rows based on the right-side table, NULLs introduced by LEFT JOIN are filtered out. Removing the WHERE preserves employees with no projects (COUNT will return 0). Alternatively, to keep only employees with at least one project, use INNER JOIN to projects or add HAVING COUNT(p.project_name) > 0.",
+      "user_answer": "SELECT \n    e.id, \n    e.name, \n    d.name AS dept, \n    COUNT(p.project_name) AS project_count\nFROM employees e\nLEFT JOIN departments d ON e.dept_id = d.id\nLEFT JOIN projects p ON e.id = p.emp_id\nGROUP BY e.id, e.name, d.name;",
+      "followup_question": "Briefly explain why the WHERE p.emp_id IS NOT NULL causes employees with no projects to be excluded, and name an alternative approach if you only want employees who have at least one project.",
+      "followup_answer": "The WHERE p.emp_id IS NOT NULL only excludes rows where p.emp_id is NULL temporarily, but the LEFT JOIN still keeps all employees; to get only employees with projects, you could just use COUNT(p.project_name) > 0 in the SELECT list instead of filtering in WHERE.",
+      "score": 8.0,
+      "feedback": "Correctly identified that WHERE p.emp_id IS NOT NULL is the bug, provided the fixed query (remove the WHERE) and explained why NULLs were being filtered out. However, the follow-up is misleading: the WHERE does negate the LEFT JOIN (making it act like an INNER JOIN), and suggesting COUNT(...) > 0 in the SELECT to filter is incorrect — use an INNER JOIN or HAVING COUNT(p.project_name) > 0 to restrict to employees with projects."
+    }
+  ],
+  "average_score": 8.0,
+  "difficulty_trajectory": [
+    "medium",
+    "hard"
+  ]
+}
