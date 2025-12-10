@@ -1,0 +1,63 @@
+{
+  "session_id": "lishad11_SQL_20251205_102159",
+  "user_id": "lishad11",
+  "skill": "SQL",
+  "created_at": "2025-12-05T10:31:49.879475",
+  "questions": [
+    {
+      "index": 1,
+      "skill": "SQL",
+      "difficulty": "medium",
+      "question": "The query below runs slowly on a large orders table. Identify the performance problem and provide a corrected query and any index you would create to improve performance. Explain briefly why your fix is better.",
+      "expected_answer": "Problem: Using a function YEAR(order_date) in the WHERE clause prevents the database from using an index on order_date (or a composite index), causing a full table scan on large data. Fix: rewrite the predicate as a date range that can use an index, and add a composite index to support the WHERE + ORDER BY.\n\nSuggested index (SQL):\nCREATE INDEX idx_orders_cust_orderdate ON orders(customer_id, order_date);\n\nRewritten query:\nSELECT id, customer_id, order_date, total\nFROM orders\nWHERE customer_id = 123\n  AND order_date >= '2024-01-01'\n  AND order_date <  '2025-01-01'\nORDER BY order_date DESC\nLIMIT 10;\n\nWhy this is better: the range predicate on order_date is sargable (can use indexes). The composite index on (customer_id, order_date) lets the database quickly find rows for customer_id and scan them in order_date order to satisfy ORDER BY ... LIMIT without sorting the entire table. Also verify with EXPLAIN to confirm index is used.",
+      "user_answer": "SELECT id, customer_id, order_date, total\nFROM orders\nWHERE customer_id = 123\n  AND order_date LIKE '2024-%'\nORDER BY order_date DESC\nLIMIT 10;",
+      "followup_question": "What is the data type of order_date (DATE/DATETIME/TIMESTAMP or string) and are you able to add indexes on the table?",
+      "followup_answer": "i do not know",
+      "score": 6.0,
+      "feedback": "Partial fix: you removed the YEAR() call, which indicates awareness that the function can block index use, but using order_date LIKE '2024-%' is not the best/canonical sargable approach and may still prevent efficient index use on a DATE/DATETIME column. You also did not propose the crucial composite index (customer_id, order_date) or explain how it helps ORDER BY ... LIMIT. The follow-up 'i do not know' confirms the answer is incomplete. A stronger answer would show the date-range rewrite (order_date >= '2024-01-01' AND order_date < '2025-01-01'), recommend CREATE INDEX idx_orders_cust_orderdate ON orders(customer_id, order_date), and briefly note to verify with EXPLAIN."
+    },
+    {
+      "index": 2,
+      "skill": "SQL",
+      "difficulty": "medium",
+      "question": "Given the accounts table (schema below), write a SQL transaction (PostgreSQL) to transfer a given amount from one account to another. The transaction must ensure the source account never becomes negative, lock the involved rows to avoid lost updates, and rollback/abort on errors (insufficient funds or missing accounts). Provide a reusable function or block and an example call.",
+      "expected_answer": "CREATE OR REPLACE FUNCTION transfer_funds(from_id INT, to_id INT, amt NUMERIC) RETURNS VOID AS $$\nDECLARE\n  from_balance NUMERIC;\nBEGIN\n  -- Lock both rows in a consistent order to avoid deadlocks\n  IF from_id < to_id THEN\n    SELECT balance INTO from_balance FROM accounts WHERE account_id = from_id FOR UPDATE;\n    PERFORM 1 FROM accounts WHERE account_id = to_id FOR UPDATE;\n  ELSE\n    PERFORM 1 FROM accounts WHERE account_id = to_id FOR UPDATE;\n    SELECT balance INTO from_balance FROM accounts WHERE account_id = from_id FOR UPDATE;\n  END IF;\n\n  IF from_balance IS NULL THEN\n    RAISE EXCEPTION 'Source account % not found', from_id;\n  END IF;\n\n  IF from_balance < amt THEN\n    RAISE EXCEPTION 'Insufficient funds in account %: balance=%', from_id, from_balance;\n  END IF;\n\n  UPDATE accounts SET balance = balance - amt WHERE account_id = from_id;\n  UPDATE accounts SET balance = balance + amt WHERE account_id = to_id;\nEND;\n$$ LANGUAGE plpgsql;\n\n-- Example call:\nSELECT transfer_funds(1, 2, 300.00);",
+      "user_answer": "i do not know",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 0.0,
+      "feedback": "No solution was provided — the answer is just “i do not know.” The task required a reusable PostgreSQL transaction/function that locks rows (SELECT ... FOR UPDATE), checks for account existence and sufficient funds, updates balances atomically, and raises exceptions to trigger rollback; none of this was attempted."
+    },
+    {
+      "index": 3,
+      "skill": "SQL",
+      "difficulty": "easy",
+      "question": "Write an SQL SELECT statement that returns the first_name and last_name of customers who are older than 30, ordered by last_name ascending.",
+      "expected_answer": "SELECT first_name, last_name\nFROM customers\nWHERE age > 30\nORDER BY last_name ASC;",
+      "user_answer": "SELECT first_name, last_name\nFROM customers\nWHERE age > 30\nORDER BY last_name ASC;\nExplanation:\n\nSELECT first_name, last_name → selects only the first and last names.\n\nWHERE age > 30 → filters customers older than 30.\n\nORDER BY last_name ASC → sorts the results by last name in ascending order.",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 10.0,
+      "feedback": "Correct SQL: it selects first_name and last_name, filters for age > 30, and orders by last_name ascending. The query is syntactically correct and the accompanying explanation accurately describes each clause."
+    },
+    {
+      "index": 4,
+      "skill": "SQL",
+      "difficulty": "medium",
+      "question": "Given two tables customers(id, name) and orders(id, customer_id, order_date), which SQL query returns all customers who have never placed an order?",
+      "expected_answer": "D) SELECT c.* FROM customers c LEFT JOIN orders o ON c.id = o.customer_id WHERE o.id IS NULL; Explanation: A LEFT JOIN keeps all customers and attaches orders when present; filtering WHERE o.id IS NULL selects rows with no matching order. Option A returns only customers with orders (INNER JOIN). Option B is incorrect because comparisons to NULL must use IS NULL. Option C can fail if orders.customer_id contains NULL values (NOT IN with NULLs can exclude all rows), so it's not safe.",
+      "user_answer": "A) SELECT c.* FROM customers c INNER JOIN orders o ON c.id = o.customer_id;",
+      "followup_question": "Please provide the correct SQL query and briefly explain why INNER JOIN is wrong and why comparisons to NULL and NOT IN can be problematic.",
+      "followup_answer": "option D is correct ans",
+      "score": 2.0,
+      "feedback": "Candidate ultimately picked D but first answered A and gave no explanation. This is insufficient: correct answer is D (LEFT JOIN ... WHERE o.id IS NULL). They should have explained why a LEFT JOIN+IS NULL finds customers with no orders and why the other options are wrong (INNER JOIN returns only matches; = NULL is invalid; NOT IN can fail with NULLs)."
+    }
+  ],
+  "average_score": 4.5,
+  "difficulty_trajectory": [
+    "medium",
+    "medium",
+    "easy",
+    "medium"
+  ]
+}

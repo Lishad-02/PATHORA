@@ -1,0 +1,638 @@
+{
+  "Ad-hoc Analysis & Reporting": [
+    {
+      "Skill": "Ad-hoc Analysis",
+      "Freq_Count": 2
+    }
+  ],
+  "Business & Domain Understanding": [
+    {
+      "Skill": "Problem Solving",
+      "Freq_Count": 26
+    },
+    {
+      "Skill": "Research",
+      "Freq_Count": 10
+    },
+    {
+      "Skill": "CRM",
+      "Freq_Count": 9
+    },
+    {
+      "Skill": "Business Analysis",
+      "Freq_Count": 8
+    },
+    {
+      "Skill": "Critical Thinking",
+      "Freq_Count": 5
+    },
+    {
+      "Skill": "Inventory Management",
+      "Freq_Count": 4
+    },
+    {
+      "Skill": "Troubleshooting",
+      "Freq_Count": 4
+    },
+    {
+      "Skill": "Root Cause Analysis",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Attention to Detail",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Policy Development",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Strategic Analysis",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Requirements Gathering",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Financial Analysis",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Strategic Insights",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Business Acumen",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Strategic Decision Making",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Analytical Skills",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Gap Analysis",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Analytical Thinking",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Strategic Recommendations",
+      "Freq_Count": 2
+    }
+  ],
+  "Business Intelligence & Reporting": [
+    {
+      "Skill": "Power BI",
+      "Freq_Count": 39
+    },
+    {
+      "Skill": "Reporting",
+      "Freq_Count": 36
+    },
+    {
+      "Skill": "Business Intelligence",
+      "Freq_Count": 10
+    },
+    {
+      "Skill": "Report Generation",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Intelligence Reporting",
+      "Freq_Count": 2
+    }
+  ],
+  "Cloud Data Platforms & Big Data Technologies": [
+    {
+      "Skill": "Microsoft Fabric",
+      "Freq_Count": 4
+    },
+    {
+      "Skill": "Azure",
+      "Freq_Count": 4
+    },
+    {
+      "Skill": "Cloud Platforms",
+      "Freq_Count": 4
+    },
+    {
+      "Skill": "Big Data",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "BigQuery",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "AWS",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "GCP",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Data Storage",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Hadoop",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Hive",
+      "Freq_Count": 2
+    }
+  ],
+  "Collaboration & Stakeholder Communication": [
+    {
+      "Skill": "Cross-functional Collaboration",
+      "Freq_Count": 27
+    },
+    {
+      "Skill": "Communication Skills",
+      "Freq_Count": 20
+    },
+    {
+      "Skill": "Stakeholder Management",
+      "Freq_Count": 16
+    },
+    {
+      "Skill": "Stakeholder Collaboration",
+      "Freq_Count": 11
+    },
+    {
+      "Skill": "Stakeholder Engagement",
+      "Freq_Count": 11
+    },
+    {
+      "Skill": "Presentation Skills",
+      "Freq_Count": 10
+    },
+    {
+      "Skill": "Documentation",
+      "Freq_Count": 9
+    },
+    {
+      "Skill": "SharePoint",
+      "Freq_Count": 6
+    },
+    {
+      "Skill": "Process Documentation",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Mentoring",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Technical Documentation",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "PowerPoint",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Electronic Data Deliverables",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Consulting Skills",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Customer Service",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Customer Support",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Training",
+      "Freq_Count": 2
+    }
+  ],
+  "Dashboard Design & Automation": [
+    {
+      "Skill": "Dashboard Development",
+      "Freq_Count": 33
+    }
+  ],
+  "Data Analysis & Exploration": [
+    {
+      "Skill": "Data Analysis",
+      "Freq_Count": 53
+    },
+    {
+      "Skill": "Excel",
+      "Freq_Count": 37
+    },
+    {
+      "Skill": "Data Collection",
+      "Freq_Count": 7
+    },
+    {
+      "Skill": "Google Sheets",
+      "Freq_Count": 6
+    },
+    {
+      "Skill": "GIS",
+      "Freq_Count": 5
+    },
+    {
+      "Skill": "Trend Analysis",
+      "Freq_Count": 5
+    },
+    {
+      "Skill": "Data Interpretation",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Pivot Tables",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Exploratory Data Analysis",
+      "Freq_Count": 2
+    }
+  ],
+  "Data Cleaning & Preprocessing": [
+    {
+      "Skill": "Data Validation",
+      "Freq_Count": 21
+    },
+    {
+      "Skill": "Data Cleaning",
+      "Freq_Count": 7
+    },
+    {
+      "Skill": "Data Entry",
+      "Freq_Count": 4
+    },
+    {
+      "Skill": "Data Extraction",
+      "Freq_Count": 3
+    }
+  ],
+  "Data Collection & Preprocessing": [
+    {
+      "Skill": "Field Data Collection",
+      "Freq_Count": 2
+    }
+  ],
+  "Data Engineering & ETL Development": [
+    {
+      "Skill": "ETL",
+      "Freq_Count": 16
+    },
+    {
+      "Skill": "Snowflake",
+      "Freq_Count": 7
+    },
+    {
+      "Skill": "Data Integration",
+      "Freq_Count": 5
+    },
+    {
+      "Skill": "Data Pipelines",
+      "Freq_Count": 4
+    },
+    {
+      "Skill": "Data Transformation",
+      "Freq_Count": 4
+    },
+    {
+      "Skill": "Power Query",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Data Migration",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Process Automation",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Data Acquisition",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Data Workflows",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Data Loading",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Workflow Automation",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Data Mapping",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Power Apps",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Data Ingestion",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Power Automate",
+      "Freq_Count": 2
+    }
+  ],
+  "Data Governance & Quality Management": [
+    {
+      "Skill": "Data Quality Management",
+      "Freq_Count": 19
+    },
+    {
+      "Skill": "Data Governance",
+      "Freq_Count": 13
+    },
+    {
+      "Skill": "Data Integrity",
+      "Freq_Count": 9
+    },
+    {
+      "Skill": "Data Management",
+      "Freq_Count": 7
+    },
+    {
+      "Skill": "Compliance",
+      "Freq_Count": 7
+    },
+    {
+      "Skill": "HIPAA",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Data Privacy",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "GDPR",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Confidentiality",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "QA/QC",
+      "Freq_Count": 3
+    }
+  ],
+  "Data Modeling & Warehousing": [
+    {
+      "Skill": "Data Modeling",
+      "Freq_Count": 15
+    },
+    {
+      "Skill": "Data Warehousing",
+      "Freq_Count": 8
+    }
+  ],
+  "Data Monitoring & Quality Management": [
+    {
+      "Skill": "Data Monitoring",
+      "Freq_Count": 2
+    }
+  ],
+  "Data Science": [
+    {
+      "Skill": "Data Science",
+      "Freq_Count": 2
+    }
+  ],
+  "Data Visualization & Storytelling": [
+    {
+      "Skill": "Data Visualization",
+      "Freq_Count": 43
+    },
+    {
+      "Skill": "Tableau",
+      "Freq_Count": 22
+    },
+    {
+      "Skill": "Looker",
+      "Freq_Count": 13
+    },
+    {
+      "Skill": "MicroStrategy",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Data Storytelling",
+      "Freq_Count": 2
+    }
+  ],
+  "Database Management & SQL Optimization": [
+    {
+      "Skill": "SQL",
+      "Freq_Count": 56
+    },
+    {
+      "Skill": "Oracle",
+      "Freq_Count": 9
+    },
+    {
+      "Skill": "Database Management",
+      "Freq_Count": 7
+    },
+    {
+      "Skill": "Relational Databases",
+      "Freq_Count": 4
+    },
+    {
+      "Skill": "Database Maintenance",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Database Development",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Stored Procedures",
+      "Freq_Count": 2
+    }
+  ],
+  "Industry-Specific Analytics (Finance)": [
+    {
+      "Skill": "Financial Data",
+      "Freq_Count": 2
+    }
+  ],
+  "Industry-Specific Analytics (Healthcare)": [
+    {
+      "Skill": "Healthcare Data",
+      "Freq_Count": 3
+    }
+  ],
+  "Industry-Specific Analytics (Marketing)": [
+    {
+      "Skill": "Market Analysis",
+      "Freq_Count": 5
+    },
+    {
+      "Skill": "Digital Marketing",
+      "Freq_Count": 4
+    },
+    {
+      "Skill": "Market Research",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "Customer Insights",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "GA4",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Google Ads",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Customer Experience",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "CDP",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Product Analytics",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "Google Analytics",
+      "Freq_Count": 2
+    }
+  ],
+  "Industry-Specific Analytics (Retail)": [
+    {
+      "Skill": "Retail KPIs",
+      "Freq_Count": 2
+    }
+  ],
+  "Industry-Specific Analytics (Sales)": [
+    {
+      "Skill": "Sales Analysis",
+      "Freq_Count": 2
+    }
+  ],
+  "Performance Measurement & KPI Tracking": [
+    {
+      "Skill": "KPI Tracking",
+      "Freq_Count": 15
+    },
+    {
+      "Skill": "Performance Tracking",
+      "Freq_Count": 2
+    }
+  ],
+  "Predictive Analytics & Machine Learning": [
+    {
+      "Skill": "Machine Learning",
+      "Freq_Count": 11
+    },
+    {
+      "Skill": "Forecasting",
+      "Freq_Count": 3
+    }
+  ],
+  "Process Improvement": [
+    {
+      "Skill": "Process Improvement",
+      "Freq_Count": 19
+    },
+    {
+      "Skill": "Lean",
+      "Freq_Count": 2
+    }
+  ],
+  "Programming for Data": [
+    {
+      "Skill": "Python",
+      "Freq_Count": 41
+    },
+    {
+      "Skill": "R",
+      "Freq_Count": 21
+    },
+    {
+      "Skill": "pandas",
+      "Freq_Count": 3
+    },
+    {
+      "Skill": "JavaScript",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "PySpark",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "APIs",
+      "Freq_Count": 2
+    },
+    {
+      "Skill": "numpy",
+      "Freq_Count": 2
+    }
+  ],
+  "Project Management & Agile Analytics": [
+    {
+      "Skill": "Project Management",
+      "Freq_Count": 11
+    },
+    {
+      "Skill": "Agile",
+      "Freq_Count": 8
+    },
+    {
+      "Skill": "Project Support",
+      "Freq_Count": 4
+    },
+    {
+      "Skill": "Planview",
+      "Freq_Count": 2
+    }
+  ],
+  "Reporting Automation & Workflow Optimization": [
+    {
+      "Skill": "Automation",
+      "Freq_Count": 6
+    }
+  ],
+  "Statistical Analysis & Hypothesis Testing": [
+    {
+      "Skill": "Statistical Analysis",
+      "Freq_Count": 13
+    },
+    {
+      "Skill": "Quantitative Analysis",
+      "Freq_Count": 5
+    },
+    {
+      "Skill": "SAS",
+      "Freq_Count": 4
+    }
+  ]
+}

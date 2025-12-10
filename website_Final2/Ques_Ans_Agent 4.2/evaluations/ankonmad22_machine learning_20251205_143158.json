@@ -1,0 +1,37 @@
+{
+  "session_id": "ankonmad22_machine learning_20251205_143158",
+  "user_id": "ankonmad22",
+  "skill": "machine learning",
+  "created_at": "2025-12-05T14:36:49.576035",
+  "questions": [
+    {
+      "index": 1,
+      "skill": "machine learning",
+      "difficulty": "medium",
+      "question": "The code below trains a classifier after selecting the top 10 features using SelectKBest. It gives suspiciously optimistic test scores. Find the bug related to feature selection and data leakage, explain why it's a problem, and show a corrected version of the code.",
+      "expected_answer": "Bug explanation:\nThe code fits SelectKBest on the entire dataset (X and y) before splitting into train and test. This leaks information from the test set into feature selection, because the selector used labels from the test rows to choose features. That causes overly optimistic evaluation.\n\nCorrect fix (fit the selector only on the training set, then transform both sets):\nfrom sklearn.feature_selection import SelectKBest, f_classif\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestClassifier\n\n# load data as before\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n\nselector = SelectKBest(f_classif, k=10)\nX_train_sel = selector.fit_transform(X_train, y_train)\nX_test_sel = selector.transform(X_test)\n\nclf = RandomForestClassifier()\nclf.fit(X_train_sel, y_train)\nprint(clf.score(X_test_sel, y_test))\n\nNotes / alternatives:\n- You can also use a pipeline (e.g., make_pipeline(SelectKBest(...), RandomForestClassifier())) and perform cross-validation, which ensures selection is applied inside each training fold and avoids leakage.\n- Always perform imputing, scaling, or selection inside a pipeline or after splitting so that the test set remains unseen during training and preprocessing.",
+      "user_answer": "i dont know",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 0.0,
+      "feedback": "The answer does not address the question — the candidate wrote 'i dont know' and failed to identify that SelectKBest was fit on the entire dataset before splitting, which leaks test-set information and inflates performance. The correct fix is to split first, then fit the selector on X_train and transform X_test (or use a pipeline/cross-validation so selection happens inside each training fold). Please review feature-selection leakage and pipelines for preprocessing."
+    },
+    {
+      "index": 2,
+      "skill": "machine learning",
+      "difficulty": "easy",
+      "question": "In supervised machine learning, why do we split data into training, validation, and test sets? Briefly explain the purpose of k-fold cross-validation and when you would use it.",
+      "expected_answer": "Training set: used to fit model parameters. Validation set: used to compare models and tune hyperparameters without touching the test set. Test set: held out until final evaluation to provide an unbiased estimate of model generalization. Using the test set during tuning causes optimistic bias and data leakage. K-fold cross-validation: the data is split into k equal folds; the model is trained k times, each time using k-1 folds for training and 1 fold for validation; performance is averaged across folds. K-fold CV gives a more reliable estimate of validation performance (reduces variance) and is useful when data is limited. Use stratified k-fold when classes are imbalanced.",
+      "user_answer": "we split the data in train test and validation to make the model robust and we train the model on train data and test data we hide the actual output and perform on it then measure the performance of the model on unseen data. k fold valiadation basically split the data during different time with different order , it makes the model robust, reduce biasedness",
+      "followup_question": "Can you briefly explain the distinct purposes of the validation and test sets, and describe step-by-step how k-fold cross-validation works (how many models are trained and what metric is reported)?",
+      "followup_answer": "we split the data in train test and validation to make the model robust and we train the model on train data and test data we hide the actual output and perform on it then measure the performance of the model on unseen data. k fold valiadation basically split the data during different time with different order , it makes the model robust, reduce biasedness",
+      "score": 2.0,
+      "feedback": "Shows a basic intuition that we train on one set and evaluate on unseen data, but fails to distinguish the validation set's role (hyperparameter tuning/model selection) from the test set (final unbiased evaluation) and omits the risk of data leakage from using the test set during tuning. The k‑fold description is vague — it should state the data is split into k folds, the model is trained k times using k‑1 folds for training and 1 for validation, and results are averaged; mention stratified k‑fold for imbalanced classes and that CV is useful when data is limited. Be more precise about these points."
+    }
+  ],
+  "average_score": 1.0,
+  "difficulty_trajectory": [
+    "medium",
+    "easy"
+  ]
+}

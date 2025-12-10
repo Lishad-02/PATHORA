@@ -1,0 +1,76 @@
+{
+  "session_id": "aurongogeb@gmail.com_python_20251205_145058",
+  "user_id": "aurongogeb@gmail.com",
+  "skill": "python",
+  "created_at": "2025-12-05T14:58:11.833697",
+  "questions": [
+    {
+      "index": 1,
+      "skill": "python",
+      "difficulty": "medium",
+      "question": "Implement the function merge_intervals(intervals) that takes a list of intervals (each interval is a list or tuple of two integers [start, end]) and returns a new list with overlapping intervals merged and sorted by start. Example: [[1,3],[2,6],[8,10],[15,18]] -> [[1,6],[8,10],[15,18]]. Intervals may be unsorted; handle empty input.",
+      "expected_answer": "def merge_intervals(intervals):\n    if not intervals:\n        return []\n    # Sort intervals by start\n    intervals = sorted([list(iv) for iv in intervals], key=lambda x: x[0])\n    merged = [intervals[0]]\n    for cur in intervals[1:]:\n        last = merged[-1]\n        if cur[0] <= last[1]:  # overlapping or touching\n            last[1] = max(last[1], cur[1])\n        else:\n            merged.append(cur)\n    return merged\n\n# Complexity: O(n log n) due to sorting, O(n) extra for merging.",
+      "user_answer": "i don't know",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 0.0,
+      "feedback": "The submission contains no implementation (\"i don't know\"), so it fails to meet any requirements: it does not handle empty input, sorting, or merging. Provide a proper implementation that sorts intervals and merges overlaps to meet the expected behavior and complexity."
+    },
+    {
+      "index": 2,
+      "skill": "python",
+      "difficulty": "easy",
+      "question": "Implement the missing methods area() and perimeter() in the Rectangle class below. Assume width and height are numbers; area should return width * height and perimeter should return 2 * (width + height).",
+      "expected_answer": "class Rectangle:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        # return the area of the rectangle\n        return self.width * self.height\n\n    def perimeter(self):\n        # return the perimeter of the rectangle\n        return 2 * (self.width + self.height)\n",
+      "user_answer": "class Rectangle:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 10.0,
+      "feedback": "Correct implementation: area returns width * height and perimeter returns 2 * (width + height). Code is syntactically correct, uses instance attributes, and will work for zero and positive numeric inputs."
+    },
+    {
+      "index": 3,
+      "skill": "python",
+      "difficulty": "medium",
+      "question": "What is the output when running the following Python 3 code?",
+      "expected_answer": "[1, 2, 3, 4] followed by a TypeError (cannot concatenate tuple and list). Explanation: For the list, x += [4] mutates the list to [1,2,3,4]. For the tuple, attempting x += [4] tries to concatenate a tuple with a list and raises a TypeError.",
+      "user_answer": "B) [1, 2, 3, 4] followed by a TypeError (cannot concatenate tuple and list)",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 9.0,
+      "feedback": "Correct choice (B). You identified that the list prints [1, 2, 3, 4] and that the tuple operation raises a TypeError (cannot concatenate tuple and list). For full credit you could explicitly state that += mutates the list in-place while += on a tuple with a list attempts concatenation and fails."
+    },
+    {
+      "index": 4,
+      "skill": "python",
+      "difficulty": "hard",
+      "question": "You find a Python function in a codebase that recently became noticeably slower. As an engineer, explain a clear, practical workflow to identify the root cause, apply safe optimizations, and verify there are no correctness regressions. Mention specific measurement tools/commands, how to interpret profiler output, a few simple optimization techniques appropriate for entry-level work, how to measure improvements, and common pitfalls to avoid.",
+      "expected_answer": "Step-by-step workflow:\n1) Reproduce and quantify the regression\n   - Create a reproducible workload or input set that demonstrates the slowdown.\n   - Measure elapsed time using time.perf_counter() or the time command for a coarse check.\n   - Use timeit for small, isolated snippets: python -m timeit 'from module import func; func(args)'.\n\n2) Profile to find hotspots\n   - Use a CPU profiler to see where time is spent: cProfile (python -m cProfile -o out.prof script.py), then inspect with snakeviz or pstats:\n     - snakeviz out.prof (visual) or\n     - python -c \"import pstats; p= pstats.Stats('out.prof'); p.sort_stats('cumtime').print_stats(20)\".\n   - For line-level detail, use line_profiler (@profile or kernprof -l) to find expensive lines inside functions.\n   - For low-overhead sampling, consider pyinstrument or py-spy to get quick call-stack samples.\n\n3) Interpret results\n   - Focus on functions with high cumulative time first (they dominate end-to-end runtime).\n   - Differentiate between many short calls vs. a few expensive operations.\n   - Check whether time is in Python-level code, IO, or external libraries.\n\n4) Apply safe, entry-level optimizations\n   - Algorithmic/complexity improvements: replacing O(n^2) loops with O(n) approaches if identified.\n   - Use built-in functions and comprehensions which are implemented in C (e.g., sum(), join(), list/dict comprehensions) instead of manual Python loops when appropriate.\n   - Reduce unnecessary work: memoize expensive pure functions with functools.lru_cache, avoid recomputing constants, hoist invariant calculations out of loops.\n   - Replace repeated string concatenation using str.join on lists.\n   - Minimize attribute/global lookups in hot loops by binding to local variables.\n   - Use appropriate data structures: e.g., set membership instead of list membership for frequent contains checks.\n   - If heavy numeric work exists, consider using numpy for vectorized operations (entry-level change: replace Python loops with numpy operations where safe).\n\n5) Make small, focused changes and re-measure\n   - Change one thing at a time and re-run the same profiler/workload to confirm impact.\n   - Measure both microbenchmarks (timeit for small functions) and end-to-end scenario to ensure real benefit.\n\n6) Verify correctness and add regression tests\n   - Run existing unit tests and add unit tests covering edge cases affected by your changes.\n   - Add performance tests or benchmarks (pytest-benchmark or simple asserts on timing) to track regressions.\n   - Integrate benchmarks into CI with conservative thresholds (fail CI only when a clear regression is detected).\n\n7) Control for measurement noise and pitfalls\n   - Warm up JIT-like effects (e.g., caches, interpreter optimizations) and run multiple iterations; use median or min of runs.\n   - Ensure a stable environment: close unrelated processes, run on the same machine/config, and avoid measuring with debug flags enabled.\n   - Beware of microbenchmarking artifacts: improvements in tiny isolated tests may not translate to system-level gains.\n   - Avoid premature optimization: profile first, optimize the real hotspot, and prefer correctness and readability unless the performance benefit is justified.\n   - Watch for side-effects when caching (mutable inputs) and for changing semantics when swapping data structures.\n\n8) Document and monitor\n   - Record what was changed, why, and what the observed improvement was (numbers before/after).\n   - Add monitoring or benchmarks to detect future regressions.\n\nConcrete commands/examples:\n   - Profile: python -m cProfile -o out.prof tests/run_benchmark.py; snakeviz out.prof\n   - timeit: python -m timeit -s \"from mymodule import f; args=...\" \"f(args)\"\n   - line profiler: pip install line_profiler; kernprof -l -v script.py\n   - simple timing in code:\n       import time\n       t0 = time.perf_counter()\n       result = myfunc()\n       print(time.perf_counter() - t0)\n\nExpected outcome:\n   - You locate the real hotspot (not guesswork), apply minimal safe changes that yield measurable improvement, keep tests passing, add benchmarks or CI checks, and document the change. Always prefer algorithmic fixes and language built-ins over micro-optimizations unless profiling shows micro-optimization wins.\n",
+      "user_answer": "i don't know this ans",
+      "followup_question": "Would you like a clear, step-by-step walkthrough with concrete commands and examples to learn how to diagnose and fix such Python performance regressions?",
+      "followup_answer": "i do not know",
+      "score": 1.0,
+      "feedback": "The candidate provided no substantive answer ('i don't know'). They failed to present the required step-by-step workflow: no reproduction/measurement steps (time.perf_counter, timeit, time), no profiling tools/commands (python -m cProfile, snakeviz, pstats, py-spy, line_profiler/kernprof), no guidance on interpreting profiler output (cumtime vs percall, call counts, IO vs CPU), no concrete entry-level optimizations (use built-ins/comprehensions, hoist invariants, lru_cache, use sets, str.join, bind locals), no re-measurement strategy (one change at a time, micro vs end-to-end benchmarking), no correctness/regression testing or CI/benchmark integration, and no discussion of common pitfalls (warm-up, environment noise, caching side-effects). A passing answer should include these specifics and example commands/snippets and verification steps."
+    },
+    {
+      "index": 5,
+      "skill": "python",
+      "difficulty": "medium",
+      "question": "Which standard library function is best for measuring short elapsed wall-clock time in Python when you need high resolution and want results unaffected by system clock adjustments?",
+      "expected_answer": "B) time.perf_counter() — it provides a high-resolution, monotonic wall-clock timer suitable for measuring short elapsed times; time.process_time() measures CPU time only, while time.time() and datetime.now() can be affected by system clock changes.",
+      "user_answer": "C) time.process_time()",
+      "followup_question": "Briefly explain the difference between time.process_time() and time.perf_counter(), and give one example scenario where you would use each.",
+      "followup_answer": "no",
+      "score": 1.0,
+      "feedback": "Incorrect. The correct choice is B) time.perf_counter(). perf_counter() is a high-resolution, monotonic wall-clock timer not affected by system clock changes. time.process_time() measures CPU time only (not elapsed wall-clock), and time.time()/datetime.now() can be altered by system clock adjustments. The follow-up 'no' provides no useful clarification."
+    }
+  ],
+  "average_score": 4.2,
+  "difficulty_trajectory": [
+    "medium",
+    "easy",
+    "medium",
+    "hard",
+    "medium"
+  ]
+}

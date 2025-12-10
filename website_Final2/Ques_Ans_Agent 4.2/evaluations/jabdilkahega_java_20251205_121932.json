@@ -1,0 +1,37 @@
+{
+  "session_id": "jabdilkahega_java_20251205_121932",
+  "user_id": "jabdilkahega",
+  "skill": "java",
+  "created_at": "2025-12-05T12:22:14.854369",
+  "questions": [
+    {
+      "index": 1,
+      "skill": "java",
+      "difficulty": "medium",
+      "question": "Implement the adultNamesSorted method below so it returns a List of names (String) of people aged 18 or older, sorted alphabetically and with duplicates removed. Use Java 8 Streams and lambdas. Handle null input by returning an empty list.",
+      "expected_answer": "import java.util.*;\nimport java.util.stream.Collectors;\n\npublic class Person {\n    private final String name;\n    private final int age;\n\n    public Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n\n    public String getName() { return name; }\n    public int getAge() { return age; }\n\n    // Implemented using Java 8 streams\n    public static List<String> adultNamesSorted(List<Person> people) {\n        if (people == null) return Collections.emptyList();\n        return people.stream()\n            .filter(Objects::nonNull)\n            .filter(p -> p.getAge() >= 18)\n            .map(Person::getName)\n            .filter(Objects::nonNull)\n            .distinct()\n            .sorted()\n            .collect(Collectors.toList());\n    }\n}",
+      "user_answer": "i donot know",
+      "followup_question": "Would you like me to provide the correct Java 8 streams implementation and explain how it handles nulls, filtering, deduplication, and sorting?",
+      "followup_answer": "i do not know",
+      "score": 0.0,
+      "feedback": "Candidate did not provide an implementation (responses: \"i donot know\" / \"i do not know\"). No use of Java 8 streams or lambdas, no filtering/mapping/distinct/sort, and no null handling — fails all rubric criteria."
+    },
+    {
+      "index": 2,
+      "skill": "java",
+      "difficulty": "easy",
+      "question": "Implement the method createAndRelease() so it creates a Person object and makes it eligible for garbage collection before the method returns. Keep the implementation short and simple.",
+      "expected_answer": "public class Main {\n    static class Person {\n        String name;\n        Person(String name) { this.name = name; }\n    }\n\n    public static void createAndRelease() {\n        Person p = new Person(\"Alice\");\n        // remove the strong reference so the object becomes eligible for GC\n        p = null;\n    }\n\n    public static void main(String[] args) {\n        createAndRelease();\n        // After createAndRelease returns, the Person is eligible for garbage collection\n    }\n}\n\nExplanation: Creating a local Person reference and then assigning null removes the only strong reference, making the object eligible for GC when there are no other references.",
+      "user_answer": "public static void createAndRelease() {\n    Person p = new Person(\"John\"); // create a Person instance\n    p = null; // remove reference, making it eligible for garbage collection\n}\nExplanation:\n\np is a local reference to a Person object.\n\nSetting p = null removes the reference before the method returns.\n\nOnce the method returns, there are no references to the object, so it becomes eligible for garbage collection.",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 10.0,
+      "feedback": "Excellent — the implementation creates a Person and explicitly nulls the local reference, and the explanation correctly states that removing the last strong reference makes the object eligible for garbage collection. The solution is concise and matches the expected answer."
+    }
+  ],
+  "average_score": 5.0,
+  "difficulty_trajectory": [
+    "medium",
+    "easy"
+  ]
+}

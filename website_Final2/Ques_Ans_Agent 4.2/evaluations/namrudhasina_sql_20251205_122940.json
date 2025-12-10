@@ -1,0 +1,37 @@
+{
+  "session_id": "namrudhasina_sql_20251205_122940",
+  "user_id": "namrudhasina",
+  "skill": "sql",
+  "created_at": "2025-12-05T12:31:54.846419",
+  "questions": [
+    {
+      "index": 1,
+      "skill": "sql",
+      "difficulty": "medium",
+      "question": "Given the orders table below, write an SQL query that returns order_id, customer_id, order_date, amount, and a running_total_amount that accumulates amount per customer in chronological order (inclusive). Use a window function.",
+      "expected_answer": "SELECT\n  order_id,\n  customer_id,\n  order_date,\n  amount,\n  SUM(amount) OVER (\n    PARTITION BY customer_id\n    ORDER BY order_date, order_id\n    ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW\n  ) AS running_total_amount\nFROM orders\nORDER BY customer_id, order_date, order_id;",
+      "user_answer": "SELECT\n    order_id,\n    customer_id,\n    order_date,\n    amount,\n    SUM(amount) OVER (\n        PARTITION BY customer_id\n        ORDER BY order_date, order_id\n        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW\n    ) AS running_total_amount\nFROM orders\nORDER BY customer_id, order_date, order_id;  Explanation:\n\nSUM(amount) OVER (...) computes a cumulative sum.\n\nPARTITION BY customer_id resets the running total for each customer.\n\nORDER BY order_date, order_id ensures the running total is chronological.\n\nROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW includes all previous rows for the running total.",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 10.0,
+      "feedback": "Correct and complete solution: the query returns the required columns, correctly partitions by customer_id, orders by order_date with order_id as a tie-breaker, specifies the explicit ROWS frame, and orders the final results. The brief explanation accurately describes each component."
+    },
+    {
+      "index": 2,
+      "skill": "sql",
+      "difficulty": "hard",
+      "question": "The users table has a regular index on name, but the following query is still performing a full table scan on large data. Identify the cause and provide a corrected change (query or index) so the query can use an index and run fast.",
+      "expected_answer": "Cause: Applying the LOWER() function to the name column in the WHERE clause prevents the regular index on name from being used. Fixes (choose one):\n\n1) Create a functional/index-on-expression that matches the query:\n   CREATE INDEX idx_users_name_lower ON users (LOWER(name));\n   -- Then the original query can use this index as written:\n   SELECT id, name FROM users WHERE LOWER(name) = 'alice' LIMIT 10;\n\n2) Or avoid the function by comparing to the exact stored value (if case matches):\n   SELECT id, name FROM users WHERE name = 'Alice' LIMIT 10;\n\n3) Or store/search using a case-insensitive type/collation (e.g., citext in PostgreSQL) so the existing index is usable for case-insensitive lookups.\n\nAny of the above (1 or 2 or 3) will allow the planner to use an index instead of a full scan. The most direct fix without changing data is option 1: create the functional index on LOWER(name).",
+      "user_answer": "i do not know",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 0.0,
+      "feedback": "The candidate gave no answer. They failed to identify that applying LOWER(name) prevents the regular index from being used; the fix is to create a functional index (e.g., CREATE INDEX idx_users_name_lower ON users(LOWER(name));), or avoid the function by comparing with the exact-case value or using a case-insensitive type/collation so the index can be used."
+    }
+  ],
+  "average_score": 5.0,
+  "difficulty_trajectory": [
+    "medium",
+    "hard"
+  ]
+}

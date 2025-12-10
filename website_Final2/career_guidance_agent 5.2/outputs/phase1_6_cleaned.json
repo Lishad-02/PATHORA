@@ -1,0 +1,152 @@
+{
+    "core_skills": {
+        "fundamentals": [
+            {
+                "name": "Python",
+                "reason": "Primary language you already know; required for Django backend development and common in the local market."
+            },
+            {
+                "name": "Object-Oriented Programming (OOP)",
+                "reason": "Essential paradigm for organizing backend code, especially in Django and for maintainable systems."
+            },
+            {
+                "name": "Algorithms",
+                "reason": "Core computer-science skill needed to solve interview problems and optimize backend logic."
+            },
+            {
+                "name": "Data Structures",
+                "reason": "Fundamental for writing efficient code and solving common programming tasks and interview questions."
+            }
+        ],
+        "frameworks_and_runtime": [
+            {
+                "name": "Django",
+                "reason": "High-impact Python backend framework; mastering it provides the fastest path to building production-ready web apps."
+            }
+        ],
+        "databases": [
+            {
+                "name": "MySQL",
+                "reason": "Common relational DB in the job market; practical to learn and frequently requested in listings."
+            },
+            {
+                "name": "SQL",
+                "reason": "Essential skill to query and manipulate relational databases; required for backend roles."
+            },
+            {
+                "name": "Database Design",
+                "reason": "Important for building efficient, normalized schemas and understanding relationships in web apps."
+            }
+        ],
+        "version_control_and_ci_cd": [
+            {
+                "name": "Git",
+                "reason": "Non-negotiable for collaborative development and required in every role."
+            },
+            {
+                "name": "GitHub",
+                "reason": "Platform for hosting projects and portfolio; important for interviews and collaboration."
+            },
+            {
+                "name": "CI/CD (concepts and basic pipelines)",
+                "reason": "Understanding and implementing simple CI/CD pipelines (e.g., tests + deploy) is essential for production readiness."
+            }
+        ]
+    },
+    "supporting_skills": {
+        "testing_and_debugging": [
+            {
+                "name": "Unit Testing",
+                "reason": "Critical for code reliability and a frequent interview requirement (Django testing with pytest/unittest)."
+            },
+            {
+                "name": "Debugging",
+                "reason": "Daily developer skill: being able to trace, reproduce, and fix bugs quickly is essential for job performance."
+            },
+            {
+                "name": "Code Review",
+                "reason": "Important practice for team quality and collaboration; learn review etiquette and tooling for GitHub PRs."
+            }
+        ],
+        "api_and_networking": [
+            {
+                "name": "RESTful API",
+                "reason": "Primary API style used in job listings; build and consume REST APIs with Django REST Framework."
+            },
+            {
+                "name": "Postman",
+                "reason": "Practical tool to test and document APIs; quick to learn and useful during development and interviews."
+            },
+            {
+                "name": "JWT (authentication basics)",
+                "reason": "Common method for stateless API authentication; implement simple token-based auth for job projects."
+            }
+        ],
+        "deployment_and_cloud": [
+            {
+                "name": "Docker (basic)",
+                "reason": "Containerization for consistent dev/prod environments; basic Docker skills are high-impact and learnable in weeks."
+            },
+            {
+                "name": "AWS (fundamentals)",
+                "reason": "Learn core services (EC2, RDS/S3, basic IAM) to deploy and host apps — market-relevant and not as heavy as multi-cloud."
+            },
+            {
+                "name": "Linux (basic)",
+                "reason": "Servers and CI runners use Linux; basic shell, file permissions, and process management are practical and time-efficient to learn."
+            }
+        ]
+    },
+    "advanced_skills": {
+        "architecture_and_design": [
+            {
+                "name": "Design Patterns (practical ones)",
+                "reason": "Understanding common patterns (Repository, Factory, Singleton where appropriate) helps design maintainable backend code."
+            },
+            {
+                "name": "SOLID principles",
+                "reason": "Guides maintainable object-oriented design; directly improves code quality when paired with OOP."
+            },
+            {
+                "name": "MVC (concept)",
+                "reason": "Architectural pattern underlying Django; knowing it helps structure apps correctly."
+            }
+        ],
+        "data_and_ai_integration": [
+            {
+                "name": "LLM integration (high-level)",
+                "reason": "Basic awareness of how to consume and integrate AI APIs (prompting, inference endpoints) can differentiate you without deep ML heaviness."
+            }
+        ],
+        "security_and_scalability": [
+            {
+                "name": "Performance Optimization (basics)",
+                "reason": "Know how to profile, identify DB/query hotspots, caching basics (Redis concepts) and optimize endpoints—high ROI for backend roles."
+            },
+            {
+                "name": "Scalability concepts (load, caching, connection limits)",
+                "reason": "Understand scaling trade-offs and when to introduce caching, background jobs, or DB sharding at a conceptual level."
+            }
+        ]
+    },
+    "professional_skills": {
+        "communication": [
+            {
+                "name": "Communication (written & verbal)",
+                "reason": "Clear communication is essential for interviews, PR descriptions, and working in teams; practice expressing technical decisions succinctly."
+            }
+        ],
+        "project_management": [
+            {
+                "name": "Agile (practical understanding)",
+                "reason": "Understanding sprint workflows, stand-ups, and backlog grooming helps you function in most software teams; learn the basics and common ceremonies."
+            }
+        ],
+        "problem_solving": [
+            {
+                "name": "Problem Solving (applied)",
+                "reason": "Focused practice solving coding and system-design problems is essential for interviews and on-the-job success."
+            }
+        ]
+    }
+}

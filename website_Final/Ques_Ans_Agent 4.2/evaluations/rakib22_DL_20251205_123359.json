@@ -1,0 +1,37 @@
+{
+  "session_id": "rakib22_DL_20251205_123359",
+  "user_id": "rakib22",
+  "skill": "DL",
+  "created_at": "2025-12-05T12:36:00.516173",
+  "questions": [
+    {
+      "index": 1,
+      "skill": "DL",
+      "difficulty": "medium",
+      "question": "In a PyTorch image preprocessing pipeline for training a CNN, which order of transforms is correct so that normalization operates on float tensors in [0,1]?",
+      "expected_answer": "B) Resize -> RandomCrop -> ToTensor -> Normalize. Resizing and random cropping are applied on PIL images, then ToTensor converts to float tensors in [0,1], and Normalize subtracts mean/divides std on those tensors.",
+      "user_answer": "A) Resize -> RandomCrop -> Normalize -> ToTensor",
+      "followup_question": "",
+      "followup_answer": "",
+      "score": 1.0,
+      "feedback": "Incorrect. The correct ordering is B) Resize -> RandomCrop -> ToTensor -> Normalize. Resize and RandomCrop operate on PIL images, ToTensor converts to float tensors in [0,1], and Normalize must be applied after ToTensor using the dataset mean/std; putting Normalize before ToTensor is wrong."
+    },
+    {
+      "index": 2,
+      "skill": "DL",
+      "difficulty": "easy",
+      "question": "The evaluate function below is supposed to compute precision, recall, F1 score, and accuracy for a binary classifier. It takes preds (predicted probabilities) and labels (0/1 integers). The function contains bugs — identify and fix them and provide a corrected implementation.",
+      "expected_answer": "Fixes required:\n1) preds are probabilities and must be thresholded to 0/1 before counting TP/FP/FN and computing accuracy.\n2) Avoid ZeroDivisionError when denominators are zero (return 0.0 for precision/recall/F1 in such cases).\n3) Ensure accuracy uses numeric division (Python 3 already does, but keep clear by converting numerator or denominator to float if desired).\n\nCorrected implementation:\ndef evaluate(preds, labels, threshold=0.5):\n    # Convert probabilities to binary predictions using threshold\n    predicted = [1 if p >= threshold else 0 for p in preds]\n    tp = sum(1 for p,l in zip(predicted, labels) if p == 1 and l == 1)\n    fp = sum(1 for p,l in zip(predicted, labels) if p == 1 and l == 0)\n    fn = sum(1 for p,l in zip(predicted, labels) if p == 0 and l == 1)\n    # safe precision/recall calculation\n    precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0\n    recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0\n    f1 = (2 * precision * recall / (precision + recall)) if (precision + recall) > 0 else 0.0\n    acc = sum(1 for p,l in zip(predicted, labels) if p == l) / len(labels)\n    return precision, recall, f1, acc",
+      "user_answer": "i do not know",
+      "followup_question": "Would you like me to provide the corrected implementation and a brief explanation, or do you want a hint so you can try fixing it yourself?",
+      "followup_answer": "pass the question",
+      "score": 0.0,
+      "feedback": "Candidate provided no substantive answer (‘i do not know’ / ‘pass the question’). Did not supply corrected code, did not threshold probabilities to 0/1, did not handle zero-division for precision/recall/F1, nor return accuracy. Expected the corrected implementation and brief explanation as in the prompt."
+    }
+  ],
+  "average_score": 0.5,
+  "difficulty_trajectory": [
+    "medium",
+    "easy"
+  ]
+}
