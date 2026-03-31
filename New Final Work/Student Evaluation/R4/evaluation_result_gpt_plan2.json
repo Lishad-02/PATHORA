@@ -1,0 +1,144 @@
+{
+    "evaluation_metadata": {
+        "model_used": "gpt-5-mini",
+        "timestamp": "2026-03-22 16:23:06",
+        "candidate_role": "Computer Vision Engineer",
+        "preparation_time_months": 2
+    },
+    "evaluation_result": {
+        "Plan_1": {
+            "HRO": {
+                "score": 8,
+                "breakdown": {
+                    "core_technical": 4,
+                    "interview_prep": 1,
+                    "portfolio": 3
+                },
+                "comment": "Covers essential CV fundamentals (OpenCV, basic CNN concepts, pre-trained models) appropriate for a first 2-month foundation but limited depth for production readiness. Minimal explicit interview preparation (DSA, system design, behavioral) and projects are small/mini rather than a strong deployed capstone."
+            },
+            "TCF": {
+                "score": 13,
+                "breakdown": {
+                    "hour_compliance": 4,
+                    "cognitive_load": 4,
+                    "overengineering": 5
+                },
+                "comment": "Estimated ~60 hours matches the user's availability (1 hr/day × 2 months). No explicit buffer included. Daily 1-hour pace and scope are realistic and avoid unnecessary advanced topics for a short timeline."
+            },
+            "PPA": {
+                "score": 11,
+                "breakdown": {
+                    "experience_adaptation": 4,
+                    "preference_integration": 3,
+                    "stack_justification": 4
+                },
+                "comment": "Assumes programming competence and correctly treats CV as a fresh domain. Recommends Python with clear rationale; mentions C# integration later but does not integrate C# hands-on in the 2-month plan (reasonable tradeoff but not fully aligned with stated language preference)."
+            },
+            "MA": {
+                "score": 8,
+                "breakdown": {
+                    "skill_demand": 4,
+                    "global_alignment": 4
+                },
+                "comment": "Covers globally relevant foundational CV skills (OpenCV, CNN inference). Lacks deeper training/deployment content that recruiters often value for job-readiness at scale."
+            },
+            "SPQ": {
+                "score": 7,
+                "breakdown": {
+                    "high_roi": 3,
+                    "logical_phasing": 4
+                },
+                "comment": "Prioritizes important foundational topics in a logical order (image processing → DL → projects). Could prioritize a stronger single capstone or PyTorch/TensorFlow hands-on earlier for higher ROI."
+            },
+            "CSDC": {
+                "score": 11,
+                "breakdown": {
+                    "module_ordering": 4,
+                    "subtopic_detail": 4,
+                    "learning_outcomes": 3
+                },
+                "comment": "Modules are ordered logically and weekly subtopics are reasonably granular for 1 hr/day. Learning outcomes are described but often high-level rather than measurable deliverables per week."
+            },
+            "CER": {
+                "score": 2,
+                "breakdown": {
+                    "resume": 1,
+                    "mock_interviews": 0,
+                    "application_strategy": 1
+                },
+                "comment": "Contains general career tips but lacks concrete, scheduled resume/LinkedIn actions, no structured mock interviews, and weak application/outreach strategy guidance."
+            },
+            "Total_Score": 60,
+            "overall_summary": "Conservative, realistic 2-month introductory plan that fits the 1 hr/day constraint and builds CV fundamentals. Good for getting hands-on exposure but weak on interview readiness, a strong deployed capstone, and explicit career execution steps. Reasonable choice if the primary goal is to learn core CV concepts steadily, but less suited for immediate hiring competitiveness."
+        },
+        "Plan_2": {
+            "HRO": {
+                "score": 21,
+                "breakdown": {
+                    "core_technical": 7,
+                    "interview_prep": 6,
+                    "portfolio": 8
+                },
+                "comment": "Strong, role-focused technical coverage (PyTorch, transfer learning, OpenCV, Docker, end-to-end capstone). Explicit interview preparation and a clear, deployable capstone make this plan much more hiring-oriented. Slight risk that depth is ambitious given short timeline."
+            },
+            "TCF": {
+                "score": 11,
+                "breakdown": {
+                    "hour_compliance": 5,
+                    "cognitive_load": 3,
+                    "overengineering": 3
+                },
+                "comment": "Planned hours (43 + 5 buffer = 48) fit within available time and explicitly include buffer. However, the plan is intensive (deep PyTorch, full training loops, Dockerized deployment) for an absolute-beginner-in-CV on a strict 1 hr/day cadence — borderline realistic and may require careful time management or accepting shallower depth on some items."
+            },
+            "PPA": {
+                "score": 11,
+                "breakdown": {
+                    "experience_adaptation": 4,
+                    "preference_integration": 3,
+                    "stack_justification": 4
+                },
+                "comment": "Adapts to a CSE graduate with limited CV experience and justifies choosing Python/PyTorch and Docker for market relevance. Does not meaningfully include C# hands-on work within the 2 months, but does acknowledge C# as an asset."
+            },
+            "MA": {
+                "score": 10,
+                "breakdown": {
+                    "skill_demand": 5,
+                    "global_alignment": 5
+                },
+                "comment": "Excellent alignment with global CV hiring demand (PyTorch, transfer learning, Dockerized inference). The skills targeted are high-demand and internationally applicable."
+            },
+            "SPQ": {
+                "score": 10,
+                "breakdown": {
+                    "high_roi": 5,
+                    "logical_phasing": 5
+                },
+                "comment": "Prioritizes high-ROI items (PyTorch, transfer learning, a single deployable capstone) and phases foundation → applied → deployment logically to maximize hiring impact."
+            },
+            "CSDC": {
+                "score": 14,
+                "breakdown": {
+                    "module_ordering": 5,
+                    "subtopic_detail": 5,
+                    "learning_outcomes": 4
+                },
+                "comment": "Well-structured modules with clear weekly micro-goals, time budgets, and tangible milestone deliverables (GitHub capstone, Docker image). Learning outcomes are concrete for the capstone but some weekly outcomes may be ambitious for 1 hr/day pacing."
+            },
+            "CER": {
+                "score": 7,
+                "breakdown": {
+                    "resume": 3,
+                    "mock_interviews": 2,
+                    "application_strategy": 2
+                },
+                "comment": "Includes explicit job-hunt actions (LinkedIn, resume refinement, outreach) and requires mock interviews. Could be stronger with templates, scheduled mock timelines, and targeted application cadence, but adequate for preparing to apply."
+            },
+            "Total_Score": 84,
+            "overall_summary": "High-impact, hiring-focused 2-month accelerator emphasizing PyTorch, transfer learning, and a single deployable capstone (Dockerized inference API). Strongly aligned with market demand and portfolio building. Ambitious for 1 hr/day for a CV novice — successful execution will depend on strict adherence to MVP scoping and disciplined time use; otherwise some depth may need to be trimmed."
+        },
+        "comparison": {
+            "better_plan": "Plan_2",
+            "reason": "Plan_2 is significantly more hiring-oriented: it emphasizes PyTorch, transfer learning, a single deployable capstone, and explicit interview preparation and deployment skills (Docker). It provides clearer deliverables and job-market alignment. Plan_1 is more conservative and realistic for pure concept learning but lacks the portfolio/deployment and interview readiness needed to maximize hiring chances within two months."
+        }
+    }
+}

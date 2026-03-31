@@ -1,0 +1,174 @@
+{
+    "evaluation_metadata": {
+        "model_used": "gpt-4o-2024-08-06",
+        "prompt_version": "v3.0-unbiased",
+        "temperature": 0.0,
+        "evaluation_type": "independent_per_plan_unbiased",
+        "bias_mitigation": "outcome_focused_rubric_v3",
+        "timestamp": "2026-03-27 20:48:41",
+        "candidate_role": "Cybersecurity Engineer(Software Engineering)",
+        "prep_months": 6,
+        "study_hrs_per_day": 4,
+        "tokens": {
+            "plan1_prompt_tokens": 10415,
+            "plan1_completion_tokens": 654,
+            "plan2_prompt_tokens": 8004,
+            "plan2_completion_tokens": 644
+        }
+    },
+    "Plan_1_System": {
+        "penalties_applied": [
+            "P2"
+        ],
+        "HRO": {
+            "score": 18,
+            "breakdown": {
+                "core_technical": 6,
+                "interview_prep": 4,
+                "portfolio": 8
+            },
+            "comment": "The plan covers core technical skills relevant to cybersecurity but lacks depth in AI-specific areas. Interview preparation is present but lacks actionable detail. The portfolio component is strong with specific projects."
+        },
+        "TCF": {
+            "score": 13,
+            "breakdown": {
+                "feasibility": 5,
+                "cognitive_load": 4,
+                "appropriateness": 4
+            },
+            "comment": "The plan is feasible within the given timeframe and appropriately paced for the user's background. Topics are mostly suitable for the user's level."
+        },
+        "PPA": {
+            "score": 12,
+            "breakdown": {
+                "experience_adaptation": 4,
+                "preference_integration": 4,
+                "stack_relevance": 4
+            },
+            "comment": "The plan is well-adapted to the user's experience and preferences, leveraging Python and Django effectively. Stack choices are relevant but could be more tailored to AI engineering."
+        },
+        "MA": {
+            "score": 7,
+            "breakdown": {
+                "skill_demand": 4,
+                "global_alignment": 3
+            },
+            "comment": "Skills align with cybersecurity demands but lack AI-specific focus. Global alignment is present but could be stronger."
+        },
+        "SPQ": {
+            "score": 8,
+            "breakdown": {
+                "high_roi": 4,
+                "progression": 4
+            },
+            "comment": "The plan prioritizes high-impact skills but mixes cybersecurity and AI engineering. Progression is logical but could be more focused on AI."
+        },
+        "CSDC": {
+            "score": 11,
+            "breakdown": {
+                "knowledge_progression": 4,
+                "content_specificity": 4,
+                "actionability": 3
+            },
+            "comment": "Knowledge progression is mostly logical, and content is specific. Actionability is present but could be more detailed."
+        },
+        "CER": {
+            "score": 5,
+            "breakdown": {
+                "resume": 3,
+                "mock_interviews": 1,
+                "application_strategy": 1
+            },
+            "comment": "Resume guidance is present but lacks depth. Mock interviews and application strategy are mentioned but not detailed."
+        },
+        "Total_Score": 74,
+        "score_band": "Good",
+        "overall_summary": "Penalty P2 was applied due to insufficient interview preparation content. The strongest dimensions were TCF and PPA, as the plan is feasible and well-adapted to the user's background. The weakest dimensions were CER and MA, with limited interview practice and global market alignment. The plan falls in the 'Good' score band, covering most necessary areas but lacking depth in AI-specific skills and interview preparation."
+    },
+    "Plan_2_Baseline": {
+        "penalties_applied": [
+            "P2",
+            "P5"
+        ],
+        "HRO": {
+            "score": 18,
+            "breakdown": {
+                "core_technical": 6,
+                "interview_prep": 3,
+                "portfolio": 9
+            },
+            "comment": "The plan covers core technical skills relevant to cybersecurity but lacks depth in AI-specific areas. Interview preparation is mentioned but lacks actionable guidance. The portfolio component is strong with specific project suggestions."
+        },
+        "TCF": {
+            "score": 12,
+            "breakdown": {
+                "feasibility": 4,
+                "cognitive_load": 4,
+                "appropriateness": 4
+            },
+            "comment": "The plan is mostly achievable within the given timeframe, with a reasonable cognitive load and appropriate topics for the user's level."
+        },
+        "PPA": {
+            "score": 10,
+            "breakdown": {
+                "experience_adaptation": 4,
+                "preference_integration": 3,
+                "stack_relevance": 3
+            },
+            "comment": "The plan is somewhat adapted to the user's background but lacks full integration of preferences like Python focus. Stack choices are generally relevant but not fully aligned with AI engineering."
+        },
+        "MA": {
+            "score": 7,
+            "breakdown": {
+                "skill_demand": 4,
+                "global_alignment": 3
+            },
+            "comment": "The skills covered are aligned with cybersecurity demands but not fully with AI engineering. Global alignment is present but could be stronger."
+        },
+        "SPQ": {
+            "score": 7,
+            "breakdown": {
+                "high_roi": 4,
+                "progression": 3
+            },
+            "comment": "The plan prioritizes high-impact skills but lacks a clear progression from foundational to advanced topics."
+        },
+        "CSDC": {
+            "score": 9,
+            "breakdown": {
+                "knowledge_progression": 4,
+                "content_specificity": 3,
+                "actionability": 2
+            },
+            "comment": "Knowledge progression is mostly logical, but content specificity and actionability are lacking in some areas."
+        },
+        "CER": {
+            "score": 2,
+            "breakdown": {
+                "resume": 1,
+                "mock_interviews": 0,
+                "application_strategy": 1
+            },
+            "comment": "Resume guidance is minimal, and there is no mock interview component. Application strategy is generic."
+        },
+        "Total_Score": 65,
+        "score_band": "Average",
+        "overall_summary": "Penalties were applied for missing interview preparation and career execution content. The strongest dimensions were HRO, due to a strong portfolio component, and TCF, as the plan is mostly feasible. The weakest dimensions were CER, due to minimal resume guidance and no mock interviews, and PPA, as it lacks full integration of user preferences. The plan falls in the Average score band."
+    },
+    "comparison": {
+        "better_plan": "Plan_1_System",
+        "Plan_1_Total": 74,
+        "Plan_2_Total": 65,
+        "score_gap": 9,
+        "gap_assessment": "Moderate discrimination (gap 8-14)",
+        "score_band_plan1": "Good",
+        "score_band_plan2": "Average",
+        "penalties_plan1": [
+            "P2"
+        ],
+        "penalties_plan2": [
+            "P2",
+            "P5"
+        ]
+    }
+}

@@ -1,0 +1,251 @@
+{
+  "generated_at": "2026-03-31T21:18:15.642705",
+  "user_profile": {
+    "role": "Business Intelligence (BI) Analyst/AI Engineer",
+    "experience": "University Recent CSE Graduate",
+    "preparation_time_months": 4,
+    "study_hours_per_day": 3,
+    "Market_Focus": "Global",
+    "other_preferences": " want remote job, Basic (Completed some courses / small exercises) coding experience, familiar with C++,JavaScript,PHP Language and familiar with dot-net Framework. build some academic projects.Preferable language is Python."
+  },
+  "learning_plan": {
+    "total_available_hours": 288,
+    "planned_learning_hours": 250,
+    "buffer_hours": 38,
+    "execution_strategy_summary": "This execution roadmap is your personalized launchpad into a high-impact BI Analyst/AI Engineer role. We're leveraging your strong Computer Science foundation \u2013 your C++/JavaScript/PHP logic, your academic project experience, and your preference for Python \u2013 to fast-track your journey. By ruthlessly prioritizing hands-on, end-to-end projects and integrating industry-standard tools like Power BI, AWS, FastAPI, and Docker, we\u2019ll forge a portfolio that screams 'production-ready,' giving you an unfair advantage in the competitive global remote job market.",
+    "monthly_plan": [
+      {
+        "month": 1,
+        "theme": "The Data Foundation: SQL Mastery & Python Data Kickstart",
+        "weekly_micro_goals": [
+          "Week 1: You'll dive deep into advanced SQL. Forget basic SELECTs; we're mastering Window Functions (ROW_NUMBER, RANK, LEAD, LAG) and Common Table Expressions (CTEs) to dissect complex datasets, much like you'd untangle logic in C++.",
+          "Week 2: We'll continue our SQL journey with advanced Joins, Subqueries, and start peeking into SQL Performance Tuning (Indexing, EXPLAIN PLAN basics). Simultaneously, you'll set up Git/GitHub \u2013 your collaborative workspace for all upcoming projects, applying version control principles you already know.",
+          "Week 3: Time to embrace Python! We'll kick off Python for Data Analysis, focusing on Pandas DataFrames and Series. You'll translate your logical thinking into efficient data manipulation, learning core data cleaning techniques like handling missing values and data types.",
+          "Week 4: We'll solidify your Pandas skills by practicing data aggregation with `groupby` and `pivot_table`, getting comfortable with merging/joining DataFrames. Your goal for the Capstone Project this month is to source and extract data from a relational database, applying your new advanced SQL skills, and then performing initial cleaning with Python."
+        ],
+        "time_budget_hours": {
+          "total_monthly_hours": 63,
+          "theory_and_reading": 19,
+          "active_practice_and_coding": 28,
+          "portfolio_project_building": 16
+        },
+        "technical_skills_to_master": [
+          "Advanced SQL (Window Functions, CTEs, Complex Joins, Performance Tuning concepts)",
+          "Git & GitHub for version control in data projects",
+          "Python Pandas (DataFrame creation, selection, basic cleaning, aggregation)"
+        ],
+        "interview_prep_goals": [
+          "Mastering SQL coding challenges (LeetCode Medium equivalent for SQL)",
+          "Articulating relational database concepts and basic SQL performance considerations",
+          "Understanding Python's role in data processing vs. SQL"
+        ],
+        "what_you_will_build": [
+          "A well-structured GitHub repository for your Capstone project.",
+          "SQL scripts for complex data extraction and initial transformations from a simulated database.",
+          "Python Pandas scripts demonstrating robust data loading and cleaning, preparing the raw data for deeper analysis."
+        ],
+        "job_hunt_action_items": [
+          "Optimize your LinkedIn profile for 'BI Analyst' and 'AI Engineer' keywords.",
+          "Start researching target companies that hire for remote BI/AI roles.",
+          "Familiarize yourself with the typical responsibilities of these roles."
+        ],
+        "curated_resources": [
+          {
+            "topic": "Advanced SQL",
+            "resource_type": "Interactive Platform",
+            "recommended_search_term": "Hackerrank SQL challenges (Medium/Hard)"
+          },
+          {
+            "topic": "Python Pandas",
+            "resource_type": "Official Docs",
+            "recommended_search_term": "Pandas User Guide"
+          },
+          {
+            "topic": "Git & GitHub",
+            "resource_type": "YouTube Video",
+            "recommended_search_term": "Fireship Git in 100 Seconds"
+          }
+        ],
+        "milestone_deliverable": "Your Capstone project's GitHub repo with initial SQL scripts and cleaned Python data, showcasing robust data extraction and preprocessing."
+      },
+      {
+        "month": 2,
+        "theme": "From Raw Data to Insightful Dashboards",
+        "weekly_micro_goals": [
+          "Week 5: We'll wrap up Python for Data Analysis, focusing on advanced Pandas (merging, joining, reshaping, and time series fundamentals) and NumPy for vectorized operations. Your CSE background makes these concepts intuitive, so lean into the efficiency of Pythonic data manipulation.",
+          "Week 6: You'll transition into data visualization. Start with Python's Matplotlib and Seaborn to perform exploratory data analysis on your Capstone data. Understand the principles of effective visualization to tell a clear story.",
+          "Week 7: It's time for industry-standard BI tools. You'll dive into Power BI Desktop, connecting to your processed Capstone data. Master Power Query for ETL operations, modeling your data (think Star Schema from your database days!), and creating relationships.",
+          "Week 8: This week is all about building your first interactive Power BI dashboard. You'll learn basic DAX (Data Analysis Expressions) for calculated columns and measures, then design compelling visualizations to surface key insights from your Capstone project. Remember to iterate and refine based on storytelling principles."
+        ],
+        "time_budget_hours": {
+          "total_monthly_hours": 63,
+          "theory_and_reading": 19,
+          "active_practice_and_coding": 29,
+          "portfolio_project_building": 15
+        },
+        "technical_skills_to_master": [
+          "Advanced Pandas & NumPy for data transformation and cleaning",
+          "Python visualization (Matplotlib, Seaborn)",
+          "Power BI Desktop (Data Connectors, Power Query, Data Modeling, Basic DAX, Report Design)"
+        ],
+        "interview_prep_goals": [
+          "Explain data cleaning and transformation steps using Pandas.",
+          "Discuss visualization best practices and when to use different chart types.",
+          "Basic Power BI concepts (ETL, modeling, DAX functions)."
+        ],
+        "what_you_will_build": [
+          "A fully cleaned and transformed dataset using advanced Pandas techniques.",
+          "Exploratory data analysis (EDA) plots using Matplotlib/Seaborn.",
+          "Your first interactive Power BI dashboard for your Capstone project, complete with a clean data model and basic DAX measures."
+        ],
+        "job_hunt_action_items": [
+          "Begin tailoring your resume to highlight Python, SQL, and Power BI skills. Use keywords found in job descriptions.",
+          "Identify 5-10 companies that align with your remote job preference and target roles.",
+          "Start practicing verbalizing your data cleaning and visualization processes."
+        ],
+        "curated_resources": [
+          {
+            "topic": "Advanced Pandas",
+            "resource_type": "YouTube Channel",
+            "recommended_search_term": "Corey Schafer Pandas Tutorial"
+          },
+          {
+            "topic": "Power BI Fundamentals",
+            "resource_type": "Online Course",
+            "recommended_search_term": "Microsoft Learn Power BI Data Analyst Course"
+          },
+          {
+            "topic": "Data Visualization Principles",
+            "resource_type": "Book/Blog",
+            "recommended_search_term": "Storytelling with Data Cole Nussbaumer Knaflic Summary"
+          }
+        ],
+        "milestone_deliverable": "A polished, interactive Power BI dashboard for your Capstone project, built on a clean dataset transformed with Python, ready to tell a story."
+      },
+      {
+        "month": 3,
+        "theme": "Statistical Rigor & Machine Learning Insights",
+        "weekly_micro_goals": [
+          "Week 9: We're bringing in the math. Your CSE background gives you a head start here! We'll cover Statistical Foundations for Data Science: Descriptive stats, probability distributions, sampling techniques, and a conceptual introduction to linear regression. Focus on *interpreting* results for business context.",
+          "Week 10: Dive into Inferential Statistics, with a practical focus on Hypothesis Testing (t-tests, ANOVA basics). You'll apply these using Python's SciPy/Statsmodels to gain deeper insights from your Capstone data, identifying significant factors influencing your business problem.",
+          "Week 11: This is where 'AI Engineer' starts to shine! You'll master Machine Learning Fundamentals with Scikit-learn. Start with supervised learning: Linear and Logistic Regression, Decision Trees. Understand the core mechanics and when to apply them.",
+          "Week 12: Continue with ML: Explore K-Nearest Neighbors, basic SVMs, and Unsupervised Learning (K-Means Clustering). Crucially, you'll learn Model Evaluation Metrics (Accuracy, Precision, Recall, F1, ROC-AUC) and Cross-validation. Apply these to your Capstone project: build an initial ML model (e.g., a classification model if you're predicting churn) and evaluate its performance. Simultaneously, we'll touch on Data Modeling (dimensional modeling) and basic Cloud concepts (AWS S3 for storage, RDS for managed databases), preparing for later deployment."
+        ],
+        "time_budget_hours": {
+          "total_monthly_hours": 62,
+          "theory_and_reading": 19,
+          "active_practice_and_coding": 28,
+          "portfolio_project_building": 15
+        },
+        "technical_skills_to_master": [
+          "Descriptive & Inferential Statistics (Hypothesis Testing, Regression interpretation)",
+          "Machine Learning Fundamentals (Supervised & Unsupervised Learning, Scikit-learn)",
+          "Model Evaluation Metrics & Cross-validation",
+          "Dimensional Modeling concepts",
+          "Basic AWS services (S3, RDS conceptual understanding and minimal setup)"
+        ],
+        "interview_prep_goals": [
+          "Explain key statistical concepts in business terms (e.g., 'What does a p-value mean?').",
+          "Describe common ML algorithms and their use cases.",
+          "Articulate the bias-variance trade-off and overfitting/underfitting.",
+          "Solve SQL case studies requiring advanced analytical queries."
+        ],
+        "what_you_will_build": [
+          "A statistical analysis report of your Capstone data, including hypothesis tests and their interpretation.",
+          "An initial machine learning model (e.g., a churn prediction model) trained and evaluated using Scikit-learn, integrated into your Capstone project.",
+          "A basic understanding of a dimensional model for your project and conceptual setup of AWS S3 for raw data storage and AWS RDS for a clean data warehouse."
+        ],
+        "job_hunt_action_items": [
+          "Reach out to 2-3 professionals in BI/AI on LinkedIn for informational interviews.",
+          "Refine your resume with statistical and machine learning keywords.",
+          "Practice explaining your Capstone project's data analysis and ML components clearly."
+        ],
+        "curated_resources": [
+          {
+            "topic": "Statistics for Data Science",
+            "resource_type": "Online Course",
+            "recommended_search_term": "Coursera Statistics for Data Science Python"
+          },
+          {
+            "topic": "Scikit-learn Fundamentals",
+            "resource_type": "Official Docs",
+            "recommended_search_term": "Scikit-learn User Guide"
+          },
+          {
+            "topic": "AWS Cloud Basics",
+            "resource_type": "YouTube Channel",
+            "recommended_search_term": "freeCodeCamp AWS Fundamentals"
+          }
+        ],
+        "milestone_deliverable": "Your Capstone project includes a trained and evaluated ML model, backed by statistical analysis, with a basic AWS data storage plan outlined."
+      },
+      {
+        "month": 4,
+        "theme": "Production-Ready BI/AI & Career Launchpad",
+        "weekly_micro_goals": [
+          "Week 13: This is where your BI Analyst skills become elite. Dive into Advanced Power BI: master complex DAX (Time Intelligence, Context Transitions), advanced Power Query (M language basics), and implement sophisticated report interactivity (Bookmarks, Drill-through, RLS).",
+          "Week 14: Time to integrate AI into BI. Deploy your Capstone ML model! You'll learn to build a simple REST API using FastAPI (a fantastic Python framework, perfect for your C++/PHP API experience) to serve your model's predictions. This is a critical step for your 'AI Engineer' role.",
+          "Week 15: Elevate your Capstone. Containerize your FastAPI ML service using Docker \u2013 this ensures your model runs consistently anywhere, a non-negotiable for remote jobs. Then, integrate these live ML predictions (e.g., churn probabilities) directly into your advanced Power BI dashboard. Polish the dashboard's design, focusing on user experience and business storytelling.",
+          "Week 16: The final push! Refine your Capstone project documentation on GitHub (professional README, clear code). Now, shift focus to intense interview preparation: mock technical interviews (SQL, Python, ML concepts), behavioral interviews (STAR method), and practice presenting your entire Capstone project end-to-end. Dedicate significant time to active job applications and networking."
+        ],
+        "time_budget_hours": {
+          "total_monthly_hours": 62,
+          "theory_and_reading": 19,
+          "active_practice_and_coding": 28,
+          "portfolio_project_building": 15
+        },
+        "technical_skills_to_master": [
+          "Advanced DAX & Power Query (M Language)",
+          "Report Interactivity & Row-Level Security (RLS) in Power BI",
+          "ML Model Deployment (FastAPI)",
+          "Containerization (Docker fundamentals)",
+          "End-to-end data pipeline integration (SQL -> Python ETL -> AWS S3/RDS -> ML -> Power BI)"
+        ],
+        "interview_prep_goals": [
+          "Ace advanced SQL and Pandas coding challenges.",
+          "Explain ML model deployment strategies (API, Docker).",
+          "Demonstrate strong problem-solving skills with BI/AI case studies.",
+          "Confidently present your Capstone project, articulating technical details and business impact.",
+          "Master behavioral interview questions using the STAR method."
+        ],
+        "what_you_will_build": [
+          "A comprehensive, highly interactive Power BI dashboard with advanced DAX, RLS, and integrated ML predictions.",
+          "A Dockerized FastAPI application serving predictions from your Capstone ML model.",
+          "A professional Capstone project on GitHub, showcasing an end-to-end BI/AI solution, complete with detailed documentation."
+        ],
+        "job_hunt_action_items": [
+          "Aggressive job application phase: target 10-15 roles per week.",
+          "Network extensively on LinkedIn, seeking referrals.",
+          "Schedule multiple mock interviews (technical and behavioral) with peers or mentors.",
+          "Refine your elevator pitch for your Capstone project and career goals."
+        ],
+        "curated_resources": [
+          {
+            "topic": "Advanced DAX & Power Query",
+            "resource_type": "Book/Blog",
+            "recommended_search_term": "SQLBI DAX Guide Power Query M Language"
+          },
+          {
+            "topic": "FastAPI & Docker",
+            "resource_type": "YouTube Channel",
+            "recommended_search_term": "Tech with Tim FastAPI Docker"
+          },
+          {
+            "topic": "Behavioral Interview Prep",
+            "resource_type": "Blog/Guide",
+            "recommended_search_term": "STAR method interview questions"
+          }
+        ],
+        "milestone_deliverable": "Your complete, production-ready Capstone project on GitHub, a polished resume, and a strong pipeline of job applications, ready for interviews."
+      }
+    ],
+    "critical_guidelines": [
+      "**Embrace the 70/30 Rule, Relentlessly:** For every hour of reading or watching tutorials (your 30%), you MUST dedicate at least two hours (your 70%) to active practice, coding along, solving problems, and building your Capstone project. Passive learning is a trap; active creation is your superpower.",
+      "**Time-Box Your Struggles:** When you hit a bug or a difficult concept, allocate a strict 30-60 minute time-box. If you're still stuck, document what you've tried, seek help (Google, Stack Overflow, AI tools, peers), and then move on to another task. Getting stuck for hours is a productivity killer.",
+      "**Project First, Theory Second (Always):** The Capstone project is your North Star. Every module, every skill you learn, must directly feed into making that project more robust, more insightful, or more 'production-ready.' This is your antidote to 'tutorial hell' and ensures real-world applicability.",
+      "**Your Buffer Hours Are Sacred:** Those 38 buffer hours aren't just for emergencies; they're for deep debugging sessions, catching up when life happens, or simply taking a mental health break. Use them wisely to prevent burnout, because consistency over these four months is paramount.",
+      "**Network Like Your Future Depends On It:** Remote jobs often come from connections. Dedicate time each week to LinkedIn outreach, informational interviews, and engaging with the data community. Your network is your net worth, especially when starting out."
+    ],
+    "final_readiness_summary": "Congratulations! After this intense and highly focused 4-month sprint, you won't just be a 'recent CSE graduate'; you'll be a lean, mean, data-driven machine. Your background in C++/JavaScript/PHP will have seamlessly transitioned into production-grade Python, powering your ML models and robust data pipelines. Your academic project experience will be dwarfed by an end-to-end BI/AI Capstone that you've not only designed and analyzed but also deployed with FastAPI and Docker, and visualized with advanced Power BI. Recruiters seeking BI Analysts and AI Engineers for remote roles will see a candidate with undeniable technical rigor, a compelling portfolio, and the practical skills to hit the ground running, making you an exceptionally competitive and valuable asset."
+  }
+}

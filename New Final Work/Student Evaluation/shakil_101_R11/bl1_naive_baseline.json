@@ -1,0 +1,188 @@
+{
+    "baseline_type": "BL-1: Naive User Zero-Shot",
+    "model": "gemini-2.5-flash",
+    "user_profile": {
+        "role": "Networking (Data Analyst/AI)",
+        "months": 4,
+        "hours_per_day": 2,
+        "experience": "University Recent CSE Graduate",
+        "other_preferences": "want to prepare for bangladesh job market,Need a remote job, Basic Coding experience, familiar with python, java,C++,JS,PHP languages and familiar with dot net and Docker, already build some academic projects, preferable language is C#"
+    },
+    "prompt_used": "\nI want to become a Networking (Data Analyst/AI). I have 4 months to prepare and I can study 2 hours per day. \nMy experience level is University Recent CSE Graduate. want to prepare for bangladesh job market,Need a remote job, Basic Coding experience, familiar with python, java,C++,JS,PHP languages and familiar with dot net and Docker, already build some academic projects, preferable language is C#\nNow generate a learning plan for me.\n",
+    "generated_plan": {
+        "title": "4-Month Learning Plan: Networking (Data Analyst/AI)",
+        "goal": "To acquire foundational skills in Networking, Data Analysis, and AI, with a practical focus on Python, SQL, and C# where applicable, for competitive remote job roles in Bangladesh as a recent CSE graduate.",
+        "daily_study_hours": 2,
+        "total_estimated_hours": 240,
+        "key_focus_areas": [
+            "Networking Fundamentals",
+            "Data Analysis with SQL & Python (Pandas, NumPy)",
+            "Introduction to Machine Learning (Scikit-learn)",
+            "Practical Project Application & Portfolio Building",
+            "Job Market Readiness"
+        ],
+        "months": [
+            {
+                "month": 1,
+                "theme": "Networking Fundamentals & C# Refresher (Approx. 50 hours)",
+                "weeks": [
+                    {
+                        "week": "Weeks 1-2",
+                        "focus": "Core Networking Concepts (28 hours)",
+                        "topics": [
+                            "OSI Model vs. TCP/IP Model",
+                            "IP Addressing (IPv4, IPv6, Subnetting)",
+                            "Common Protocols (TCP, UDP, HTTP, DNS, DHCP, ARP, ICMP)",
+                            "Network Devices (Routers, Switches, Firewalls)",
+                            "Basic Network Topologies",
+                            "Command-line network tools (ping, tracert, ipconfig, netstat)"
+                        ],
+                        "resources": [
+                            "Cisco CCNA Introduction (readings/videos)",
+                            "CompTIA Network+ certification basics",
+                            "Online tutorials (e.g., freeCodeCamp, Udemy)"
+                        ]
+                    },
+                    {
+                        "week": "Weeks 3-4",
+                        "focus": "Network Security Basics & C# for Networking (22 hours)",
+                        "topics": [
+                            "Basic Security Concepts (Firewalls, VPNs, basic attack types)",
+                            "Introduction to Wireshark for packet analysis",
+                            "C# for Networking: Basic Socket Programming (e.g., simple client-server, port scanning basics)"
+                        ],
+                        "resources": [
+                            "Microsoft Learn - C# Network Programming",
+                            "Wireshark documentation and tutorials"
+                        ],
+                        "project_idea": "Simple command-line network scanner or basic packet analysis tool in C#."
+                    }
+                ]
+            },
+            {
+                "month": 2,
+                "theme": "Data Analysis Fundamentals (Approx. 50 hours)",
+                "weeks": [
+                    {
+                        "week": "Weeks 5-6",
+                        "focus": "SQL for Data Analysis (28 hours)",
+                        "topics": [
+                            "Database Concepts (Relational, Tables, Keys)",
+                            "Basic Queries (SELECT, FROM, WHERE, GROUP BY, ORDER BY, LIMIT)",
+                            "Joins (INNER, LEFT, RIGHT, FULL)",
+                            "Subqueries, Common Table Expressions (CTEs)",
+                            "Introduction to Window Functions"
+                        ],
+                        "resources": [
+                            "SQLZoo.net",
+                            "HackerRank SQL challenges",
+                            "freeCodeCamp SQL Course",
+                            "LeetCode SQL problems"
+                        ]
+                    },
+                    {
+                        "week": "Weeks 7-8",
+                        "focus": "Python for Data Analysis (22 hours)",
+                        "topics": [
+                            "Python Refresher (focus on data types, functions)",
+                            "NumPy: Arrays and basic array operations",
+                            "Pandas: DataFrames, Series, reading/writing data (CSV, Excel), data cleaning (missing values, duplicates), data manipulation (filtering, sorting, merging, grouping)",
+                            "Basic Data Visualization with Matplotlib/Seaborn (line, bar, scatter, histogram)"
+                        ],
+                        "resources": [
+                            "Wes McKinney's 'Python for Data Analysis'",
+                            "freeCodeCamp Python/Pandas tutorials",
+                            "Kaggle notebooks for Pandas practice"
+                        ],
+                        "project_idea": "Analyze a public dataset (e.g., from Kaggle) using SQL and Python/Pandas, creating relevant visualizations."
+                    }
+                ]
+            },
+            {
+                "month": 3,
+                "theme": "Introduction to AI/Machine Learning (Approx. 50 hours)",
+                "weeks": [
+                    {
+                        "week": "Weeks 9-10",
+                        "focus": "ML Foundations & Supervised Learning (28 hours)",
+                        "topics": [
+                            "What is Machine Learning? (Supervised, Unsupervised, Reinforcement)",
+                            "ML Workflow (Data preparation, feature engineering, model selection, training, evaluation)",
+                            "Scikit-learn: Introduction to its API",
+                            "Regression: Linear Regression (concepts, implementation, evaluation metrics)",
+                            "Classification: Logistic Regression, Decision Trees (concepts, implementation, evaluation metrics: Accuracy, Precision, Recall, F1, Confusion Matrix)"
+                        ],
+                        "resources": [
+                            "Andrew Ng's Machine Learning course (Coursera - conceptual)",
+                            "Scikit-learn official documentation",
+                            "Towards Data Science (Medium) articles"
+                        ]
+                    },
+                    {
+                        "week": "Weeks 11-12",
+                        "focus": "Unsupervised Learning, Feature Engineering & Ethics (22 hours)",
+                        "topics": [
+                            "Clustering: K-Means (concepts, implementation, elbow method)",
+                            "Dimensionality Reduction: Principal Component Analysis (PCA - conceptual)",
+                            "Feature Engineering basics (creating new features, encoding categorical data)",
+                            "Introduction to Machine Learning ethics and bias"
+                        ],
+                        "resources": [
+                            "Scikit-learn documentation for K-Means and PCA",
+                            "Online articles on feature engineering best practices"
+                        ],
+                        "project_idea": "Build a simple predictive model (e.g., house price prediction, sentiment analysis) on a cleaned dataset from the previous month."
+                    }
+                ]
+            },
+            {
+                "month": 4,
+                "theme": "Integration, Specialization & Job Prep (Approx. 50 hours)",
+                "weeks": [
+                    {
+                        "week": "Weeks 13-14",
+                        "focus": "Networking & Data/AI Integrated Project (28 hours)",
+                        "topics": [
+                            "Work on a capstone project combining networking data with analysis/AI techniques.",
+                            "Example Project Ideas:",
+                            "- Analyze network logs (firewall, router) using Python/Pandas to identify anomalies or patterns.",
+                            "- Build a basic intrusion detection system (IDS) proof-of-concept using ML on simulated or public network traffic data.",
+                            "- Develop a C# application that interacts with network devices/APIs and sends data to a Python script for ML analysis.",
+                            "Utilize Docker for containerizing your project components."
+                        ],
+                        "resources": [
+                            "Kaggle datasets related to network security/traffic",
+                            "Packet analysis libraries in Python (e.g., Scapy - for advanced users)",
+                            "Docker documentation"
+                        ],
+                        "project_idea": "A comprehensive project demonstrating skills across Networking, Data Analysis, and AI, using Docker for deployment."
+                    },
+                    {
+                        "week": "Weeks 15-16",
+                        "focus": "Portfolio, Resume & Interview Prep (22 hours)",
+                        "topics": [
+                            "Refine all portfolio projects for GitHub (well-documented, clear READMEs).",
+                            "Tailor resume/CV for 'Networking Data Analyst' or 'Entry-level ML Engineer' roles, highlighting diverse skill set.",
+                            "Practice common technical interview questions (SQL queries, Python coding, ML concepts, basic networking troubleshooting).",
+                            "Research Bangladesh IT job market specifics for remote roles.",
+                            "Networking on LinkedIn: Connect with professionals, follow relevant companies."
+                        ],
+                        "resources": [
+                            "LinkedIn job search and networking tools",
+                            "Interview prep platforms (e.g., LeetCode, Pramp)",
+                            "Resume builders and templates"
+                        ],
+                        "job_market_tip": "Focus on clearly articulating how your networking knowledge enhances data analysis and AI applications, particularly in areas like cybersecurity, network performance optimization, and IoT."
+                    }
+                ]
+            }
+        ],
+        "additional_recommendations": [
+            "**GitHub:** Make all your project code publicly available and well-documented.",
+            "**LinkedIn:** Build a strong professional profile and actively network.",
+            "**Kaggle:** Participate in competitions or explore datasets for practice.",
+            "**Cloud Basics (Optional but Recommended):** Familiarize yourself with basic services on AWS, Azure, or GCP free tiers, especially for deploying containerized applications with Docker."
+        ],
+        "note": "While C# is your preferred language, Python is the industry standard for Data Analysis and AI. This plan incorporates C# for networking aspects but heavily emphasizes Python for data science to align with job market demands. Consistency is key for the 2 hours/day study schedule."
+    }
+}
