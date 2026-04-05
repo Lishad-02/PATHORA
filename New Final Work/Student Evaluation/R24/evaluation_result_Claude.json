@@ -1,0 +1,434 @@
+{
+  "generated_at": "2026-04-02T23:08:43.039030",
+  "model": "claude-sonnet-4-6",
+  "temperature": 0.0,
+  "prompt_version": "v1.0-comparative-dimension-first",
+  "user_profile": {
+    "role": "Full Stack Developer(Software Engineering)",
+    "experience": "University Final Year CSE Student",
+    "preparation_time_months": 10,
+    "study_hours_per_day": 1,
+    "Market_Focus": "Global",
+    "other_preferences": " looking for remote job, Basic (Completed some courses / small exercises) coding experience, familiar with Python, C, C++, Kotlin and JavaScript and familiar with django,flask framework. Also build some academic project, preferable language is Python"
+  },
+  "result": {
+    "evaluation_methodology": "comparative \u2014 both plans analyzed together per dimension before scoring",
+    "user_profile_summary": "Final-year CSE student targeting a global remote Full Stack Developer role with 10 months and 1 hour/day (240 hours). Has basic coding experience, familiarity with Python, Django, Flask, JavaScript, C, C++, Kotlin, and some academic projects. Prefers Python as primary language.",
+    "dimensions": {
+      "D1": {
+        "name": "Hiring Readiness Optimization",
+        "weight": 0.25,
+        "comparative_analysis": "Plan 1 covers the full stack comprehensively \u2014 Django/DRF backend, React frontend, PostgreSQL, Docker, AWS deployment, CI/CD, and DSA woven throughout all 10 months. It includes a progressive blog project and a capstone (e-commerce/social platform) with deployment, plus dedicated interview prep in Month 10 with mock interviews and system design. Plan 2 also covers the full stack but front-loads DRF in Month 1 (skipping foundational Django review), delays DSA to Months 6-7, and introduces a new portfolio project only in Month 9 with limited time to complete it. Plan 1's capstone is more ambitious and employer-worthy, with explicit AWS deployment and CI/CD. Plan 2's portfolio strategy is weaker \u2014 the 'new ambitious project' in Month 9 leaves only one month to complete and polish it. Both include behavioral prep, but Plan 1 has more explicit mock interview scheduling and system design coverage.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 delivers a more employer-worthy capstone with full deployment, integrates DSA throughout rather than siloing it, and has more structured mock interview and system design preparation.",
+        "Plan_1": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Covers Django/DRF, React, PostgreSQL, Docker, AWS, CI/CD, Git \u2014 all core full-stack requirements. Depth is appropriate for a graduate-level hire. Minor gap: Redis/Celery not covered."
+            },
+            "interview_prep_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "DSA integrated monthly from Month 1, system design introduced in Month 7 and deepened in Month 10, mock interviews explicitly scheduled in Month 10, behavioral prep via STAR method. Strong coverage across all SWE interview pillars."
+            },
+            "portfolio_project_strength": {
+              "score": 8,
+              "max": 9,
+              "justification": "Two projects: a Django blog (with DRF, auth, PostgreSQL) and a capstone (e-commerce/social platform) deployed to AWS with CI/CD. Progressive build, live deployment, and professional READMEs planned. Highly employer-worthy."
+            }
+          },
+          "raw_score": 22,
+          "max_raw": 25,
+          "weighted_contribution": 22.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "Covers Django/DRF, React, PostgreSQL, Docker basics, deployment, Redis/Celery, and web security (OWASP). Good breadth but Month 8 advanced topics feel rushed given the 1hr/day constraint."
+            },
+            "interview_prep_readiness": {
+              "score": 5,
+              "max": 8,
+              "justification": "DSA is siloed to Months 6-7 with no integration into earlier months, reducing retention. System design is covered in Month 9 but briefly. Mock interviews mentioned in Month 10 but not structured. Less consistent interview prep cadence."
+            },
+            "portfolio_project_strength": {
+              "score": 6,
+              "max": 9,
+              "justification": "Integrated full-stack app deployed in Month 5 is good, but the 'new ambitious project' starting in Month 9 leaves only ~30 hours to build, document, and polish it. Risk of incomplete or under-documented capstone at job application time."
+            }
+          },
+          "raw_score": 17,
+          "max_raw": 25,
+          "weighted_contribution": 17.0
+        }
+      },
+      "D2": {
+        "name": "Time-Constrained Feasibility",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 explicitly budgets 216 planned hours with 24 buffer hours out of 240 total, and breaks down each month into theory, practice, and project hours. This is transparent and realistic. However, some months pack a lot \u2014 e.g., Month 1 covers advanced Git, advanced Python OOP, SOLID principles, AND foundational DSA in 22 hours, which is ambitious for 1hr/day. Plan 2 claims ~300 hours total for a 1hr/day, 10-month plan, which is mathematically incorrect (10 months \u00d7 30 days \u00d7 1hr = ~300 hours is plausible only if counting every single day including weekends). Plan 2 does not provide per-month hour budgets, making feasibility harder to verify. Plan 2's Month 1 jumping straight into DRF, JWT, and advanced PostgreSQL without reviewing Django fundamentals may be too steep. Plan 2's Month 8 stacks Redis, Celery, advanced ORM, Redux, testing, and OWASP security \u2014 clearly overloaded for ~30 hours.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 provides explicit hour budgets with a buffer, making feasibility verifiable, while Plan 2 has an inflated hour claim and a severely overloaded Month 8.",
+        "Plan_1": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 5,
+              "max": 5,
+              "justification": "216 planned hours + 24 buffer = 240 total. Matches the 10-month, 1hr/day constraint precisely. Transparent monthly breakdown provided."
+            },
+            "cognitive_load_realism": {
+              "score": 3,
+              "max": 5,
+              "justification": "Most months are reasonable, but Month 1 (advanced Git + advanced Python + OOP/SOLID + DSA) and Month 3 (Django views + PostgreSQL + DRF intro + DSA trees) are dense for 22 hours. Some weeks may require more than 1 hour to complete meaningfully."
+            },
+            "overengineering_avoidance": {
+              "score": 4,
+              "max": 5,
+              "justification": "AWS EC2/RDS/S3/Route53 + Nginx + CI/CD in Month 9 is ambitious but justified for a production-ready portfolio. Trimmed topics are explicitly justified. Minor concern with Dijkstra's algorithm inclusion given time constraints."
+            }
+          },
+          "raw_score": 12,
+          "max_raw": 15,
+          "weighted_contribution": 12.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 3,
+              "max": 5,
+              "justification": "Claims ~300 hours for 1hr/day over 10 months, which overstates available hours (realistically ~240-300 depending on daily consistency). No per-month hour breakdown makes compliance unverifiable."
+            },
+            "cognitive_load_realism": {
+              "score": 2,
+              "max": 5,
+              "justification": "Month 1 jumps to DRF, JWT, and advanced PostgreSQL without Django fundamentals review. Month 8 stacks Redis, Celery, advanced ORM, Redux/Zustand, Jest, React Testing Library, and OWASP Top 10 \u2014 far too much for ~30 hours."
+            },
+            "overengineering_avoidance": {
+              "score": 3,
+              "max": 5,
+              "justification": "SASS/SCSS, Redis, Celery, Zustand, and OWASP Top 10 are included but feel like scope creep for a 1hr/day plan. The new ambitious project in Month 9 alongside system design study is unrealistic."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 15,
+          "weighted_contribution": 8.0
+        }
+      },
+      "D3": {
+        "name": "Personalization & Preference Alignment",
+        "weight": 0.15,
+        "comparative_analysis": "Both plans acknowledge the user's Python/Django familiarity and target the global remote market. Plan 1 explicitly justifies skipping Kotlin/C/C++ and explains why Python/JavaScript is the focus, and it builds on the user's existing Django knowledge rather than restarting from scratch. Plan 1 also explicitly addresses remote work preparation (LinkedIn optimization, networking, elevator pitch). Plan 2 also leverages Python/Django but jumps to DRF in Month 1 without acknowledging that the user may need some Django consolidation first. Plan 2 mentions English communication as advice for global remote roles, which is a thoughtful personalization touch. Both plans use the user's preferred Python stack, but Plan 1 provides more explicit rationale for technology choices and better addresses the remote job context throughout the plan.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 explicitly justifies technology choices, addresses the remote work context throughout, and provides clearer rationale for skipping non-relevant languages.",
+        "Plan_1": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 4,
+              "max": 5,
+              "justification": "Correctly skips beginner Python and starts with advanced features. Builds on existing Django knowledge. Explicitly trims Kotlin/C/C++. Minor gap: could have acknowledged Flask familiarity more explicitly."
+            },
+            "preference_integration": {
+              "score": 5,
+              "max": 5,
+              "justification": "Python-first throughout, Django/DRF backend, React frontend, global remote job focus with LinkedIn/networking actions every month, GitHub portfolio emphasis. Strongly aligned with all stated preferences."
+            },
+            "stack_justification_quality": {
+              "score": 4,
+              "max": 5,
+              "justification": "Trimmed topics section explicitly justifies technology choices. Explains why Python/JavaScript over Kotlin/C/C++. Could be slightly more explicit about why React was chosen over Vue or other alternatives."
+            }
+          },
+          "raw_score": 13,
+          "max_raw": 15,
+          "weighted_contribution": 13.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 3,
+              "max": 5,
+              "justification": "Acknowledges existing Django/Flask familiarity in prerequisites but Month 1 jumps to DRF without consolidating Django fundamentals, which may be too aggressive for 'basic' experience level. Does not explicitly skip beginner content."
+            },
+            "preference_integration": {
+              "score": 4,
+              "max": 5,
+              "justification": "Python/Django focus maintained throughout, global remote market addressed, English communication tip is a nice touch. However, remote-specific job hunt actions are less integrated month-by-month compared to Plan 1."
+            },
+            "stack_justification_quality": {
+              "score": 3,
+              "max": 5,
+              "justification": "Technology choices (React, PostgreSQL, Docker) are listed but not explicitly justified relative to the user's goals or market demand. No explanation for why certain tools were included or excluded."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 15,
+          "weighted_contribution": 10.0
+        }
+      },
+      "D4": {
+        "name": "Market Alignment",
+        "weight": 0.1,
+        "comparative_analysis": "Both plans cover the globally in-demand full-stack skill set: Python/Django backend, React frontend, PostgreSQL, Docker, and cloud deployment. Plan 1 includes AWS (EC2, RDS, S3) which is more globally recognized than Heroku/Render (Plan 2's primary deployment option), and CI/CD via GitHub Actions. Plan 2 includes Redis, Celery, and OWASP security awareness, which are valuable differentiators for senior-leaning roles but may be premature for a graduate-level hire. Plan 1's AWS focus is more aligned with global enterprise hiring. Both plans include system design, which is standard for SWE interviews globally. Neither plan includes TypeScript, which is increasingly expected in global remote roles, but this is a minor gap given the time constraint.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1's AWS deployment focus is more globally marketable than Heroku/Render, and its skill set is better calibrated for graduate-level global remote hiring.",
+        "Plan_1": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Django/DRF, React, PostgreSQL, Docker, AWS, CI/CD, Git \u2014 all highly in-demand globally for full-stack roles. Missing TypeScript and Redis, but appropriate for the timeline. AWS is a strong differentiator."
+            },
+            "regional_global_alignment": {
+              "score": 5,
+              "max": 5,
+              "justification": "AWS deployment, GitHub Actions CI/CD, system design preparation, and remote work networking strategy are all well-aligned with what global employers expect from graduate full-stack hires."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 10,
+          "weighted_contribution": 9.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Covers similar core stack plus Redis, Celery, and OWASP security \u2014 good additions. However, Heroku/Render as primary deployment targets are less enterprise-relevant than AWS. Redis/Celery inclusion is a differentiator but may be superficial given time constraints."
+            },
+            "regional_global_alignment": {
+              "score": 4,
+              "max": 5,
+              "justification": "Covers global remote market needs adequately. English communication tip is relevant. System design included. Deployment options (Heroku/Vercel) are more startup-oriented, which is valid for remote roles but less enterprise-aligned than AWS."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 10,
+          "weighted_contribution": 8.0
+        }
+      },
+      "D5": {
+        "name": "Strategic Prioritization Quality",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 follows a coherent arc: Foundation (Git, Python, DSA basics) \u2192 Backend (Django, DRF, PostgreSQL) \u2192 Frontend (HTML/CSS/JS, React) \u2192 Integration \u2192 Deployment \u2192 Interview Blitz. DSA is woven throughout, ensuring retention. The blog project builds progressively into a capstone. Plan 2's phasing has a notable issue: it front-loads DRF and advanced backend in Month 1, then does frontend in Months 2-4, deployment in Month 5, then pivots entirely to DSA in Months 6-7, then advanced framework topics in Month 8, then system design + new project in Month 9. This creates a disjointed arc where DSA is siloed and the new portfolio project starts too late. Plan 1's integrated DSA approach and progressive project building is strategically superior.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1's integrated DSA approach and progressive project arc is more strategically coherent than Plan 2's siloed DSA block and late-starting new portfolio project.",
+        "Plan_1": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 4,
+              "max": 5,
+              "justification": "Backend API skills (highest ROI for full-stack) are prioritized early. DSA starts Month 1 for sustained practice. React comes after backend foundation is solid. Minor concern: frontend starts Month 5, which is relatively late."
+            },
+            "logical_phasing": {
+              "score": 5,
+              "max": 5,
+              "justification": "Clear Foundation \u2192 Backend \u2192 Frontend \u2192 Integration \u2192 Deployment \u2192 Interview arc. Each phase builds on the previous. Blog project grows progressively into a capstone. DSA integrated throughout for retention."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 10,
+          "weighted_contribution": 9.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 3,
+              "max": 5,
+              "justification": "DRF front-loaded in Month 1 is good for ROI, but DSA delayed to Months 6-7 means 5 months without interview prep practice. New portfolio project starting Month 9 is a low-ROI timing decision."
+            },
+            "logical_phasing": {
+              "score": 3,
+              "max": 5,
+              "justification": "Backend \u2192 Frontend \u2192 Integration \u2192 Deployment is logical for the first 5 months, but the pivot to pure DSA in Months 6-7 breaks momentum. Month 8 advanced topics feel disconnected. Month 9 new project alongside system design is poorly timed."
+            }
+          },
+          "raw_score": 6,
+          "max_raw": 10,
+          "weighted_contribution": 6.0
+        }
+      },
+      "D6": {
+        "name": "Curriculum Structural Depth & Clarity",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 provides weekly micro-goals, specific technical skills to master, interview prep goals, concrete deliverables, job hunt action items, and curated resources for every month. Each month has a named milestone deliverable. The level of detail is significantly higher than Plan 2. Plan 2 provides monthly topics, activities, and a single output statement per month, plus a consolidated resource list. Plan 2's structure is clear but less granular \u2014 topics are listed without weekly breakdown, and activities are somewhat generic. Plan 1's weekly micro-goals make it immediately actionable, while Plan 2 requires the user to self-organize within each month.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1's weekly micro-goals, per-month hour budgets, specific deliverables, and curated resources per topic provide significantly more actionable structure than Plan 2's monthly topic lists.",
+        "Plan_1": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 5,
+              "max": 5,
+              "justification": "Modules build logically: Git/Python \u2192 Django \u2192 PostgreSQL/DRF \u2192 API Security \u2192 Frontend \u2192 React \u2192 Integration \u2192 Capstone \u2192 Deployment \u2192 Interview. Each month's content directly enables the next."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 5,
+              "max": 5,
+              "justification": "Weekly micro-goals are specific and actionable (e.g., 'Master DRF Serializers, ViewSets, and Routers', 'Implement JWT using djangorestframework-simplejwt'). Resources are named with specific search terms. No vague filler."
+            },
+            "clear_learning_outcomes": {
+              "score": 5,
+              "max": 5,
+              "justification": "Every month has a named milestone deliverable, weekly goals, interview prep goals, and job hunt action items. Outcomes are measurable and concrete (e.g., 'A secure, fully functional Django REST API with Postman collection')."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 4,
+              "max": 5,
+              "justification": "Monthly ordering is generally logical for the first 5 months. The DSA block in Months 6-7 and the new project in Month 9 create some structural discontinuity, but within each month, topics build reasonably."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 3,
+              "max": 5,
+              "justification": "Topics are listed clearly but without weekly breakdown. Activities are somewhat generic (e.g., 'Enhance one of your existing projects with advanced features'). No per-topic resource mapping. Less immediately actionable."
+            },
+            "clear_learning_outcomes": {
+              "score": 3,
+              "max": 5,
+              "justification": "Each month has a single 'output' statement which is useful but less granular than Plan 1. No weekly milestones, no per-month hour budgets, no interview prep goals per month. User must self-organize significantly."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 15,
+          "weighted_contribution": 10.0
+        }
+      },
+      "D7": {
+        "name": "Career Execution Readiness",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 integrates job hunt action items every single month \u2014 LinkedIn optimization in Month 1, company research in Month 2, networking in Month 3, resume updates in Month 4, personal website in Month 5, system design reading in Month 6, portfolio updates in Month 7, elevator pitch in Month 8, resume refinement in Month 9, and full application hustle in Month 10. Mock interviews are explicitly scheduled in Month 10 with peer/mentor feedback. Plan 2 consolidates all career execution into Month 10, with resume/LinkedIn, behavioral prep, mock interviews, and job applications all crammed into the final month. This is a significant weakness \u2014 career preparation should be progressive, not a last-minute sprint.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 distributes career execution actions across all 10 months, while Plan 2 dangerously concentrates all job search preparation into the final month.",
+        "Plan_1": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 4,
+              "max": 4,
+              "justification": "LinkedIn optimization starts Month 1, skills section updated Month 3-4, resume refined Month 4 and Month 9, portfolio website Month 5, GitHub READMEs Month 7 and Month 10. Fully progressive and well-distributed."
+            },
+            "mock_interviews_included": {
+              "score": 3,
+              "max": 3,
+              "justification": "Mock technical interviews (DSA + coding) explicitly scheduled in Month 10 with peer/mentor feedback. System design practice in Month 10. Behavioral STAR method introduced Month 7. All three SWE interview pillars covered."
+            },
+            "application_strategy": {
+              "score": 3,
+              "max": 3,
+              "justification": "Company list curation Month 2, recruiter networking Month 2-3, virtual meetups Month 3, elevator pitch Month 8, targeted remote role applications Month 10 with LinkedIn engagement. Clear and actionable strategy."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 2,
+              "max": 4,
+              "justification": "Resume and LinkedIn optimization mentioned only in Month 10 topics. No progressive resume building or LinkedIn updates throughout the plan. General advice section mentions networking but without monthly integration."
+            },
+            "mock_interviews_included": {
+              "score": 2,
+              "max": 3,
+              "justification": "Mock interviews mentioned in Month 10 activities ('self-recorded or with peers') but not structured. No explicit scheduling of coding + system design + behavioral mock sessions. Less rigorous than Plan 1."
+            },
+            "application_strategy": {
+              "score": 2,
+              "max": 3,
+              "justification": "Job application strategy mentioned in Month 10 and general advice. Networking mentioned generally. No month-by-month company research, recruiter engagement, or platform-specific guidance for remote roles."
+            }
+          },
+          "raw_score": 6,
+          "max_raw": 10,
+          "weighted_contribution": 6.0
+        }
+      }
+    },
+    "final_scores": {
+      "Plan_1": {
+        "total_weighted_score": 90.0,
+        "dimension_wins": [
+          "D1",
+          "D2",
+          "D3",
+          "D4",
+          "D5",
+          "D6",
+          "D7"
+        ],
+        "strengths": [
+          "Comprehensive weekly micro-goals with explicit hour budgets and buffer time",
+          "Progressive portfolio building from blog to deployed capstone on AWS",
+          "DSA integrated throughout all 10 months for sustained retention",
+          "Career execution actions distributed across every month, not just Month 10",
+          "Explicit technology choice justifications and trimmed topics rationale",
+          "AWS deployment with CI/CD pipeline \u2014 strong global market differentiator",
+          "Structured mock interview scheduling with peer/mentor feedback"
+        ],
+        "critical_gaps": [
+          "Month 1 cognitive load is high (Git + advanced Python + OOP/SOLID + DSA in 22 hours)",
+          "Frontend starts Month 5, which is relatively late in the plan",
+          "TypeScript not included despite growing global demand",
+          "Redis/Celery not covered, limiting backend depth for senior-leaning roles"
+        ]
+      },
+      "Plan_2": {
+        "total_weighted_score": 65.0,
+        "dimension_wins": [],
+        "strengths": [
+          "Includes Redis, Celery, and OWASP security awareness \u2014 good differentiators",
+          "English communication tip is a thoughtful personalization for global remote roles",
+          "Deployment covered earlier (Month 5) giving more time to iterate on live project",
+          "Comprehensive resource list organized by technology area",
+          "SASS/SCSS and Zustand included as modern tooling options"
+        ],
+        "critical_gaps": [
+          "All career execution (resume, LinkedIn, mock interviews, applications) crammed into Month 10",
+          "DSA siloed to Months 6-7 with no integration into earlier months \u2014 poor retention strategy",
+          "New ambitious portfolio project starting Month 9 leaves insufficient time to complete and polish",
+          "Month 8 severely overloaded with Redis, Celery, Redux, testing, and OWASP in ~30 hours",
+          "No per-month hour budgets \u2014 feasibility unverifiable",
+          "Hour claim of ~300 hours is inflated relative to 1hr/day constraint",
+          "No weekly micro-goals \u2014 requires significant self-organization from user"
+        ]
+      }
+    },
+    "verdict": {
+      "winner": "Plan_1",
+      "score_gap": 25.0,
+      "margin_interpretation": "decisive",
+      "winner_key_advantages": [
+        "Weekly micro-goals and per-month hour budgets make Plan 1 immediately actionable without self-organization overhead",
+        "DSA integrated throughout all 10 months ensures retention and consistent interview readiness",
+        "Progressive capstone project deployed to AWS with CI/CD is significantly more employer-worthy",
+        "Career execution actions distributed across all 10 months rather than concentrated in the final month",
+        "Explicit technology justifications and trimmed topics rationale demonstrate strategic thinking"
+      ],
+      "loser_salvageable_strengths": [
+        "Plan 2's Redis/Celery and OWASP security coverage could be incorporated into Plan 1's Month 8",
+        "Plan 2's earlier deployment (Month 5) gives more iteration time on a live project \u2014 a valid structural choice",
+        "Plan 2's consolidated resource list by technology is a useful reference format",
+        "English communication tip for global remote roles is a thoughtful addition worth adopting"
+      ],
+      "shared_gaps_in_both_plans": [
+        "TypeScript not included despite growing global demand for full-stack roles",
+        "No explicit WebSocket or real-time feature coverage (e.g., Django Channels)",
+        "No GraphQL coverage, which is increasingly common in global remote job descriptions",
+        "Limited coverage of API documentation tools (Swagger/OpenAPI) beyond Postman"
+      ],
+      "final_recommendation": "Plan 1 is decisively superior and should be followed. Its weekly micro-goals, integrated DSA practice, progressive portfolio building, AWS deployment, and month-by-month career execution actions make it significantly more likely to result in a job offer within the 10-month window. The user should supplement Plan 1 with Plan 2's Redis/Celery concepts in Month 8 and consider adding TypeScript basics in Month 10's polish phase. The 1hr/day constraint is tight \u2014 the user should strictly apply Plan 1's MVP principle and resist scope creep, particularly in the capstone phase."
+    }
+  },
+  "winner": "Plan_1",
+  "plan_1_score": 90.0,
+  "plan_2_score": 65.0
+}

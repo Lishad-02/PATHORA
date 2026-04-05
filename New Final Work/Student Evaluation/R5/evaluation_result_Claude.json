@@ -1,0 +1,433 @@
+{
+  "generated_at": "2026-04-02T14:22:27.657602",
+  "model": "claude-sonnet-4-6",
+  "temperature": 0.0,
+  "prompt_version": "v1.0-comparative-dimension-first",
+  "user_profile": {
+    "role": "Mobile App Developer/DevOps Engineer (Software Engineering)",
+    "months": 3,
+    "hours_per_day": 8,
+    "experience": "University 3rd year CSE Student",
+    "other_preferences": "Want remote job, Basic (Completed some courses / small exercises) coding experience, familiar with java Language and familiar with django framework. build some academic projects.preferable language is java"
+  },
+  "result": {
+    "evaluation_methodology": "comparative \u2014 both plans analyzed together per dimension before scoring",
+    "user_profile_summary": "3rd-year CSE student targeting Mobile App Developer and DevOps Engineer remote roles. Has basic coding experience, Java familiarity, Django exposure, and academic projects. Prefers Java. Has 3 months at 8 hours/day (~576 total hours).",
+    "dimensions": {
+      "D1": {
+        "name": "Hiring Readiness Optimization",
+        "weight": 0.25,
+        "comparative_analysis": "Plan 1 builds a full-stack Android+Spring Boot+DevOps stack with explicit DSA milestones (20+ LeetCode problems per month), system design prep, and a deployed capstone with CI/CD \u2014 all highly employer-visible. Plan 2 covers Android+Django+DevOps but DSA practice is deferred mostly to weeks 11-12, interview prep is concentrated at the end, and the capstone is less rigorously defined in terms of deployment and testing. Plan 1's portfolio is stronger because it includes Docker deployment, GitHub Actions CI/CD, Swagger docs, and comprehensive testing, whereas Plan 2's capstone deployment is more loosely described. Plan 1 also explicitly schedules behavioral and system design prep across months, while Plan 2 bundles most interview prep into the final week. Plan 2 does introduce Fastlane and Terraform which are differentiating DevOps tools, but the overall hiring readiness arc is weaker.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 has a consistently scheduled, multi-month interview prep arc with DSA targets, a fully deployed and tested capstone, and explicit system design practice \u2014 all materially stronger for SWE hiring readiness.",
+        "Plan_1": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Covers Android (Java), Spring Boot REST API, MVVM, Room, Retrofit, Docker, GitHub Actions CI/CD \u2014 a comprehensive and employer-relevant stack for the dual Mobile/DevOps role. Minor gap: no Kotlin mention, which is increasingly expected for Android roles."
+            },
+            "interview_prep_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "DSA practice is explicitly scheduled each month with LeetCode targets (20+ Easy/Medium in M1, 20+ Medium in M2, 10+ Hard in M3), behavioral STAR method, and mock technical interviews in M3. System design is touched on for junior roles. Well-distributed across the plan."
+            },
+            "portfolio_project_strength": {
+              "score": 8,
+              "max": 9,
+              "justification": "Iterative capstone (e-commerce/social app) progresses from Java foundation \u2192 Spring Boot API with auth and tests \u2192 Android frontend \u2192 full integration with Docker, CI/CD, and cloud deployment. Professional README and live demo included. Highly employer-worthy. Minor deduction: cloud deployment is described as 'conceptual' for AWS."
+            }
+          },
+          "raw_score": 22,
+          "max_raw": 25,
+          "weighted_contribution": 22.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "Covers Android (Java), Django backend, Docker, Terraform, Fastlane, GitHub Actions \u2014 good breadth. However, the backend is Django (not Spring Boot), which is less aligned with the user's Java preference for backend. Terraform is a strong differentiator but may be too advanced for the timeline."
+            },
+            "interview_prep_readiness": {
+              "score": 4,
+              "max": 8,
+              "justification": "DSA practice is mentioned in week 11 (2 hours/day) and interview prep in week 12 only. No explicit LeetCode targets per month, no system design practice scheduled until the final week. This back-loading significantly reduces readiness for technical screens."
+            },
+            "portfolio_project_strength": {
+              "score": 6,
+              "max": 9,
+              "justification": "Capstone 'Remote Job Tracker' is a reasonable idea with Android + Django + Docker + CI/CD. However, deployment instructions are vague, testing is not emphasized, and the project is only seriously built in weeks 11-12, leaving limited time for polish and iteration."
+            }
+          },
+          "raw_score": 16,
+          "max_raw": 25,
+          "weighted_contribution": 16.0
+        }
+      },
+      "D2": {
+        "name": "Time-Constrained Feasibility",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 explicitly accounts for 504 planned hours out of 576 available, with a 72-hour buffer \u2014 this is transparent and well-structured. However, Plan 1 is extremely ambitious: in a single week it asks the user to learn Spring Security+JWT, start Android development, and continue DSA \u2014 this is heavy cognitive stacking. Plan 2 distributes topics more gradually (Android fundamentals in M1, DevOps in M2-M3) and the weekly hour allocations are more granular and realistic. Plan 2 introduces Terraform in week 10 which is a stretch, but overall the weekly cognitive load is more manageable. Plan 1's M2 week 6 (Spring Security + Android Activities + Fragments + DSA) is particularly overloaded. Both plans are ambitious for 8 hours/day, but Plan 2's phasing is more digestible.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 distributes cognitive load more gradually across weeks with explicit daily hour breakdowns, while Plan 1 stacks multiple complex new domains simultaneously in single weeks.",
+        "Plan_1": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Explicitly states 504 planned hours out of 576 available with a 72-hour buffer. Hour accounting is transparent and compliant."
+            },
+            "cognitive_load_realism": {
+              "score": 2,
+              "max": 5,
+              "justification": "Week 6 asks the user to simultaneously learn Spring Security+JWT, Android Activities/Fragments, Material Design, and continue DSA. Week 9 adds MVVM+Room+Retrofit+ViewModel+LiveData all at once. These are unrealistic weekly loads for a student with basic experience."
+            },
+            "overengineering_avoidance": {
+              "score": 3,
+              "max": 5,
+              "justification": "Hilt/Dagger concepts, Espresso UI testing, AWS EC2 deployment, and LeetCode Hard problems in month 3 push the boundaries for a 3-month plan at this experience level. Some of these are stretch goals that may not be achievable."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 15,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Daily hour allocations are provided per topic (4+3+1 = 8 hours/day), which is consistent with the user's commitment. No explicit total hour accounting or buffer stated, which is a minor gap."
+            },
+            "cognitive_load_realism": {
+              "score": 3,
+              "max": 5,
+              "justification": "Weekly topics are more focused \u2014 Android fundamentals in M1, architecture in M2, DevOps in M2-M3. However, week 7 (advanced Git + Linux + networking) and week 10 (Docker Compose + Terraform + security) are still somewhat overloaded."
+            },
+            "overengineering_avoidance": {
+              "score": 3,
+              "max": 5,
+              "justification": "Terraform in week 10 is advanced for a 3-month plan at this level. Fastlane is a niche mobile DevOps tool that adds complexity. These are not dealbreakers but represent some overreach for the timeline."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 15,
+          "weighted_contribution": 10.0
+        }
+      },
+      "D3": {
+        "name": "Personalization & Preference Alignment",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 strongly leverages the user's Java background by building the entire backend in Spring Boot (Java) and Android in Java, explicitly connecting prior Java knowledge to new frameworks. It acknowledges Django experience but pivots to Spring Boot for a more cohesive Java-centric stack. Plan 2 uses Django for the backend (Python), which contradicts the user's stated Java preference for backend work, though it does use Java for Android. Plan 1 also explicitly mentions the user's academic project background and frames the capstone as an evolution of that experience. Both plans target remote roles, but Plan 1 more explicitly addresses remote job hunting strategies. Plan 2's use of Django is a meaningful misalignment with the user's stated preference.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 builds the entire stack in Java (Android + Spring Boot), directly honoring the user's stated language preference, while Plan 2 uses Django/Python for the backend which contradicts the user's explicit Java preference.",
+        "Plan_1": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 4,
+              "max": 5,
+              "justification": "Acknowledges Java familiarity and skips basic Java intro, jumping to advanced OOP and design patterns. Recognizes academic project background. Minor gap: could have more explicitly leveraged Django knowledge as a conceptual bridge to Spring Boot."
+            },
+            "preference_integration": {
+              "score": 5,
+              "max": 5,
+              "justification": "Java is used throughout (Android + Spring Boot). Remote job hunting is explicitly addressed in monthly job hunt action items. Mobile App Developer and DevOps Engineer roles are both covered. Preferred language is fully honored."
+            },
+            "stack_justification_quality": {
+              "score": 4,
+              "max": 5,
+              "justification": "Spring Boot is justified as the enterprise Java backend framework. Android Java is justified for mobile. Docker and GitHub Actions are justified for DevOps. The pivot away from Django is implicit rather than explicitly explained, which is a minor gap."
+            }
+          },
+          "raw_score": 13,
+          "max_raw": 15,
+          "weighted_contribution": 13.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 3,
+              "max": 5,
+              "justification": "Acknowledges Java and Django background. Uses Java for Android. However, it reuses Django for the backend rather than building on Java for backend, which is a missed opportunity to deepen the user's primary language."
+            },
+            "preference_integration": {
+              "score": 3,
+              "max": 5,
+              "justification": "Android development in Java is aligned. However, the backend is Django (Python), directly contradicting the user's Java preference. Remote job focus is mentioned but not deeply integrated into the plan structure."
+            },
+            "stack_justification_quality": {
+              "score": 3,
+              "max": 5,
+              "justification": "Django reuse is justified as leveraging existing knowledge, which is reasonable but conflicts with the user's stated preference. Kotlin mention as a note is appropriate. Terraform and Fastlane choices are not deeply justified for this user's level."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 15,
+          "weighted_contribution": 9.0
+        }
+      },
+      "D4": {
+        "name": "Market Alignment",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 covers Android (Java), Spring Boot, MVVM, Room, Retrofit, Docker, GitHub Actions CI/CD \u2014 all highly demanded in global remote SWE/Mobile markets. Spring Boot is a top enterprise Java framework globally. Plan 2 covers Android (Java), Django, Docker, Terraform, Fastlane, GitHub Actions \u2014 also market-relevant, with Terraform being a strong DevOps differentiator. However, Django/Python backend is less aligned with Java-focused Android developer roles globally. Plan 1's Spring Boot + Android Java combination is a more coherent and in-demand profile for remote Java-focused mobile/backend roles. Plan 2's Terraform inclusion is a genuine differentiator for DevOps roles but may be premature for entry-level. Both plans address CI/CD which is critical for DevOps alignment.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1's Spring Boot + Android Java stack is more cohesive and globally in-demand for remote Java-focused SWE roles, while Plan 2's Django backend creates a language fragmentation that weakens the market profile.",
+        "Plan_1": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Spring Boot, Android Java, MVVM, Docker, GitHub Actions CI/CD are all highly demanded globally. Hilt/Dagger and Espresso add depth. Missing Kotlin (increasingly standard for Android) is a notable gap for market alignment."
+            },
+            "regional_global_alignment": {
+              "score": 4,
+              "max": 5,
+              "justification": "The Spring Boot + Android + CI/CD + Docker profile matches what global remote employers seek for junior-to-mid SWE roles. System design prep for junior roles is appropriate. Cloud deployment (AWS) is included, which is expected globally."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 10,
+          "weighted_contribution": 8.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Android Java, Docker, Terraform, Fastlane, GitHub Actions are all market-relevant. Terraform is a strong differentiator for DevOps roles. Django is widely used but creates a Python/Java split that may confuse the user's market positioning."
+            },
+            "regional_global_alignment": {
+              "score": 3,
+              "max": 5,
+              "justification": "The Android + Django + DevOps tools profile is somewhat fragmented for global remote roles. Employers hiring Java Android developers typically prefer Java/Kotlin backend alignment. The DevOps toolchain (Terraform, Fastlane) is strong but the overall profile lacks coherence for a single target role."
+            }
+          },
+          "raw_score": 7,
+          "max_raw": 10,
+          "weighted_contribution": 7.0
+        }
+      },
+      "D5": {
+        "name": "Strategic Prioritization Quality",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 starts with Java foundations and DSA in M1, moves to Spring Boot + Android in M2, and integrates + deploys in M3 \u2014 a logical Foundation \u2192 Applied \u2192 Integration arc. However, starting Android only in M2 week 6 (the primary target role) is a strategic delay. Plan 2 starts Android fundamentals immediately in M1 week 1, which is higher ROI for the primary Mobile App Developer role. Plan 2's DevOps tools are introduced in M2-M3, which is appropriate sequencing. Plan 1 delays Android to M2 in favor of Spring Boot backend, which is a reasonable choice for full-stack depth but suboptimal if Mobile is the primary target. Both plans have logical phasing overall, but Plan 2's immediate Android focus is more strategically aligned with the primary role.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 prioritizes Android development from week 1, directly addressing the primary target role immediately, while Plan 1 delays Android to month 2 in favor of backend work.",
+        "Plan_1": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 3,
+              "max": 5,
+              "justification": "Java foundations and DSA first is correct. However, Android (the primary target role) is not introduced until M2 week 6, which is a strategic delay. Spring Boot backend is prioritized over the primary mobile role."
+            },
+            "logical_phasing": {
+              "score": 4,
+              "max": 5,
+              "justification": "Foundation (Java+DSA+DB) \u2192 Backend (Spring Boot) \u2192 Mobile (Android) \u2192 Integration+DevOps is a coherent arc. The phasing makes sense for full-stack depth but the mobile-first priority is somewhat inverted."
+            }
+          },
+          "raw_score": 7,
+          "max_raw": 10,
+          "weighted_contribution": 7.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 4,
+              "max": 5,
+              "justification": "Android fundamentals start in week 1, directly addressing the primary target role. Java deep dive is concurrent. DevOps tools are introduced after Android foundation is established. This is high-ROI sequencing for the stated role."
+            },
+            "logical_phasing": {
+              "score": 4,
+              "max": 5,
+              "justification": "Android Fundamentals (M1) \u2192 Advanced Android + DevOps Intro (M2) \u2192 DevOps Tools + Integration + Portfolio (M3) is a clean and logical arc. The transition from mobile to DevOps is well-paced."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 10,
+          "weighted_contribution": 8.0
+        }
+      },
+      "D6": {
+        "name": "Curriculum Structural Depth & Clarity",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 provides weekly micro-goals with narrative descriptions, monthly time budgets broken into theory/practice/project hours, explicit milestone deliverables, and curated resources with search terms. Plan 2 provides weekly topic breakdowns with daily hour allocations per topic, project exercises per week, and specific resource names. Plan 1's milestone deliverables are more concrete and measurable (e.g., 'fully functional Spring Boot backend with authentication and API documentation'). Plan 2's weekly structure is more granular with daily hour splits, making it easier to execute day-to-day. Plan 1's resources are more actionable (specific search terms). Both plans have good structural depth, but Plan 1's milestone deliverables and resource specificity give it a slight edge in clarity of outcomes.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 provides more concrete milestone deliverables per month and more actionable resource recommendations with specific search terms, making learning outcomes clearer and more measurable.",
+        "Plan_1": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 5,
+              "max": 5,
+              "justification": "Modules build correctly: Java OOP \u2192 Git \u2192 SQL \u2192 Spring Boot \u2192 Android \u2192 Integration \u2192 DevOps. Each week's content logically depends on the previous week's foundation."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 4,
+              "max": 5,
+              "justification": "Weekly micro-goals are narrative and specific (e.g., 'implement authentication and authorization using Spring Security JWT, handle validations, and integrate logging'). Resources include specific search terms. Minor gap: some weeks are described at a high level without day-by-day breakdown."
+            },
+            "clear_learning_outcomes": {
+              "score": 5,
+              "max": 5,
+              "justification": "Each month has a clear milestone deliverable with specific, measurable outcomes (e.g., 'fully functional Spring Boot backend with authentication and API documentation, and a standalone Android application with a rich UI'). Monthly time budgets add further clarity."
+            }
+          },
+          "raw_score": 14,
+          "max_raw": 15,
+          "weighted_contribution": 14.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 5,
+              "max": 5,
+              "justification": "Android fundamentals \u2192 Advanced Android + Architecture \u2192 DevOps tools \u2192 Integration is a clean and logical progression. Each week builds on prior knowledge appropriately."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 4,
+              "max": 5,
+              "justification": "Weekly topics include daily hour allocations per subtopic (e.g., '4 hours/day: RecyclerView, 3 hours/day: Fragments, 1 hour/day: ConstraintLayout'), which is highly actionable. Project exercises are specific. Resources are named but less specific than Plan 1."
+            },
+            "clear_learning_outcomes": {
+              "score": 3,
+              "max": 5,
+              "justification": "Weekly project exercises serve as implicit outcomes, but there are no explicit monthly milestone deliverables with measurable criteria. The capstone project outcome is only described in week 11, leaving earlier months without clear portfolio checkpoints."
+            }
+          },
+          "raw_score": 12,
+          "max_raw": 15,
+          "weighted_contribution": 12.0
+        }
+      },
+      "D7": {
+        "name": "Career Execution Readiness",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 includes explicit monthly job hunt action items: LinkedIn optimization in M1, resume tailoring and behavioral prep in M2, and aggressive job applications (5-10/day) with networking in M3. Mock interviews are explicitly scheduled in M3 with both technical and behavioral components. Plan 2 mentions resume/GitHub profile preparation in week 12 and mock interviews in week 12, but these are concentrated at the very end with minimal earlier preparation. Plan 1's distributed career execution activities across all three months are significantly stronger for remote job readiness. Plan 2's application strategy is vague (no volume targets, no platform specifics).",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 distributes career execution activities (LinkedIn, resume, networking, mock interviews, job applications) across all three months with specific targets, while Plan 2 concentrates all career prep in the final week.",
+        "Plan_1": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 4,
+              "max": 4,
+              "justification": "LinkedIn optimization is scheduled in M1 week 1 with specific guidance (headline, open to work). Resume tailoring with job description keywords is in M2. Continuous GitHub updates are emphasized throughout. Well-distributed and specific."
+            },
+            "mock_interviews_included": {
+              "score": 3,
+              "max": 3,
+              "justification": "Mock technical interviews (LeetCode Hard, system design for junior roles) and behavioral interviews (STAR method) are explicitly scheduled in M3 with 10+ mock interview target. Behavioral prep starts in M2. Comprehensive coverage."
+            },
+            "application_strategy": {
+              "score": 3,
+              "max": 3,
+              "justification": "Specific application volume target (5-10 jobs/day in M3), networking strategy (LinkedIn connections with recruiters/engineers), virtual tech talks, and community engagement are all explicitly mentioned. Strong and actionable."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 2,
+              "max": 4,
+              "justification": "GitHub profile cleanup and README writing are mentioned in week 12. No explicit LinkedIn optimization, resume tailoring timeline, or earlier career prep activities. This is a significant back-loading of career preparation."
+            },
+            "mock_interviews_included": {
+              "score": 2,
+              "max": 3,
+              "justification": "Mock interviews are mentioned in week 12 ('mock interviews, practice explaining technical concepts clearly') but without specifics on format, frequency, or type. No system design mock interviews explicitly scheduled."
+            },
+            "application_strategy": {
+              "score": 1,
+              "max": 3,
+              "justification": "No specific job application volume targets, platform recommendations, or networking strategy. 'Network' is mentioned in important notes but not integrated into the weekly plan. Vague and insufficient for remote job hunting."
+            }
+          },
+          "raw_score": 5,
+          "max_raw": 10,
+          "weighted_contribution": 5.0
+        }
+      }
+    },
+    "final_scores": {
+      "Plan_1": {
+        "total_weighted_score": 84.0,
+        "dimension_wins": [
+          "D1",
+          "D3",
+          "D4",
+          "D6",
+          "D7"
+        ],
+        "strengths": [
+          "Fully Java-centric stack (Android + Spring Boot) honoring user's language preference",
+          "Distributed interview prep with explicit DSA targets across all three months",
+          "Deployed, tested, CI/CD-integrated capstone project that is highly employer-visible",
+          "Explicit monthly career execution activities (LinkedIn, resume, job applications with volume targets)",
+          "Clear monthly milestone deliverables with measurable outcomes",
+          "Transparent hour accounting with buffer"
+        ],
+        "critical_gaps": [
+          "No Kotlin mention despite it being the modern standard for Android development",
+          "Cognitive overload in several weeks (M2 week 6 stacks Spring Security + Android + DSA simultaneously)",
+          "Android development delayed to M2, which is suboptimal for the primary target role",
+          "AWS cloud deployment described as 'conceptual' rather than hands-on"
+        ]
+      },
+      "Plan_2": {
+        "total_weighted_score": 67.0,
+        "dimension_wins": [
+          "D2",
+          "D5"
+        ],
+        "strengths": [
+          "Android development starts immediately in week 1, prioritizing the primary target role",
+          "More gradual cognitive load distribution with explicit daily hour breakdowns per topic",
+          "Terraform inclusion is a genuine DevOps differentiator",
+          "Fastlane for mobile CI/CD is a niche but valuable skill for mobile DevOps roles",
+          "Leverages user's existing Django knowledge for backend deployment exercises",
+          "Kotlin awareness note is appropriate and forward-looking"
+        ],
+        "critical_gaps": [
+          "Django backend contradicts user's explicit Java preference for backend development",
+          "DSA and interview prep are heavily back-loaded to weeks 11-12, reducing technical screen readiness",
+          "Career execution activities (LinkedIn, resume, job applications) are concentrated in the final week",
+          "No explicit monthly milestone deliverables with measurable outcomes",
+          "Application strategy lacks volume targets, platform specifics, and networking plan",
+          "Terraform in week 10 may be too advanced for the timeline and experience level"
+        ]
+      }
+    },
+    "verdict": {
+      "winner": "Plan_1",
+      "score_gap": 17.0,
+      "margin_interpretation": "decisive",
+      "winner_key_advantages": [
+        "Fully Java-centric stack (Android + Spring Boot) directly honors user's stated language preference",
+        "Consistently distributed interview preparation with explicit LeetCode targets across all three months",
+        "Production-grade capstone with Docker, CI/CD, cloud deployment, and comprehensive testing",
+        "Explicit career execution activities distributed across all months with specific application volume targets",
+        "Clearer monthly milestone deliverables enabling measurable progress tracking"
+      ],
+      "loser_salvageable_strengths": [
+        "Plan 2's immediate Android focus from week 1 is strategically superior for the primary target role",
+        "Plan 2's daily hour breakdowns per topic are more actionable for day-to-day execution",
+        "Plan 2's Terraform and Fastlane inclusion are genuine DevOps differentiators worth incorporating",
+        "Plan 2's more gradual cognitive load distribution reduces burnout risk at 8 hours/day"
+      ],
+      "shared_gaps_in_both_plans": [
+        "Neither plan adequately addresses Kotlin, which is the modern standard for Android development and increasingly expected by employers",
+        "Both plans are cognitively ambitious for a student with basic experience at 8 hours/day",
+        "Neither plan explicitly addresses portfolio hosting, app store submission, or demo video creation for the Android app",
+        "System design preparation is minimal in both plans despite being expected in SWE interviews"
+      ],
+      "final_recommendation": "Plan 1 is the stronger choice for this user's hiring goals due to its Java-centric coherence, distributed interview preparation, and production-grade capstone. However, the user should adopt Plan 2's strategy of starting Android development in week 1 rather than delaying it to month 2, and should incorporate Plan 2's daily hour breakdown format for better day-to-day execution. The user should also add a brief Kotlin orientation (even 1 week) given its dominance in modern Android development, and should be prepared to scope down some of Plan 1's more ambitious elements (LeetCode Hard, Espresso testing, AWS deployment) if time pressure mounts."
+    }
+  },
+  "winner": "Plan_1",
+  "plan_1_score": 84.0,
+  "plan_2_score": 67.0
+}

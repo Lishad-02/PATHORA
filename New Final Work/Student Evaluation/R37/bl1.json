@@ -1,6 +1,6 @@
 {
     "b1": "B1_ZS",
-    "model": "gemini-2.5-flash",
+    "model": "",
     "user_profile": {
         "role": "Full Stack Developer (Software Engineering)",
         "months": 12,
@@ -8,7 +8,7 @@
         "experience": "University recent CSE graduate",
         "other_preferences": "want to focus global market,need fast job, Intermediate (Built small projects) coding experience, familiar with java, C,C++,javascript,typescript,php,kotlin Language and familiar with dot net,node.js,express.js,react framework. build some academic and personal projects & also done intership.preferable language is C# and javascript"
     },
-    "prompt_used": "\nI want to become a Full Stack Developer (Software Engineering). I have 12 months to prepare and I can study 8 hours per day. \nMy experience level is University recent CSE graduate. want to focus global market,need fast job, Intermediate (Built small projects) coding experience, familiar with java, C,C++,javascript,typescript,php,kotlin Language and familiar with dot net,node.js,express.js,react framework. build some academic and personal projects & also done intership.preferable language is C# and javascript\nNow generate a learning plan for me.\n",
+    "prompt_used": "",
     "generated_plan": {
         "title": "12-Month Full Stack Developer Learning Plan (C# & JavaScript Focus)",
         "goal": "Become a Full Stack Software Engineer for the global market, secure a fast job, leveraging C#/.NET and JavaScript/TypeScript/React/Node.js skills.",

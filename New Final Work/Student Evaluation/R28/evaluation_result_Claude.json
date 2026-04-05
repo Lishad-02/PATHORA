@@ -1,0 +1,428 @@
+{
+  "generated_at": "2026-04-02T23:48:29.015240",
+  "model": "claude-sonnet-4-6",
+  "temperature": 0.0,
+  "prompt_version": "v1.0-comparative-dimension-first",
+  "user_profile": {
+    "role": "Backend Developer(Software Engineering)",
+    "experience": "University Recent CSE Graduate",
+    "preparation_time_months": 2,
+    "study_hours_per_day": 1,
+    "Market_Focus": "Global",
+    "other_preferences": "Advanced (Internship / Real-world experience) coding experience, familiar with Python, Typescript and JavaScript and familiar with node.js,react, pytorch framework. Also build some academic project and done intership and real world project"
+  },
+  "result": {
+    "evaluation_methodology": "comparative \u2014 both plans analyzed together per dimension before scoring",
+    "user_profile_summary": "Recent CSE graduate targeting Backend Developer (SWE) roles globally, with 1 hour/day over 2 months (approx. 60 hours total). Has advanced coding experience via internships and real-world projects, proficient in Python, TypeScript, JavaScript, Node.js, React, and PyTorch. Needs to convert existing experience into a demonstrable, interview-ready backend portfolio.",
+    "dimensions": {
+      "D1": {
+        "name": "Hiring Readiness Optimization",
+        "weight": 0.25,
+        "comparative_analysis": "Plan 1 builds a single, progressively enhanced capstone (Project Management API) that accumulates testing, security, Docker, and CI/CD by end of month 2 \u2014 directly employer-demonstrable. Interview prep is woven in from Week 1 with daily DSA, system design exposure, and behavioral STAR prep explicitly scheduled. Plan 2 covers a broader technical surface (MongoDB, Redis, FastAPI, microservices) but the portfolio project is loosely defined with multiple options and no single cohesive deliverable. Plan 2's interview prep is concentrated in Week 8 only, which is too late and too compressed for a 2-month window. Plan 1's portfolio is clearly stronger: deployed, tested, secured, and CI/CD-enabled. Plan 2's core technical coverage is wider but shallower, and the interview preparation cadence is significantly weaker.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 delivers a fully deployed, tested, and secured capstone with consistent interview prep throughout, while Plan 2 defers interview preparation to the final week and lacks a single cohesive portfolio deliverable.",
+        "Plan_1": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Covers Node.js/TypeScript depth, REST API design, ORM, JWT auth, Docker, AWS deployment, CI/CD, and testing \u2014 all highly relevant for global backend SWE roles. Minor gap: no NoSQL or message queue exposure."
+            },
+            "interview_prep_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Daily DSA ritual from Week 1, system design introduced in Month 1, behavioral STAR prep in Month 2, mock interviews explicitly mentioned. Well-distributed across the 2-month window."
+            },
+            "portfolio_project_strength": {
+              "score": 8,
+              "max": 9,
+              "justification": "Single cohesive Project Management API that is progressively built, tested, secured, Dockerized, deployed to AWS EC2, and CI/CD-enabled. Highly employer-worthy. Minor deduction for no GraphQL or async messaging layer."
+            }
+          },
+          "raw_score": 22,
+          "max_raw": 25,
+          "weighted_contribution": 22.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "Covers PostgreSQL, MongoDB, Redis, FastAPI, Docker, and CI/CD \u2014 broad coverage but shallower depth per topic. FastAPI and microservices intro in Week 7 adds breadth but dilutes focus for a backend SWE role targeting Node.js."
+            },
+            "interview_prep_readiness": {
+              "score": 4,
+              "max": 8,
+              "justification": "Interview prep is almost entirely deferred to Week 8. No DSA practice cadence established early. System design and behavioral prep mentioned only in the final week, which is insufficient for a 2-month plan."
+            },
+            "portfolio_project_strength": {
+              "score": 6,
+              "max": 9,
+              "justification": "Project ideas are listed but not mandated as a single capstone. The blog/social media API suggestion is good but the plan allows fragmentation across multiple small projects. Deployment is mentioned but not as a firm deliverable milestone."
+            }
+          },
+          "raw_score": 16,
+          "max_raw": 25,
+          "weighted_contribution": 16.0
+        }
+      },
+      "D2": {
+        "name": "Time-Constrained Feasibility",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 explicitly accounts for 43 planned hours out of 48 available (2 months \u00d7 4 weeks \u00d7 6 days \u00d7 1 hour, roughly), with 5 buffer hours \u2014 showing disciplined hour tracking. Each week has a focused theme with a single deliverable. Plan 2 does not provide any hour accounting or buffer planning. Plan 2's Week 7 attempts to cover microservices, message queues (RabbitMQ/Kafka), AND FastAPI in a single week of 7 hours \u2014 a severe cognitive overload. Plan 1's weeks are more tightly scoped, though Month 2 is still ambitious. Both plans have some overreach, but Plan 1 is meaningfully more realistic and explicitly managed.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 explicitly tracks hours with a buffer and scopes each week to a single deliverable, while Plan 2 has no hour accounting and Week 7 is severely overloaded with three distinct advanced topics.",
+        "Plan_1": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Explicitly states 43 planned hours out of 48 available with 5 buffer hours. Hour budgets are broken down by month and by activity type (theory, coding, project building)."
+            },
+            "cognitive_load_realism": {
+              "score": 4,
+              "max": 5,
+              "justification": "Each week has a clear single focus. Month 2 is ambitious (testing + security + Docker + AWS + CI/CD across 4 weeks at 1 hr/day) but manageable given the user's existing experience. Minor overreach in Week 7 combining Docker and AWS."
+            },
+            "overengineering_avoidance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Stays focused on the core backend SWE stack. AWS EC2 deployment is appropriate. CI/CD via GitHub Actions is lightweight. No unnecessary detours into microservices or message queues."
+            }
+          },
+          "raw_score": 13,
+          "max_raw": 15,
+          "weighted_contribution": 13.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 2,
+              "max": 5,
+              "justification": "No hour tracking, no buffer planning, no total hour accounting. The plan does not verify that its content fits within 60 available hours."
+            },
+            "cognitive_load_realism": {
+              "score": 2,
+              "max": 5,
+              "justification": "Week 7 attempts microservices concepts, message queues (RabbitMQ/Kafka), AND FastAPI in approximately 7 hours \u2014 clearly infeasible. Week 4 also stacks MongoDB and Redis together, which is heavy for 7 hours."
+            },
+            "overengineering_avoidance": {
+              "score": 2,
+              "max": 5,
+              "justification": "FastAPI introduction, microservices architecture, and message queue implementation in a 2-month, 1-hr/day plan for a Node.js-focused backend role is overengineering. These topics dilute focus without meaningful hiring impact at this stage."
+            }
+          },
+          "raw_score": 6,
+          "max_raw": 15,
+          "weighted_contribution": 6.0
+        }
+      },
+      "D3": {
+        "name": "Personalization & Preference Alignment",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 explicitly acknowledges the user's existing Node.js, TypeScript, and real-world experience and states it will bypass beginner material. The capstone is built on the user's known stack (Node.js, TypeScript, Express, MySQL/Prisma) and the plan is entirely tailored to backend SWE. Plan 2 also builds on the user's stack but introduces FastAPI and Python backend development in Week 7, which diverges from the user's stated Node.js focus and the Backend Developer role. Plan 2 acknowledges the user's React and PyTorch experience as 'less central' but still includes them in prerequisites. Plan 1 is more tightly aligned to the user's actual profile and stated role.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 stays entirely within the user's stated stack and role focus, explicitly skipping beginner content, while Plan 2 introduces Python/FastAPI as a detour that misaligns with the user's Node.js-centric backend goal.",
+        "Plan_1": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 5,
+              "max": 5,
+              "justification": "Explicitly states it bypasses beginner material, dives into advanced TS features, event loop internals, and production patterns from Week 1. Fully respects the user's internship and real-world experience level."
+            },
+            "preference_integration": {
+              "score": 5,
+              "max": 5,
+              "justification": "Uses Node.js, TypeScript, Express, MySQL/Prisma \u2014 exactly the user's stated stack. Targets global market with Docker and AWS deployment. Backend SWE role is the sole focus throughout."
+            },
+            "stack_justification_quality": {
+              "score": 4,
+              "max": 5,
+              "justification": "Technology choices (Prisma over raw SQL, Jest/Supertest for testing, GitHub Actions for CI/CD) are explained in context. Minor gap: MySQL choice over PostgreSQL not explicitly justified, though both are valid."
+            }
+          },
+          "raw_score": 14,
+          "max_raw": 15,
+          "weighted_contribution": 14.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 4,
+              "max": 5,
+              "justification": "Acknowledges the user's experience and aims for deeper understanding. Week 1 starts at an appropriate level. However, does not explicitly state it skips beginner content, and some Week 1 activities (basic CRUD) may be redundant for an experienced user."
+            },
+            "preference_integration": {
+              "score": 3,
+              "max": 5,
+              "justification": "Covers the user's Node.js/TypeScript stack but introduces FastAPI/Python in Week 7, which diverges from the user's stated backend role focus. MongoDB and Redis are reasonable additions but add breadth over depth."
+            },
+            "stack_justification_quality": {
+              "score": 3,
+              "max": 5,
+              "justification": "PostgreSQL vs MongoDB trade-offs are explained. FastAPI introduction is justified as 'broadening exposure' but this rationale is weak for a 2-month, 1-hr/day plan targeting a specific backend SWE role."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 15,
+          "weighted_contribution": 10.0
+        }
+      },
+      "D4": {
+        "name": "Market Alignment",
+        "weight": 0.1,
+        "comparative_analysis": "Both plans cover globally in-demand backend skills. Plan 1 focuses on Node.js/TypeScript, REST APIs, relational databases, JWT auth, Docker, AWS, and CI/CD \u2014 a highly marketable combination for global backend SWE roles. Plan 2 adds MongoDB, Redis, and FastAPI, which broadens the skill surface but at the cost of depth. For global backend SWE hiring, Docker, cloud deployment, testing, and system design awareness are critical differentiators \u2014 Plan 1 covers these more thoroughly. Plan 2's inclusion of Redis caching and NoSQL is a slight market advantage, but the FastAPI detour is not aligned with the user's Node.js-focused role target.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1's focused coverage of Docker, AWS, CI/CD, testing, and security maps more precisely to what global backend SWE employers expect at the graduate level, without diluting focus with off-stack technologies.",
+        "Plan_1": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Node.js, TypeScript, REST, ORM, JWT, Docker, AWS, CI/CD, and testing are all highly in-demand globally for backend SWE. Minor gap: no NoSQL or caching layer, which are common in production systems."
+            },
+            "regional_global_alignment": {
+              "score": 5,
+              "max": 5,
+              "justification": "Docker + AWS deployment, GitHub Actions CI/CD, JWT security, and system design awareness are exactly what global tech employers (including FAANG-adjacent companies) expect from backend SWE graduates."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 10,
+          "weighted_contribution": 9.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Covers PostgreSQL, MongoDB, Redis, Docker, and CI/CD \u2014 all in-demand. FastAPI adds Python backend exposure which has market value but is misaligned with the user's Node.js focus. Redis caching is a genuine differentiator."
+            },
+            "regional_global_alignment": {
+              "score": 4,
+              "max": 5,
+              "justification": "Covers cloud deployment, CI/CD, and security basics. System design is mentioned but only in Week 8. The breadth of technologies covered is globally relevant but the depth per topic is insufficient for confident interview performance."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 10,
+          "weighted_contribution": 8.0
+        }
+      },
+      "D5": {
+        "name": "Strategic Prioritization Quality",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 follows a clear Foundation \u2192 Build \u2192 Harden \u2192 Deploy \u2192 Interview arc. Core API and database work comes first, then security and testing, then deployment and CI/CD, with interview prep woven throughout. This is the correct phasing for a backend SWE role. Plan 2 introduces testing in Week 2 (good), but then adds NoSQL and Redis in Week 4 before authentication in Week 5, which is a reasonable but slightly suboptimal ordering (auth typically precedes caching in production systems). Week 7's microservices/FastAPI detour is a strategic misfire \u2014 it consumes a full week of a 2-month plan on topics with low immediate hiring ROI for this user.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1's phasing arc is coherent and role-appropriate with interview prep distributed throughout, while Plan 2 wastes a full week on low-ROI topics (microservices, FastAPI) in a critically constrained timeline.",
+        "Plan_1": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 5,
+              "max": 5,
+              "justification": "REST API design, ORM, testing, JWT auth, Docker, and AWS are sequenced in order of hiring impact. DSA practice starts Week 1. No low-ROI detours."
+            },
+            "logical_phasing": {
+              "score": 5,
+              "max": 5,
+              "justification": "Month 1: Foundation + Capstone build. Month 2: Harden (test, secure) + Deploy + Interview. This is the textbook SWE preparation arc and is executed cleanly."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 3,
+              "max": 5,
+              "justification": "Testing in Week 2 is good. Auth in Week 5 is appropriate. However, Week 7 (microservices + FastAPI) is a low-ROI use of a full week in a 2-month plan. Redis caching in Week 4 before auth is a minor sequencing issue."
+            },
+            "logical_phasing": {
+              "score": 3,
+              "max": 5,
+              "justification": "The overall arc (foundations \u2192 databases \u2192 security \u2192 deployment \u2192 advanced) is reasonable but the Week 7 detour breaks the momentum. Interview prep concentrated in Week 8 is a structural weakness."
+            }
+          },
+          "raw_score": 6,
+          "max_raw": 10,
+          "weighted_contribution": 6.0
+        }
+      },
+      "D6": {
+        "name": "Curriculum Structural Depth & Clarity",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 provides weekly micro-goals with specific deliverables, named technologies, and a clear milestone at the end of each month. Each week's output is tied to the capstone project, making progress tangible. Plan 2 also provides weekly breakdowns with topics and activities, and includes a 'goal' statement per week \u2014 which is a structural strength. However, Plan 2's subtopics are sometimes vague (e.g., 'read articles/watch videos on system design concepts') and the project deliverable is not consistently tied to a single artifact. Both plans are structurally solid, but Plan 1's integration of all learning into one evolving capstone gives it clearer measurable outcomes.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 ties every week's learning to a specific, evolving capstone deliverable with named technologies and measurable milestones, while Plan 2's activities are occasionally vague and the project deliverable is fragmented.",
+        "Plan_1": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 5,
+              "max": 5,
+              "justification": "Modules build correctly: Node.js/TS \u2192 REST API \u2192 Database \u2192 Advanced Queries \u2192 Testing \u2192 Security \u2192 Docker/AWS \u2192 CI/CD. Each week's output feeds directly into the next."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 4,
+              "max": 5,
+              "justification": "Subtopics are specific (e.g., 'Zod or Joi for validation', 'Prisma migrations', 'bcrypt password hashing', 'GitHub Actions for CI/CD'). Minor gap: some weeks could specify exact LeetCode problem patterns to target."
+            },
+            "clear_learning_outcomes": {
+              "score": 5,
+              "max": 5,
+              "justification": "Each week has a named deliverable tied to the capstone. Month-end milestones are explicit and employer-demonstrable (e.g., 'Dockerized API deployed to AWS EC2 with CI/CD pipeline')."
+            }
+          },
+          "raw_score": 14,
+          "max_raw": 15,
+          "weighted_contribution": 14.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 4,
+              "max": 5,
+              "justification": "Modules generally build on each other. Week 4 (NoSQL + Redis) before Week 5 (Auth) is slightly suboptimal. Week 7 (microservices + FastAPI) breaks the logical flow of the deployment and interview prep arc."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 4,
+              "max": 5,
+              "justification": "Topics are specific (e.g., 'Prisma or TypeORM', 'Bcrypt', 'RBAC', 'Dockerfile creation'). Some activities are vague ('read articles/watch videos on system design concepts', 'reflect on scenarios')."
+            },
+            "clear_learning_outcomes": {
+              "score": 4,
+              "max": 5,
+              "justification": "Each week has a 'goal' statement which is a structural strength. However, the project deliverable is not consistently a single artifact \u2014 multiple project options and fragmented features reduce clarity of what the user will have built by end of Month 2."
+            }
+          },
+          "raw_score": 12,
+          "max_raw": 15,
+          "weighted_contribution": 12.0
+        }
+      },
+      "D7": {
+        "name": "Career Execution Readiness",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 explicitly schedules LinkedIn optimization and resume refinement in Month 1, Week 1-2, with specific guidance (ATS-friendly, impact-focused bullet points, headline update). Mock interviews are explicitly mentioned in Week 8 with peer/mentor guidance. Job application strategy includes tailoring resumes to job descriptions and gathering references. Plan 2 mentions networking and portfolio quality in 'important considerations' but does not schedule resume/LinkedIn work at any specific week. Mock interviews are mentioned only in Week 8 as a possibility ('consider a mock interview if possible'). Plan 2's career execution is advisory rather than scheduled, making it significantly weaker on this dimension.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 explicitly schedules resume and LinkedIn work in Month 1 and includes a concrete job application strategy with mock interviews, while Plan 2 treats career execution as optional advisory notes without scheduling.",
+        "Plan_1": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 4,
+              "max": 4,
+              "justification": "LinkedIn optimization scheduled in Month 1 Week 1 with specific guidance (headline, summary, ATS-friendly). Resume refinement with impact-focused bullets and technology highlighting scheduled in Month 1 Week 2."
+            },
+            "mock_interviews_included": {
+              "score": 2,
+              "max": 3,
+              "justification": "Mock technical interviews (coding + system design + behavioral) explicitly mentioned in Week 8. Peer/mentor mock interviews referenced. Minor gap: no structured mock interview schedule across multiple weeks."
+            },
+            "application_strategy": {
+              "score": 3,
+              "max": 3,
+              "justification": "Active job application submissions planned for Month 2 Week 8. Resume tailoring to job descriptions, keyword matching, reference gathering, and cover letter customization all explicitly mentioned."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 10,
+          "weighted_contribution": 9.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 1,
+              "max": 4,
+              "justification": "No scheduled resume or LinkedIn work at any specific week. Portfolio quality is mentioned in 'important considerations' as a general note, not as a scheduled action item."
+            },
+            "mock_interviews_included": {
+              "score": 1,
+              "max": 3,
+              "justification": "Mock interviews mentioned in Week 8 as 'consider a mock interview if possible' \u2014 conditional and unscheduled. No coding mock, system design mock, or behavioral mock explicitly planned."
+            },
+            "application_strategy": {
+              "score": 1,
+              "max": 3,
+              "justification": "Networking mentioned in 'important considerations' but no specific platforms, timing, volume targets, or application strategy provided. No guidance on when to start applying or how to prioritize job boards."
+            }
+          },
+          "raw_score": 3,
+          "max_raw": 10,
+          "weighted_contribution": 3.0
+        }
+      }
+    },
+    "final_scores": {
+      "Plan_1": {
+        "total_weighted_score": 91.0,
+        "dimension_wins": [
+          "D1",
+          "D2",
+          "D3",
+          "D4",
+          "D5",
+          "D6",
+          "D7"
+        ],
+        "strengths": [
+          "Single cohesive capstone (Project Management API) that is progressively built, tested, secured, Dockerized, and deployed \u2014 highly employer-demonstrable",
+          "Explicit hour tracking with buffer, making the plan genuinely feasible within the 2-month, 1-hr/day constraint",
+          "Interview prep (DSA, system design, behavioral) distributed throughout both months rather than deferred to the final week",
+          "Career execution (resume, LinkedIn, job applications) explicitly scheduled in Month 1 with specific actionable guidance",
+          "Tight alignment to user's stated Node.js/TypeScript stack without off-stack detours"
+        ],
+        "critical_gaps": [
+          "No NoSQL (MongoDB) or caching (Redis) exposure, which are common in production backend systems and may be asked about in interviews",
+          "System design preparation could be more structured with specific problem types and resources",
+          "Mock interview scheduling is concentrated in Week 8 rather than distributed across Month 2"
+        ]
+      },
+      "Plan_2": {
+        "total_weighted_score": 61.0,
+        "dimension_wins": [],
+        "strengths": [
+          "Broader technology coverage including PostgreSQL, MongoDB, Redis, and Docker \u2014 reflects real-world backend diversity",
+          "Per-week 'goal' statements provide clear measurable outcomes for each module",
+          "Redis caching introduction is a genuine differentiator that Plan 1 lacks",
+          "Comprehensive resource list with specific course and documentation recommendations"
+        ],
+        "critical_gaps": [
+          "Week 7 (microservices + FastAPI + message queues) is a severe cognitive overload and strategic misfire for a Node.js-focused backend role in a 2-month plan",
+          "Interview preparation entirely deferred to Week 8 \u2014 insufficient for DSA, system design, and behavioral readiness",
+          "No hour tracking or buffer planning \u2014 plan feasibility is unverified",
+          "Career execution (resume, LinkedIn, job applications) is advisory-only with no scheduled action items",
+          "Portfolio project is fragmented across multiple options with no single mandatory capstone deliverable"
+        ]
+      }
+    },
+    "verdict": {
+      "winner": "Plan_1",
+      "score_gap": 30.0,
+      "margin_interpretation": "decisive",
+      "winner_key_advantages": [
+        "Cohesive, progressively built capstone project that is deployed and CI/CD-enabled by end of Month 2",
+        "Interview preparation (DSA, system design, behavioral) distributed throughout the plan rather than deferred",
+        "Explicit hour accounting with buffer ensures the plan is actually executable in 60 hours",
+        "Career execution (resume, LinkedIn, applications) scheduled as concrete action items in Month 1",
+        "Stays focused on the user's Node.js/TypeScript stack without diluting effort on off-stack technologies"
+      ],
+      "loser_salvageable_strengths": [
+        "Plan 2's Redis caching introduction (Week 4) is a valuable addition that Plan 1 could incorporate",
+        "Plan 2's per-week 'goal' statement format is a clean structural element worth adopting",
+        "Plan 2's broader database coverage (PostgreSQL + MongoDB) reflects real-world backend diversity",
+        "Plan 2's resource list is more comprehensive and specific in naming courses and documentation"
+      ],
+      "shared_gaps_in_both_plans": [
+        "Neither plan includes GraphQL or gRPC exposure, which are increasingly common in global backend SWE roles",
+        "Neither plan includes message queue (RabbitMQ/Kafka) hands-on practice, which is relevant for production backend systems",
+        "System design preparation in both plans is relatively light given its weight in global SWE interviews",
+        "Neither plan explicitly addresses networking strategies (LinkedIn outreach, referrals, open source contributions) beyond general mentions"
+      ],
+      "final_recommendation": "Plan 1 is decisively superior for this user's profile and constraints. Its focused capstone, distributed interview prep, explicit hour management, and scheduled career execution actions make it significantly more likely to result in a job offer within the 2-month window. The user should follow Plan 1 but consider borrowing Plan 2's Redis caching week (replacing or compressing one of the less critical weeks) and adopting Plan 2's per-week goal statement format for personal tracking. The most important enhancement would be adding 2-3 structured system design mock sessions in Month 2 Weeks 6-7 to strengthen the weakest area of both plans."
+    }
+  },
+  "winner": "Plan_1",
+  "plan_1_score": 91.0,
+  "plan_2_score": 61.0
+}

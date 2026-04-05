@@ -1,0 +1,434 @@
+{
+  "generated_at": "2026-04-02T15:58:41.086400",
+  "model": "claude-sonnet-4-6",
+  "temperature": 0.0,
+  "prompt_version": "v1.0-comparative-dimension-first",
+  "user_profile": {
+    "role": "Product/Marketing Data Analyst (Data Analyst/ Analytics / AI Engineer)",
+    "experience": "University Recent CSE Graduate",
+    "preparation_time_months": 3,
+    "study_hours_per_day": 4,
+    "Market_Focus": "Global",
+    "other_preferences": "need a fast job, Intermediate (Built small projects) coding experience, familiar with python, java, c++, R Language. build some academic projects.Preferable language is Python and R"
+  },
+  "result": {
+    "evaluation_methodology": "comparative \u2014 both plans analyzed together per dimension before scoring",
+    "user_profile_summary": "Recent CSE graduate targeting Product/Marketing Data Analyst and Analytics/AI Engineer roles globally. Intermediate coding experience with Python, Java, C++, R. Prefers Python and R. Needs a job quickly within 3 months at 4 hours/day (~360 total hours). Has built small academic projects.",
+    "dimensions": {
+      "D1": {
+        "name": "Hiring Readiness Optimization",
+        "weight": 0.25,
+        "comparative_analysis": "Both plans cover the core DA stack (SQL, Python, visualization, A/B testing, BI tools). Plan 1 covers Tableau/Power BI broadly and includes basic ML (scikit-learn, regression/classification) for churn prediction, which adds breadth. Plan 2 commits deeply to Power BI with DAX and Power Query, deploys to Power BI Service, and includes a simulated A/B test with Python \u2014 both more specific and more employer-demonstrable. Plan 2's interview prep is distributed across all three months with explicit SQL LeetCode targets, Pandas problem sets, and 3-5 mock technical interviews in Month 3, whereas Plan 1 concentrates interview prep mostly in the final two weeks. Plan 2's capstone is iteratively built across all 3 months and deployed publicly (GitHub + Power BI Service + optional Streamlit), making it more employer-worthy. Plan 1's portfolio is solid but less deployment-focused and the capstone is more compressed into the final weeks.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 delivers a deployed, iteratively built capstone with distributed interview prep and specific quantified practice targets, making it more concretely employer-ready.",
+        "Plan_1": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "Covers SQL, Python/R, Pandas, visualization, A/B testing, basic ML (regression/classification), and BI tools. Includes cloud basics. Depth is appropriate for a graduate DA role but ML coverage is somewhat surface-level and cloud is introductory only."
+            },
+            "interview_prep_readiness": {
+              "score": 5,
+              "max": 8,
+              "justification": "Interview prep is mentioned throughout but concentrated in weeks 11-12. SQL LeetCode and StrataScratch are referenced, behavioral prep is included, but no explicit mock interview schedule or quantified problem targets until the final sprint."
+            },
+            "portfolio_project_strength": {
+              "score": 6,
+              "max": 9,
+              "justification": "Multiple project ideas per week are provided and a capstone is planned in weeks 11-12. GitHub and dashboard publishing are mentioned. However, the capstone is compressed into the final two weeks and deployment specifics are vague, reducing employer-readiness confidence."
+            }
+          },
+          "raw_score": 17,
+          "max_raw": 25,
+          "weighted_contribution": 17.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Covers advanced SQL, Pandas/NumPy, Power BI with DAX, A/B testing with Python, statistics, feature engineering, and product/marketing metrics. Power BI deployment to Service is a concrete employer-facing skill. Slightly less ML breadth than Plan 1 but more depth on BI tooling."
+            },
+            "interview_prep_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Interview prep is explicitly distributed across all three months: 10-15 SQL problems in Month 1, 10 Pandas problems in Month 2, 3-5 mock technical interviews in Month 3. STAR method is introduced early and refined. Case study practice and A/B test interpretation are explicitly included."
+            },
+            "portfolio_project_strength": {
+              "score": 8,
+              "max": 9,
+              "justification": "Capstone is built iteratively from Month 1 through Month 3, with clear milestone deliverables each month. Final deployment to GitHub, Power BI Service, and optionally Streamlit is specified. README documentation and stakeholder presentation are explicitly required, making this highly employer-worthy."
+            }
+          },
+          "raw_score": 22,
+          "max_raw": 25,
+          "weighted_contribution": 22.0
+        }
+      },
+      "D2": {
+        "name": "Time-Constrained Feasibility",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 2 explicitly calculates total available hours (288), planned hours (253), and buffer hours (35), demonstrating deliberate time management. Plan 1 provides a daily schedule breakdown but does not calculate total hours or buffer explicitly. Plan 1's weeks 1-2 pack SQL deep dives, Python/R setup, and statistics simultaneously, which is cognitively dense. Plan 2 also has dense weeks (e.g., Month 2 Week 2 covers cleaning, feature engineering, and pipeline building) but provides monthly hour budgets split across theory, practice, and project work. Both plans include some overengineering risk: Plan 1 adds cloud services and ML in Month 3; Plan 2 adds DAX, Power Query, and A/B testing in Month 3. Plan 2's overengineering is more role-relevant (Power BI is core to the DA role) while Plan 1's cloud/ML additions are more peripheral for a Product/Marketing DA.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 explicitly accounts for total hours, buffer, and monthly time budgets, demonstrating superior feasibility planning and more role-relevant scope management.",
+        "Plan_1": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 3,
+              "max": 5,
+              "justification": "Daily schedule is provided (4 hours/day) but total hours are never calculated or verified against the 3-month constraint. No explicit buffer is mentioned. Compliance is implied but not demonstrated."
+            },
+            "cognitive_load_realism": {
+              "score": 3,
+              "max": 5,
+              "justification": "Weeks 1-2 combine SQL deep dive, Python/R setup, and statistics simultaneously. Some weeks are more balanced. The final two weeks compress capstone, portfolio, resume, and interview prep together, which is unrealistically dense."
+            },
+            "overengineering_avoidance": {
+              "score": 3,
+              "max": 5,
+              "justification": "Cloud services (AWS/GCP/Azure) and ML model building in Month 3 are somewhat peripheral for a Product/Marketing DA role within 3 months. These add value but risk diluting focus on core DA skills."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 15,
+          "weighted_contribution": 9.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Explicitly states 288 total available hours, 253 planned hours, and 35 buffer hours. Monthly budgets (84, 84, 85) are provided with theory/practice/project splits. This is the most rigorous hour accounting of either plan."
+            },
+            "cognitive_load_realism": {
+              "score": 3,
+              "max": 5,
+              "justification": "Month 2 Week 2 (cleaning + feature engineering + pipeline) and Month 3 Week 1 (full Power BI mastery including DAX) are ambitious for single weeks. However, the iterative capstone approach distributes cognitive load better than Plan 1's compressed final sprint."
+            },
+            "overengineering_avoidance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Power BI with DAX and Power Query is directly role-relevant and not overengineering. A/B testing in Python is core. The optional Streamlit deployment is additive but not required. Scope is well-controlled for the target role."
+            }
+          },
+          "raw_score": 12,
+          "max_raw": 15,
+          "weighted_contribution": 12.0
+        }
+      },
+      "D3": {
+        "name": "Personalization & Preference Alignment",
+        "weight": 0.15,
+        "comparative_analysis": "Both plans acknowledge the user's CSE background and Python/R preference. Plan 2 more explicitly leverages the CSE background throughout \u2014 e.g., skipping basic programming, jumping to advanced Pandas/NumPy, and framing Git as a natural extension of CS coursework. Plan 1 mentions Python and R as parallel options throughout but does not consistently skip beginner content (e.g., 'refresh basics' in Week 1 is unnecessary for an intermediate coder). Plan 2 explicitly states it skips introductory programming and focuses on industry-standard advanced techniques. Both plans address the global market and fast-job goal, but Plan 2 includes explicit weekly job hunt action items from Month 1, which better serves the urgency. Plan 1 mentions Tableau as a BI tool option while Plan 2 commits to Power BI \u2014 Power BI is more globally demanded for DA roles, making Plan 2's choice more aligned with the global market preference.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 more consistently skips beginner content, explicitly leverages the CSE background, and integrates job hunt actions from Month 1 to serve the fast-job urgency.",
+        "Plan_1": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 3,
+              "max": 5,
+              "justification": "Acknowledges intermediate experience but still includes 'refresh basics' for Python/R in Week 1 and covers foundational statistics from scratch. Does not consistently skip beginner-level content for an intermediate CSE graduate."
+            },
+            "preference_integration": {
+              "score": 4,
+              "max": 5,
+              "justification": "Python and R are used throughout as parallel options. SQL, BI tools, and product/marketing domain are all addressed. Global market focus is acknowledged. Fast-job urgency is mentioned in strategy but job hunt actions are deferred to the final weeks."
+            },
+            "stack_justification_quality": {
+              "score": 3,
+              "max": 5,
+              "justification": "Tool choices (Tableau/Power BI/Looker Studio) are presented as options without clear justification for which to prioritize. The rationale for including cloud services and ML is explained but feels like scope expansion rather than targeted role alignment."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 15,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 5,
+              "max": 5,
+              "justification": "Explicitly states it skips introductory programming and jumps to advanced Pandas/NumPy. Frames Git as a natural extension of CS background. Advanced SQL is introduced immediately without basics review. Consistently treats the user as an intermediate coder throughout."
+            },
+            "preference_integration": {
+              "score": 4,
+              "max": 5,
+              "justification": "Python is the primary language throughout. R is acknowledged but not deeply integrated (minor gap). Power BI is chosen as the BI tool with clear rationale. Job hunt actions are distributed across all three months, directly serving the fast-job urgency. Global market focus is addressed."
+            },
+            "stack_justification_quality": {
+              "score": 4,
+              "max": 5,
+              "justification": "Power BI is justified as industry-standard for the target role. Advanced SQL and Pandas are tied to real-world data extraction needs. A/B testing is linked to product/marketing decision-making. Technology choices are consistently connected to the user's target role and goals."
+            }
+          },
+          "raw_score": 13,
+          "max_raw": 15,
+          "weighted_contribution": 13.0
+        }
+      },
+      "D4": {
+        "name": "Market Alignment",
+        "weight": 0.1,
+        "comparative_analysis": "Both plans cover the globally demanded DA stack: SQL, Python, visualization, A/B testing, and BI tools. Plan 1 includes basic ML (scikit-learn) and cloud awareness, which adds some differentiation for Analytics Engineer roles. Plan 2 focuses on Power BI with DAX and deployment to Power BI Service, which is highly demanded globally for Product/Marketing DA roles. Plan 1's inclusion of Tableau as an option is valid but less decisive than Plan 2's deep Power BI commitment. Plan 2 also references Streamlit for Python app deployment, which is an emerging differentiator. Neither plan includes dbt or modern data stack tools, which would be relevant for Analytics Engineer roles but may be out of scope for the 3-month timeline. Plan 2's explicit product metrics framework (AARRR, LTV, CAC) and A/B testing depth are more directly aligned with what global Product/Marketing DA employers test in interviews.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2's deep Power BI commitment with deployment and explicit product metrics framework more precisely matches global Product/Marketing DA hiring requirements.",
+        "Plan_1": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Covers SQL, Python, visualization, A/B testing, basic ML, and BI tools \u2014 all in demand. Cloud awareness adds some differentiation. However, the breadth across Tableau/Power BI/Looker without depth in any one tool slightly reduces market readiness."
+            },
+            "regional_global_alignment": {
+              "score": 4,
+              "max": 5,
+              "justification": "Global market focus is acknowledged. SQL + Python + BI tools + A/B testing is the standard global DA stack. Basic ML adds value for Analytics Engineer positioning. Lacks depth in any single BI tool which global employers typically require."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 10,
+          "weighted_contribution": 8.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Power BI with DAX and Service deployment, advanced SQL, Python for analysis and A/B testing, product metrics (AARRR, LTV, CAC), and optional Streamlit deployment cover the full globally demanded Product/Marketing DA stack with emerging tool awareness."
+            },
+            "regional_global_alignment": {
+              "score": 4,
+              "max": 5,
+              "justification": "Power BI is the dominant BI tool in global enterprise DA roles. SQL + Python + Power BI + A/B testing + product metrics is precisely what global employers hire for at the graduate DA level. Minor gap: no mention of cloud data warehouses (BigQuery/Redshift) which are increasingly common globally."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 10,
+          "weighted_contribution": 9.0
+        }
+      },
+      "D5": {
+        "name": "Strategic Prioritization Quality",
+        "weight": 0.1,
+        "comparative_analysis": "Both plans follow a logical SQL/Python foundation \u2192 visualization/analytics \u2192 portfolio/interview arc. Plan 1 introduces statistics in Week 1 alongside SQL and Python setup, which is somewhat scattered. Plan 2 defers statistics to Month 2 Week 1, allowing Month 1 to focus purely on SQL and Python mastery \u2014 a cleaner prioritization. Plan 1 introduces ML and cloud in Month 3, which are lower-ROI for a Product/Marketing DA role compared to deepening BI tool skills. Plan 2 prioritizes Power BI in Month 3 Week 1, which is higher ROI for the target role. Both plans correctly front-load SQL as the highest-impact skill. Plan 2's iterative capstone building from Month 1 is a higher-ROI strategy than Plan 1's compressed final-sprint capstone, as it allows for refinement and earlier portfolio visibility.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 maintains cleaner monthly focus, prioritizes Power BI over ML/cloud for the target role, and builds the capstone iteratively for higher ROI.",
+        "Plan_1": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 3,
+              "max": 5,
+              "justification": "SQL is correctly front-loaded. However, statistics is introduced in Week 1 alongside SQL and Python setup, creating early cognitive scatter. ML and cloud in Month 3 are lower-ROI for Product/Marketing DA than deepening BI tool proficiency."
+            },
+            "logical_phasing": {
+              "score": 4,
+              "max": 5,
+              "justification": "Follows a coherent Foundation \u2192 Applied Analytics \u2192 Portfolio arc appropriate for DA roles. The phasing is logical but the final two weeks are overloaded with capstone, portfolio, resume, and interview prep simultaneously."
+            }
+          },
+          "raw_score": 7,
+          "max_raw": 10,
+          "weighted_contribution": 7.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 5,
+              "max": 5,
+              "justification": "SQL and Python are isolated in Month 1 for maximum focus. Statistics and cleaning are correctly placed in Month 2 after data manipulation foundations. Power BI (highest BI tool ROI for the role) is prioritized in Month 3. Iterative capstone building maximizes portfolio ROI."
+            },
+            "logical_phasing": {
+              "score": 4,
+              "max": 5,
+              "justification": "Follows SQL/Python Foundation \u2192 Stats/Cleaning/Visualization/Metrics \u2192 BI Tool/Experimentation/Portfolio arc, which is the ideal DA phasing. Minor issue: Power BI mastery in a single week (Month 3 Week 1) is ambitious but the overall arc is coherent and role-appropriate."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 10,
+          "weighted_contribution": 9.0
+        }
+      },
+      "D6": {
+        "name": "Curriculum Structural Depth & Clarity",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 provides detailed weekly topic breakdowns with specific SQL functions listed (ROW_NUMBER, RANK, LAG, LEAD, etc.), specific Python libraries, and named resources. Each week has a project idea. Plan 2 provides weekly micro-goals in narrative form, monthly milestone deliverables, and curated resources with search terms. Plan 1's subtopic specificity is higher \u2014 it names exact SQL window functions, specific statistical tests, and specific Python libraries. Plan 2's narrative micro-goals are descriptive but less technically precise (e.g., 'master Power BI' in a week without specifying which DAX functions or report types). However, Plan 2's milestone deliverables are clearer and more measurable (specific GitHub artifacts, Power BI Service deployment). Both plans have logical module ordering. Plan 1 edges Plan 2 on subtopic technical detail while Plan 2 edges Plan 1 on measurable deliverable clarity.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 provides more technically specific subtopic detail with named functions, libraries, and statistical tests, giving learners clearer daily execution guidance.",
+        "Plan_1": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 5,
+              "max": 5,
+              "justification": "Modules build correctly: SQL fundamentals \u2192 EDA \u2192 visualization \u2192 A/B testing \u2192 ML \u2192 portfolio. Each week's content logically depends on the previous week's skills."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 5,
+              "max": 5,
+              "justification": "Highly specific: names exact SQL window functions (ROW_NUMBER, RANK, LAG, LEAD, NTILE), specific Python libraries (Pandas, Matplotlib, Seaborn, Plotly, Scikit-learn), specific statistical tests (t-tests, chi-squared), and specific metrics (CAC, LTV, AARRR). Learner knows exactly what to study."
+            },
+            "clear_learning_outcomes": {
+              "score": 4,
+              "max": 5,
+              "justification": "Each week has a project idea that serves as a practical outcome. Monthly goals are stated. However, deliverables are described as 'project ideas' rather than required artifacts, making them slightly less measurable than Plan 2's milestone deliverables."
+            }
+          },
+          "raw_score": 14,
+          "max_raw": 15,
+          "weighted_contribution": 14.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 5,
+              "max": 5,
+              "justification": "Modules build correctly: SQL/Python foundation \u2192 statistics/cleaning/visualization/metrics \u2192 BI tool/experimentation/portfolio. The iterative capstone reinforces each module's content in sequence."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 3,
+              "max": 5,
+              "justification": "Weekly micro-goals are descriptive narratives rather than specific technical lists. 'Master Power BI' and 'deep dive into statistical analysis' lack the specificity of Plan 1's named functions and libraries. Resources are provided as search terms rather than direct links, reducing actionability."
+            },
+            "clear_learning_outcomes": {
+              "score": 5,
+              "max": 5,
+              "justification": "Each month has a clearly defined milestone deliverable with specific artifacts (GitHub repo with README, Python notebook with visualizations, Power BI dashboard deployed to Service). These are measurable and employer-demonstrable outcomes."
+            }
+          },
+          "raw_score": 13,
+          "max_raw": 15,
+          "weighted_contribution": 13.0
+        }
+      },
+      "D7": {
+        "name": "Career Execution Readiness",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 2 explicitly includes job hunt action items in every month, starting from Month 1 (LinkedIn optimization, resume drafting, company research). Plan 1 defers resume and LinkedIn work to the final two weeks. Plan 2 specifies 10-15 job applications per week in Month 3 and includes informational interviews and recruiter outreach on LinkedIn. Plan 1 mentions networking and tailoring applications but without specific volume targets or timing. Plan 2 includes 3-5 mock technical interviews in Month 3 with explicit coverage of SQL, Python, stats, and A/B testing case studies. Plan 1 mentions interview practice in the final sprint but without a structured mock interview schedule. Both plans mention behavioral preparation, but Plan 2 introduces STAR method in Month 1 and refines it progressively.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 distributes career execution activities across all three months with specific volume targets and structured mock interview scheduling, far better serving the fast-job urgency.",
+        "Plan_1": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 2,
+              "max": 4,
+              "justification": "Resume and LinkedIn optimization are mentioned in weeks 11-12 only. No earlier touchpoints for career document preparation despite the fast-job urgency. Tailoring advice is generic."
+            },
+            "mock_interviews_included": {
+              "score": 2,
+              "max": 3,
+              "justification": "Interview practice is mentioned in the final sprint with SQL (LeetCode, StrataScratch), Python/R problems, and behavioral questions. No structured mock interview schedule or explicit number of practice sessions specified."
+            },
+            "application_strategy": {
+              "score": 1,
+              "max": 3,
+              "justification": "Networking and tailoring applications are mentioned but no specific platforms, application volume targets, or timing strategy is provided. Job search is treated as a final-week activity rather than an ongoing process."
+            }
+          },
+          "raw_score": 5,
+          "max_raw": 10,
+          "weighted_contribution": 5.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 4,
+              "max": 4,
+              "justification": "LinkedIn optimization with role-specific keywords is scheduled in Month 1. Resume drafting begins in Month 1. Resume and cover letter tailoring for 5-10 roles per week is specified in Month 3. Career documents are treated as living artifacts built throughout the plan."
+            },
+            "mock_interviews_included": {
+              "score": 3,
+              "max": 3,
+              "justification": "3-5 mock technical interviews are explicitly scheduled in Month 3 covering SQL, Python, stats, and A/B testing case studies. STAR method is introduced in Month 1 and refined in Month 2. Behavioral and technical mock interviews are both addressed."
+            },
+            "application_strategy": {
+              "score": 3,
+              "max": 3,
+              "justification": "Specific application volume (10-15 roles per week in Month 3), platform deployment (GitHub, Power BI Service, Streamlit), informational interviews, and LinkedIn recruiter outreach are all explicitly specified. Company research begins in Month 1. This is a comprehensive, actionable job search strategy."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        }
+      }
+    },
+    "final_scores": {
+      "Plan_1": {
+        "total_weighted_score": 70.0,
+        "dimension_wins": [
+          "D6"
+        ],
+        "strengths": [
+          "Highly specific subtopic detail with named SQL functions, Python libraries, and statistical tests providing clear daily study guidance",
+          "Covers basic ML (regression, classification, scikit-learn) which adds differentiation for Analytics Engineer positioning",
+          "Well-structured daily schedule with explicit time allocation across learning, practice, review, and job search",
+          "Comprehensive resource list with specific named books, platforms, and courses",
+          "Honest note on AI Engineer scope limitations sets realistic expectations"
+        ],
+        "critical_gaps": [
+          "Interview prep and career execution activities are heavily concentrated in the final two weeks, poorly serving the fast-job urgency",
+          "No explicit hour accounting or buffer calculation, making feasibility harder to verify",
+          "BI tool choice is left open (Tableau/Power BI/Looker) without clear recommendation, reducing depth in any single tool",
+          "Capstone is compressed into the final sprint rather than built iteratively, reducing portfolio quality and employer visibility",
+          "Resume and LinkedIn preparation deferred to weeks 11-12 with no earlier touchpoints"
+        ]
+      },
+      "Plan_2": {
+        "total_weighted_score": 88.0,
+        "dimension_wins": [
+          "D1",
+          "D2",
+          "D3",
+          "D4",
+          "D5",
+          "D7"
+        ],
+        "strengths": [
+          "Explicit hour accounting (288 available, 253 planned, 35 buffer) with monthly time budgets demonstrating rigorous feasibility planning",
+          "Iterative capstone built across all three months with deployed artifacts (GitHub, Power BI Service, optional Streamlit)",
+          "Career execution activities distributed from Month 1 with specific application volume targets (10-15 roles/week) and recruiter outreach strategy",
+          "Consistently skips beginner content and leverages CSE background throughout, appropriate for intermediate graduate",
+          "Power BI with DAX and Service deployment is a high-ROI, globally demanded skill for the target role",
+          "Distributed interview prep with quantified targets (10-15 SQL problems, 10 Pandas problems, 3-5 mock interviews)"
+        ],
+        "critical_gaps": [
+          "Weekly micro-goals are narrative rather than technically specific, lacking named functions and libraries that Plan 1 provides",
+          "R language preference is acknowledged but not meaningfully integrated into the curriculum",
+          "Power BI mastery in a single week (Month 3 Week 1) including DAX is ambitious and may be underestimated",
+          "No cloud data warehouse exposure (BigQuery, Redshift) which is increasingly common in global DA roles",
+          "Resources provided as search terms rather than direct links reduces immediate actionability"
+        ]
+      }
+    },
+    "verdict": {
+      "winner": "Plan_2",
+      "score_gap": 18.0,
+      "margin_interpretation": "decisive",
+      "winner_key_advantages": [
+        "Superior career execution readiness with job hunt actions distributed from Month 1, specific application volume targets, and structured mock interview scheduling \u2014 directly serving the fast-job urgency",
+        "Explicit hour accounting with buffer demonstrates rigorous feasibility planning absent in Plan 1",
+        "Iterative capstone building across all three months produces a more employer-ready, deployed portfolio",
+        "Deeper Power BI commitment (DAX, Power Query, Service deployment) is higher ROI for the target role than Plan 1's multi-tool breadth",
+        "Consistently leverages CSE background by skipping beginner content and framing advanced techniques as natural extensions of existing knowledge"
+      ],
+      "loser_salvageable_strengths": [
+        "Plan 1's technically specific subtopic detail (named SQL functions, Python libraries, statistical tests) could be adopted by Plan 2 to improve daily execution clarity",
+        "Plan 1's basic ML coverage (scikit-learn, churn prediction) adds Analytics Engineer positioning value that Plan 2 lacks",
+        "Plan 1's explicit daily schedule breakdown (1.5h learning, 1.5h practice, 0.5h review, 0.5h job search) is a useful daily structure",
+        "Plan 1's honest note on AI Engineer scope limitations is a valuable expectation-setting element"
+      ],
+      "shared_gaps_in_both_plans": [
+        "Neither plan meaningfully integrates R language despite it being a stated user preference",
+        "Neither plan covers dbt or modern data stack tools (Airflow, dbt, Fivetran) which are increasingly relevant for Analytics Engineer roles globally",
+        "Neither plan includes cloud data warehouse hands-on practice (BigQuery, Redshift, Snowflake) which global employers increasingly require",
+        "Neither plan addresses salary negotiation or offer evaluation strategies relevant to the global job market",
+        "Neither plan includes peer learning or community engagement strategies beyond generic networking advice"
+      ],
+      "final_recommendation": "Plan 2 is the clear winner for this user profile. Its decisive advantages in career execution readiness, feasibility planning, iterative portfolio building, and role-aligned tool depth make it substantially more likely to achieve the user's primary goal of fast global employment. The user should adopt Plan 2 as the primary framework while supplementing it with Plan 1's technically specific subtopic lists for daily study guidance and considering adding Plan 1's basic ML module (scikit-learn, churn prediction) in Month 3 as an optional differentiator for Analytics Engineer applications."
+    }
+  },
+  "winner": "Plan_2",
+  "plan_1_score": 70.0,
+  "plan_2_score": 88.0
+}

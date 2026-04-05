@@ -1,0 +1,411 @@
+{
+  "generated_at": "2026-04-02T17:58:34.147888",
+  "model": "gpt-4o-2024-08-06",
+  "temperature": 0.0,
+  "prompt_version": "v1.0-comparative-dimension-first",
+  "user_profile": {
+    "role": "NLP Engineer",
+    "experience": "University Final Year CSE Student",
+    "preparation_time_months": 5,
+    "study_hours_per_day": 1,
+    "Market_Focus": "Bangladesh",
+    "other_preferences": "Need a fast Job, Intermediate (Built small projects) coding experience, familiar with Python, C++, Java Script and familiar with react,node.js,TensorFlow, pytorch framework. Also build some academic and personal projects, preferable language is Python"
+  },
+  "result": {
+    "evaluation_methodology": "comparative \u2014 both plans analyzed together per dimension before scoring",
+    "user_profile_summary": "The user is a final-year CSE student aiming to become an NLP Engineer in Bangladesh within 5 months, with 1 hour of study per day. They have intermediate coding experience and familiarity with Python, C++, JavaScript, React, Node.js, TensorFlow, and PyTorch, with a preference for Python.",
+    "dimensions": {
+      "D1": {
+        "name": "Hiring Readiness Optimization",
+        "weight": 0.25,
+        "comparative_analysis": "Plan 1 provides a structured approach to building foundational NLP skills, progressing to advanced topics like Transformers and practical applications in the Bangladesh market. It includes a final month focused on portfolio building and interview preparation. Plan 2 emphasizes a capstone project throughout, integrating learning with practical application, and includes detailed interview preparation strategies. Both plans cover core technical skills, but Plan 2 integrates them more directly into a single project, potentially offering a more cohesive portfolio piece.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2's integration of learning into a single capstone project provides a stronger, more cohesive portfolio piece.",
+        "Plan_1": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Covers foundational to advanced NLP topics, including Transformers and practical applications."
+            },
+            "interview_prep_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "Includes interview preparation in the final month, but less integrated throughout the plan."
+            },
+            "portfolio_project_strength": {
+              "score": 7,
+              "max": 9,
+              "justification": "Multiple projects are suggested, but not as integrated as a single capstone project."
+            }
+          },
+          "raw_score": 20,
+          "max_raw": 25,
+          "weighted_contribution": 20.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 8,
+              "max": 8,
+              "justification": "Strong focus on integrating technical skills into a single capstone project."
+            },
+            "interview_prep_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Consistent interview preparation throughout the plan, with specific goals each month."
+            },
+            "portfolio_project_strength": {
+              "score": 8,
+              "max": 9,
+              "justification": "Capstone project is central to the plan, providing a strong portfolio piece."
+            }
+          },
+          "raw_score": 23,
+          "max_raw": 25,
+          "weighted_contribution": 23.0
+        }
+      },
+      "D2": {
+        "name": "Time-Constrained Feasibility",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 estimates a total of 150 study hours, fitting within the user's available time, but lacks a buffer. Plan 2 plans for 108 hours with a 12-hour buffer, offering more flexibility. Both plans are realistic in terms of cognitive load, but Plan 2's focus on a single capstone project may reduce complexity and overengineering.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 provides a buffer and focuses on a single project, reducing complexity and overengineering.",
+        "Plan_1": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Fits within available hours but lacks a buffer."
+            },
+            "cognitive_load_realism": {
+              "score": 4,
+              "max": 5,
+              "justification": "Realistic cognitive load with a structured approach."
+            },
+            "overengineering_avoidance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Covers necessary topics without excessive complexity."
+            }
+          },
+          "raw_score": 12,
+          "max_raw": 15,
+          "weighted_contribution": 12.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Includes a buffer, fitting well within available hours."
+            },
+            "cognitive_load_realism": {
+              "score": 5,
+              "max": 5,
+              "justification": "Focus on a single project reduces cognitive load."
+            },
+            "overengineering_avoidance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Avoids overengineering by focusing on a single capstone project."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        }
+      },
+      "D3": {
+        "name": "Personalization & Preference Alignment",
+        "weight": 0.15,
+        "comparative_analysis": "Both plans are well-aligned with the user's experience and preferences, focusing on Python and relevant frameworks. Plan 1 includes specific content for the Bangladesh market, while Plan 2 leverages the user's existing skills more explicitly in the capstone project. Both plans justify their technology choices effectively.",
+        "dimension_winner": "Tie",
+        "winner_reason": "Both plans align well with the user's experience and preferences, with slight differences in focus.",
+        "Plan_1": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 5,
+              "max": 5,
+              "justification": "Skips beginner content and aligns with user's experience."
+            },
+            "preference_integration": {
+              "score": 5,
+              "max": 5,
+              "justification": "Focuses on Python and relevant frameworks, with content for the Bangladesh market."
+            },
+            "stack_justification_quality": {
+              "score": 5,
+              "max": 5,
+              "justification": "Technology choices are well-justified and aligned with the user's goals."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 5,
+              "max": 5,
+              "justification": "Leverages user's existing skills in the capstone project."
+            },
+            "preference_integration": {
+              "score": 5,
+              "max": 5,
+              "justification": "Focuses on Python and relevant frameworks, integrating them into the capstone project."
+            },
+            "stack_justification_quality": {
+              "score": 5,
+              "max": 5,
+              "justification": "Technology choices are well-justified and aligned with the user's goals."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        }
+      },
+      "D4": {
+        "name": "Market Alignment",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 includes specific content for the Bangladesh market, such as Bangla NLP, which is a strong point for regional alignment. Plan 2 focuses more on global skills like Transformers and MLOps, which are in high demand globally. Both plans cover skills relevant to the NLP Engineer role.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 includes specific content for the Bangladesh market, enhancing regional alignment.",
+        "Plan_1": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Covers globally relevant skills and includes Bangla NLP for regional relevance."
+            },
+            "regional_global_alignment": {
+              "score": 5,
+              "max": 5,
+              "justification": "Includes specific content for the Bangladesh market."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 10,
+          "weighted_contribution": 9.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Focuses on globally in-demand skills like Transformers and MLOps."
+            },
+            "regional_global_alignment": {
+              "score": 4,
+              "max": 5,
+              "justification": "Strong global alignment but less focus on regional specifics."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 10,
+          "weighted_contribution": 9.0
+        }
+      },
+      "D5": {
+        "name": "Strategic Prioritization Quality",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 follows a logical progression from foundational NLP to advanced topics and practical applications, ending with portfolio building and interview preparation. Plan 2 prioritizes high-impact skills early by integrating them into a capstone project, maintaining a coherent learning arc. Both plans are strategically sound, but Plan 2's focus on a single project may offer a more streamlined learning experience.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2's integration of skills into a single capstone project offers a streamlined learning experience.",
+        "Plan_1": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 4,
+              "max": 5,
+              "justification": "Prioritizes foundational skills early, with a logical progression."
+            },
+            "logical_phasing": {
+              "score": 4,
+              "max": 5,
+              "justification": "Follows a coherent learning arc from foundational to advanced topics."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 10,
+          "weighted_contribution": 8.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 5,
+              "max": 5,
+              "justification": "Integrates high-impact skills into a single capstone project early."
+            },
+            "logical_phasing": {
+              "score": 5,
+              "max": 5,
+              "justification": "Maintains a coherent learning arc with a focus on a capstone project."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        }
+      },
+      "D6": {
+        "name": "Curriculum Structural Depth & Clarity",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 provides detailed modules with specific topics and project ideas, ensuring clear learning outcomes. Plan 2 offers a structured approach with weekly micro-goals and milestone deliverables, providing clarity and depth. Both plans are well-structured, but Plan 2's weekly goals and deliverables offer more actionable detail.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2's weekly micro-goals and milestone deliverables provide more actionable detail.",
+        "Plan_1": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 4,
+              "max": 5,
+              "justification": "Modules build logically on each other."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 4,
+              "max": 5,
+              "justification": "Provides specific topics and project ideas."
+            },
+            "clear_learning_outcomes": {
+              "score": 4,
+              "max": 5,
+              "justification": "Each module has a clear project idea as an outcome."
+            }
+          },
+          "raw_score": 12,
+          "max_raw": 15,
+          "weighted_contribution": 12.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 5,
+              "max": 5,
+              "justification": "Weekly micro-goals ensure logical progression."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 5,
+              "max": 5,
+              "justification": "Detailed weekly goals and deliverables provide actionable detail."
+            },
+            "clear_learning_outcomes": {
+              "score": 5,
+              "max": 5,
+              "justification": "Milestone deliverables ensure clear learning outcomes."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        }
+      },
+      "D7": {
+        "name": "Career Execution Readiness",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 includes resume and LinkedIn preparation in the final month, with some networking tips. Plan 2 integrates career readiness throughout, with specific job hunt action items and interview prep goals each month. Plan 2's consistent focus on career execution readiness provides a more comprehensive approach.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2's consistent focus on career readiness throughout the plan provides a more comprehensive approach.",
+        "Plan_1": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 3,
+              "max": 4,
+              "justification": "Scheduled in the final month, with some networking tips."
+            },
+            "mock_interviews_included": {
+              "score": 2,
+              "max": 3,
+              "justification": "Includes interview preparation in the final month."
+            },
+            "application_strategy": {
+              "score": 2,
+              "max": 3,
+              "justification": "Some job search tips included, but less detailed."
+            }
+          },
+          "raw_score": 7,
+          "max_raw": 10,
+          "weighted_contribution": 7.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 4,
+              "max": 4,
+              "justification": "Integrated throughout with specific action items each month."
+            },
+            "mock_interviews_included": {
+              "score": 3,
+              "max": 3,
+              "justification": "Consistent interview prep goals each month."
+            },
+            "application_strategy": {
+              "score": 3,
+              "max": 3,
+              "justification": "Detailed job hunt action items and strategies included."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        }
+      }
+    },
+    "final_scores": {
+      "Plan_1": {
+        "total_weighted_score": 83.0,
+        "dimension_wins": [
+          "D4"
+        ],
+        "strengths": [
+          "Market alignment with regional focus",
+          "Comprehensive technical readiness"
+        ],
+        "critical_gaps": [
+          "Less integrated career readiness",
+          "Lacks buffer in time management"
+        ]
+      },
+      "Plan_2": {
+        "total_weighted_score": 97.0,
+        "dimension_wins": [
+          "D1",
+          "D2",
+          "D3",
+          "D5",
+          "D6",
+          "D7"
+        ],
+        "strengths": [
+          "Integrated capstone project",
+          "Consistent career readiness",
+          "Buffer in time management"
+        ],
+        "critical_gaps": [
+          "Less regional focus compared to Plan 1"
+        ]
+      }
+    },
+    "verdict": {
+      "winner": "Plan_2",
+      "score_gap": 14.0,
+      "margin_interpretation": "moderate",
+      "winner_key_advantages": [
+        "Integrated capstone project",
+        "Consistent career readiness",
+        "Buffer in time management"
+      ],
+      "loser_salvageable_strengths": [
+        "Market alignment with regional focus",
+        "Comprehensive technical readiness"
+      ],
+      "shared_gaps_in_both_plans": [],
+      "final_recommendation": "Plan 2 is recommended for its comprehensive integration of learning and career readiness, with a strong focus on a capstone project and effective time management. Consider incorporating Plan 1's regional focus for a more balanced approach."
+    }
+  },
+  "winner": "Plan_2",
+  "plan_1_score": 83.0,
+  "plan_2_score": 97.0
+}

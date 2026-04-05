@@ -1,0 +1,434 @@
+{
+  "generated_at": "2026-04-02T17:01:55.731629",
+  "model": "claude-sonnet-4-6",
+  "temperature": 0.0,
+  "prompt_version": "v1.0-comparative-dimension-first",
+  "user_profile": {
+    "role": "Machine Learning Engineer/AI Engineer (Data Analyst/ Analytics / AI Engineer)",
+    "experience": "University Recent CSE Graduate",
+    "preparation_time_months": 2,
+    "study_hours_per_day": 4,
+    "Market_Focus": "Global",
+    "other_preferences": " want a fast job which will be paid in dollar, Intermediate (Built small projects) coding experience, familiar with python,C Language and familiar with Tensorflow, Pytorch Framework. build some academic projects.Preferable language is Python."
+  },
+  "result": {
+    "evaluation_methodology": "comparative \u2014 both plans analyzed together per dimension before scoring",
+    "user_profile_summary": "Recent CSE graduate targeting ML Engineer / AI Engineer roles in the global market with dollar pay. Has intermediate Python/C coding experience, familiarity with TensorFlow and PyTorch, and small academic projects. 2-month timeline, 4 hours/day (~240 total hours). Needs fast employability, portfolio strength, and interview readiness.",
+    "dimensions": {
+      "D1": {
+        "name": "Hiring Readiness Optimization",
+        "weight": 0.25,
+        "comparative_analysis": "Both plans cover the core MLE/AIE technical stack including deep learning, deployment, and MLOps. Plan 1 structures technical readiness across 4 weekly phases with explicit topic lists and resource links, covering DL fundamentals, MLOps, advanced ML (NLP/tabular), and interview prep. Plan 2 covers a similar stack but adds production-grade Python, SQL, CI/CD with GitHub Actions, and DVC \u2014 all highly relevant for global MLE roles. For interview prep, Plan 1 dedicates Weeks 7-8 to ML system design, DSA, and behavioral prep but starts late. Plan 2 integrates LeetCode and SQL interview prep from Week 1 and includes explicit mock interview scheduling in Week 8. On portfolio, Plan 1 builds 3 separate projects (image classifier, deployed API, NLP/tabular app), which is breadth-focused. Plan 2 builds a single iterative capstone that grows from a containerized ML model to a cloud-deployed, MLOps-integrated system \u2014 more employer-convincing as a cohesive production artifact. Plan 2's capstone with CI/CD, MLflow, and cloud deployment is marginally stronger as a single portfolio piece.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 integrates interview prep earlier, builds a more cohesive production-grade capstone with CI/CD and MLOps, and covers SQL and production Python which are critical differentiators for global MLE hiring.",
+        "Plan_1": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "Covers DL, MLOps, NLP/tabular ML, FastAPI, Docker, and cloud deployment. Misses SQL depth, production Python patterns, and CI/CD pipelines which are commonly tested in global MLE interviews."
+            },
+            "interview_prep_readiness": {
+              "score": 5,
+              "max": 8,
+              "justification": "ML system design and behavioral prep are covered in Weeks 7-8, but DSA practice is mentioned only briefly and not scheduled consistently. No SQL interview prep despite its relevance for MLE roles globally."
+            },
+            "portfolio_project_strength": {
+              "score": 6,
+              "max": 9,
+              "justification": "Three projects (image classifier, deployed API, NLP/tabular app) demonstrate breadth but lack the cohesive narrative of a single production system. Deployment is included which is good, but no CI/CD or MLflow integration in the portfolio."
+            }
+          },
+          "raw_score": 17,
+          "max_raw": 25,
+          "weighted_contribution": 17.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Covers production Python, SQL, Docker, FastAPI, cloud deployment, MLflow, DVC, CI/CD with GitHub Actions, and advanced DL with Transformers. Comprehensive and well-aligned with global MLE job requirements."
+            },
+            "interview_prep_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "LeetCode practice starts Week 1 and continues through Week 8 with increasing difficulty. SQL interview questions included. ML system design and behavioral STAR method explicitly scheduled. Mock interviews planned in Week 8."
+            },
+            "portfolio_project_strength": {
+              "score": 7,
+              "max": 9,
+              "justification": "Single iterative capstone grows from a containerized ML model to a cloud-deployed system with MLflow, CI/CD, and comprehensive documentation. More employer-convincing as a production artifact, though a second smaller project would add breadth."
+            }
+          },
+          "raw_score": 21,
+          "max_raw": 25,
+          "weighted_contribution": 21.0
+        }
+      },
+      "D2": {
+        "name": "Time-Constrained Feasibility",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 does not explicitly calculate total hours or provide a buffer, making it harder to verify feasibility. Each week has a daily breakdown of 2.5 hours of structured activity (1h theory + 1.5h project), leaving 1.5 hours unaccounted \u2014 this is either implicit buffer or unstructured time. The weekly scope is ambitious but not unreasonable for a CSE graduate. Plan 2 explicitly calculates 192 total available hours, plans 170 hours, and reserves 22 hours as buffer \u2014 a transparent and disciplined approach. Plan 2's monthly time budgets (85h each) are clearly broken into theory, practice, and project building. However, Plan 2's Month 1 asks the user to master production Python, advanced SQL, Docker, Git, and build an ML model simultaneously \u2014 this is cognitively dense for 4 hours/day. Plan 1's week-by-week focus is slightly more contained per week. Both plans have some overengineering risk (DVC, CI/CD in Plan 2; RL mention in Plan 1), but Plan 2's explicit hour accounting makes it more trustworthy overall.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 explicitly accounts for all 192 available hours with a 22-hour buffer, providing transparent feasibility validation that Plan 1 entirely lacks.",
+        "Plan_1": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 3,
+              "max": 5,
+              "justification": "No explicit hour calculation or buffer. Daily breakdown only covers 2.5 of 4 hours, leaving 1.5 hours unaccounted per day. Cannot verify total planned hours fit within 240 available hours."
+            },
+            "cognitive_load_realism": {
+              "score": 3,
+              "max": 5,
+              "justification": "Weeks 1-2 cover DL theory, CNN/RNN/Transformers, and a full image classification project simultaneously. Weeks 5-6 offer three alternative tracks which is helpful but the scope per week is still dense for 4 hours/day."
+            },
+            "overengineering_avoidance": {
+              "score": 3,
+              "max": 5,
+              "justification": "Reinforcement Learning is mentioned as an option in Weeks 5-6 which is unnecessary for fast MLE hiring. Otherwise topics are reasonably scoped. The three-project approach may spread effort too thin."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 15,
+          "weighted_contribution": 9.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Explicitly calculates 192 total hours, plans 170 hours, and reserves 22 hours as buffer. Monthly breakdowns (85h each) are further split into theory, practice, and project building \u2014 fully transparent and compliant."
+            },
+            "cognitive_load_realism": {
+              "score": 3,
+              "max": 5,
+              "justification": "Month 1 stacks production Python, advanced SQL, Docker, Git, and ML model building across 4 weeks \u2014 cognitively dense. Month 2 adds cloud deployment, MLflow, DVC, and CI/CD in rapid succession. Ambitious but the 70/30 rule guideline helps manage this."
+            },
+            "overengineering_avoidance": {
+              "score": 3,
+              "max": 5,
+              "justification": "DVC and CI/CD with GitHub Actions are valuable but add complexity for a 2-month sprint. The iterative capstone approach mitigates this somewhat, but the breadth of Month 2 tools risks surface-level coverage."
+            }
+          },
+          "raw_score": 11,
+          "max_raw": 15,
+          "weighted_contribution": 11.0
+        }
+      },
+      "D3": {
+        "name": "Personalization & Preference Alignment",
+        "weight": 0.15,
+        "comparative_analysis": "Both plans acknowledge the user's Python/TensorFlow/PyTorch background and skip beginner content. Plan 1 explicitly states the user's current experience level in its header and builds on it by jumping to advanced DL architectures and fine-tuning. Plan 2 opens with 'production-grade Python' which could be seen as slightly redundant for an intermediate user, but frames it as elevating from familiar to production-ready \u2014 a reasonable distinction for global job readiness. Both plans use Python as the primary language. Plan 1 explicitly mentions the user's TF/PyTorch familiarity and builds on it in Weeks 1-2. Plan 2 references the user's background in its execution summary and Week 5. Plan 2 better addresses the 'fast dollar-paying global job' preference by integrating job hunt actions, LinkedIn optimization, and application volume targets explicitly. Plan 1 mentions these in general recommendations but doesn't schedule them as weekly actions. Stack justification is stronger in Plan 2 which explains why each tool is chosen in the context of production readiness.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 more explicitly operationalizes the user's 'fast dollar-paying global job' goal through weekly job hunt action items and application strategy, while still building on the user's existing TF/PyTorch background.",
+        "Plan_1": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 4,
+              "max": 5,
+              "justification": "Skips beginner Python and ML basics, jumps to advanced DL architectures and fine-tuning. Acknowledges existing TF/PyTorch familiarity. Minor redundancy in reviewing core ML algorithms in Week 1 which the user likely already knows."
+            },
+            "preference_integration": {
+              "score": 4,
+              "max": 5,
+              "justification": "Uses Python throughout, leverages TF/PyTorch, targets global MLE roles. The dollar-pay and fast-job preference is acknowledged in goals but not operationalized into weekly job hunt actions."
+            },
+            "stack_justification_quality": {
+              "score": 3,
+              "max": 5,
+              "justification": "Technology choices (FastAPI, Docker, MLflow, Hugging Face) are listed with context but justifications are brief. The choice between NLP/tabular/RL tracks in Weeks 5-6 is presented without clear guidance on which is most market-relevant."
+            }
+          },
+          "raw_score": 11,
+          "max_raw": 15,
+          "weighted_contribution": 11.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 4,
+              "max": 5,
+              "justification": "Frames Python upgrade as 'familiar to production-grade' which is appropriate. Leverages TF/PyTorch background in Week 5 for advanced DL. SQL depth in Week 2 is new content but justified for global MLE roles."
+            },
+            "preference_integration": {
+              "score": 5,
+              "max": 5,
+              "justification": "Explicitly addresses fast job, dollar pay, and global market in the execution summary. Weekly job hunt action items are integrated throughout both months. Application volume (5-10 roles daily) and LinkedIn optimization are explicitly scheduled."
+            },
+            "stack_justification_quality": {
+              "score": 4,
+              "max": 5,
+              "justification": "Each tool is introduced with a clear rationale tied to production readiness and employability. The 70/30 rule and iterative capstone approach are explicitly justified as employability strategies. Minor gap: DVC justification is thin."
+            }
+          },
+          "raw_score": 13,
+          "max_raw": 15,
+          "weighted_contribution": 13.0
+        }
+      },
+      "D4": {
+        "name": "Market Alignment",
+        "weight": 0.1,
+        "comparative_analysis": "Both plans target globally relevant MLE/AIE skills. Plan 1 covers DL, MLOps, NLP with Hugging Face Transformers, FastAPI, Docker, and cloud deployment \u2014 all highly demanded in global MLE job postings. Plan 2 adds SQL (increasingly required in MLE roles for feature engineering and data querying), production Python patterns, CI/CD with GitHub Actions, and DVC \u2014 tools that appear frequently in global MLE job descriptions at the junior-to-mid level. Both plans include cloud deployment (AWS/GCP) which is essential for global remote MLE roles. Plan 2's inclusion of SQL and CI/CD gives it a slight edge for global market alignment, as many MLE job descriptions at the graduate level explicitly require SQL proficiency and familiarity with CI/CD pipelines. Plan 1's optional RL track is less market-relevant for fast hiring. Both plans include Transformers/Hugging Face which is a strong differentiator in the current market.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 adds SQL and CI/CD which are explicitly required in a significant portion of global MLE job descriptions at the graduate level, giving it stronger market alignment.",
+        "Plan_1": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 4,
+              "max": 5,
+              "justification": "DL, MLOps, Hugging Face Transformers, FastAPI, Docker, and cloud deployment are all highly demanded. The optional RL track is less relevant for fast hiring. Missing SQL and CI/CD which appear in many global MLE job descriptions."
+            },
+            "regional_global_alignment": {
+              "score": 4,
+              "max": 5,
+              "justification": "Covers the core stack expected for global remote MLE roles. MLOps Zoomcamp is a globally recognized resource. Cloud deployment on AWS/GCP is included. English communication advice is a thoughtful addition for global market targeting."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 10,
+          "weighted_contribution": 8.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Covers production Python, SQL, Docker, FastAPI, cloud deployment, MLflow, DVC, CI/CD, and advanced DL with Transformers. This is a comprehensive and current stack for global MLE roles at the graduate level, including emerging tools like GitHub Actions for ML CI/CD."
+            },
+            "regional_global_alignment": {
+              "score": 4,
+              "max": 5,
+              "justification": "Strong alignment with global MLE hiring expectations. SQL inclusion is particularly relevant for global companies that expect MLE candidates to query feature stores and data warehouses. Application volume guidance (5-10 roles daily) reflects global remote job market realities."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 10,
+          "weighted_contribution": 9.0
+        }
+      },
+      "D5": {
+        "name": "Strategic Prioritization Quality",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 follows a ML Theory \u2192 Deployment \u2192 Advanced Topics \u2192 Interview arc. This is reasonable but places interview prep entirely in the final two weeks, which is risky for a 2-month timeline. Advanced topics (NLP/tabular) in Weeks 5-6 are high-value but come after MLOps, which is a slightly unusual ordering \u2014 deployment before advanced modeling is defensible but not optimal for building the capstone. Plan 2 follows a Foundation \u2192 Applied ML \u2192 Productionization \u2192 Interview Sprint arc, with interview prep (LeetCode, SQL) integrated from Week 1. This is a stronger strategic choice because DSA and SQL practice benefit from spaced repetition over time. Plan 2 also prioritizes Docker and Git in Month 1 before cloud deployment in Month 2, which is the correct dependency order. The iterative capstone approach means the user is building toward a deployable product from day one, which is strategically sound for fast hiring.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 integrates interview prep from Week 1 and follows a correct dependency-ordered phasing arc (Foundation \u2192 Applied \u2192 Production \u2192 Interview Sprint) that maximizes readiness within the 2-month constraint.",
+        "Plan_1": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 3,
+              "max": 5,
+              "justification": "DL and deployment are prioritized early which is correct. However, interview prep (DSA, system design) is deferred entirely to Weeks 7-8, reducing spaced repetition benefit. The optional RL track in Weeks 5-6 is low ROI for fast hiring."
+            },
+            "logical_phasing": {
+              "score": 3,
+              "max": 5,
+              "justification": "DL \u2192 MLOps \u2192 Advanced Topics \u2192 Interview is a reasonable arc but placing deployment before advanced modeling means the capstone project is built on a simpler model. Interview prep concentration in the final two weeks is a strategic risk."
+            }
+          },
+          "raw_score": 6,
+          "max_raw": 10,
+          "weighted_contribution": 6.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 4,
+              "max": 5,
+              "justification": "Production Python, SQL, and Docker are prioritized in Month 1 as foundational enablers. LeetCode practice starts Week 1. Advanced DL and cloud deployment come in Month 2 after the foundation is set. High-ROI topics are front-loaded appropriately."
+            },
+            "logical_phasing": {
+              "score": 4,
+              "max": 5,
+              "justification": "Foundation (Python, SQL, Docker, ML) \u2192 Productionization (cloud, MLOps, CI/CD) \u2192 Interview Sprint is a coherent and dependency-correct arc. The iterative capstone ensures each phase builds on the previous. Minor issue: SQL depth in Week 2 before ML model building in Week 3 is slightly front-heavy on data engineering."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 10,
+          "weighted_contribution": 8.0
+        }
+      },
+      "D6": {
+        "name": "Curriculum Structural Depth & Clarity",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 provides week-by-week breakdowns with daily hour allocations, key topics, and specific resource recommendations. The structure is clear and actionable, with named resources (fast.ai, MLOps Zoomcamp, Hugging Face Course) and specific project descriptions. However, the daily breakdown only covers 2.5 of 4 hours, leaving a structural gap. Plan 2 provides monthly themes with weekly micro-goals, time budget breakdowns, technical skills lists, interview prep goals, deliverables, job hunt action items, and curated resources per month. The milestone deliverables are specific and measurable. Plan 2's structure is more comprehensive and multi-layered, but the weekly micro-goals are written as narrative paragraphs rather than structured lists, which reduces scannability. Plan 1's resource specificity (named courses, platforms) is slightly stronger than Plan 2's search-term-based resource format. Overall, Plan 2 has more structural depth with clearer measurable outcomes per phase.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 provides more structural layers (time budgets, deliverables, job hunt actions, milestone summaries) with measurable outcomes per phase, making it more actionable despite slightly lower resource specificity.",
+        "Plan_1": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 4,
+              "max": 5,
+              "justification": "Modules build logically from DL fundamentals to deployment to advanced topics to interview prep. The dependency chain is mostly correct. Minor issue: advanced topics before interview prep means system design practice is compressed into 2 weeks."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 4,
+              "max": 5,
+              "justification": "Key topics are specific (e.g., 'nn.Module, DataLoader, optimizers, callbacks, TensorBoard') and resources are named (fast.ai, MLOps Zoomcamp). Daily breakdowns specify what to do each hour. The 2.5-hour daily coverage gap reduces actionability slightly."
+            },
+            "clear_learning_outcomes": {
+              "score": 3,
+              "max": 5,
+              "justification": "Projects are described with specific goals (e.g., 'fine-tune ResNet on CIFAR-100', 'containerize with Docker, build FastAPI endpoint') but formal milestone deliverables per week are not explicitly stated. Outcomes are implied rather than declared."
+            }
+          },
+          "raw_score": 11,
+          "max_raw": 15,
+          "weighted_contribution": 11.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 4,
+              "max": 5,
+              "justification": "Foundation \u2192 Productionization arc is logically ordered with correct dependencies (Docker before cloud, ML model before MLOps). Monthly themes are coherent. Minor issue: SQL depth in Week 2 before ML modeling in Week 3 is slightly front-heavy on data engineering for an MLE role."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 4,
+              "max": 5,
+              "justification": "Technical skills lists are specific and actionable. Weekly micro-goals describe what will be built and learned. Resource recommendations use search terms rather than direct links, which is slightly less actionable but still useful. Time budget breakdowns add quantitative clarity."
+            },
+            "clear_learning_outcomes": {
+              "score": 5,
+              "max": 5,
+              "justification": "Each month has an explicit milestone deliverable with specific technical components (e.g., 'fully containerized, locally runnable ML model with SQL-based features'). What-you-will-build sections list concrete artifacts per phase. Interview prep goals are quantified (10-15 LeetCode problems)."
+            }
+          },
+          "raw_score": 13,
+          "max_raw": 15,
+          "weighted_contribution": 13.0
+        }
+      },
+      "D7": {
+        "name": "Career Execution Readiness",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 addresses resume and LinkedIn optimization in Weeks 7-8 as part of the interview prep phase, and mentions networking and English communication in general recommendations. However, these are treated as end-of-plan activities rather than ongoing processes. Mock interviews are mentioned (peer/mentor practice, ChatGPT for behavioral) but not formally scheduled. Application strategy is vague \u2014 LinkedIn and networking are mentioned but no volume targets or platform specifics are given. Plan 2 integrates resume and LinkedIn work from Month 1 Week 1 as explicit job hunt action items. Application strategy is specific (5-10 roles daily in Month 2, identify 10-15 target companies in Month 1). Mock interviews are explicitly scheduled in Week 8 with peer/mentor guidance. Plan 2's career execution is treated as a parallel track throughout the plan rather than a final-week afterthought, which is significantly stronger for fast hiring.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 integrates resume/LinkedIn work from Week 1, provides specific application volume targets, and schedules mock interviews explicitly \u2014 treating career execution as a parallel track rather than a final-week afterthought.",
+        "Plan_1": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 2,
+              "max": 4,
+              "justification": "Resume and LinkedIn optimization are mentioned in Weeks 7-8 and in general recommendations, but treated as end-of-plan activities. No specific guidance on resume keywords, tailoring strategy, or LinkedIn optimization tactics beyond general advice."
+            },
+            "mock_interviews_included": {
+              "score": 2,
+              "max": 3,
+              "justification": "Mock interviews are mentioned (peer/mentor practice, ChatGPT for behavioral questions) but not formally scheduled as weekly activities. ML system design practice is included in Weeks 7-8. DSA practice is underemphasized."
+            },
+            "application_strategy": {
+              "score": 1,
+              "max": 3,
+              "justification": "LinkedIn and networking are mentioned in general recommendations but no specific platform guidance, application volume targets, or timing strategy is provided. The job search is treated as a background activity rather than a structured parallel track."
+            }
+          },
+          "raw_score": 5,
+          "max_raw": 10,
+          "weighted_contribution": 5.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 4,
+              "max": 4,
+              "justification": "Resume creation with MLE-specific keywords is scheduled in Month 1 Week 1. LinkedIn optimization for recruiter visibility is explicitly included. Month 2 includes resume tailoring per application. Career execution is treated as a parallel track from day one."
+            },
+            "mock_interviews_included": {
+              "score": 3,
+              "max": 3,
+              "justification": "Mock interviews with peers/mentors are explicitly scheduled in Week 8. ML system design practice is included. Behavioral STAR method practice is scheduled. LeetCode practice runs throughout both months providing consistent coding interview preparation."
+            },
+            "application_strategy": {
+              "score": 3,
+              "max": 3,
+              "justification": "Specific guidance: identify 10-15 target companies in Month 1, apply to 5-10 roles daily in Month 2, network on LinkedIn with professionals at target companies. Application volume and timing are explicitly quantified, which is actionable for fast hiring."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        }
+      }
+    },
+    "final_scores": {
+      "Plan_1": {
+        "total_weighted_score": 67.0,
+        "dimension_wins": [],
+        "strengths": [
+          "Named, specific resource recommendations (fast.ai, MLOps Zoomcamp, Hugging Face Course) that are directly actionable",
+          "Three distinct projects demonstrating breadth across image classification, deployment, and NLP/tabular ML",
+          "Clear daily hour breakdowns with explicit topic-to-time mapping",
+          "English communication advice is a thoughtful addition for global market targeting",
+          "Covers core MLE stack (DL, MLOps, FastAPI, Docker, cloud) comprehensively"
+        ],
+        "critical_gaps": [
+          "No explicit hour accounting or buffer calculation \u2014 feasibility cannot be verified",
+          "Interview prep (DSA, system design) deferred entirely to final 2 weeks, reducing spaced repetition benefit",
+          "No SQL coverage despite its relevance in global MLE job descriptions",
+          "No CI/CD pipeline coverage which appears in many MLE job postings",
+          "Career execution (resume, LinkedIn, applications) treated as end-of-plan afterthought rather than parallel track",
+          "Application strategy lacks specificity \u2014 no volume targets, platform guidance, or timing"
+        ]
+      },
+      "Plan_2": {
+        "total_weighted_score": 85.0,
+        "dimension_wins": [
+          "D1",
+          "D2",
+          "D3",
+          "D4",
+          "D5",
+          "D6",
+          "D7"
+        ],
+        "strengths": [
+          "Explicit hour accounting (192 total, 170 planned, 22 buffer) provides transparent feasibility validation",
+          "Iterative single capstone project grows into a production-grade cloud-deployed system with MLOps and CI/CD",
+          "Interview prep integrated from Week 1 with quantified LeetCode targets and SQL practice",
+          "Career execution treated as parallel track with specific application volume targets and company research",
+          "SQL and production Python coverage aligns with global MLE job description requirements",
+          "Milestone deliverables are specific and measurable per phase",
+          "70/30 practice-to-theory rule provides a clear execution framework"
+        ],
+        "critical_gaps": [
+          "Resource recommendations use search terms rather than direct links, slightly reducing actionability",
+          "Month 1 cognitive load is high \u2014 production Python, SQL, Docker, Git, and ML model building in 4 weeks",
+          "DVC coverage may be surface-level given the timeline constraints",
+          "A second smaller project would add portfolio breadth alongside the capstone",
+          "Weekly micro-goals written as narrative paragraphs reduce scannability compared to structured lists"
+        ]
+      }
+    },
+    "verdict": {
+      "winner": "Plan_2",
+      "score_gap": 18.0,
+      "margin_interpretation": "decisive",
+      "winner_key_advantages": [
+        "Transparent hour accounting with explicit buffer ensures the plan is feasible within the 2-month constraint",
+        "Career execution integrated as a parallel track from Week 1 with specific application volume targets \u2014 critical for the user's fast-hiring goal",
+        "SQL and CI/CD coverage aligns with actual global MLE job description requirements that Plan 1 misses",
+        "Iterative capstone with cloud deployment, MLflow, and GitHub Actions CI/CD is a stronger single portfolio artifact than three separate smaller projects",
+        "Interview prep (LeetCode, SQL, system design, behavioral) distributed across both months for spaced repetition benefit"
+      ],
+      "loser_salvageable_strengths": [
+        "Plan 1's named resource recommendations (fast.ai, MLOps Zoomcamp, Hugging Face Course) are more directly actionable than Plan 2's search-term format",
+        "Plan 1's three-project approach provides portfolio breadth that could complement Plan 2's single capstone",
+        "Plan 1's daily hour breakdown structure (1h theory + 1.5h project) is a useful micro-scheduling template",
+        "Plan 1's English communication advice for global market targeting is a thoughtful addition worth incorporating"
+      ],
+      "shared_gaps_in_both_plans": [
+        "Neither plan explicitly addresses salary negotiation strategies for dollar-paying global roles",
+        "Neither plan covers LLM API integration (OpenAI, Anthropic) which is increasingly expected in AI Engineer roles globally",
+        "Neither plan addresses portfolio hosting beyond GitHub (e.g., personal website, Hugging Face Spaces for model demos)",
+        "Neither plan provides guidance on remote work platforms (Toptal, Upwork, Remote.com) which are relevant for the user's fast dollar-paying job goal"
+      ],
+      "final_recommendation": "Plan 2 is the clear winner and should be followed as the primary roadmap. It is decisively stronger on hiring readiness, career execution, market alignment, and strategic prioritization \u2014 all critical for the user's goal of fast dollar-paying global employment. The user should supplement Plan 2 with Plan 1's specific resource recommendations (fast.ai, MLOps Zoomcamp, Hugging Face Course) and consider adding one smaller secondary project for portfolio breadth. The user should also explore LLM API integration (OpenAI/Anthropic) as an optional Week 5-6 addition given its strong demand in current AI Engineer job postings globally."
+    }
+  },
+  "winner": "Plan_2",
+  "plan_1_score": 67.0,
+  "plan_2_score": 85.0
+}
