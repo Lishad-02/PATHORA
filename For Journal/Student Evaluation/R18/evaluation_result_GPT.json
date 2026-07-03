@@ -1,0 +1,414 @@
+{
+  "generated_at": "2026-04-02T18:06:57.187708",
+  "model": "gpt-4o-2024-08-06",
+  "temperature": 0.0,
+  "prompt_version": "v1.0-comparative-dimension-first",
+  "user_profile": {
+    "role": "Machine Learning Engineer",
+    "experience": "University Recent CSE Graduate",
+    "preparation_time_months": 2,
+    "study_hours_per_day": 1,
+    "Market_Focus": "Global",
+    "other_preferences": "Need a fast job, Intermediate (Built small projects) Coding experience, familiar with typescript, java,C,C++,PHP, javascript languages and familiar with node.js,React,.NET framewrok. Also build some academic project "
+  },
+  "result": {
+    "evaluation_methodology": "comparative \u2014 both plans analyzed together per dimension before scoring",
+    "user_profile_summary": "The user is a recent CSE graduate aiming to become a Machine Learning Engineer within 2 months, studying 1 hour per day, with a global market focus. They have intermediate coding experience and familiarity with multiple programming languages and frameworks.",
+    "dimensions": {
+      "D1": {
+        "name": "Hiring Readiness Optimization",
+        "weight": 0.25,
+        "comparative_analysis": "Plan 1 focuses on a broad range of ML concepts, including Python for Data Science, core ML algorithms, and interview preparation. It includes a mini-project but lacks deployment. Plan 2 emphasizes building deployable ML solutions, including Dockerization and cloud deployment, which are critical for job readiness. It also includes a capstone project with deployment, which is more aligned with industry expectations.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 includes deployment and a more comprehensive capstone project, which are crucial for hiring readiness.",
+        "Plan_1": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "Covers core ML concepts and Python but lacks deployment focus."
+            },
+            "interview_prep_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Includes ML interview prep and DS&A, which are essential for ML roles."
+            },
+            "portfolio_project_strength": {
+              "score": 6,
+              "max": 9,
+              "justification": "Includes a mini-project but lacks deployment, reducing its impact."
+            }
+          },
+          "raw_score": 19,
+          "max_raw": 25,
+          "weighted_contribution": 19.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 8,
+              "max": 8,
+              "justification": "Covers ML workflow, deployment, and advanced SQL, aligning well with industry needs."
+            },
+            "interview_prep_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Includes consistent interview prep with a focus on practical skills."
+            },
+            "portfolio_project_strength": {
+              "score": 9,
+              "max": 9,
+              "justification": "Features a deployable capstone project, which is highly valuable for employers."
+            }
+          },
+          "raw_score": 24,
+          "max_raw": 25,
+          "weighted_contribution": 24.0
+        }
+      },
+      "D2": {
+        "name": "Time-Constrained Feasibility",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 allocates 60 hours over 2 months, which fits the user's schedule but lacks a buffer. Plan 2 plans for 42 hours with a 6-hour buffer, making it more feasible. Both plans avoid overengineering, but Plan 2's focus on deployment might be challenging within the time constraints.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 includes a buffer and a more realistic hour allocation.",
+        "Plan_1": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Fits within the available hours but lacks a buffer."
+            },
+            "cognitive_load_realism": {
+              "score": 4,
+              "max": 5,
+              "justification": "Realistic weekly goals but no buffer for catch-up."
+            },
+            "overengineering_avoidance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Avoids advanced topics that don't fit the timeline."
+            }
+          },
+          "raw_score": 13,
+          "max_raw": 15,
+          "weighted_contribution": 13.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Includes a buffer and fits within the available hours."
+            },
+            "cognitive_load_realism": {
+              "score": 4,
+              "max": 5,
+              "justification": "Realistic weekly goals with a buffer for catch-up."
+            },
+            "overengineering_avoidance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Focus on deployment might be challenging but feasible."
+            }
+          },
+          "raw_score": 13,
+          "max_raw": 15,
+          "weighted_contribution": 13.0
+        }
+      },
+      "D3": {
+        "name": "Personalization & Preference Alignment",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 leverages the user's existing programming skills but focuses more on Python basics. Plan 2 better integrates the user's existing skills in Java, C++, and .NET, emphasizing deployment and leveraging these strengths. Both plans align with the user's goal of a fast job in the global market.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 better leverages the user's existing skills and aligns with their preferences.",
+        "Plan_1": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 3,
+              "max": 5,
+              "justification": "Covers Python basics, which may be redundant given the user's experience."
+            },
+            "preference_integration": {
+              "score": 4,
+              "max": 5,
+              "justification": "Aligns with the user's goal of a fast job in the global market."
+            },
+            "stack_justification_quality": {
+              "score": 3,
+              "max": 5,
+              "justification": "Focuses on Python without fully leveraging existing skills in other languages."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 15,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 5,
+              "max": 5,
+              "justification": "Effectively leverages the user's existing programming skills."
+            },
+            "preference_integration": {
+              "score": 5,
+              "max": 5,
+              "justification": "Strong alignment with the user's goal and market focus."
+            },
+            "stack_justification_quality": {
+              "score": 5,
+              "max": 5,
+              "justification": "Justifies technology choices well, focusing on deployment and leveraging existing skills."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        }
+      },
+      "D4": {
+        "name": "Market Alignment",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 covers essential ML skills but lacks deployment, which is increasingly important in the global market. Plan 2 includes deployment and advanced SQL, aligning well with global employer expectations for ML Engineers.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 aligns better with global market demands by including deployment skills.",
+        "Plan_1": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 3,
+              "max": 5,
+              "justification": "Covers core ML skills but lacks deployment focus."
+            },
+            "regional_global_alignment": {
+              "score": 3,
+              "max": 5,
+              "justification": "Aligns with basic global expectations but misses advanced deployment skills."
+            }
+          },
+          "raw_score": 6,
+          "max_raw": 10,
+          "weighted_contribution": 6.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Includes deployment and advanced SQL, which are in high demand."
+            },
+            "regional_global_alignment": {
+              "score": 5,
+              "max": 5,
+              "justification": "Strong alignment with global employer expectations for ML Engineers."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        }
+      },
+      "D5": {
+        "name": "Strategic Prioritization Quality",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 follows a logical progression from foundational ML concepts to interview preparation. Plan 2 prioritizes high-impact skills like deployment early on, which is crucial for job readiness. Both plans have a logical phasing, but Plan 2's focus on deployment gives it an edge.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 prioritizes high-impact skills like deployment early in the plan.",
+        "Plan_1": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 3,
+              "max": 5,
+              "justification": "Focuses on foundational ML concepts but delays deployment."
+            },
+            "logical_phasing": {
+              "score": 4,
+              "max": 5,
+              "justification": "Follows a logical progression from basics to interview prep."
+            }
+          },
+          "raw_score": 7,
+          "max_raw": 10,
+          "weighted_contribution": 7.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 5,
+              "max": 5,
+              "justification": "Prioritizes deployment and practical skills early on."
+            },
+            "logical_phasing": {
+              "score": 5,
+              "max": 5,
+              "justification": "Logical progression with a focus on deployment and job readiness."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        }
+      },
+      "D6": {
+        "name": "Curriculum Structural Depth & Clarity",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 provides detailed subtopics and clear learning outcomes for each week. Plan 2 also offers detailed subtopics and clear deliverables, with a strong focus on practical outcomes like deployment. Both plans have a clear structure, but Plan 2's emphasis on deployment provides more actionable outcomes.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 offers more actionable outcomes with a focus on deployment.",
+        "Plan_1": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 4,
+              "max": 5,
+              "justification": "Modules build logically on each other."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 4,
+              "max": 5,
+              "justification": "Provides specific and actionable subtopics."
+            },
+            "clear_learning_outcomes": {
+              "score": 4,
+              "max": 5,
+              "justification": "Each week has measurable outcomes."
+            }
+          },
+          "raw_score": 12,
+          "max_raw": 15,
+          "weighted_contribution": 12.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 5,
+              "max": 5,
+              "justification": "Modules build logically with a focus on deployment."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 5,
+              "max": 5,
+              "justification": "Detailed subtopics with a focus on practical skills."
+            },
+            "clear_learning_outcomes": {
+              "score": 5,
+              "max": 5,
+              "justification": "Clear and actionable outcomes, especially with deployment."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        }
+      },
+      "D7": {
+        "name": "Career Execution Readiness",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 includes resume and LinkedIn optimization but lacks a detailed application strategy. Plan 2 provides a comprehensive job application strategy, including targeted outreach and mock interviews, which are crucial for securing a job quickly.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 offers a comprehensive job application strategy and mock interviews.",
+        "Plan_1": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 3,
+              "max": 4,
+              "justification": "Includes resume and LinkedIn optimization but lacks depth."
+            },
+            "mock_interviews_included": {
+              "score": 1,
+              "max": 3,
+              "justification": "Mentions interview prep but lacks explicit mock interviews."
+            },
+            "application_strategy": {
+              "score": 1,
+              "max": 3,
+              "justification": "Lacks a detailed job application strategy."
+            }
+          },
+          "raw_score": 5,
+          "max_raw": 10,
+          "weighted_contribution": 5.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 4,
+              "max": 4,
+              "justification": "Comprehensive resume and LinkedIn preparation."
+            },
+            "mock_interviews_included": {
+              "score": 3,
+              "max": 3,
+              "justification": "Includes explicit mock interviews."
+            },
+            "application_strategy": {
+              "score": 3,
+              "max": 3,
+              "justification": "Detailed job application strategy with targeted outreach."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        }
+      }
+    },
+    "final_scores": {
+      "Plan_1": {
+        "total_weighted_score": 72.0,
+        "dimension_wins": [],
+        "strengths": [
+          "Covers core ML concepts and interview preparation.",
+          "Logical module ordering and clear learning outcomes."
+        ],
+        "critical_gaps": [
+          "Lacks deployment focus, reducing hiring readiness.",
+          "No detailed job application strategy."
+        ]
+      },
+      "Plan_2": {
+        "total_weighted_score": 97.0,
+        "dimension_wins": [
+          "Hiring Readiness Optimization",
+          "Time-Constrained Feasibility",
+          "Personalization & Preference Alignment",
+          "Market Alignment",
+          "Strategic Prioritization Quality",
+          "Curriculum Structural Depth & Clarity",
+          "Career Execution Readiness"
+        ],
+        "strengths": [
+          "Includes deployment and a comprehensive capstone project.",
+          "Realistic hour allocation with a buffer.",
+          "Leverages existing skills and aligns with user preferences.",
+          "Strong market alignment with deployment skills.",
+          "Prioritizes high-impact skills like deployment early.",
+          "Clear and actionable outcomes with a focus on deployment.",
+          "Comprehensive job application strategy and mock interviews."
+        ],
+        "critical_gaps": []
+      }
+    },
+    "verdict": {
+      "winner": "Plan_2",
+      "score_gap": 25.0,
+      "margin_interpretation": "decisive",
+      "winner_key_advantages": [
+        "Includes deployment and a comprehensive capstone project.",
+        "Realistic hour allocation with a buffer.",
+        "Leverages existing skills and aligns with user preferences.",
+        "Strong market alignment with deployment skills.",
+        "Comprehensive job application strategy and mock interviews."
+      ],
+      "loser_salvageable_strengths": [
+        "Covers core ML concepts and interview preparation.",
+        "Logical module ordering and clear learning outcomes."
+      ],
+      "shared_gaps_in_both_plans": [],
+      "final_recommendation": "Plan 2 is recommended due to its comprehensive approach to deployment, realistic scheduling, and strong alignment with market demands and user preferences."
+    }
+  },
+  "winner": "Plan_2",
+  "plan_1_score": 72.0,
+  "plan_2_score": 97.0
+}

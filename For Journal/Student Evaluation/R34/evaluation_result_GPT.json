@@ -1,0 +1,408 @@
+{
+  "generated_at": "2026-04-03T02:41:20.790866",
+  "model": "gpt-4o-2024-08-06",
+  "temperature": 0.0,
+  "prompt_version": "v1.0-comparative-dimension-first",
+  "user_profile": {
+    "role": "AI Engineer (Data Analyst/ Analytics / AI Engineer)",
+    "experience": "University Final year CSE Student",
+    "preparation_time_months": 4,
+    "study_hours_per_day": 4,
+    "Market_Focus": "Global",
+    "other_preferences": "want job in top tech companies. Intermediate (Built small projects) coding experience, familiar with python,java.c++, C Language and familiar with pytorch,tensorflow,Django framework.build some academic projects.preferable language is python"
+  },
+  "result": {
+    "evaluation_methodology": "comparative \u2014 both plans analyzed together per dimension before scoring",
+    "user_profile_summary": "The user is a final-year CSE student aiming to become an AI Engineer, with a focus on global tech companies. They have intermediate coding experience and are familiar with Python, PyTorch, TensorFlow, and Django. They have 4 months to prepare, studying 4 hours per day.",
+    "dimensions": {
+      "D1": {
+        "name": "Hiring Readiness Optimization",
+        "weight": 0.25,
+        "comparative_analysis": "Plan 1 provides a comprehensive roadmap with a strong focus on building a production-ready portfolio, including a capstone project that involves end-to-end MLOps on the cloud. It also emphasizes interview preparation with mock interviews and behavioral questions. Plan 2 focuses on foundational skills and consistent DSA practice but lacks the same depth in portfolio development and specific interview preparation strategies.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 offers a more robust approach to portfolio development and interview preparation, crucial for AI Engineering roles.",
+        "Plan_1": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Covers advanced ML/DL, MLOps, and cloud deployment, aligning well with AI Engineering requirements."
+            },
+            "interview_prep_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Includes targeted interview prep with mock interviews and behavioral questions."
+            },
+            "portfolio_project_strength": {
+              "score": 8,
+              "max": 9,
+              "justification": "Focuses on a capstone project with end-to-end deployment, showcasing practical skills."
+            }
+          },
+          "raw_score": 22,
+          "max_raw": 25,
+          "weighted_contribution": 22.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "Covers foundational ML/DL and DSA but lacks advanced topics like MLOps."
+            },
+            "interview_prep_readiness": {
+              "score": 5,
+              "max": 8,
+              "justification": "Focuses on DSA practice but lacks structured interview preparation."
+            },
+            "portfolio_project_strength": {
+              "score": 6,
+              "max": 9,
+              "justification": "Includes project work but lacks a comprehensive capstone project."
+            }
+          },
+          "raw_score": 17,
+          "max_raw": 25,
+          "weighted_contribution": 17.0
+        }
+      },
+      "D2": {
+        "name": "Time-Constrained Feasibility",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 allocates 335 hours out of 384 available, leaving a buffer for rest and unforeseen challenges. It balances theory and practice well. Plan 2 does not specify total hours but emphasizes daily consistency, which may lead to cognitive overload without clear breaks or buffers.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 provides a clear time allocation with buffer hours, ensuring feasibility within the given timeframe.",
+        "Plan_1": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Total planned hours fit within available hours with a buffer."
+            },
+            "cognitive_load_realism": {
+              "score": 4,
+              "max": 5,
+              "justification": "Balanced weekly goals with a mix of theory and practice."
+            },
+            "overengineering_avoidance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Focuses on relevant skills without unnecessary complexity."
+            }
+          },
+          "raw_score": 13,
+          "max_raw": 15,
+          "weighted_contribution": 13.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 3,
+              "max": 5,
+              "justification": "Lacks explicit total hour tracking, risking overcommitment."
+            },
+            "cognitive_load_realism": {
+              "score": 3,
+              "max": 5,
+              "justification": "Daily consistency is emphasized but may lead to burnout without breaks."
+            },
+            "overengineering_avoidance": {
+              "score": 3,
+              "max": 5,
+              "justification": "Covers foundational topics but lacks clarity on advanced topic integration."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 15,
+          "weighted_contribution": 9.0
+        }
+      },
+      "D3": {
+        "name": "Personalization & Preference Alignment",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 is highly personalized, leveraging the user's existing skills in Python and frameworks like PyTorch and TensorFlow. It aligns with the user's goal of working in top tech companies. Plan 2 also uses Python and familiar frameworks but lacks the same level of customization and justification for technology choices.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 better aligns with the user's existing skills and career goals, providing a tailored learning path.",
+        "Plan_1": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 5,
+              "max": 5,
+              "justification": "Builds on existing skills and avoids beginner content."
+            },
+            "preference_integration": {
+              "score": 5,
+              "max": 5,
+              "justification": "Aligns with the user's preference for Python and target companies."
+            },
+            "stack_justification_quality": {
+              "score": 5,
+              "max": 5,
+              "justification": "Clearly explains technology choices in relation to career goals."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 4,
+              "max": 5,
+              "justification": "Uses familiar tools but lacks depth in personalization."
+            },
+            "preference_integration": {
+              "score": 4,
+              "max": 5,
+              "justification": "Incorporates Python but less focus on specific career goals."
+            },
+            "stack_justification_quality": {
+              "score": 3,
+              "max": 5,
+              "justification": "Limited explanation of technology choices."
+            }
+          },
+          "raw_score": 11,
+          "max_raw": 15,
+          "weighted_contribution": 11.0
+        }
+      },
+      "D4": {
+        "name": "Market Alignment",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 includes advanced topics like MLOps and cloud deployment, which are highly relevant for global AI Engineering roles. Plan 2 focuses on foundational skills and consistent DSA practice, which are important but less aligned with emerging market demands.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 incorporates advanced, in-demand skills like MLOps and cloud deployment, aligning well with global market trends.",
+        "Plan_1": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Includes emerging skills like MLOps and cloud deployment."
+            },
+            "regional_global_alignment": {
+              "score": 5,
+              "max": 5,
+              "justification": "Aligns with global hiring trends for AI Engineers."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 3,
+              "max": 5,
+              "justification": "Focuses on foundational skills but lacks advanced topics."
+            },
+            "regional_global_alignment": {
+              "score": 3,
+              "max": 5,
+              "justification": "Covers basics but not fully aligned with global trends."
+            }
+          },
+          "raw_score": 6,
+          "max_raw": 10,
+          "weighted_contribution": 6.0
+        }
+      },
+      "D5": {
+        "name": "Strategic Prioritization Quality",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 prioritizes high-impact skills early, such as production-grade Python and SQL, followed by ML/DL fundamentals and MLOps. Plan 2 follows a more traditional path, starting with foundational skills and gradually moving to advanced topics, but lacks the same strategic focus on high ROI skills.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 effectively prioritizes high-impact skills early, ensuring a strategic learning path.",
+        "Plan_1": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 5,
+              "max": 5,
+              "justification": "Focuses on high-impact skills like production-grade coding and MLOps early."
+            },
+            "logical_phasing": {
+              "score": 5,
+              "max": 5,
+              "justification": "Follows a coherent progression from foundational to advanced skills."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 3,
+              "max": 5,
+              "justification": "Emphasizes foundational skills but lacks focus on high ROI topics."
+            },
+            "logical_phasing": {
+              "score": 4,
+              "max": 5,
+              "justification": "Logical progression but less strategic in prioritizing high-impact skills."
+            }
+          },
+          "raw_score": 7,
+          "max_raw": 10,
+          "weighted_contribution": 7.0
+        }
+      },
+      "D6": {
+        "name": "Curriculum Structural Depth & Clarity",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 provides detailed weekly goals with clear deliverables and outcomes, ensuring a structured learning path. Plan 2 offers a broad overview with less specific subtopic detail and fewer measurable outcomes.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 offers a more detailed and structured curriculum with clear learning outcomes.",
+        "Plan_1": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 5,
+              "max": 5,
+              "justification": "Modules build logically on each other, ensuring a coherent learning path."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 5,
+              "max": 5,
+              "justification": "Provides specific and actionable subtopics."
+            },
+            "clear_learning_outcomes": {
+              "score": 5,
+              "max": 5,
+              "justification": "Each week has measurable deliverables and outcomes."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 4,
+              "max": 5,
+              "justification": "Follows a logical order but lacks depth in module connections."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 3,
+              "max": 5,
+              "justification": "Subtopics are broad and less actionable."
+            },
+            "clear_learning_outcomes": {
+              "score": 3,
+              "max": 5,
+              "justification": "Lacks specific outcomes for each week."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 15,
+          "weighted_contribution": 10.0
+        }
+      },
+      "D7": {
+        "name": "Career Execution Readiness",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 includes explicit resume and LinkedIn preparation, mock interviews, and a detailed application strategy. Plan 2 mentions networking and application submission but lacks the same level of detail in execution readiness.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 provides a comprehensive approach to career execution, including mock interviews and application strategies.",
+        "Plan_1": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 4,
+              "max": 4,
+              "justification": "Explicitly schedules resume and LinkedIn updates."
+            },
+            "mock_interviews_included": {
+              "score": 3,
+              "max": 3,
+              "justification": "Includes role-relevant mock interviews."
+            },
+            "application_strategy": {
+              "score": 3,
+              "max": 3,
+              "justification": "Provides a detailed job application plan."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 3,
+              "max": 4,
+              "justification": "Mentions updates but lacks detailed scheduling."
+            },
+            "mock_interviews_included": {
+              "score": 2,
+              "max": 3,
+              "justification": "Mentions mock interviews but lacks specificity."
+            },
+            "application_strategy": {
+              "score": 2,
+              "max": 3,
+              "justification": "General application advice without detailed strategy."
+            }
+          },
+          "raw_score": 7,
+          "max_raw": 10,
+          "weighted_contribution": 7.0
+        }
+      }
+    },
+    "final_scores": {
+      "Plan_1": {
+        "total_weighted_score": 95.0,
+        "dimension_wins": [
+          "D1",
+          "D2",
+          "D3",
+          "D4",
+          "D5",
+          "D6",
+          "D7"
+        ],
+        "strengths": [
+          "Comprehensive portfolio development",
+          "Advanced skill inclusion like MLOps",
+          "Detailed career execution strategy"
+        ],
+        "critical_gaps": []
+      },
+      "Plan_2": {
+        "total_weighted_score": 67.0,
+        "dimension_wins": [],
+        "strengths": [
+          "Consistent DSA practice",
+          "Foundational skill coverage"
+        ],
+        "critical_gaps": [
+          "Lacks advanced skill focus",
+          "Less detailed career execution strategy"
+        ]
+      }
+    },
+    "verdict": {
+      "winner": "Plan_1",
+      "score_gap": 28.0,
+      "margin_interpretation": "decisive",
+      "winner_key_advantages": [
+        "Comprehensive approach to portfolio and interview preparation",
+        "Inclusion of advanced, market-relevant skills",
+        "Detailed and structured curriculum"
+      ],
+      "loser_salvageable_strengths": [
+        "Strong emphasis on foundational skills",
+        "Consistent practice in DSA"
+      ],
+      "shared_gaps_in_both_plans": [],
+      "final_recommendation": "Plan 1 is recommended for its comprehensive and structured approach, aligning well with the user's goals and market demands."
+    }
+  },
+  "winner": "Plan_1",
+  "plan_1_score": 95.0,
+  "plan_2_score": 67.0
+}

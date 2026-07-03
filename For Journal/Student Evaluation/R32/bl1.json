@@ -1,0 +1,340 @@
+{
+    "b1": "B1_ZS",
+    "model": "gemini-2.5-flash",
+    "user_profile": {
+        "role": "Cybersecurity Engineer (Software Engineering)",
+        "months": 4,
+        "hours_per_day": 2,
+        "experience": "University Final year CSE student",
+        "other_preferences": "prefer less hassle job.Want to target global market. Intermediate (Built small projects) coding experience, familiar with python,java.c++, C Language and familiar with pytorch,tensorflow,flask framework.build some academic projects.preferable language is python"
+    },
+    "prompt_used": "\nI want to become a Cybersecurity Engineer (Software Engineering). I have 4 months to prepare and I can study 2 hours per day. \nMy experience level is University Final year CSE student. prefer less hassle job.Want to target global market. Intermediate (Built small projects) coding experience, familiar with python,java.c++, C Language and familiar with pytorch,tensorflow,flask framework.build some academic projects.preferable language is python\nNow generate a learning plan for me.\n",
+    "generated_plan": {
+        "plan_title": "4-Month Cybersecurity Engineer (Software Engineering Focus) Learning Plan",
+        "duration_months": 4,
+        "daily_study_hours": 2,
+        "target_role": "Cybersecurity Engineer (Software Engineering Focused)",
+        "prerequisites": {
+            "education": "University Final year CSE student",
+            "coding_experience": "Intermediate (Built small projects) in Python, Java, C++, C",
+            "frameworks_familiarity": "PyTorch, TensorFlow, Flask",
+            "preferred_language": "Python"
+        },
+        "overall_approach": "This plan prioritizes hands-on learning, secure coding practices, and building a strong portfolio. It's designed for someone targeting roles that involve building secure software, automating security tasks, and integrating security into development workflows. Focus heavily on practical application of concepts.",
+        "months": [
+            {
+                "month_number": 1,
+                "theme": "Foundations & Python Deep Dive",
+                "weeks": [
+                    {
+                        "week_number": 1,
+                        "topics": [
+                            "Introduction to Cybersecurity (CIA Triad, Threat Actors, Domains)",
+                            "Operating System Fundamentals (Linux CLI, File Permissions, Users, Processes)",
+                            "OS Security Basics"
+                        ],
+                        "activities": [
+                            "Install a Linux VM (Ubuntu/Kali)",
+                            "Practice basic Linux commands and shell scripting",
+                            "Read about cybersecurity principles and common attack vectors"
+                        ],
+                        "recommended_resources": [
+                            "TryHackMe: 'Pre-Security' path, 'Linux Fundamentals' rooms",
+                            "CompTIA Security+ study guide (for foundational concepts)"
+                        ]
+                    },
+                    {
+                        "week_number": 2,
+                        "topics": [
+                            "Networking Fundamentals (OSI/TCP-IP Model, IPs, Ports, Protocols - HTTP/S, DNS)",
+                            "Secure Programming Principles (Input Validation, Authentication, Error Handling, Least Privilege)",
+                            "Python for Network I/O (sockets)"
+                        ],
+                        "activities": [
+                            "Basic Wireshark usage to analyze network traffic",
+                            "Ethical network scanning with Nmap (e.g., on a local VM)",
+                            "Practice Python socket programming (client-server communication)"
+                        ],
+                        "recommended_resources": [
+                            "CompTIA Network+ material (videos, study guides)",
+                            "SANS Secure Coding Practices (overview)",
+                            "Python 'socket' module documentation"
+                        ]
+                    },
+                    {
+                        "week_number": 3,
+                        "topics": [
+                            "Advanced Python for Security (File I/O, Regular Expressions, Web Scraping, API Interaction with `requests`)",
+                            "Scripting for automation (e.g., log parsing, system checks)"
+                        ],
+                        "activities": [
+                            "Build small Python scripts for: log parsing, simple web scraping for public data (e.g., news headlines), interacting with a public API (e.g., GitHub, weather data)",
+                            "Explore Python security libraries (e.g., `hashlib`, `hmac`)"
+                        ],
+                        "recommended_resources": [
+                            "Real Python tutorials for advanced Python concepts",
+                            "'Violent Python' (for conceptual ideas, not necessarily direct code execution)",
+                            "Python 'requests' library documentation"
+                        ]
+                    },
+                    {
+                        "week_number": 4,
+                        "topics": [
+                            "Data Structures & Algorithms Review (with a security lens - e.g., efficiency for parsing large logs)",
+                            "Version Control with Git (secure branching strategies, commit hygiene)"
+                        ],
+                        "activities": [
+                            "Solve LeetCode/HackerRank easy problems (focus on practical DSA applications)",
+                            "Set up a GitHub repository for your projects",
+                            "Practice Git workflows (clone, add, commit, push, branch, merge)"
+                        ],
+                        "recommended_resources": [
+                            "Your existing DSA course material",
+                            "'Pro Git' book (online version)"
+                        ]
+                    }
+                ]
+            },
+            {
+                "month_number": 2,
+                "theme": "Web & Application Security",
+                "weeks": [
+                    {
+                        "week_number": 5,
+                        "topics": [
+                            "Web Technologies (HTTP/S, HTML, CSS, JavaScript, Web Servers)",
+                            "OWASP Top 10 (Introduction, Injection, Broken Authentication, Sensitive Data Exposure)"
+                        ],
+                        "activities": [
+                            "Explore browser developer tools",
+                            "Practice identifying basic vulnerabilities in intentionally vulnerable applications (e.g., OWASP Juice Shop, DVWA)",
+                            "Understand the impact of each vulnerability"
+                        ],
+                        "recommended_resources": [
+                            "OWASP Top 10 Official Guide",
+                            "PortSwigger Web Security Academy (free labs)"
+                        ]
+                    },
+                    {
+                        "week_number": 6,
+                        "topics": [
+                            "OWASP Top 10 Deep Dive (XML External Entities, Broken Access Control, Security Misconfiguration, Cross-Site Scripting (XSS), Insecure Deserialization)"
+                        ],
+                        "activities": [
+                            "Practical labs for each of these categories on Juice Shop/DVWA/PortSwigger",
+                            "Understand the exploitation techniques and core mitigation strategies"
+                        ],
+                        "recommended_resources": [
+                            "PortSwigger Web Security Academy",
+                            "Specific OWASP Top 10 articles and cheat sheets"
+                        ]
+                    },
+                    {
+                        "week_number": 7,
+                        "topics": [
+                            "Secure Web Development Practices (Input Sanitization, Output Encoding, Session Management, CSRF Protection, HTTPS deployment, Secure Headers)",
+                            "Focus on Flask security best practices"
+                        ],
+                        "activities": [
+                            "Implement secure features in a simple Flask application (e.g., user authentication, input validation, CSRF tokens)",
+                            "Review Flask security extensions (Flask-Login, Flask-WTF) and their use"
+                        ],
+                        "recommended_resources": [
+                            "OWASP Cheat Sheet Series (especially for XSS, CSRF, Authentication)",
+                            "Flask documentation and tutorials on security"
+                        ]
+                    },
+                    {
+                        "week_number": 8,
+                        "topics": [
+                            "Vulnerability Assessment & Penetration Testing Basics (Web)",
+                            "Reconnaissance techniques (passive/active)",
+                            "Scanning tools (Nikto, ZAP/Burp Suite Free Edition)",
+                            "Reporting found vulnerabilities"
+                        ],
+                        "activities": [
+                            "Use Burp Suite (free version) to intercept and modify HTTP traffic on a test target",
+                            "Perform basic vulnerability scans using an open-source scanner like OWASP ZAP on a deliberately vulnerable VM (e.g., Metasploitable)",
+                            "Practice writing a simple vulnerability report"
+                        ],
+                        "recommended_resources": [
+                            "Burp Suite documentation",
+                            "TryHackMe 'OWASP Top 10' rooms, 'Web Hacking Fundamentals' path"
+                        ]
+                    }
+                ]
+            },
+            {
+                "month_number": 3,
+                "theme": "System, Cloud, and Automation Security",
+                "weeks": [
+                    {
+                        "week_number": 9,
+                        "topics": [
+                            "Operating System Security (Linux hardening - SSH, firewalls, user management, patching)",
+                            "Basic Windows Security (Active Directory concepts, patching, local security policies)",
+                            "File System Permissions and Privilege Escalation (basics)"
+                        ],
+                        "activities": [
+                            "Harden a Linux VM (e.g., configure `ufw` firewall, disable root SSH login, manage user privileges)",
+                            "Explore basic Windows security settings on a VM",
+                            "Understand `sudo` privileges and common misconfigurations"
+                        ],
+                        "recommended_resources": [
+                            "CIS Benchmarks (summary versions for Linux/Windows)",
+                            "Linux security guides (e.g., ArchWiki, Ubuntu Security Guide)"
+                        ]
+                    },
+                    {
+                        "week_number": 10,
+                        "topics": [
+                            "Introduction to Cloud Security (Shared Responsibility Model)",
+                            "AWS/Azure Fundamentals (IAM, S3 Security, EC2 Security Groups, basic networking in cloud VPCs)"
+                        ],
+                        "activities": [
+                            "Create a free-tier AWS or Azure account",
+                            "Explore Identity and Access Management (IAM) best practices",
+                            "Create secure S3 buckets (AWS) or Storage Accounts (Azure) and configure EC2 Security Groups (AWS) or Network Security Groups (Azure)"
+                        ],
+                        "recommended_resources": [
+                            "AWS Security Fundamentals/Azure Security Fundamentals (free online courses/documentation)",
+                            "Official AWS/Azure security best practices documentation"
+                        ]
+                    },
+                    {
+                        "week_number": 11,
+                        "topics": [
+                            "Scripting & Automation for Security (Python scripting for security tasks: log analysis, threat intelligence integration, vulnerability scanning automation)",
+                            "Using APIs for security tools"
+                        ],
+                        "activities": [
+                            "Write Python scripts to: monitor specific patterns in logs, fetch threat intelligence data from a public API (e.g., VirusTotal, AlienVault OTX), automate a simple security check (e.g., checking for open ports on a list of IPs)",
+                            "Explore how security tools expose APIs for integration"
+                        ],
+                        "recommended_resources": [
+                            "Python 'logging' module documentation",
+                            "Public API documentation for security services"
+                        ]
+                    },
+                    {
+                        "week_number": 12,
+                        "topics": [
+                            "DevSecOps Concepts (Shift-Left Security, Security as Code)",
+                            "CI/CD Security (integrating security into pipelines: SAST/DAST overview, dependency scanning)",
+                            "Infrastructure as Code (IaC) security principles"
+                        ],
+                        "activities": [
+                            "Explore static analysis tools for Python (e.g., Bandit)",
+                            "Understand the concepts of integrating security checks into Jenkins/GitHub Actions/GitLab CI pipelines",
+                            "Learn about security best practices for IaC (e.g., Terraform, CloudFormation)"
+                        ],
+                        "recommended_resources": [
+                            "DevSecOps Foundation material (online resources)",
+                            "Bandit (Python SAST tool) documentation",
+                            "OWASP Dependency-Check"
+                        ]
+                    }
+                ]
+            },
+            {
+                "month_number": 4,
+                "theme": "Cryptography, Tools, and Job Preparation",
+                "weeks": [
+                    {
+                        "week_number": 13,
+                        "topics": [
+                            "Cryptography Fundamentals (Symmetric/Asymmetric encryption, Hashing, Digital Signatures, Public Key Infrastructure (PKI))",
+                            "Secure Communications (TLS/SSL protocols, certificates)"
+                        ],
+                        "activities": [
+                            "Understand how `openssl` works (basic commands for generating keys/certs)",
+                            "Implement simple encryption/hashing in Python using `hashlib` or `cryptography` library",
+                            "Explore how HTTPS works under the hood"
+                        ],
+                        "recommended_resources": [
+                            "Cryptography Explained (online resources/books)",
+                            "Python 'cryptography' library documentation"
+                        ]
+                    },
+                    {
+                        "week_number": 14,
+                        "topics": [
+                            "Security Tools & Concepts (SIEM, EDR, Vulnerability Scanners - Nessus/OpenVAS)",
+                            "Threat Modeling Basics (STRIDE, DREAD)",
+                            "Security Orchestration, Automation, and Response (SOAR) overview"
+                        ],
+                        "activities": [
+                            "Explore OpenVAS (community edition) for vulnerability scanning",
+                            "Understand the role and capabilities of SIEM (e.g., Splunk, ELK Stack) and EDR solutions",
+                            "Practice a basic threat model for a simple application you built"
+                        ],
+                        "recommended_resources": [
+                            "MITRE ATT&CK framework",
+                            "Threat Modeling: Designing for Security (book by Adam Shostack - conceptual)",
+                            "SIEM/EDR vendor whitepapers"
+                        ]
+                    },
+                    {
+                        "week_number": 15,
+                        "topics": [
+                            "Practical Projects & CTF Practice",
+                            "Review of all learned topics"
+                        ],
+                        "activities": [
+                            "Work on a capstone project (choose one from the project ideas below or a personal one)",
+                            "Participate in beginner/intermediate Capture The Flag (CTF) challenges (TryHackMe, HackTheBox Academy)",
+                            "Practice explaining your project's security features and challenges"
+                        ],
+                        "recommended_resources": [
+                            "CTF platforms (TryHackMe, HackTheBox)",
+                            "Your GitHub repository for project work"
+                        ]
+                    },
+                    {
+                        "week_number": 16,
+                        "topics": [
+                            "Resume Building & Portfolio Curation",
+                            "Interview Preparation (Technical, Behavioral, Secure Coding questions)",
+                            "Networking & Job Search Strategies"
+                        ],
+                        "activities": [
+                            "Tailor your resume specifically for Cybersecurity Engineer roles, highlighting relevant projects and skills",
+                            "Practice mock interviews (online, with peers)",
+                            "Develop an 'elevator pitch' for yourself and your interest in cybersecurity",
+                            "Actively network on LinkedIn and explore job boards"
+                        ],
+                        "recommended_resources": [
+                            "Online resume guides and templates for tech roles",
+                            "'Cracking the Coding Interview' (for general SWE interview prep)",
+                            "Cybersecurity community forums and LinkedIn"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "project_ideas": [
+            "**Secure Flask Application**: Develop a simple web application with robust authentication (user registration/login), input validation, secure session management, proper error handling, and parameterized queries. Implement basic logging and access control.",
+            "**Network Scanner/Monitor**: A Python script to scan a network for open ports and services, identify OS versions (passively), or monitor network traffic for suspicious patterns (e.g., using `scapy` basics).",
+            "**Log Analyzer/Alerting Tool**: A Python tool to parse various security logs (e.g., Apache access logs, Linux auth.log, Windows Event Logs) and flag suspicious entries based on predefined rules, sending alerts (e.g., to email, Discord webhook).",
+            "**Threat Intelligence Aggregator**: A script that pulls data from multiple open-source threat intelligence feeds (e.g., VirusTotal API, AlienVault OTX, HaveIBeenPwned) and provides a consolidated report for a given IP, domain, or email.",
+            "**Cloud Security Audit Script (AWS/Azure)**: A Python script (using Boto3 for AWS or Azure SDK) to check for common misconfigurations in a cloud environment, such as public S3 buckets, overly permissive IAM policies, or unencrypted storage.",
+            "**Secure Configuration Auditor**: A Python script that checks the configuration of a Linux server against a set of security best practices (e.g., checking SSH config, firewall rules, disabled services)."
+        ],
+        "certification_recommendation": {
+            "immediate_focus": "Prioritize hands-on skills and building a strong project portfolio over certifications for entry-level roles.",
+            "if_time_permits": [
+                "**CompTIA Security+**: A foundational certification that covers a broad range of cybersecurity topics relevant to an engineer.",
+                "**AWS Certified Cloud Practitioner** or **Azure Fundamentals**: If you find yourself enjoying cloud security, these can validate basic cloud knowledge. Consider their Security Specialty certifications later."
+            ]
+        },
+        "global_market_tips": [
+            "**Strong English Communication**: Essential for collaborating with diverse teams globally.",
+            "**Build a Solid GitHub Portfolio**: Your code and projects are your best resume. Ensure clear READMEs and well-documented code.",
+            "**LinkedIn Profile**: Optimize your profile with relevant keywords, connect with cybersecurity professionals, and follow companies you're interested in.",
+            "**Understand Regulatory Basics**: Be aware of major global data privacy regulations (e.g., GDPR, CCPA) as they often influence secure software design.",
+            "**Interview Practice**: Be prepared for technical challenges (coding, system design), secure coding questions, and behavioral interviews. Practice articulating your thought process clearly.",
+            "**Continuous Learning**: The cybersecurity landscape changes rapidly. Demonstrate a passion for continuous learning."
+        ],
+        "final_advice": "Consistency is key. Even short, focused study sessions daily will lead to significant progress over 4 months. Don't just consume information; actively practice and build. Your final-year CSE background provides a strong base; now, specialize it with a security mindset."
+    }
+}

@@ -1,0 +1,404 @@
+{
+  "generated_at": "2026-04-02T17:43:06.518675",
+  "model": "gpt-4o-2024-08-06",
+  "temperature": 0.0,
+  "prompt_version": "v1.0-comparative-dimension-first",
+  "user_profile": {
+    "role": "Machine Learning Engineer/AI Engineer (Data Analyst/ Analytics / AI Engineer)",
+    "experience": "University Recent CSE Graduate",
+    "preparation_time_months": 2,
+    "study_hours_per_day": 4,
+    "Market_Focus": "Global",
+    "other_preferences": " want a fast job which will be paid in dollar, Intermediate (Built small projects) coding experience, familiar with python,C Language and familiar with Tensorflow, Pytorch Framework. build some academic projects.Preferable language is Python."
+  },
+  "result": {
+    "evaluation_methodology": "comparative \u2014 both plans analyzed together per dimension before scoring",
+    "user_profile_summary": "The user is a recent CSE graduate aiming to become a Machine Learning Engineer/AI Engineer, with a preparation time of 2 months and 4 study hours per day. The user has intermediate coding experience, familiarity with Python, C, TensorFlow, and PyTorch, and seeks a fast job in the global market paid in USD.",
+    "dimensions": {
+      "D1": {
+        "name": "Hiring Readiness Optimization",
+        "weight": 0.25,
+        "comparative_analysis": "Both plans aim to prepare the user for a Machine Learning Engineer role by focusing on core technical skills, interview preparation, and portfolio projects. Plan 1 emphasizes building a strong portfolio with production-ready ML projects and includes a detailed interview preparation phase. Plan 2 also focuses on a capstone project but integrates it more iteratively throughout the learning process. Plan 1 provides a more structured approach to interview preparation, while Plan 2 offers a comprehensive capstone project that is integrated into the learning process.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 provides a more structured approach to interview preparation and portfolio project development.",
+        "Plan_1": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Covers essential ML/DL and MLOps skills with depth appropriate for a graduate level."
+            },
+            "interview_prep_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Includes a dedicated phase for technical interviews, covering coding, system design, and behavioral aspects."
+            },
+            "portfolio_project_strength": {
+              "score": 8,
+              "max": 9,
+              "justification": "Focuses on building 2-3 production-ready ML projects, demonstrating engineering skills."
+            }
+          },
+          "raw_score": 22,
+          "max_raw": 25,
+          "weighted_contribution": 22.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "Covers essential skills but less emphasis on structured interview preparation."
+            },
+            "interview_prep_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "Interview preparation is integrated but less structured compared to Plan 1."
+            },
+            "portfolio_project_strength": {
+              "score": 7,
+              "max": 9,
+              "justification": "Capstone project is comprehensive but less emphasis on multiple projects."
+            }
+          },
+          "raw_score": 19,
+          "max_raw": 25,
+          "weighted_contribution": 19.0
+        }
+      },
+      "D2": {
+        "name": "Time-Constrained Feasibility",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 and Plan 2 both fit within the user's available study hours, but Plan 2 explicitly accounts for buffer hours, which adds flexibility. Plan 1 has a more intensive schedule with less explicit mention of buffer time. Both plans avoid overengineering by focusing on relevant skills, but Plan 2's iterative approach to the capstone project may reduce cognitive load.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 includes buffer hours and an iterative approach that may reduce cognitive load.",
+        "Plan_1": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Fits within available hours but lacks explicit buffer time."
+            },
+            "cognitive_load_realism": {
+              "score": 4,
+              "max": 5,
+              "justification": "Intensive schedule but manageable within the timeframe."
+            },
+            "overengineering_avoidance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Focuses on relevant skills without unnecessary complexity."
+            }
+          },
+          "raw_score": 13,
+          "max_raw": 15,
+          "weighted_contribution": 13.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Includes buffer hours, providing flexibility."
+            },
+            "cognitive_load_realism": {
+              "score": 5,
+              "max": 5,
+              "justification": "Iterative approach reduces cognitive load."
+            },
+            "overengineering_avoidance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Focuses on relevant skills without unnecessary complexity."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        }
+      },
+      "D3": {
+        "name": "Personalization & Preference Alignment",
+        "weight": 0.15,
+        "comparative_analysis": "Both plans are well-aligned with the user's experience and preferences, focusing on Python, TensorFlow, and PyTorch. Plan 1 emphasizes practical implementation and networking, while Plan 2 provides a more detailed execution strategy tailored to the user's background. Both plans justify the technology choices effectively.",
+        "dimension_winner": "Tie",
+        "winner_reason": "Both plans align well with the user's experience and preferences.",
+        "Plan_1": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 5,
+              "max": 5,
+              "justification": "Skips beginner content and matches the user's experience level."
+            },
+            "preference_integration": {
+              "score": 5,
+              "max": 5,
+              "justification": "Uses the user's preferred stack and focuses on the global market."
+            },
+            "stack_justification_quality": {
+              "score": 5,
+              "max": 5,
+              "justification": "Technology choices are well-explained and tied to the user's goals."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 5,
+              "max": 5,
+              "justification": "Skips beginner content and matches the user's experience level."
+            },
+            "preference_integration": {
+              "score": 5,
+              "max": 5,
+              "justification": "Uses the user's preferred stack and focuses on the global market."
+            },
+            "stack_justification_quality": {
+              "score": 5,
+              "max": 5,
+              "justification": "Technology choices are well-explained and tied to the user's goals."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        }
+      },
+      "D4": {
+        "name": "Market Alignment",
+        "weight": 0.1,
+        "comparative_analysis": "Both plans align well with global market demands for AI Engineering roles, focusing on MLOps, Python, and cloud deployment. Plan 1 includes emerging tools like Transformers, while Plan 2 emphasizes cloud deployment and MLOps practices. Both plans reflect what global employers seek at the graduate level.",
+        "dimension_winner": "Tie",
+        "winner_reason": "Both plans align well with global market demands and include relevant skills.",
+        "Plan_1": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Includes in-demand skills like MLOps and Transformers."
+            },
+            "regional_global_alignment": {
+              "score": 5,
+              "max": 5,
+              "justification": "Reflects global employer requirements for AI Engineering roles."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Focuses on in-demand skills like cloud deployment and MLOps."
+            },
+            "regional_global_alignment": {
+              "score": 5,
+              "max": 5,
+              "justification": "Reflects global employer requirements for AI Engineering roles."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        }
+      },
+      "D5": {
+        "name": "Strategic Prioritization Quality",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 follows a logical progression from foundational ML/DL skills to MLOps and interview preparation. Plan 2 emphasizes an iterative approach to building a capstone project, integrating learning and application throughout. Both plans prioritize high-impact skills early, but Plan 1's structured phasing is more coherent.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 follows a more coherent phasing arc from foundational skills to interview preparation.",
+        "Plan_1": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 5,
+              "max": 5,
+              "justification": "Prioritizes high-impact skills like ML/DL and MLOps early."
+            },
+            "logical_phasing": {
+              "score": 5,
+              "max": 5,
+              "justification": "Follows a coherent progression from foundational skills to interview preparation."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 4,
+              "max": 5,
+              "justification": "Prioritizes high-impact skills but less structured phasing."
+            },
+            "logical_phasing": {
+              "score": 4,
+              "max": 5,
+              "justification": "Iterative approach is effective but less coherent than Plan 1."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 10,
+          "weighted_contribution": 8.0
+        }
+      },
+      "D6": {
+        "name": "Curriculum Structural Depth & Clarity",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 provides clear learning outcomes and detailed subtopics for each module, ensuring a structured learning path. Plan 2 also offers detailed subtopics but focuses more on the iterative development of the capstone project. Plan 1's structure is slightly more detailed and clear in terms of learning outcomes.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 offers more detailed and clear learning outcomes for each module.",
+        "Plan_1": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 5,
+              "max": 5,
+              "justification": "Modules build logically on each other with clear progression."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 5,
+              "max": 5,
+              "justification": "Subtopics are specific and actionable, providing clear guidance."
+            },
+            "clear_learning_outcomes": {
+              "score": 5,
+              "max": 5,
+              "justification": "Each module has measurable deliverables and outcomes."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 4,
+              "max": 5,
+              "justification": "Modules are logical but focus more on iterative capstone development."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 4,
+              "max": 5,
+              "justification": "Subtopics are detailed but less structured than Plan 1."
+            },
+            "clear_learning_outcomes": {
+              "score": 4,
+              "max": 5,
+              "justification": "Learning outcomes are present but less explicit than Plan 1."
+            }
+          },
+          "raw_score": 12,
+          "max_raw": 15,
+          "weighted_contribution": 12.0
+        }
+      },
+      "D7": {
+        "name": "Career Execution Readiness",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 includes explicit scheduling for resume and LinkedIn optimization, mock interviews, and a job application strategy. Plan 2 also covers these areas but with less emphasis on mock interviews. Plan 1's detailed approach to career execution readiness gives it an edge.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 provides a more detailed approach to career execution readiness, including mock interviews.",
+        "Plan_1": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 4,
+              "max": 4,
+              "justification": "Explicitly scheduled resume and LinkedIn optimization."
+            },
+            "mock_interviews_included": {
+              "score": 3,
+              "max": 3,
+              "justification": "Includes role-relevant mock interviews."
+            },
+            "application_strategy": {
+              "score": 3,
+              "max": 3,
+              "justification": "Detailed job application strategy with networking advice."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 3,
+              "max": 4,
+              "justification": "Covers resume and LinkedIn optimization but less detailed."
+            },
+            "mock_interviews_included": {
+              "score": 2,
+              "max": 3,
+              "justification": "Less emphasis on mock interviews compared to Plan 1."
+            },
+            "application_strategy": {
+              "score": 3,
+              "max": 3,
+              "justification": "Includes a job application strategy but less detailed."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 10,
+          "weighted_contribution": 8.0
+        }
+      }
+    },
+    "final_scores": {
+      "Plan_1": {
+        "total_weighted_score": 95.0,
+        "dimension_wins": [
+          "D1",
+          "D5",
+          "D6",
+          "D7"
+        ],
+        "strengths": [
+          "Structured interview preparation",
+          "Clear learning outcomes",
+          "Detailed career execution readiness"
+        ],
+        "critical_gaps": []
+      },
+      "Plan_2": {
+        "total_weighted_score": 87.0,
+        "dimension_wins": [
+          "D2"
+        ],
+        "strengths": [
+          "Buffer hours for flexibility",
+          "Iterative capstone development"
+        ],
+        "critical_gaps": []
+      }
+    },
+    "verdict": {
+      "winner": "Plan_1",
+      "score_gap": 8.0,
+      "margin_interpretation": "moderate",
+      "winner_key_advantages": [
+        "Structured interview preparation",
+        "Clear learning outcomes",
+        "Detailed career execution readiness"
+      ],
+      "loser_salvageable_strengths": [
+        "Buffer hours for flexibility",
+        "Iterative capstone development"
+      ],
+      "shared_gaps_in_both_plans": [],
+      "final_recommendation": "Plan 1 is recommended for its structured approach to interview preparation, clear learning outcomes, and detailed career execution readiness. Plan 2's strengths in flexibility and iterative development can be incorporated into Plan 1 for a more balanced approach."
+    }
+  },
+  "winner": "Plan_1",
+  "plan_1_score": 95.0,
+  "plan_2_score": 87.0
+}

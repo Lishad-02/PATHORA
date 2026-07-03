@@ -1,0 +1,435 @@
+{
+  "generated_at": "2026-04-02T14:10:33.929777",
+  "model": "claude-sonnet-4-6",
+  "temperature": 0.0,
+  "prompt_version": "v1.0-comparative-dimension-first",
+  "user_profile": {
+    "role": "Computer Vision Engineer",
+    "experience": "University Recent CSE Graduate",
+    "preparation_time_months": 2,
+    "study_hours_per_day": 1,
+    "Market_Focus": "Global",
+    "other_preferences": "Absolute Beginner (Very little coding experience) coding experience, familiar with Python, Java, C, C++, JavaScript, PHP, Kotlin, Dart languages and familiar with Spring Boot, .NET, TensorFlow, PyTorch, Docker framework. Also build some academic projects,personal projects, and internship / real-world project, Preferable language is C# "
+  },
+  "result": {
+    "evaluation_methodology": "comparative \u2014 both plans analyzed together per dimension before scoring",
+    "user_profile_summary": "Recent CSE graduate targeting Computer Vision Engineer roles globally, with only 1 hour/day over 2 months (48 total hours). Self-described absolute beginner in CV despite familiarity with Python, TensorFlow, PyTorch, Docker, and multiple languages. Prefers C# but needs Python-centric CV skills. Has academic, personal, and internship project experience.",
+    "dimensions": {
+      "D1": {
+        "name": "Hiring Readiness Optimization",
+        "weight": 0.25,
+        "comparative_analysis": "Plan 1 explicitly targets hiring readiness with dedicated interview prep goals each month, a capstone project that culminates in a Dockerized inference API, and job hunt action items including LinkedIn optimization, resume drafting, and mock interviews. Plan 2 is framed as a 'foundational learning plan' with a disclaimer that it won't make someone a full CV engineer, and it defers advanced topics and deployment to 'next steps after 2 months.' Plan 1's capstone produces a deployable artifact (Docker + PyTorch model + inference API) that is employer-worthy, while Plan 2's mini-projects are limited to running pre-trained model inference without training or deployment. Plan 1 includes explicit behavioral interview prep using STAR method and mock technical interviews, whereas Plan 2 has no interview preparation whatsoever. For a hiring-focused goal, Plan 1 is substantially stronger.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 delivers a deployable capstone, structured interview prep, and explicit job hunt actions, while Plan 2 explicitly disclaims hiring readiness and defers deployment to post-plan activities.",
+        "Plan_1": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "Covers Python/NumPy, PyTorch, OpenCV, transfer learning, and Docker \u2014 the core CV engineer stack. Misses object detection frameworks (YOLO, Detectron2) and segmentation, but given 48 hours this is reasonable. Depth is appropriate for a graduate-level entry role."
+            },
+            "interview_prep_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "Includes Python DSA basics, Big O notation, conceptual CV/DL review, mock technical and behavioral interviews with STAR method. Lacks ML system design practice which is increasingly expected for CV roles globally, but coverage is solid for the time constraint."
+            },
+            "portfolio_project_strength": {
+              "score": 7,
+              "max": 9,
+              "justification": "Single iterative capstone with transfer learning, custom dataset, Docker deployment, and inference API endpoint. Well-documented with README. Employer-worthy for entry-level CV roles. Loses points for not including a more visually compelling demo (e.g., web UI or video inference) and limited dataset scope."
+            }
+          },
+          "raw_score": 19,
+          "max_raw": 25,
+          "weighted_contribution": 19.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 4,
+              "max": 8,
+              "justification": "Covers OpenCV fundamentals and pre-trained model inference well, but never reaches model training, transfer learning, or deployment within the plan. Core CV engineer skills like training pipelines and model evaluation are deferred to 'next steps,' leaving a significant gap for hiring readiness."
+            },
+            "interview_prep_readiness": {
+              "score": 0,
+              "max": 8,
+              "justification": "Zero interview preparation included. No DSA practice, no ML concept review, no behavioral prep, no mock interviews. This is a critical omission for a hiring-focused plan."
+            },
+            "portfolio_project_strength": {
+              "score": 2,
+              "max": 9,
+              "justification": "Mini-projects involve running pre-trained model inference and combining OpenCV with DL \u2014 not training, evaluating, or deploying a model. These are not employer-worthy portfolio pieces for a CV Engineer role and would not differentiate a candidate in a global market."
+            }
+          },
+          "raw_score": 6,
+          "max_raw": 25,
+          "weighted_contribution": 6.0
+        }
+      },
+      "D2": {
+        "name": "Time-Constrained Feasibility",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 allocates 43 planned hours with 5 buffer hours against 48 available \u2014 tight but technically compliant. However, the cognitive load is aggressive: Week 5 alone asks the user to master PyTorch Tensors, Autograd, custom nn.Module, Dataset, and DataLoader in roughly 6 hours, which is very dense. Plan 2 allocates approximately 60 hours (1 hour/day \u00d7 60 days) but the user only has 48 hours (1 hour/day \u00d7 60 days = 60 days in 2 months, so this is actually consistent). Plan 2's pacing is more gradual \u2014 4 weeks on OpenCV basics, 2 weeks on DL concepts, 2 weeks on mini-projects \u2014 which is more realistic for 1 hour/day. Plan 1 attempts more ambitious outcomes (training + deployment) in the same timeframe, creating higher cognitive load risk. Plan 2 avoids overengineering but at the cost of under-delivering on hiring outcomes.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2's pacing is more realistic for 1 hour/day, with gradual topic progression and no week requiring mastery of 4-5 new framework concepts simultaneously, unlike Plan 1's dense Week 5.",
+        "Plan_1": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 4,
+              "max": 5,
+              "justification": "43 planned + 5 buffer = 48 hours, exactly matching available hours. Compliant but leaves no slack for real-world interruptions beyond the buffer."
+            },
+            "cognitive_load_realism": {
+              "score": 2,
+              "max": 5,
+              "justification": "Week 5 stacks PyTorch Tensors, Autograd, nn.Module, Dataset, and DataLoader in ~6 hours. Week 8 adds transfer learning, custom dataset training, Docker deployment, and inference API. These are unrealistic for 1 hour/day sessions and risk incomplete execution."
+            },
+            "overengineering_avoidance": {
+              "score": 3,
+              "max": 5,
+              "justification": "Docker deployment and inference API in Week 8 is ambitious but relevant for the role. Transfer learning is appropriate. The plan avoids truly advanced topics like segmentation or detection architectures, keeping scope reasonable."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 15,
+          "weighted_contribution": 9.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Plan uses ~60 hours across 60 days at 1 hour/day, which aligns with the 2-month constraint. Each week is allocated 7 hours with clear daily breakdowns, making scheduling straightforward."
+            },
+            "cognitive_load_realism": {
+              "score": 4,
+              "max": 5,
+              "justification": "Each week introduces one focused topic area (e.g., geometric transformations, edge detection, CNN concepts) with daily granularity. The progression is gentle and achievable in 1-hour sessions. Minor concern: Week 8 allocates 11 hours which slightly exceeds 7-day \u00d7 1-hour = 7 hours."
+            },
+            "overengineering_avoidance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Plan deliberately avoids model training, fine-tuning, and deployment within the 2-month window, keeping scope conservative. This avoids overengineering but arguably under-engineers for the target role."
+            }
+          },
+          "raw_score": 13,
+          "max_raw": 15,
+          "weighted_contribution": 13.0
+        }
+      },
+      "D3": {
+        "name": "Personalization & Preference Alignment",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 acknowledges the user's existing TensorFlow/PyTorch and Docker familiarity and explicitly builds on it, skipping basic framework installation tutorials and jumping to practical implementation. It addresses the C# preference by noting it as an asset for adaptability while justifying Python as the primary language for CV. Plan 2 also recommends Python over C# with a clear rationale and mentions C# integration (OpenCvSharp, Emgu CV) as a future option, which is a nice touch. However, Plan 2 treats the user more like a true beginner \u2014 spending 4 weeks on OpenCV basics that someone with PyTorch/TensorFlow familiarity would find elementary. Plan 1 better calibrates to the user's actual experience level, while Plan 2's 'absolute beginner in CV' framing leads to under-challenging content for someone who has already used TensorFlow and PyTorch.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 correctly leverages the user's existing PyTorch/Docker experience to accelerate the curriculum, while Plan 2 over-applies the 'absolute beginner' label and delivers content too elementary for someone with TensorFlow/PyTorch project experience.",
+        "Plan_1": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 4,
+              "max": 5,
+              "justification": "Correctly skips basic Python setup and framework installation, building on stated PyTorch/Docker familiarity. Starts with Pythonic idioms and NumPy rather than Python syntax basics. Minor gap: still spends Week 1 on Git basics which a CSE graduate with project experience likely already knows."
+            },
+            "preference_integration": {
+              "score": 4,
+              "max": 5,
+              "justification": "Explicitly addresses C# preference with a reasoned explanation, uses PyTorch (user's stated framework), incorporates Docker (user's stated familiarity), and targets global market. Does not explore C# CV libraries as a future path, which would have been a nice addition."
+            },
+            "stack_justification_quality": {
+              "score": 4,
+              "max": 5,
+              "justification": "Clearly explains why Python/PyTorch is prioritized over C# for CV roles, ties Docker to production deployment needs, and justifies OpenCV integration with PyTorch pipelines. Technology choices are well-motivated and role-aligned."
+            }
+          },
+          "raw_score": 12,
+          "max_raw": 15,
+          "weighted_contribution": 12.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 2,
+              "max": 5,
+              "justification": "Despite acknowledging the user's TensorFlow/PyTorch familiarity in the disclaimer, the plan still starts with environment setup (Anaconda, virtual environments) and spends 4 weeks on OpenCV basics that a PyTorch-experienced user would cover in 1-2 weeks. The 'absolute beginner in CV' framing is over-applied."
+            },
+            "preference_integration": {
+              "score": 3,
+              "max": 5,
+              "justification": "Addresses C# preference with a thoughtful rationale and mentions OpenCvSharp/Emgu CV for future C# integration \u2014 a genuine differentiator. However, the plan doesn't leverage the user's Docker, Spring Boot, or .NET experience in any meaningful way within the curriculum."
+            },
+            "stack_justification_quality": {
+              "score": 3,
+              "max": 5,
+              "justification": "Python-over-C# rationale is clear and well-argued. Resource recommendations (PyImageSearch, Andrew Ng, Fast.ai) are appropriate. However, the choice to defer model training entirely is not well-justified given the user's existing PyTorch familiarity."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 15,
+          "weighted_contribution": 8.0
+        }
+      },
+      "D4": {
+        "name": "Market Alignment",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 covers the globally demanded CV engineer stack: Python, PyTorch, OpenCV, transfer learning, Docker containerization, and inference API deployment. These are precisely the skills listed in global CV engineer job postings at the entry level. Plan 2 covers OpenCV and pre-trained model inference, which are foundational but insufficient for global market competitiveness \u2014 most CV engineer roles require demonstrated model training, evaluation, and deployment experience. Plan 1 also includes transfer learning (ResNet, VGG-style architectures), which is a high-demand skill. Neither plan covers emerging tools like ONNX, TensorRT, or cloud deployment (AWS SageMaker, GCP Vertex AI), but Plan 1 is significantly closer to what global employers expect from a CV engineer candidate.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 aligns with global CV engineer job requirements by including model training, transfer learning, and Docker deployment, while Plan 2 stops at inference with pre-trained models \u2014 insufficient for most global CV engineer roles.",
+        "Plan_1": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 4,
+              "max": 5,
+              "justification": "PyTorch, OpenCV, transfer learning, Docker, and inference APIs are all high-demand skills for global CV engineer roles. Missing cloud deployment (AWS/GCP) and object detection frameworks (YOLO), but these are reasonable omissions given the 48-hour constraint."
+            },
+            "regional_global_alignment": {
+              "score": 4,
+              "max": 5,
+              "justification": "The Python/PyTorch/Docker stack is globally standard for CV engineering. The capstone project with deployment demonstrates production readiness expected by global employers. Lacks MLOps tooling (MLflow, Weights & Biases) which is increasingly expected but not critical at entry level."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 10,
+          "weighted_contribution": 8.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 2,
+              "max": 5,
+              "justification": "OpenCV fundamentals and pre-trained model inference are necessary but not sufficient for global CV engineer roles. The plan does not reach model training, fine-tuning, evaluation metrics, or deployment \u2014 all of which appear in virtually every CV engineer job description globally."
+            },
+            "regional_global_alignment": {
+              "score": 2,
+              "max": 5,
+              "justification": "The plan's scope is more aligned with a 'CV hobbyist' or 'ML beginner' profile than a global CV engineer candidate. Global employers at entry level expect at minimum a trained and evaluated model with some deployment experience, which this plan defers entirely."
+            }
+          },
+          "raw_score": 4,
+          "max_raw": 10,
+          "weighted_contribution": 4.0
+        }
+      },
+      "D5": {
+        "name": "Strategic Prioritization Quality",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 follows a coherent ML Theory \u2192 Applied Implementation \u2192 Production Deployment arc, which is the appropriate phasing for an AI/CV Engineering role. High-ROI skills (PyTorch, transfer learning, Docker) are introduced in Month 2 after a necessary foundation in Month 1. Plan 2 follows a more traditional image processing \u2192 DL concepts \u2192 mini-projects arc, which is pedagogically sound but strategically suboptimal for hiring \u2014 it spends 4 of 8 weeks on classical OpenCV before touching deep learning, which is the dominant paradigm in modern CV engineering. Plan 1's prioritization of deep learning earlier (Week 2-3 conceptually, Week 5 practically) better reflects what employers actually test. Plan 2's heavy OpenCV-first approach would have been appropriate 10 years ago but is less strategically optimal for 2024-2025 global CV roles.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 prioritizes deep learning and PyTorch earlier in the curriculum, reflecting the modern CV engineering landscape where DL dominates, while Plan 2 spends half the plan on classical OpenCV before touching neural networks.",
+        "Plan_1": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 4,
+              "max": 5,
+              "justification": "PyTorch and transfer learning are introduced in Month 2 with conceptual groundwork in Month 1. Docker deployment is saved for the final week as a capstone skill. The ordering reflects employer priorities well. Minor issue: Git basics in Week 1 is low-ROI for a CSE graduate."
+            },
+            "logical_phasing": {
+              "score": 4,
+              "max": 5,
+              "justification": "Foundation (Python/NumPy/CNN theory) \u2192 Applied (PyTorch training loop, OpenCV integration) \u2192 Production (transfer learning, Docker deployment) is a textbook ML Engineering arc. Each phase builds directly on the previous one."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 10,
+          "weighted_contribution": 8.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 2,
+              "max": 5,
+              "justification": "Classical OpenCV (morphological operations, histograms, contours) occupies 4 of 8 weeks. While foundational, these are lower-ROI for modern CV engineering compared to DL training pipelines. The highest-ROI skills (model training, evaluation, deployment) are never reached within the plan."
+            },
+            "logical_phasing": {
+              "score": 3,
+              "max": 5,
+              "justification": "The OpenCV \u2192 DL concepts \u2192 mini-projects arc is internally coherent and pedagogically logical. However, it is not optimally phased for a hiring goal \u2014 the plan ends before reaching the skills that would make a candidate competitive, making the phasing strategically weak despite being logically ordered."
+            }
+          },
+          "raw_score": 5,
+          "max_raw": 10,
+          "weighted_contribution": 5.0
+        }
+      },
+      "D6": {
+        "name": "Curriculum Structural Depth & Clarity",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 2 has superior structural clarity at the daily level \u2014 it breaks down each week into specific day-by-day activities (e.g., 'Day 1-2: Python Environment Setup, Day 3-5: Image Loading'), making it highly actionable for a self-directed learner. Plan 1 provides weekly micro-goals and monthly themes but lacks day-level granularity. However, Plan 1's subtopics are more technically specific and role-relevant (e.g., 'Implementing and manipulating PyTorch Tensors efficiently on CPU/GPU,' 'Creating robust data loading pipelines with torch.utils.data.Dataset and DataLoader'). Plan 1's learning outcomes are tied to concrete deliverables (GitHub repo, Docker image, inference API), while Plan 2's outcomes are more activity-based ('code along with tutorials,' 'experiment with different parameters'). Both plans have logical module ordering, but Plan 1's deliverables are more measurable.",
+        "dimension_winner": "Tie",
+        "winner_reason": "Plan 2 wins on daily granularity and actionability while Plan 1 wins on technical specificity and measurable deliverables \u2014 the two plans are roughly equivalent in overall structural quality.",
+        "Plan_1": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 4,
+              "max": 5,
+              "justification": "Modules build correctly: NumPy/Python \u2192 CNN theory \u2192 PyTorch basics \u2192 training loop \u2192 OpenCV integration \u2192 deployment. The progression is coherent and each module is a prerequisite for the next."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 4,
+              "max": 5,
+              "justification": "Subtopics are technically specific (e.g., 'torch.nn.Module,' 'Autograd,' 'Dataset and DataLoader,' 'transfer learning'). Resources include specific search terms rather than vague categories. Could benefit from day-level breakdown to improve actionability."
+            },
+            "clear_learning_outcomes": {
+              "score": 4,
+              "max": 5,
+              "justification": "Each month has a milestone deliverable (GitHub repo with NumPy script; Dockerized capstone project). Weekly micro-goals describe what the learner will be able to do. Outcomes are concrete and verifiable."
+            }
+          },
+          "raw_score": 12,
+          "max_raw": 15,
+          "weighted_contribution": 12.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 5,
+              "max": 5,
+              "justification": "Day-by-day ordering within each week is precise and logical. Topics within each week build on each other (e.g., color spaces before transformations, smoothing before edge detection). The macro ordering from image processing to DL to projects is coherent."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 4,
+              "max": 5,
+              "justification": "Daily breakdowns are highly specific (e.g., 'Otsu's thresholding,' 'Bilateral filter,' 'Convex Hull'). Resources are named specifically (PyImageSearch, Andrew Ng Coursera, Fast.ai). Loses a point because DL subtopics in Phase 2 are less technically deep than Phase 1."
+            },
+            "clear_learning_outcomes": {
+              "score": 3,
+              "max": 5,
+              "justification": "Phase objectives are stated but weekly outcomes are activity-based ('code along,' 'experiment') rather than deliverable-based. No milestone artifacts are defined \u2014 the learner completes activities but has no concrete output to show at the end of each phase."
+            }
+          },
+          "raw_score": 12,
+          "max_raw": 15,
+          "weighted_contribution": 12.0
+        }
+      },
+      "D7": {
+        "name": "Career Execution Readiness",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 includes explicit career execution actions in both months: LinkedIn optimization with specific guidance, resume drafting tied to CV-specific skills, company research with tech stack analysis, cold outreach strategies, and mock behavioral and technical interviews. Plan 2 has zero career execution content \u2014 no resume guidance, no LinkedIn advice, no mock interviews, no application strategy. The only career-adjacent content in Plan 2 is a mention of 'online communities' and 'Kaggle competitions' in the next steps section, which is post-plan and not actionable within the 2-month window. This is a decisive gap for a user whose explicit goal is job preparation.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 includes comprehensive career execution actions across both months while Plan 2 contains zero career preparation content within the plan itself.",
+        "Plan_1": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 3,
+              "max": 4,
+              "justification": "LinkedIn optimization is scheduled in Month 1 Week 1 with specific guidance (professional photo, compelling summary, CV role ambition). Resume drafting is scheduled in Month 1 with tailoring advice. Month 2 includes resume refinement. Loses one point for not specifying which CV-specific keywords or skills to highlight on the resume."
+            },
+            "mock_interviews_included": {
+              "score": 2,
+              "max": 3,
+              "justification": "Mock technical interviews (PyTorch code snippets, debugging) and mock behavioral interviews (STAR method) are explicitly scheduled in Month 2. ML system design mock interviews are not included, which is a gap for global CV engineer roles."
+            },
+            "application_strategy": {
+              "score": 2,
+              "max": 3,
+              "justification": "Includes active job application guidance, resume tailoring per job description, and cold outreach to recruiters on LinkedIn. Missing specific platform recommendations (LinkedIn Jobs, Indeed, Glassdoor, AngelList) and application volume targets."
+            }
+          },
+          "raw_score": 7,
+          "max_raw": 10,
+          "weighted_contribution": 7.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 0,
+              "max": 4,
+              "justification": "No resume or LinkedIn preparation included anywhere in the plan. This is a complete omission for a hiring-focused preparation plan."
+            },
+            "mock_interviews_included": {
+              "score": 0,
+              "max": 3,
+              "justification": "No mock interviews of any kind are included. Interview preparation is entirely absent from the plan."
+            },
+            "application_strategy": {
+              "score": 0,
+              "max": 3,
+              "justification": "No job application strategy, platform recommendations, networking advice, or application timing guidance is provided within the 2-month plan."
+            }
+          },
+          "raw_score": 0,
+          "max_raw": 10,
+          "weighted_contribution": 0.0
+        }
+      }
+    },
+    "final_scores": {
+      "Plan_1": {
+        "total_weighted_score": 75.0,
+        "dimension_wins": [
+          "D1",
+          "D3",
+          "D4",
+          "D5",
+          "D7"
+        ],
+        "strengths": [
+          "Delivers a deployable capstone project (PyTorch model + Docker inference API) that is employer-worthy for entry-level CV roles",
+          "Includes structured interview preparation covering technical, conceptual, and behavioral dimensions",
+          "Correctly leverages user's existing PyTorch and Docker familiarity to accelerate the curriculum",
+          "Follows the optimal ML Theory \u2192 Applied \u2192 Production phasing arc for AI Engineering roles",
+          "Comprehensive career execution actions including LinkedIn, resume, cold outreach, and mock interviews",
+          "Technology choices are well-justified and globally market-aligned"
+        ],
+        "critical_gaps": [
+          "Week 5 cognitive load is unrealistically dense for 1-hour daily sessions (5 new PyTorch concepts in ~6 hours)",
+          "Missing ML system design interview preparation which is increasingly expected for global CV engineer roles",
+          "No object detection frameworks (YOLO, Detectron2) or segmentation coverage",
+          "No cloud deployment component (AWS/GCP) which differentiates candidates in global markets",
+          "Git basics in Week 1 wastes time for a CSE graduate with project experience"
+        ]
+      },
+      "Plan_2": {
+        "total_weighted_score": 48.0,
+        "dimension_wins": [
+          "D2",
+          "D6"
+        ],
+        "strengths": [
+          "Excellent daily granularity with day-by-day breakdowns making it highly actionable for self-directed learning",
+          "Realistic pacing for 1 hour/day with gradual topic progression and no cognitive overload",
+          "Thoughtful C# integration mention (OpenCvSharp, Emgu CV) as a future path",
+          "Strong OpenCV fundamentals coverage with specific technique names and parameters",
+          "Honest disclaimer about limitations sets appropriate expectations"
+        ],
+        "critical_gaps": [
+          "Zero interview preparation of any kind \u2014 no DSA, no ML concepts review, no behavioral prep, no mock interviews",
+          "Zero career execution content \u2014 no resume, LinkedIn, or application strategy",
+          "Never reaches model training, evaluation, or deployment within the 2-month window",
+          "Over-applies 'absolute beginner' framing to a user with TensorFlow/PyTorch project experience",
+          "Mini-projects (pre-trained model inference) are not employer-worthy portfolio pieces for CV engineer roles",
+          "Spends 50% of the plan on classical OpenCV when modern CV engineering is dominated by deep learning"
+        ]
+      }
+    },
+    "verdict": {
+      "winner": "Plan_1",
+      "score_gap": 27.0,
+      "margin_interpretation": "decisive",
+      "winner_key_advantages": [
+        "Produces a deployable, employer-worthy capstone project (trained PyTorch model + Docker inference API) within the 2-month window",
+        "Includes comprehensive interview preparation (technical, conceptual, behavioral) aligned with global CV engineer hiring processes",
+        "Correctly calibrates curriculum difficulty to the user's actual experience level with PyTorch and Docker",
+        "Follows the optimal production-oriented phasing arc for AI/CV Engineering roles",
+        "Provides actionable career execution strategy including LinkedIn, resume, cold outreach, and mock interviews"
+      ],
+      "loser_salvageable_strengths": [
+        "Plan 2's day-by-day scheduling format is superior and could be adopted by Plan 1 to improve daily actionability",
+        "Plan 2's C# integration roadmap (OpenCvSharp, Emgu CV) is a valuable addition that Plan 1 omits",
+        "Plan 2's OpenCV fundamentals coverage (morphological operations, contours, histograms) is more thorough and could supplement Plan 1's Week 7",
+        "Plan 2's honest disclaimer about realistic expectations is a good practice for managing learner motivation"
+      ],
+      "shared_gaps_in_both_plans": [
+        "Neither plan covers object detection frameworks (YOLO, Detectron2, SSD) which are core to many CV engineer job descriptions",
+        "Neither plan includes cloud deployment (AWS SageMaker, GCP Vertex AI, Azure ML) which differentiates candidates globally",
+        "Neither plan covers ML system design interview preparation which is increasingly tested at global tech companies",
+        "Neither plan addresses model evaluation metrics specific to CV (mAP, IoU, precision-recall curves) in sufficient depth",
+        "Neither plan covers video processing or real-time inference which are common CV engineer requirements"
+      ],
+      "final_recommendation": "Plan 1 is the clear choice for a user whose explicit goal is becoming job-ready as a Computer Vision Engineer within 2 months. Its decisive advantages in hiring readiness, market alignment, and career execution readiness make it substantially more fit-for-purpose. The primary risk is cognitive overload in Week 5 \u2014 the user should consider splitting PyTorch fundamentals across Weeks 4-5 by starting Tensor/Autograd basics in Week 4 alongside project setup. To further strengthen Plan 1, incorporate Plan 2's day-by-day scheduling format for better daily accountability, add Plan 2's C# integration roadmap as a post-plan note, and supplement Week 7's OpenCV section with Plan 2's more thorough classical CV coverage. The user should also add one object detection mini-project (YOLO inference at minimum) to the capstone to better align with global job postings."
+    }
+  },
+  "winner": "Plan_1",
+  "plan_1_score": 75.0,
+  "plan_2_score": 48.0
+}

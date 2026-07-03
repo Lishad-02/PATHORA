@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-04-11T21:35:33.203098",
+  "user_preferences": {
+    "specific_role": "Full Stack Developer(Software Engineering)",
+    "experience_level": "University recent CSE graduate",
+    "preparation_time": 12,
+    "study_hours": 8,
+    "location": "Global",
+    "other_preferences": "need fast job, Intermediate (Built small projects) coding experience, familiar with java, C,C++,javascript,typescript,php,kotlin Language and familiar with dot net,node.js,express.js,react framework. build some academic and personal projects & also done intership.preferable language is C# and javascript"
+  },
+  "market_selected_skills": {
+    "primary_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "HTML",
+      "CSS",
+      "RESTful API",
+      "MySQL",
+      "Git"
+    ],
+    "supporting_skills": [
+      "TypeScript",
+      "Express.js",
+      "Docker",
+      "AWS",
+      "OOP",
+      "Agile",
+      "PostgreSQL"
+    ],
+    "optional_skills": [
+      "CI/CD",
+      "MongoDB",
+      "Next.js",
+      "Github",
+      "Unit Testing"
+    ]
+  }
+}

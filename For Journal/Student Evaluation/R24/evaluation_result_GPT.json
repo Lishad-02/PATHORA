@@ -1,0 +1,409 @@
+{
+  "generated_at": "2026-04-02T23:06:12.508045",
+  "model": "gpt-4o-2024-08-06",
+  "temperature": 0.0,
+  "prompt_version": "v1.0-comparative-dimension-first",
+  "user_profile": {
+    "role": "Full Stack Developer(Software Engineering)",
+    "experience": "University Final Year CSE Student",
+    "preparation_time_months": 10,
+    "study_hours_per_day": 1,
+    "Market_Focus": "Global",
+    "other_preferences": " looking for remote job, Basic (Completed some courses / small exercises) coding experience, familiar with Python, C, C++, Kotlin and JavaScript and familiar with django,flask framework. Also build some academic project, preferable language is Python"
+  },
+  "result": {
+    "evaluation_methodology": "comparative \u2014 both plans analyzed together per dimension before scoring",
+    "user_profile_summary": "The user is a final-year CSE student aiming to become a Full Stack Developer with a focus on Python/Django and React, seeking a remote job in the global market. They have basic coding experience and prefer Python.",
+    "dimensions": {
+      "D1": {
+        "name": "Hiring Readiness Optimization",
+        "weight": 0.25,
+        "comparative_analysis": "Plan 1 provides a detailed roadmap with a strong focus on building a portfolio through a capstone project and deploying it, which is crucial for hiring readiness. It also includes comprehensive interview preparation, covering DSA, system design, and behavioral interviews. Plan 2 also covers core technical skills and interview preparation but lacks the same level of detail in portfolio project development and deployment.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 offers a more structured approach to portfolio development and deployment, which is critical for hiring readiness.",
+        "Plan_1": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Covers full stack development with Python/Django and React, including deployment."
+            },
+            "interview_prep_readiness": {
+              "score": 8,
+              "max": 8,
+              "justification": "Includes consistent interview preparation throughout the plan."
+            },
+            "portfolio_project_strength": {
+              "score": 8,
+              "max": 9,
+              "justification": "Focuses on a capstone project with deployment, showcasing end-to-end capabilities."
+            }
+          },
+          "raw_score": 23,
+          "max_raw": 25,
+          "weighted_contribution": 23.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "Covers necessary technical skills but lacks depth in deployment."
+            },
+            "interview_prep_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Provides interview preparation but not as integrated as Plan 1."
+            },
+            "portfolio_project_strength": {
+              "score": 6,
+              "max": 9,
+              "justification": "Includes project work but lacks emphasis on deployment and capstone."
+            }
+          },
+          "raw_score": 19,
+          "max_raw": 25,
+          "weighted_contribution": 19.0
+        }
+      },
+      "D2": {
+        "name": "Time-Constrained Feasibility",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 is tightly aligned with the available hours, providing a buffer and ensuring cognitive load is manageable. Plan 2 also fits within the time constraints but is slightly more ambitious in terms of content coverage, which might lead to cognitive overload.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 offers a more realistic approach to time management with a buffer and clear focus.",
+        "Plan_1": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Fits within available hours with a buffer."
+            },
+            "cognitive_load_realism": {
+              "score": 5,
+              "max": 5,
+              "justification": "Realistic weekly goals without overloading."
+            },
+            "overengineering_avoidance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Avoids unnecessary complexity for the timeline."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Fits within hours but lacks a buffer."
+            },
+            "cognitive_load_realism": {
+              "score": 4,
+              "max": 5,
+              "justification": "Ambitious content coverage might lead to overload."
+            },
+            "overengineering_avoidance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Includes some advanced topics that may not fit the timeline."
+            }
+          },
+          "raw_score": 12,
+          "max_raw": 15,
+          "weighted_contribution": 12.0
+        }
+      },
+      "D3": {
+        "name": "Personalization & Preference Alignment",
+        "weight": 0.15,
+        "comparative_analysis": "Both plans are well-tailored to the user's background and preferences, focusing on Python/Django and React. Plan 1 provides more justification for the chosen stack and aligns closely with the user's experience level. Plan 2 also aligns well but lacks detailed justification for technology choices.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 offers better justification for technology choices and aligns closely with user preferences.",
+        "Plan_1": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 5,
+              "max": 5,
+              "justification": "Skips beginner content and matches user's experience level."
+            },
+            "preference_integration": {
+              "score": 5,
+              "max": 5,
+              "justification": "Aligns with user's preferred stack and role focus."
+            },
+            "stack_justification_quality": {
+              "score": 5,
+              "max": 5,
+              "justification": "Provides clear justification for technology choices."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 4,
+              "max": 5,
+              "justification": "Matches user's experience but includes some unnecessary basics."
+            },
+            "preference_integration": {
+              "score": 4,
+              "max": 5,
+              "justification": "Aligns with user's stack but less emphasis on preferences."
+            },
+            "stack_justification_quality": {
+              "score": 3,
+              "max": 5,
+              "justification": "Lacks detailed justification for technology choices."
+            }
+          },
+          "raw_score": 11,
+          "max_raw": 15,
+          "weighted_contribution": 11.0
+        }
+      },
+      "D4": {
+        "name": "Market Alignment",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 is well-aligned with global market demands, focusing on in-demand skills like cloud deployment and system design. Plan 2 also covers relevant skills but lacks emphasis on emerging tools and global alignment.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 better aligns with global market demands and includes emerging tools.",
+        "Plan_1": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Covers in-demand skills and includes cloud deployment."
+            },
+            "regional_global_alignment": {
+              "score": 5,
+              "max": 5,
+              "justification": "Reflects global employer requirements for full-stack roles."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Covers necessary skills but lacks emphasis on emerging tools."
+            },
+            "regional_global_alignment": {
+              "score": 4,
+              "max": 5,
+              "justification": "Aligns with global requirements but less comprehensive."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 10,
+          "weighted_contribution": 8.0
+        }
+      },
+      "D5": {
+        "name": "Strategic Prioritization Quality",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 prioritizes high-impact skills early, such as Git and advanced Python, and follows a logical progression from foundation to application and interview preparation. Plan 2 also follows a logical sequence but introduces some advanced topics later, which might not be as impactful.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 prioritizes high-impact skills early and follows a logical progression.",
+        "Plan_1": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 5,
+              "max": 5,
+              "justification": "Focuses on high-impact skills early in the plan."
+            },
+            "logical_phasing": {
+              "score": 5,
+              "max": 5,
+              "justification": "Follows a coherent progression from foundation to application."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 4,
+              "max": 5,
+              "justification": "Covers important skills but some are introduced later."
+            },
+            "logical_phasing": {
+              "score": 4,
+              "max": 5,
+              "justification": "Logical sequence but less emphasis on early high-impact skills."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 10,
+          "weighted_contribution": 8.0
+        }
+      },
+      "D6": {
+        "name": "Curriculum Structural Depth & Clarity",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 provides detailed modules with clear subtopics and learning outcomes, ensuring each phase builds on the previous one. Plan 2 also has a structured curriculum but lacks the same level of detail in subtopics and outcomes.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 offers more detailed subtopics and clear learning outcomes.",
+        "Plan_1": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 5,
+              "max": 5,
+              "justification": "Modules build logically on each other."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 5,
+              "max": 5,
+              "justification": "Provides specific and actionable subtopics."
+            },
+            "clear_learning_outcomes": {
+              "score": 5,
+              "max": 5,
+              "justification": "Each module has measurable outcomes."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 4,
+              "max": 5,
+              "justification": "Modules are logically ordered but less detailed."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 4,
+              "max": 5,
+              "justification": "Subtopics are less specific and actionable."
+            },
+            "clear_learning_outcomes": {
+              "score": 4,
+              "max": 5,
+              "justification": "Learning outcomes are present but less clear."
+            }
+          },
+          "raw_score": 12,
+          "max_raw": 15,
+          "weighted_contribution": 12.0
+        }
+      },
+      "D7": {
+        "name": "Career Execution Readiness",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 includes explicit scheduling for resume and LinkedIn preparation, mock interviews, and a detailed job application strategy. Plan 2 also covers these areas but with less emphasis and detail.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 provides a more comprehensive approach to career execution readiness.",
+        "Plan_1": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 4,
+              "max": 4,
+              "justification": "Explicitly scheduled and detailed."
+            },
+            "mock_interviews_included": {
+              "score": 3,
+              "max": 3,
+              "justification": "Includes role-relevant mock interviews."
+            },
+            "application_strategy": {
+              "score": 3,
+              "max": 3,
+              "justification": "Detailed job application strategy included."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 3,
+              "max": 4,
+              "justification": "Included but less detailed."
+            },
+            "mock_interviews_included": {
+              "score": 2,
+              "max": 3,
+              "justification": "Mock interviews are mentioned but not detailed."
+            },
+            "application_strategy": {
+              "score": 2,
+              "max": 3,
+              "justification": "Application strategy is present but less comprehensive."
+            }
+          },
+          "raw_score": 7,
+          "max_raw": 10,
+          "weighted_contribution": 7.0
+        }
+      }
+    },
+    "final_scores": {
+      "Plan_1": {
+        "total_weighted_score": 98.0,
+        "dimension_wins": [
+          "D1",
+          "D2",
+          "D3",
+          "D4",
+          "D5",
+          "D6",
+          "D7"
+        ],
+        "strengths": [
+          "Comprehensive portfolio development",
+          "Detailed interview preparation",
+          "Realistic time management",
+          "Alignment with global market demands"
+        ],
+        "critical_gaps": []
+      },
+      "Plan_2": {
+        "total_weighted_score": 77.0,
+        "dimension_wins": [],
+        "strengths": [
+          "Covers core technical skills",
+          "Includes interview preparation"
+        ],
+        "critical_gaps": [
+          "Less emphasis on deployment",
+          "Lacks detailed project development"
+        ]
+      }
+    },
+    "verdict": {
+      "winner": "Plan_1",
+      "score_gap": 21.0,
+      "margin_interpretation": "decisive",
+      "winner_key_advantages": [
+        "Comprehensive approach to portfolio and deployment",
+        "Detailed and integrated interview preparation",
+        "Realistic and well-structured timeline"
+      ],
+      "loser_salvageable_strengths": [
+        "Covers core technical skills",
+        "Includes interview preparation"
+      ],
+      "shared_gaps_in_both_plans": [],
+      "final_recommendation": "Plan 1 is recommended for its comprehensive and structured approach, ensuring the user is well-prepared for a full-stack developer role in the global market."
+    }
+  },
+  "winner": "Plan_1",
+  "plan_1_score": 98.0,
+  "plan_2_score": 77.0
+}

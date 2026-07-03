@@ -1,0 +1,232 @@
+{
+    "b1": "B1_ZS",
+    "model": "",
+    "user_profile": {
+        "role": "Any Type of Role(Data Analyst/ Analytics / AI Engineer)",
+        "months": 3,
+        "hours_per_day": 5,
+        "experience": "University Recent CSE Graduate",
+        "other_preferences": "preferable global market, Intermediate (Built small projects) coding experience, familiar with Python and familiar with TensorFlow framework. Also build some academic projects"
+    },
+    "prompt_used": "",
+    "generated_plan": {
+        "overall_goals": [
+            "Develop a strong foundation in data analysis, data engineering principles, and machine learning/deep learning.",
+            "Build a robust portfolio of projects demonstrating proficiency in SQL, Python for data, ML frameworks, and data visualization.",
+            "Acquire practical skills relevant for Data Analyst, Analytics Engineer, or AI Engineer roles in the global market.",
+            "Prepare for technical interviews and resume building."
+        ],
+        "key_resources": [
+            {
+                "category": "Courses & Platforms",
+                "items": [
+                    "Coursera: 'SQL for Data Science', 'Python for Everybody Specialization', 'Google Data Analytics Professional Certificate', 'IBM Data Analyst Professional Certificate', 'Deep Learning Specialization' (Andrew Ng)",
+                    "edX: 'Data Science MicroMasters' (UCSD), 'Analytics Edge' (MIT)",
+                    "DataCamp/Codecademy: Interactive SQL and Python (Pandas, NumPy) courses.",
+                    "Kaggle: Datasets, notebooks, and competitions for practical experience.",
+                    "HackerRank/LeetCode: For SQL and Python coding challenges.",
+                    "Udemy: Specific courses on advanced SQL, dbt, MLOps, or cloud platforms (e.g., 'AWS Certified Machine Learning Specialty')."
+                ]
+            },
+            {
+                "category": "Books & Documentation",
+                "items": [
+                    "'SQL Cookbook' by Anthony Molinaro (for advanced SQL)",
+                    "'Python for Data Analysis' by Wes McKinney (Pandas creator)",
+                    "'Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow' by Aurélien Géron",
+                    "Official documentation for Pandas, NumPy, Scikit-learn, TensorFlow, dbt, AWS/GCP/Azure."
+                ]
+            },
+            {
+                "category": "Community & Blogs",
+                "items": [
+                    "Stack Overflow, Towards Data Science, Medium articles, LinkedIn."
+                ]
+            }
+        ],
+        "learning_plan": [
+            {
+                "month": 1,
+                "focus": "Foundational Skills: SQL, Python for Data, Statistics, Data Viz Basics",
+                "weeks": [
+                    {
+                        "week_number": 1,
+                        "topics": [
+                            "**SQL Fundamentals:** SELECT, FROM, WHERE, GROUP BY, ORDER BY, LIMIT, Basic JOINs (INNER, LEFT)",
+                            "**Python Refresher & Environment Setup:** Anaconda, Jupyter Notebooks, VS Code.",
+                            "**NumPy Basics:** Arrays, array operations, broadcasting."
+                        ],
+                        "projects_and_activities": [
+                            "Complete basic SQL challenges on HackerRank/LeetCode.",
+                            "Practice NumPy array manipulations.",
+                            "Set up a robust Python data science environment."
+                        ]
+                    },
+                    {
+                        "week_number": 2,
+                        "topics": [
+                            "**SQL Intermediate:** Subqueries, CTEs (Common Table Expressions), Window Functions (RANK, ROW_NUMBER, LAG, LEAD), CASE statements.",
+                            "**Pandas Core:** DataFrames, Series, indexing, selecting data, handling missing values (NaN).",
+                            "**Basic Descriptive Statistics:** Mean, Median, Mode, Variance, Standard Deviation, Quartiles."
+                        ],
+                        "projects_and_activities": [
+                            "Solve intermediate SQL problems (e.g., 'DataLemur').",
+                            "Perform basic data cleaning and manipulation on a small dataset using Pandas.",
+                            "Calculate descriptive statistics for various features in a dataset."
+                        ]
+                    },
+                    {
+                        "week_number": 3,
+                        "topics": [
+                            "**SQL Advanced:** UNION, INTERSECT, EXCEPT, Stored Procedures (concepts), Performance considerations (indexing basics).",
+                            "**Pandas Advanced:** GroupBy, Merge, Concat, Apply, Lambda functions, Time Series functionality basics.",
+                            "**Inferential Statistics Basics:** Hypothesis testing (t-tests, chi-square), A/B testing concepts."
+                        ],
+                        "projects_and_activities": [
+                            "Design and execute complex SQL queries involving multiple tables and advanced functions.",
+                            "Conduct an Exploratory Data Analysis (EDA) on a Kaggle dataset using Pandas and generate insights.",
+                            "Understand the concepts of p-value and confidence intervals."
+                        ]
+                    },
+                    {
+                        "week_number": 4,
+                        "topics": [
+                            "**Data Visualization (Matplotlib & Seaborn):** Histograms, Scatter plots, Bar plots, Line plots, Box plots, Correlation matrices. Data storytelling principles.",
+                            "**Git & GitHub:** Version control fundamentals, cloning, committing, pushing, pulling, branching.",
+                            "**Introduction to Data Modeling:** Star schema, Snowflake schema concepts (crucial for Analytics Engineer track)."
+                        ],
+                        "projects_and_activities": [
+                            "Create a visual report (Jupyter Notebook) from your EDA project, focusing on clear communication.",
+                            "Host all your code and projects on GitHub.",
+                            "Research and understand common data warehouse architectures."
+                        ]
+                    }
+                ]
+            },
+            {
+                "month": 2,
+                "focus": "Machine Learning Fundamentals, Deep Learning Deep Dive, Cloud Basics",
+                "weeks": [
+                    {
+                        "week_number": 5,
+                        "topics": [
+                            "**Machine Learning Fundamentals (Scikit-learn):** Supervised Learning: Linear Regression, Logistic Regression.",
+                            "**Model Evaluation Metrics:** R-squared, MAE, MSE, Accuracy, Precision, Recall, F1-score, Confusion Matrix.",
+                            "**Feature Engineering Basics:** One-hot encoding, scaling, polynomial features."
+                        ],
+                        "projects_and_activities": [
+                            "Implement Linear and Logistic Regression on datasets using Scikit-learn.",
+                            "Practice evaluating model performance using different metrics."
+                        ]
+                    },
+                    {
+                        "week_number": 6,
+                        "topics": [
+                            "**Machine Learning (Intermediate):** Supervised Learning: Decision Trees, Random Forests, Support Vector Machines (SVMs).",
+                            "**Unsupervised Learning Basics:** K-Means Clustering.",
+                            "**Introduction to Cloud Platforms (AWS/GCP/Azure - choose one):** Basic services (Compute/EC2, Storage/S3), IAM concepts."
+                        ],
+                        "projects_and_activities": [
+                            "Build classification and clustering models.",
+                            "Create a free-tier cloud account and deploy a simple web server or store data in cloud storage."
+                        ]
+                    },
+                    {
+                        "week_number": 7,
+                        "topics": [
+                            "**Deep Learning with TensorFlow (Review & CNNs):** Review TF fundamentals, build and train Convolutional Neural Networks (CNNs) for image classification.",
+                            "**Transfer Learning:** Concepts and practical application with pre-trained models (e.g., VGG, ResNet).",
+                            "**MLOps Concepts (Introduction):** Model versioning, basic deployment ideas."
+                        ],
+                        "projects_and_activities": [
+                            "Implement a CNN for an image dataset (e.g., CIFAR-10, Fashion MNIST).",
+                            "Experiment with transfer learning to fine-tune a pre-trained model.",
+                            "Research and understand the MLOps lifecycle."
+                        ]
+                    },
+                    {
+                        "week_number": 8,
+                        "topics": [
+                            "**Deep Learning (RNNs & Advanced Topics):** Recurrent Neural Networks (RNNs) basics for sequence data (LSTMs, GRUs - conceptual understanding, simple implementation).",
+                            "**Neural Network Architectures:** Understanding different layers, activation functions, optimizers.",
+                            "**Ethics in AI:** Bias, fairness, interpretability basics."
+                        ],
+                        "projects_and_activities": [
+                            "Try a simple RNN for text classification or time series prediction (e.g., sentiment analysis on movie reviews).",
+                            "Explore resources on responsible AI development."
+                        ]
+                    }
+                ]
+            },
+            {
+                "month": 3,
+                "focus": "Specialization, Advanced Projects, Job Preparation",
+                "weeks": [
+                    {
+                        "week_number": 9,
+                        "topics": [
+                            "**Analytics Engineer Path (Optional deep dive):** dbt (Data Build Tool) fundamentals, data pipeline orchestration concepts (Apache Airflow basics).",
+                            "**Data Analyst Path (Optional deep dive):** Dashboarding tools (Tableau/Power BI) for interactive reporting, advanced Excel.",
+                            "**AI Engineer Path (Optional deep dive):** Advanced MLOps: Docker for containerization, FastAPI/Flask for API development for models."
+                        ],
+                        "projects_and_activities": [
+                            "**Choose ONE path to focus on.**",
+                            "AE: Set up dbt on a local environment and transform some data.",
+                            "DA: Build an interactive dashboard using Tableau Public or Power BI Desktop.",
+                            "AI: Containerize a simple ML model using Docker and expose it via a Flask/FastAPI endpoint."
+                        ]
+                    },
+                    {
+                        "week_number": 10,
+                        "topics": [
+                            "**Project Work & Refinement:** Dedicate significant time to developing 1-2 substantial portfolio projects.",
+                            "**Resume & LinkedIn Optimization:** Tailor for target roles, highlight projects and skills.",
+                            "**Behavioral Interview Prep:** STAR method, common questions."
+                        ],
+                        "projects_and_activities": [
+                            "Work on a chosen end-to-end project: From data collection/SQL to analysis/ML model to visualization/deployment (e.g., predicting customer churn, building a recommendation system, analyzing sales data and building a dashboard).",
+                            "Create a professional resume and LinkedIn profile."
+                        ]
+                    },
+                    {
+                        "week_number": 11,
+                        "topics": [
+                            "**Technical Interview Prep (Coding):** SQL queries (complex scenarios), Python data structures and algorithms (arrays, dicts, lists, time complexity).",
+                            "**Technical Interview Prep (ML/DL):** Core concepts, explaining models, debugging scenarios, system design questions (high-level).",
+                            "**Cloud Services for ML/Data (Deeper Dive):** Explore specific services (e.g., AWS SageMaker, GCP Vertex AI, Azure ML) for managed ML workflows."
+                        ],
+                        "projects_and_activities": [
+                            "Practice SQL and Python coding challenges on platforms like LeetCode/HackerRank.",
+                            "Review ML/DL theory, explain key algorithms in your own words.",
+                            "Attempt to use a managed ML service for one of your project components (e.g., for model training or endpoint deployment)."
+                        ]
+                    },
+                    {
+                        "week_number": 12,
+                        "topics": [
+                            "**Final Project Polish:** Ensure projects are well-documented, code is clean, and insights are clear.",
+                            "**Networking & Job Application:** Reach out to professionals, apply for relevant positions.",
+                            "**Review & Reinforce:** Go over weak areas identified during interview prep."
+                        ],
+                        "projects_and_activities": [
+                            "Finalize your portfolio, ensure all projects are on GitHub with clear READMEs.",
+                            "Begin actively applying for roles that align with your strongest path (Data Analyst, Analytics Engineer, or AI Engineer).",
+                            "Mock interviews."
+                        ]
+                    }
+                ]
+            }
+        ],
+        "tips": [
+            "**Prioritize:** While the plan covers all three roles, pick one or two that excite you most and deep dive there in Month 3. Given your background, AI Engineer or Analytics Engineer might be a natural fit.",
+            "**Learn by Doing:** Projects are paramount. Start small and iterate. Every week, try to apply what you've learned.",
+            "**Active Learning:** Don't just watch videos; take notes, summarize, and explain concepts in your own words.",
+            "**Networking:** Connect with professionals on LinkedIn. Attend virtual meetups or webinars.",
+            "**Read Documentation:** Get comfortable reading official documentation for libraries and tools.",
+            "**Consistency is Key:** 5 hours a day is significant. Stick to a schedule and take breaks.",
+            "**Global Market Focus:** Practice communicating technical concepts clearly in English. Explore job postings from companies in the US, Europe, and Asia to understand skill demands.",
+            "**Showcase Your Work:** GitHub is your professional resume for technical roles. Make sure your repositories are organized, well-documented (READMEs), and showcase your best work."
+        ],
+        "final_notes": "This is an ambitious plan for 3 months, especially aiming for AI Engineer with global market standards. Focus on building a strong foundational understanding and demonstrating practical application through projects. You may find yourself more aligned with one role than others as you progress. Good luck!"
+    }
+}

@@ -1,0 +1,205 @@
+{
+  "generated_at": "2026-04-10T00:20:16.084328",
+  "user_profile": {
+    "role": "Product/Marketing Data Analyst (Data Analyst/ Analytics / AI Engineer)",
+    "experience": "University Recent CSE Graduate",
+    "preparation_time_months": 3,
+    "study_hours_per_day": 4,
+    "Market_Focus": "Global",
+    "other_preferences": "need a fast job, Intermediate (Built small projects) coding experience, familiar with python, java, c++, R Language. build some academic projects.Preferable language is Python and R"
+  },
+  "learning_plan": {
+    "total_available_hours": 288,
+    "planned_learning_hours": 255,
+    "buffer_hours": 33,
+    "execution_strategy_summary": "This 3-month roadmap is meticulously crafted to leverage your existing CSE background, Python/R familiarity, and academic project experience, fast-tracking you into a Product/Marketing Data Analyst role. We'll ruthlessly prioritize hands-on application of SQL, Python, R, and BI tools, focusing on real-world problem-solving and building a compelling, end-to-end portfolio project that directly showcases your ability to drive data-driven insights for business decisions.",
+    "monthly_plan": [
+      {
+        "month": 1,
+        "theme": "Foundations & Python Power-Up: Mastering Data Extraction and Initial Exploration",
+        "weekly_micro_goals": [
+          "Week 1: You'll dive deep into advanced SQL, focusing on window functions, CTEs, and query optimization. This is where you'll learn to extract complex, aggregated data efficiently, which is crucial for any analyst role. We'll also set up Git for version control, a non-negotiable industry standard.",
+          "Week 2: Transitioning to Python, you'll master Pandas for data manipulation. Think of it as your data Swiss Army knife \u2013 cleaning messy datasets, merging disparate sources, and preparing data for analysis. We'll start ingesting data from your SQL practice into Python.",
+          "Week 3: This week is all about Exploratory Data Analysis (EDA) with Python. You'll use Pandas and NumPy to understand data distributions, identify outliers, and uncover initial patterns. This is also when you'll kick off your Capstone Project, applying these skills to a real-world dataset.",
+          "Week 4: You'll continue refining your Python data wrangling skills, focusing on advanced cleaning techniques and basic feature engineering. Your Capstone Project will progress, with a clean, transformed dataset ready for deeper analysis, and your SQL scripts and Python notebooks will be version-controlled with Git."
+        ],
+        "time_budget_hours": {
+          "total_monthly_hours": 85,
+          "theory_and_reading": 25,
+          "active_practice_and_coding": 35,
+          "portfolio_project_building": 25
+        },
+        "technical_skills_to_master": [
+          "Advanced SQL (Window Functions, CTEs, Query Optimization)",
+          "Relational Database Schema Design for Analytics",
+          "Git for collaborative data projects",
+          "Pandas & NumPy for efficient data wrangling and cleaning",
+          "Exploratory Data Analysis (EDA) with Python",
+          "Data Ingestion from SQL databases into Python"
+        ],
+        "interview_prep_goals": [
+          "Solve intermediate SQL LeetCode-style problems (e.g., 'Nth highest salary', 'department highest salary').",
+          "Understand Git commands for common workflows (clone, add, commit, push, pull, branch, merge).",
+          "Practice Python list/dict comprehensions and basic Pandas operations for data manipulation questions."
+        ],
+        "what_you_will_build": [
+          "A simple star schema for a simulated marketing campaign dataset.",
+          "A series of complex SQL queries to extract campaign performance and user data.",
+          "A Python script (Jupyter Notebook) that ingests data from your SQL database, performs comprehensive cleaning, handles missing values, and conducts initial EDA.",
+          "A well-documented Git repository containing your SQL scripts and Python notebooks for the Capstone Project."
+        ],
+        "job_hunt_action_items": [
+          "Optimize your LinkedIn profile: Update your headline to reflect 'Aspiring Data Analyst' or 'CSE Grad | Data Analytics Enthusiast'.",
+          "Start researching target companies and roles to understand common tech stacks.",
+          "Begin drafting a foundational resume, focusing on your academic projects and relevant coursework."
+        ],
+        "curated_resources": [
+          {
+            "topic": "Advanced SQL",
+            "resource_type": "Interactive Platform",
+            "recommended_search_term": "LeetCode SQL problems"
+          },
+          {
+            "topic": "Advanced SQL & Data Warehousing",
+            "resource_type": "Online Course/Tutorial",
+            "recommended_search_term": "Mode Analytics SQL Tutorial"
+          },
+          {
+            "topic": "Pandas & NumPy",
+            "resource_type": "Official Docs / YouTube Channel",
+            "recommended_search_term": "Pandas User Guide / Data School Pandas Tutorials"
+          }
+        ],
+        "milestone_deliverable": "A clean, transformed dataset from your Capstone Project, extracted via optimized SQL and processed with Python, ready for statistical analysis, along with a well-structured Git repository."
+      },
+      {
+        "month": 2,
+        "theme": "Statistical Storytelling & Dual-Language Mastery: Uncovering Insights with Python and R",
+        "weekly_micro_goals": [
+          "Week 1: You'll dive into applied statistics, focusing on hypothesis testing and A/B testing principles. This is where you learn to validate your insights rigorously, using Python's SciPy and Statsmodels. We'll also calculate crucial product and marketing KPIs.",
+          "Week 2: Master data visualization with Python using Matplotlib and Seaborn. You'll learn to create compelling, publication-quality plots that tell a clear story, moving beyond basic charts to advanced techniques for communicating complex findings.",
+          "Week 3: Now, we pivot to R, leveraging your existing familiarity. You'll immerse yourself in the Tidyverse ecosystem (`dplyr`, `tidyr`) for efficient data manipulation, which is highly valued in many analytical roles. This will feel familiar yet powerful, building on your Python skills.",
+          "Week 4: This week focuses on `ggplot2` for advanced visualization in R and building basic statistical models like linear and logistic regression. You'll apply these to your Capstone Project, perhaps predicting customer churn or LTV, and generate reproducible reports using R Markdown."
+        ],
+        "time_budget_hours": {
+          "total_monthly_hours": 85,
+          "theory_and_reading": 25,
+          "active_practice_and_coding": 35,
+          "portfolio_project_building": 25
+        },
+        "technical_skills_to_master": [
+          "Applied Statistics (Hypothesis Testing, A/B Testing, Confidence Intervals)",
+          "Product & Marketing Metrics (LTV, CAC, Conversion, Churn)",
+          "Data Visualization with Matplotlib & Seaborn (Python)",
+          "Tidyverse (`dplyr`, `tidyr`) for data manipulation in R",
+          "`ggplot2` for advanced data visualization in R",
+          "Basic Statistical Modeling (Linear/Logistic Regression) in R",
+          "R Markdown for reproducible reporting"
+        ],
+        "interview_prep_goals": [
+          "Practice explaining A/B test results and statistical significance in a business context.",
+          "Be able to articulate the difference between various visualization types and when to use them.",
+          "Review common data analyst case study questions involving metric calculation and interpretation."
+        ],
+        "what_you_will_build": [
+          "Statistical analysis (e.g., A/B test simulation) on your Capstone Project data, with clear hypothesis formulation and testing.",
+          "A series of advanced data visualizations in both Python (Matplotlib/Seaborn) and R (ggplot2) to illustrate key findings from your Capstone Project.",
+          "An initial statistical model (e.g., linear regression for LTV prediction or logistic regression for churn) using R on your Capstone Project data.",
+          "A draft R Markdown report summarizing your statistical analysis and visualizations."
+        ],
+        "job_hunt_action_items": [
+          "Start tailoring your resume with keywords from job descriptions for Product/Marketing Data Analyst roles.",
+          "Begin practicing behavioral interview questions using the STAR method.",
+          "Network on LinkedIn: Connect with data analysts and hiring managers in your target companies."
+        ],
+        "curated_resources": [
+          {
+            "topic": "Applied Statistics & A/B Testing",
+            "resource_type": "Online Course/Book",
+            "recommended_search_term": "Practical Statistics for Data Scientists O'Reilly"
+          },
+          {
+            "topic": "Python Visualization",
+            "resource_type": "YouTube Channel",
+            "recommended_search_term": "Corey Schafer Matplotlib Seaborn Tutorial"
+          },
+          {
+            "topic": "R Tidyverse & ggplot2",
+            "resource_type": "Book/Online Course",
+            "recommended_search_term": "R for Data Science Hadley Wickham"
+          }
+        ],
+        "milestone_deliverable": "A comprehensive statistical analysis of your Capstone Project data, including A/B test results and initial predictive modeling, visualized effectively in both Python and R, with a preliminary R Markdown report."
+      },
+      {
+        "month": 3,
+        "theme": "Insights to Impact & Job Hunt Blitz: BI Dashboards, ML, and Career Launch",
+        "weekly_micro_goals": [
+          "Week 1: You'll dive into Business Intelligence (BI) tools, specifically Tableau or Power BI. This is where your analytical insights become actionable for stakeholders. You'll learn to connect to data, create calculated fields, and design interactive dashboards.",
+          "Week 2: Focus on building a compelling, interactive dashboard for your Capstone Project. This dashboard will visualize your key product/marketing metrics, A/B test results, and allow users to explore data. You'll learn to tell a data story through your dashboard design.",
+          "Week 3: Transition to practical Machine Learning for business insights using Python's Scikit-learn. You'll build classification (e.g., churn prediction) or regression models (e.g., LTV prediction) on your Capstone data, focusing on model evaluation and interpretability, directly addressing the 'AI Engineer' aspect.",
+          "Week 4: This is the sprint to the finish line! You'll polish your Capstone Project, ensuring a professional README, and integrate any remaining ML insights. Crucially, this week is heavily weighted towards mock interviews, refining your resume/LinkedIn, and aggressively applying for jobs. We'll also quickly cover advanced spreadsheet skills for those ad-hoc tasks."
+        ],
+        "time_budget_hours": {
+          "total_monthly_hours": 85,
+          "theory_and_reading": 25,
+          "active_practice_and_coding": 30,
+          "portfolio_project_building": 15,
+          "interview_prep_and_job_hunt": 15
+        },
+        "technical_skills_to_master": [
+          "Business Intelligence Tools (Tableau/Power BI) for dashboard creation",
+          "Data Storytelling and UX design for dashboards",
+          "Practical Machine Learning (Supervised/Unsupervised) with Scikit-learn",
+          "Model Evaluation Metrics (Accuracy, Precision, Recall, F1, AUC-ROC)",
+          "Feature Importance and Model Interpretability",
+          "Advanced Spreadsheet functions (VLOOKUP/XLOOKUP, Pivot Tables)"
+        ],
+        "interview_prep_goals": [
+          "Conduct at least 3 mock technical interviews (SQL, Python, Stats, ML concepts).",
+          "Practice explaining your Capstone Project end-to-end, focusing on business impact.",
+          "Refine behavioral answers using the STAR method for common questions.",
+          "Prepare for case study interviews involving dashboard design or ML problem framing."
+        ],
+        "what_you_will_build": [
+          "A fully interactive marketing/product performance dashboard in Tableau or Power BI, visualizing your Capstone Project's key metrics, A/B test results, and insights.",
+          "A practical machine learning model (e.g., churn prediction, LTV forecasting) using Python on your Capstone Project data, with clear evaluation and interpretation.",
+          "A polished, end-to-end Capstone Project with a professional README, hosted on GitHub, showcasing your full analytical workflow.",
+          "A refined resume and LinkedIn profile, ready for applications."
+        ],
+        "job_hunt_action_items": [
+          "Apply to 10-15 relevant jobs daily, tailoring your resume and cover letter.",
+          "Actively engage in LinkedIn outreach to recruiters and hiring managers.",
+          "Schedule mock interviews with peers or mentors.",
+          "Prepare a concise 'elevator pitch' for your skills and Capstone Project."
+        ],
+        "curated_resources": [
+          {
+            "topic": "Tableau/Power BI",
+            "resource_type": "Official Docs / YouTube Channel",
+            "recommended_search_term": "Tableau Public Tutorials / Guy in a Cube Power BI"
+          },
+          {
+            "topic": "Machine Learning (Scikit-learn)",
+            "resource_type": "Official Docs / Online Course",
+            "recommended_search_term": "Scikit-learn User Guide / Andrew Ng Machine Learning Specialization (Coursera - focus on practical application)"
+          },
+          {
+            "topic": "Interview Prep (Data Analyst)",
+            "resource_type": "Book/Website",
+            "recommended_search_term": "Ace the Data Science Interview / StrataScratch"
+          }
+        ],
+        "milestone_deliverable": "A complete, polished, and deployed Capstone Project (GitHub repo + BI dashboard), a job-ready resume and LinkedIn profile, and a strong understanding of interview patterns for your target roles."
+      }
+    ],
+    "critical_guidelines": [
+      "Embrace the 70/30 Rule: For every hour of passive learning (reading, watching), dedicate at least two hours to active practice, coding, and building your portfolio. This is non-negotiable for real skill acquisition.",
+      "Time-Box Your Struggles: When you hit a bug or a difficult concept, set a timer (e.g., 30-60 minutes). If you're stuck after that, take a break, ask for help (forums, peers), or move on to another task. Don't let one problem derail your entire day.",
+      "Project First, Theory Second: Your Capstone Project is your North Star. Every skill you learn should immediately be applied to it. This isn't about theoretical mastery; it's about building something tangible that proves your capabilities.",
+      "Network Relentlessly: Your job hunt starts NOW. Connect with people on LinkedIn, attend virtual meetups, and don't be afraid to ask for informational interviews. Many jobs are found through connections, not just applications.",
+      "Prioritize Mental Well-being: This is an intense sprint. Use your buffer hours for rest, exercise, and hobbies. Burnout is real, and a fresh mind is far more effective than an exhausted one. Consistency beats intensity every time."
+    ],
+    "final_readiness_summary": "By completing this rigorous 3-month roadmap, you won't just be a CSE graduate; you'll be a production-ready Product/Marketing Data Analyst. Your strong academic foundation in Python, R, and C++ will be supercharged with industry-grade SQL, advanced data wrangling, statistical rigor, practical machine learning, and compelling BI dashboarding. Your end-to-end Capstone Project, meticulously documented and deployed, will serve as undeniable proof of your ability to extract, transform, analyze, and communicate data-driven insights that directly impact product and marketing strategies. You'll be equipped not just with skills, but with a portfolio and interview readiness that makes you an incredibly attractive candidate for FAANG-level and high-growth companies globally."
+  }
+}

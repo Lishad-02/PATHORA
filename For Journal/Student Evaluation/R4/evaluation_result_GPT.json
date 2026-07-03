@@ -1,0 +1,406 @@
+{
+  "generated_at": "2026-04-02T14:12:03.985730",
+  "model": "gpt-4o",
+  "temperature": 0.0,
+  "prompt_version": "v1.0-comparative-dimension-first",
+  "user_profile": {
+    "role": "Computer Vision Engineer",
+    "experience": "University Recent CSE Graduate",
+    "preparation_time_months": 2,
+    "study_hours_per_day": 1,
+    "Market_Focus": "Global",
+    "other_preferences": "Absolute Beginner (Very little coding experience) coding experience, familiar with Python, Java, C, C++, JavaScript, PHP, Kotlin, Dart languages and familiar with Spring Boot, .NET, TensorFlow, PyTorch, Docker framework. Also build some academic projects,personal projects, and internship / real-world project, Preferable language is C# "
+  },
+  "result": {
+    "evaluation_methodology": "comparative \u2014 both plans analyzed together per dimension before scoring",
+    "user_profile_summary": "The user is a recent CSE graduate aiming to become a Computer Vision Engineer, with a preference for C# but familiarity with multiple programming languages and frameworks. They have 2 months to prepare, studying 1 hour per day, with a focus on the global market.",
+    "dimensions": {
+      "D1": {
+        "name": "Hiring Readiness Optimization",
+        "weight": 0.25,
+        "comparative_analysis": "Plan 1 focuses on building a strong portfolio project with a capstone that involves deploying a model using Docker, which is crucial for demonstrating job readiness. It also includes specific interview preparation goals related to coding and problem-solving. Plan 2, while comprehensive in foundational learning, lacks a strong emphasis on a capstone project and interview preparation is not as explicitly detailed.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 provides a more structured approach to building a portfolio project and includes specific interview preparation activities.",
+        "Plan_1": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Covers essential tools like Python, PyTorch, and Docker, which are critical for a Computer Vision Engineer."
+            },
+            "interview_prep_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Includes specific goals for coding and problem-solving, which are crucial for interviews."
+            },
+            "portfolio_project_strength": {
+              "score": 8,
+              "max": 9,
+              "justification": "Focuses on a capstone project that is deployable and showcases practical skills."
+            }
+          },
+          "raw_score": 22,
+          "max_raw": 25,
+          "weighted_contribution": 22.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "Covers foundational skills but lacks depth in deployment and advanced tools."
+            },
+            "interview_prep_readiness": {
+              "score": 5,
+              "max": 8,
+              "justification": "Interview preparation is not as detailed or role-specific."
+            },
+            "portfolio_project_strength": {
+              "score": 5,
+              "max": 9,
+              "justification": "Lacks a strong capstone project focus, which is critical for showcasing skills."
+            }
+          },
+          "raw_score": 16,
+          "max_raw": 25,
+          "weighted_contribution": 16.0
+        }
+      },
+      "D2": {
+        "name": "Time-Constrained Feasibility",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 allocates 48 hours with a buffer, ensuring feasibility within the user's constraints. It emphasizes active practice, which is realistic given the time limits. Plan 2 plans for 60 hours, which slightly exceeds the user's available time, and includes a broad range of topics that may be challenging to cover in depth within the timeframe.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 is more aligned with the user's available hours and includes a buffer for flexibility.",
+        "Plan_1": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Fits within the available hours and includes a buffer."
+            },
+            "cognitive_load_realism": {
+              "score": 4,
+              "max": 5,
+              "justification": "Focuses on active practice, which is achievable within the time constraints."
+            },
+            "overengineering_avoidance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Avoids overly complex topics that don't fit the timeline."
+            }
+          },
+          "raw_score": 13,
+          "max_raw": 15,
+          "weighted_contribution": 13.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 3,
+              "max": 5,
+              "justification": "Exceeds the user's available hours slightly."
+            },
+            "cognitive_load_realism": {
+              "score": 3,
+              "max": 5,
+              "justification": "Covers a broad range of topics, which may be challenging to manage."
+            },
+            "overengineering_avoidance": {
+              "score": 3,
+              "max": 5,
+              "justification": "Includes some advanced topics that may not fit the timeline."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 15,
+          "weighted_contribution": 9.0
+        }
+      },
+      "D3": {
+        "name": "Personalization & Preference Alignment",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 leverages the user's familiarity with Python and frameworks like PyTorch and Docker, aligning well with their preferences. It also integrates C# where possible. Plan 2 recommends Python due to its prevalence in the CV field but does not integrate C# as effectively, which is the user's preferred language.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 better integrates the user's language preferences and existing skills.",
+        "Plan_1": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 5,
+              "max": 5,
+              "justification": "Builds on the user's existing knowledge and skills effectively."
+            },
+            "preference_integration": {
+              "score": 5,
+              "max": 5,
+              "justification": "Incorporates C# and aligns with the user's language preferences."
+            },
+            "stack_justification_quality": {
+              "score": 4,
+              "max": 5,
+              "justification": "Justifies the use of Python and PyTorch well, considering the user's goals."
+            }
+          },
+          "raw_score": 14,
+          "max_raw": 15,
+          "weighted_contribution": 14.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 4,
+              "max": 5,
+              "justification": "Assumes some foundational knowledge but less tailored to the user's specific experience."
+            },
+            "preference_integration": {
+              "score": 3,
+              "max": 5,
+              "justification": "Focuses on Python but does not integrate C# effectively."
+            },
+            "stack_justification_quality": {
+              "score": 3,
+              "max": 5,
+              "justification": "Rationale for Python is clear, but less emphasis on user's preferred stack."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 15,
+          "weighted_contribution": 10.0
+        }
+      },
+      "D4": {
+        "name": "Market Alignment",
+        "weight": 0.1,
+        "comparative_analysis": "Both plans focus on Python and PyTorch, which are highly relevant for the global Computer Vision market. Plan 1 includes Docker, which is an emerging tool for deployment, adding extra market relevance. Plan 2 covers foundational skills but lacks emphasis on deployment tools like Docker.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 includes Docker, enhancing its alignment with market demands for deployment skills.",
+        "Plan_1": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Includes Python, PyTorch, and Docker, which are in high demand."
+            },
+            "regional_global_alignment": {
+              "score": 4,
+              "max": 5,
+              "justification": "Aligns well with global market demands for Computer Vision roles."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 10,
+          "weighted_contribution": 9.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Focuses on Python and PyTorch, which are relevant but lacks deployment tools."
+            },
+            "regional_global_alignment": {
+              "score": 4,
+              "max": 5,
+              "justification": "Covers foundational skills relevant to the global market."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 10,
+          "weighted_contribution": 8.0
+        }
+      },
+      "D5": {
+        "name": "Strategic Prioritization Quality",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 prioritizes high-impact skills like Python and PyTorch early on, followed by deployment skills with Docker. It follows a logical progression from foundational skills to a capstone project. Plan 2 starts with foundational image processing and gradually moves to deep learning, but the progression to practical application is less clear.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 has a clearer strategic prioritization of high-impact skills and logical phasing.",
+        "Plan_1": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 5,
+              "max": 5,
+              "justification": "Focuses on high-impact skills early in the plan."
+            },
+            "logical_phasing": {
+              "score": 4,
+              "max": 5,
+              "justification": "Follows a coherent progression from foundation to application."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 10,
+          "weighted_contribution": 9.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 3,
+              "max": 5,
+              "justification": "Covers foundational skills but less emphasis on high-impact skills early."
+            },
+            "logical_phasing": {
+              "score": 3,
+              "max": 5,
+              "justification": "Progression to practical application is less clear."
+            }
+          },
+          "raw_score": 6,
+          "max_raw": 10,
+          "weighted_contribution": 6.0
+        }
+      },
+      "D6": {
+        "name": "Curriculum Structural Depth & Clarity",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 provides detailed weekly goals and clear learning outcomes, with specific deliverables for each phase. Plan 2 outlines topics and activities but lacks the same level of detail in terms of weekly deliverables and outcomes.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 offers more detailed structure and clarity in its curriculum.",
+        "Plan_1": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 5,
+              "max": 5,
+              "justification": "Modules build logically on each other."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 5,
+              "max": 5,
+              "justification": "Subtopics are specific and actionable."
+            },
+            "clear_learning_outcomes": {
+              "score": 5,
+              "max": 5,
+              "justification": "Each week has measurable deliverables."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 4,
+              "max": 5,
+              "justification": "Modules are ordered logically but less detailed."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 3,
+              "max": 5,
+              "justification": "Subtopics are less specific and actionable."
+            },
+            "clear_learning_outcomes": {
+              "score": 3,
+              "max": 5,
+              "justification": "Lacks clear weekly deliverables."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 15,
+          "weighted_contribution": 10.0
+        }
+      },
+      "D7": {
+        "name": "Career Execution Readiness",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 includes specific actions for resume and LinkedIn preparation, mock interviews, and a job application strategy. Plan 2 provides general advice on career readiness but lacks specific actions and timelines for these activities.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 includes detailed career execution steps, enhancing readiness.",
+        "Plan_1": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 4,
+              "max": 4,
+              "justification": "Explicitly schedules resume and LinkedIn preparation."
+            },
+            "mock_interviews_included": {
+              "score": 3,
+              "max": 3,
+              "justification": "Includes mock interviews as part of the plan."
+            },
+            "application_strategy": {
+              "score": 3,
+              "max": 3,
+              "justification": "Provides a clear job application strategy."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 2,
+              "max": 4,
+              "justification": "General advice but lacks specific scheduling."
+            },
+            "mock_interviews_included": {
+              "score": 1,
+              "max": 3,
+              "justification": "Does not explicitly include mock interviews."
+            },
+            "application_strategy": {
+              "score": 1,
+              "max": 3,
+              "justification": "Lacks a detailed job application strategy."
+            }
+          },
+          "raw_score": 4,
+          "max_raw": 10,
+          "weighted_contribution": 4.0
+        }
+      }
+    },
+    "final_scores": {
+      "Plan_1": {
+        "total_weighted_score": 92.0,
+        "dimension_wins": [
+          "D1",
+          "D2",
+          "D3",
+          "D4",
+          "D5",
+          "D6",
+          "D7"
+        ],
+        "strengths": [
+          "Strong portfolio project focus",
+          "Detailed career execution steps",
+          "Clear curriculum structure"
+        ],
+        "critical_gaps": []
+      },
+      "Plan_2": {
+        "total_weighted_score": 63.0,
+        "dimension_wins": [],
+        "strengths": [
+          "Comprehensive foundational learning"
+        ],
+        "critical_gaps": [
+          "Lacks strong capstone project",
+          "Less detailed career execution steps"
+        ]
+      }
+    },
+    "verdict": {
+      "winner": "Plan_1",
+      "score_gap": 29.0,
+      "margin_interpretation": "decisive",
+      "winner_key_advantages": [
+        "Strong focus on portfolio project",
+        "Detailed interview preparation",
+        "Clear career execution strategy"
+      ],
+      "loser_salvageable_strengths": [
+        "Comprehensive foundational learning"
+      ],
+      "shared_gaps_in_both_plans": [],
+      "final_recommendation": "Plan 1 is recommended due to its strong focus on building a portfolio project, detailed interview preparation, and clear career execution strategy, making it more suitable for achieving the user's goal of becoming a Computer Vision Engineer."
+    }
+  },
+  "winner": "Plan_1",
+  "plan_1_score": 92.0,
+  "plan_2_score": 63.0
+}

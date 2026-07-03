@@ -1,0 +1,176 @@
+{
+    "b1": "B1_ZS",
+    "model": "",
+    "user_profile": {
+        "role": "Product/Marketing Data Analyst (Data Analyst/ Analytics / AI Engineer)",
+        "months": 3,
+        "hours_per_day": 4,
+        "experience": "University Recent CSE Graduate",
+        "other_preferences": "Want to focus global market.need a fast job, Intermediate (Built small projects) coding experience, familiar with python, java, c++, R Language. build some academic projects.Preferable language is Python and R"
+    },
+    "prompt_used": "",
+    "generated_plan": {
+        "title": "3-Month Learning Plan: Product/Marketing Data Analyst (Leveraging AI/Analytics Techniques)",
+        "target_roles": [
+            "Product Data Analyst",
+            "Marketing Data Analyst",
+            "Data Analyst",
+            "Analytics Engineer"
+        ],
+        "user_profile": {
+            "experience_level": "University Recent CSE Graduate",
+            "study_time": "4 hours per day",
+            "total_preparation_time": "3 months",
+            "coding_experience": "Intermediate (Built small projects)",
+            "familiar_languages": [
+                "Python",
+                "Java",
+                "C++",
+                "R"
+            ],
+            "preferred_languages": [
+                "Python",
+                "R"
+            ],
+            "goal": "Fast job, focus global market"
+        },
+        "overall_strategy": "This plan prioritizes practical skills and a strong project portfolio to secure a job quickly in the global market. It builds on your CSE foundation, focusing on data analysis, visualization, statistical understanding, and the application of basic machine learning for business insights, which is crucial for Product/Marketing Analytics and serves as a strong bridge towards Analytics Engineer roles. We'll leverage Python and R heavily, alongside industry-standard tools like SQL and BI platforms.",
+        "learning_pillars": [
+            "Technical Skills (SQL, Python/R, BI Tools, Excel)",
+            "Statistical & Analytical Thinking (A/B Testing, Predictive Modeling)",
+            "Domain Knowledge (Product & Marketing Metrics)",
+            "Project Portfolio & Communication",
+            "Interview Preparation"
+        ],
+        "monthly_breakdown": [
+            {
+                "month": 1,
+                "title": "Foundations & Core Data Skills (SQL & Python/R Data Wrangling)",
+                "goal": "Master SQL for data extraction and manipulation. Solidify Python/R for data loading, cleaning, and basic exploration. Understand fundamental statistics.",
+                "weeks": [
+                    {
+                        "week": "1-2",
+                        "topics": [
+                            "**SQL Deep Dive (50% SQL, 30% Python/R setup, 20% Stats)**",
+                            "SQL: SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY, JOINs (INNER, LEFT, RIGHT, FULL OUTER), UNION, Subqueries, CTEs, Window Functions (ROW_NUMBER, RANK, LAG, LEAD, NTILE, AVG/SUM OVER PARTITION BY).",
+                            "Python/R: Environment setup (Anaconda/RStudio), refresh basics. Intro to Pandas/Tidyverse (dataframes, series/tibbles, basic manipulation).",
+                            "Statistics: Descriptive Statistics (mean, median, mode, variance, std dev, quartiles), Probability Basics (conditional probability, Bayes' theorem)."
+                        ],
+                        "resources_examples": [
+                            "SQL: Mode Analytics SQL Tutorial, LeetCode SQL, StrataScratch, SQLZoo.",
+                            "Python/R: DataCamp 'Data Analyst with Python/R' track, Kaggle 'Pandas/Tidyverse' tutorials."
+                        ],
+                        "project_idea": "Analyze a simple e-commerce dataset (e.g., Kaggle retail dataset) using SQL to answer business questions (e.g., 'Top-selling products by region', 'Customer lifetime value tiers')."
+                    },
+                    {
+                        "week": "3-4",
+                        "topics": [
+                            "**Python/R Data Manipulation & Exploratory Data Analysis (EDA) (60% Python/R, 20% SQL review, 20% Stats)**",
+                            "Python (Pandas) / R (Tidyverse): Data loading (CSV, Excel, SQL DB), cleaning (missing values, duplicates, data types), reshaping (pivot, melt), merging/joining dataframes. Filtering, grouping, aggregating.",
+                            "SQL: Practice more complex queries, focus on performance considerations and optimization.",
+                            "Statistics: Inferential Statistics introduction (Central Limit Theorem, hypothesis testing concepts, p-values, confidence intervals)."
+                        ],
+                        "resources_examples": [
+                            "Python: 'Python for Data Analysis' (Wes McKinney).",
+                            "R: 'R for Data Science' (Hadley Wickham).",
+                            "Statistics: Khan Academy 'Statistics and Probability'."
+                        ],
+                        "project_idea": "Perform a comprehensive EDA on a marketing campaign dataset (e.g., A/B test results, ad spend data) or product usage log using Python/R. Identify trends, anomalies, and potential insights."
+                    }
+                ]
+            },
+            {
+                "month": 2,
+                "title": "Visualization, A/B Testing & Business Acumen",
+                "goal": "Build strong data visualization skills. Understand and apply A/B testing principles. Grasp key product and marketing metrics.",
+                "weeks": [
+                    {
+                        "week": "5-6",
+                        "topics": [
+                            "**Data Visualization & Communication (70% Viz, 15% Stats, 15% Domain Intro)**",
+                            "Python (Matplotlib, Seaborn, Plotly) / R (ggplot2): Create various plots (bar, line, scatter, histogram, box plot, heatmaps). Focus on storytelling with data and effective communication of insights.",
+                            "BI Tools (Tableau/Power BI/Looker Studio): Introduction to one tool (e.g., Tableau Public). Connect data, build interactive dashboards with best practices.",
+                            "Statistics: Distributions (Normal, Bernoulli, Binomial, Poisson).",
+                            "Product/Marketing Intro: Define key metrics (CAC, LTV, Churn, DAU/MAU, Conversion Rate, Retention, AARRR funnel)."
+                        ],
+                        "resources_examples": [
+                            "Visualization: 'Storytelling with Data' (Cole Nussbaumer Knaflic).",
+                            "BI Tools: Tableau Public resources, Power BI 'Learn the Basics' series, YouTube tutorials."
+                        ],
+                        "project_idea": "Create an interactive dashboard (e.g., in Tableau Public) visualizing the EDA from a previous project, focusing on actionable insights for product or marketing teams."
+                    },
+                    {
+                        "week": "7-8",
+                        "topics": [
+                            "**A/B Testing & Product/Marketing Analytics Deep Dive (60% A/B Testing, 30% Domain, 10% Tool Integration)**",
+                            "A/B Testing: Design of experiments, sample size calculation, hypothesis testing for A/B tests (t-tests, chi-squared tests), interpretation of results, common pitfalls (p-hacking, multiple comparisons).",
+                            "Product Analytics: Funnel analysis, cohort analysis, user segmentation, user journey mapping.",
+                            "Marketing Analytics: Campaign attribution models, ROI calculation, understanding data from ad platforms (Google Ads, Facebook Ads - how data is structured and collected).",
+                            "Tool Integration: Practice exporting/connecting Python/R analysis results to BI tools."
+                        ],
+                        "resources_examples": [
+                            "A/B Testing: Udacity A/B Testing course, articles on Optimizely, VWO blogs.",
+                            "Domain: Reforge insights (advanced but conceptual), Amplitude/Mixpanel blogs for product analytics metrics."
+                        ],
+                        "project_idea": "Simulate an A/B test analysis from a hypothetical product feature rollout or marketing campaign. Calculate required sample size, run statistical tests (in Python/R), and interpret results to provide a recommendation."
+                    }
+                ]
+            },
+            {
+                "month": 3,
+                "title": "Advanced Analytics, Cloud & Portfolio Building",
+                "goal": "Apply basic machine learning for business insights. Get familiar with cloud data services. Build end-to-end projects for a strong portfolio. Prepare for interviews.",
+                "weeks": [
+                    {
+                        "week": "9-10",
+                        "topics": [
+                            "**Predictive Analytics & Cloud Basics (60% ML/Cloud, 20% Python/R review, 20% SQL review)**",
+                            "Machine Learning (for Analytics): Introduction to Supervised Learning (Linear Regression for forecasting, Logistic Regression for classification - e.g., churn prediction or conversion likelihood). Focus on *interpreting* model outputs, feature importance, and business implications rather than deep algorithmic theory.",
+                            "Cloud Data Services: Basic understanding of cloud platforms (AWS/GCP/Azure) and their relevant data services (e.g., S3/GCS for storage, BigQuery/Redshift for data warehousing, basic ETL/ELT concepts). Focus on understanding where data lives and how it's accessed/queried.",
+                            "Python (Scikit-learn) / R (tidymodels): Implement simple regression/classification models. Evaluate models using metrics like accuracy, precision, recall, F1-score for classification; R-squared, MAE, RMSE for regression."
+                        ],
+                        "resources_examples": [
+                            "ML: Coursera 'Machine Learning' (Andrew Ng - conceptual), Scikit-learn documentation (for Python), 'Hands-On Machine Learning with Scikit-Learn...' (Aurélien Géron - for Python).",
+                            "Cloud: AWS/GCP/Azure 'getting started' guides for S3/BigQuery/Redshift, DataCamp 'Cloud Computing for Data Scientists' track."
+                        ],
+                        "project_idea": "Build a customer churn prediction or lead scoring model using a public dataset. Analyze factors contributing to churn/conversion and provide recommendations based on model insights."
+                    },
+                    {
+                        "week": "11-12",
+                        "topics": [
+                            "**End-to-End Projects, Portfolio & Interview Prep (50% Projects, 30% Interview Prep, 20% Networking)**",
+                            "Capstone Project: Choose a real-world problem (e.g., optimizing product recommendations, analyzing marketing attribution across channels, segmenting users for targeted campaigns) and apply all learned skills.",
+                            "Capstone Deliverables: Comprehensive SQL queries, Python/R notebooks (clean, well-commented), interactive dashboard (Tableau/Power BI), presentation slides summarizing findings, and actionable business recommendations.",
+                            "Portfolio: Curate all projects on GitHub with clear READMEs, linking to dashboards and code. Consider a personal website/blog.",
+                            "Resume & LinkedIn: Tailor for Data Analyst, Product Analyst, Marketing Analyst roles. Highlight skills, projects, and quantifiable achievements. Optimize with keywords.",
+                            "Interview Prep: Practice SQL coding challenges (LeetCode, StrataScratch), Python/R data manipulation problems, statistical concepts, A/B testing scenarios, behavioral questions. Practice explaining projects and insights."
+                        ],
+                        "resources_examples": [
+                            "Projects: Kaggle competition notebooks, real-world case studies (e.g., from product/marketing companies).",
+                            "Interview Prep: 'Cracking the Coding Interview', 'Case Interview Secrets', Glassdoor interview questions for DA roles."
+                        ],
+                        "project_idea": "Build a comprehensive Product or Marketing Analytics project from data acquisition to insightful recommendations. Present your findings effectively as if to a business stakeholder."
+                    }
+                ]
+            }
+        ],
+        "daily_schedule_suggestion": {
+            "total_hours": "4 hours",
+            "breakdown": [
+                "**1.5 hours:** Core learning (new concepts, lectures, reading, tutorials).",
+                "**1.5 hours:** Hands-on practice (coding exercises, project work, data cleaning).",
+                "**0.5 hour:** Review, consolidate notes, deep dive into challenging concepts.",
+                "**0.5 hour:** Break / Interview prep / Networking / Job Search."
+            ]
+        },
+        "key_success_factors": [
+            "**Consistency:** Adhere to the 4 hours/day diligently.",
+            "**Projects are paramount:** Focus on building a strong, diverse portfolio that demonstrates your skills from end-to-end (data extraction to recommendations).",
+            "**Communication:** Practice explaining technical findings to non-technical audiences. This is crucial for analytics roles.",
+            "**Network:** Connect with professionals on LinkedIn, attend virtual meetups/webinars.",
+            "**Tailor applications:** Customize your resume and cover letter for each role, highlighting relevant projects and skills.",
+            "**Interview Practice:** Regularly practice technical (SQL, Python/R, stats) and behavioral interview questions."
+        ],
+        "note_on_ai_engineer_aspect": "While the title 'AI Engineer' is broad, this plan focuses on leveraging predictive analytics (basic ML models like regression/classification) to derive business insights, which is highly valuable for advanced Data Analyst and Analytics Engineer roles. For a full-fledged AI Engineer role requiring deep learning, MLOps, and advanced model deployment, a more specialized and extended learning path would be necessary. This plan provides a strong foundation for moving into those areas later, should you choose to specialize further."
+    }
+}

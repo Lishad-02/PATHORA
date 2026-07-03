@@ -1,0 +1,429 @@
+{
+  "generated_at": "2026-04-03T02:24:44.217140",
+  "model": "claude-sonnet-4-6",
+  "temperature": 0.0,
+  "prompt_version": "v1.0-comparative-dimension-first",
+  "user_profile": {
+    "role": "Mobile App Developer (Android / iOS) (Software Engineering)",
+    "experience": "University Final year CSE Student",
+    "preparation_time_months": 5,
+    "study_hours_per_day": 3,
+    "Market_Focus": "Global",
+    "other_preferences": "need a fast job. Basic (Completed some courses / small exercises) coding experience, familiar with only C Language.preferable language is C"
+  },
+  "result": {
+    "evaluation_methodology": "comparative \u2014 both plans analyzed together per dimension before scoring",
+    "user_profile_summary": "Final-year CSE student targeting Mobile App Developer (Android/iOS) role globally, with 5 months, 3 hours/day (360 total hours), basic C-only coding background, needs fast employment, and prefers C but must transition to mobile-relevant languages.",
+    "dimensions": {
+      "D1": {
+        "name": "Hiring Readiness Optimization",
+        "weight": 0.25,
+        "comparative_analysis": "Plan 1 focuses exclusively on Flutter/Dart, delivering a single cohesive capstone ('Social Event Planner & Expense Splitter') with Firebase integration, clean architecture, testing, and deployment \u2014 all highly employer-visible signals. Plan 2 splits the 5 months between native Android (Kotlin, months 1-3) and Flutter (months 4-5), which broadens coverage but dilutes depth; the capstone is less defined and the Firebase/backend integration is absent. Plan 1's interview prep is woven throughout all 5 months with explicit DSA milestones, behavioral prep, and mock interviews. Plan 2 defers most interview prep to month 5, which is a meaningful risk for a fast-job seeker. Plan 1's portfolio is stronger: a single polished, deployed, Firebase-backed app with testing and a signed APK is more employer-worthy than Plan 2's 2-3 lighter apps without a clear deployment story.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 delivers a deeper, deployment-ready capstone with Firebase, testing, and clean architecture, plus consistent interview prep throughout, making it materially stronger for hiring readiness.",
+        "Plan_1": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Covers Dart, Flutter, Firebase Auth/Firestore/Storage, state management (Provider), local persistence, REST APIs, clean architecture, and testing \u2014 a comprehensive junior Flutter developer stack. Minor gap: no native Android/iOS coverage, but Flutter cross-platform is globally accepted."
+            },
+            "interview_prep_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "DSA practice in Dart starts month 1 and escalates through months 3-4 with LeetCode Easy/Medium. Behavioral prep (STAR method) and mock interviews are explicitly scheduled in months 4-5. Consistent cadence is a strength, though system design is absent (acceptable at junior level)."
+            },
+            "portfolio_project_strength": {
+              "score": 8,
+              "max": 9,
+              "justification": "Progressive build: console app \u2192 To-Do app \u2192 Weather app \u2192 Firebase-backed Social Event Planner with clean architecture, unit/widget tests, signed APK, and a polished GitHub README. Highly employer-worthy for a junior Flutter role. Minor deduction: no live Play Store submission."
+            }
+          },
+          "raw_score": 21,
+          "max_raw": 25,
+          "weighted_contribution": 21.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "Covers Kotlin (Android native) and Flutter/Dart, MVVM, Room, Retrofit, Coroutines, Provider/Bloc basics. Broader stack but shallower depth in each; Firebase is absent, and the Flutter section (month 4) is compressed into a single month leaving limited time for mastery."
+            },
+            "interview_prep_readiness": {
+              "score": 4,
+              "max": 8,
+              "justification": "DSA is introduced in month 1 (Kotlin) but not consistently reinforced. Interview prep is largely deferred to month 5, creating a late-stage concentration risk. No explicit mock interview scheduling or behavioral prep cadence until the final month."
+            },
+            "portfolio_project_strength": {
+              "score": 6,
+              "max": 9,
+              "justification": "Plan targets 2-3 apps (To-Do, Weather, Movie/Book, Flutter rebuild, E-commerce/social feed) but none are as deeply polished as Plan 1's capstone. No Firebase backend, no testing emphasis, no signed APK deployment story. Portfolio breadth is present but depth and employer-wow factor are lower."
+            }
+          },
+          "raw_score": 16,
+          "max_raw": 25,
+          "weighted_contribution": 16.0
+        }
+      },
+      "D2": {
+        "name": "Time-Constrained Feasibility",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 explicitly accounts for 324 planned hours with 36 buffer hours out of 360 total, and breaks down each month's hours into theory, practice, and project building \u2014 demonstrating careful time budgeting. Plan 2 states 21 hours/week per month (which equals ~84 hours/month \u00d7 5 = 420 hours), exceeding the user's actual 360-hour budget by 60 hours \u2014 a meaningful compliance failure. Plan 1's cognitive load is well-managed with a single technology stack (Flutter/Dart) throughout, avoiding context-switching. Plan 2 requires the user to master Kotlin deeply for 3 months then pivot to Dart/Flutter in month 4, which is a significant cognitive context-switch for a beginner. Plan 1 avoids overengineering by staying within Flutter's ecosystem; Plan 2's dual-stack approach (native Android + Flutter) risks spreading the learner too thin.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 correctly fits within the 360-hour budget with explicit buffer, while Plan 2 overestimates available hours by ~60 hours and introduces a costly mid-plan language/framework pivot.",
+        "Plan_1": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 5,
+              "max": 5,
+              "justification": "324 planned hours + 36 buffer = 360 total, perfectly matching the user's availability. Monthly breakdowns (65+65+65+65+64) are explicit and consistent."
+            },
+            "cognitive_load_realism": {
+              "score": 4,
+              "max": 5,
+              "justification": "Single-stack (Dart/Flutter) throughout reduces context-switching. Weekly micro-goals are specific and achievable in ~15 hours/week. Month 4 (Firebase + clean architecture simultaneously) is slightly dense but manageable."
+            },
+            "overengineering_avoidance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Clean architecture and Repository Pattern in month 4 are slightly advanced for a 5-month beginner plan, but are introduced as concepts rather than full implementation. Overall scope is appropriate for a junior Flutter role."
+            }
+          },
+          "raw_score": 13,
+          "max_raw": 15,
+          "weighted_contribution": 13.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 2,
+              "max": 5,
+              "justification": "21 hours/week \u00d7 ~4.3 weeks/month \u00d7 5 months \u2248 420+ hours, exceeding the user's 360-hour budget by ~60 hours. No buffer hours are mentioned. This is a material planning error."
+            },
+            "cognitive_load_realism": {
+              "score": 3,
+              "max": 5,
+              "justification": "Months 1-3 in Kotlin then month 4 pivot to Dart/Flutter is a significant cognitive context-switch for a C-only beginner. Month 4 tries to cover all of Flutter fundamentals in one month, which is compressed. Month 1 also combines OOP, DSA, and Git simultaneously."
+            },
+            "overengineering_avoidance": {
+              "score": 3,
+              "max": 5,
+              "justification": "Dependency injection (Hilt/Koin) in month 3 and MVVM architecture are somewhat advanced for a beginner on a tight timeline. Dual-stack (native Android + Flutter) is ambitious and risks shallow mastery of both."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 15,
+          "weighted_contribution": 8.0
+        }
+      },
+      "D3": {
+        "name": "Personalization & Preference Alignment",
+        "weight": 0.15,
+        "comparative_analysis": "Both plans correctly identify that C is not viable for mobile development and transition the user to modern languages. Plan 1 chooses Dart/Flutter exclusively and explicitly draws parallels to C (procedural \u2192 OOP transition), making the language shift feel natural and motivated. Plan 2 introduces Kotlin first, then Dart, which doubles the language learning burden for a C-only beginner seeking fast employment. Plan 1 directly addresses the 'fast job' preference by front-loading portfolio building and distributing interview prep throughout all 5 months. Plan 2 acknowledges the fast-job need in its key recommendations but structurally defers job prep to month 5. Neither plan uses C as a teaching language (correctly), but Plan 1 better bridges the user's C background by explicitly referencing it in the transition narrative.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 better serves the fast-job need through consistent interview prep and a single-stack focus that avoids the dual-language learning burden Plan 2 imposes on a C-only beginner.",
+        "Plan_1": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 4,
+              "max": 5,
+              "justification": "Explicitly acknowledges C background and frames Dart as a natural evolution. Starts with Dart fundamentals before Flutter, appropriate for a beginner. OOP is introduced as a 'crucial shift from procedural C,' showing genuine adaptation."
+            },
+            "preference_integration": {
+              "score": 4,
+              "max": 5,
+              "justification": "Addresses fast-job need with distributed interview prep and early portfolio building. Global market focus is reflected in Firebase (widely used globally) and deployment readiness. C preference is acknowledged but correctly redirected to Dart."
+            },
+            "stack_justification_quality": {
+              "score": 4,
+              "max": 5,
+              "justification": "Flutter/Dart choice is justified as cross-platform (covering both Android and iOS), reducing learning overhead. Firebase is justified as a backend solution enabling full-stack app building without a separate backend. Clean architecture is justified for professional code quality."
+            }
+          },
+          "raw_score": 12,
+          "max_raw": 15,
+          "weighted_contribution": 12.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 3,
+              "max": 5,
+              "justification": "Acknowledges C background in key recommendations and important considerations. However, starting with Kotlin (a new language) then pivoting to Dart (another new language) doubles the language learning burden for a C-only beginner, which is not well-adapted to the user's actual experience level."
+            },
+            "preference_integration": {
+              "score": 3,
+              "max": 5,
+              "justification": "Fast-job need is mentioned in key recommendations but structurally deferred \u2014 interview prep is concentrated in month 5. The dual-stack approach (Kotlin + Flutter) is broader but slower to produce a deployable portfolio, working against the fast-job goal."
+            },
+            "stack_justification_quality": {
+              "score": 3,
+              "max": 5,
+              "justification": "The rationale for starting with native Android Kotlin before Flutter is explained (solid native foundation), but this choice adds significant time cost for a user who needs fast employment. The justification is logical in theory but suboptimal for this user's specific constraints."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 15,
+          "weighted_contribution": 9.0
+        }
+      },
+      "D4": {
+        "name": "Market Alignment",
+        "weight": 0.1,
+        "comparative_analysis": "Both plans target globally relevant mobile development skills. Plan 1's Flutter/Dart + Firebase stack is highly in demand globally for cross-platform mobile roles, and Firebase is a widely adopted backend-as-a-service in the global startup and mid-market ecosystem. Plan 2's Kotlin-first approach aligns with native Android demand, which remains strong globally, and adding Flutter broadens the candidate's appeal. However, Plan 2's compressed Flutter coverage (one month) may leave the candidate insufficiently skilled in either stack. Plan 1's depth in Flutter with Firebase, clean architecture, and testing better matches what global junior Flutter roles actually require. Both plans lack Swift/iOS native coverage, which is acceptable given the cross-platform Flutter approach.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1's deep Flutter + Firebase stack with testing and deployment aligns more precisely with what global junior mobile developer job postings actually require, versus Plan 2's shallower dual-stack coverage.",
+        "Plan_1": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Flutter, Dart, Firebase, Provider state management, REST APIs, Git, and clean architecture are all highly demanded in global junior mobile developer roles. Testing and deployment readiness add further market value. Minor gap: no Kotlin/native Android coverage."
+            },
+            "regional_global_alignment": {
+              "score": 4,
+              "max": 5,
+              "justification": "Flutter is globally adopted by startups and enterprises for cross-platform development. Firebase is a globally standard backend for mobile apps. The skill set is well-aligned with global hiring patterns for junior mobile developers seeking fast employment."
+            }
+          },
+          "raw_score": 8,
+          "max_raw": 10,
+          "weighted_contribution": 8.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Kotlin for Android is highly in demand globally, and Flutter adds cross-platform value. MVVM, Room, Retrofit, and Coroutines are standard Android development skills. However, the compressed Flutter coverage and absence of Firebase reduce the depth of market-ready skills."
+            },
+            "regional_global_alignment": {
+              "score": 3,
+              "max": 5,
+              "justification": "Native Android (Kotlin) is globally relevant but the plan's dual-stack approach results in shallow mastery of both. Global employers for junior roles typically want depth in one stack; Plan 2's breadth-over-depth approach is a moderate misalignment for fast hiring."
+            }
+          },
+          "raw_score": 7,
+          "max_raw": 10,
+          "weighted_contribution": 7.0
+        }
+      },
+      "D5": {
+        "name": "Strategic Prioritization Quality",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 follows a clear Foundation \u2192 Applied \u2192 Full-Stack \u2192 Polish/Deploy arc: Dart/Flutter basics \u2192 UI/state management \u2192 APIs/persistence \u2192 Firebase/architecture \u2192 testing/deployment/job hunt. High-ROI skills (Flutter UI, state management, Firebase) are introduced early enough to be practiced extensively. Plan 2's arc is Foundation (Kotlin) \u2192 Native Android \u2192 Intermediate Android \u2192 Flutter intro \u2192 Portfolio/job prep. The Kotlin-first approach delays Flutter (the cross-platform differentiator) to month 4, leaving only one month for Flutter mastery before job hunting. This is a strategic prioritization weakness given the user's fast-job goal. Plan 1's phasing is more coherent for the target outcome.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1's single-stack progressive arc gets the user to a deployable, employer-ready Flutter app faster, while Plan 2 delays the cross-platform differentiator to month 4, reducing time for mastery.",
+        "Plan_1": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 5,
+              "max": 5,
+              "justification": "Flutter UI (month 1-2), state management (month 2), APIs (month 3), Firebase (month 4), and deployment (month 5) follow a high-ROI sequence. Interview prep starts month 1. Each month builds directly on the previous, maximizing skill compounding."
+            },
+            "logical_phasing": {
+              "score": 5,
+              "max": 5,
+              "justification": "Foundation (Dart/Flutter basics) \u2192 Applied (UI/state) \u2192 Data (APIs/persistence) \u2192 Full-stack (Firebase/architecture) \u2192 Production (testing/deployment/job hunt) is a textbook coherent phasing arc for a mobile SWE role. No phase is out of order."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 3,
+              "max": 5,
+              "justification": "Kotlin is a high-ROI skill for Android, but spending 3 months on native Android before introducing Flutter delays the cross-platform capability that maximizes the user's market appeal. Interview prep is deferred to month 5, which is a low-ROI sequencing decision for a fast-job seeker."
+            },
+            "logical_phasing": {
+              "score": 3,
+              "max": 5,
+              "justification": "The Kotlin \u2192 Flutter pivot in month 4 creates a logical discontinuity \u2014 the user must essentially restart their framework learning with one month remaining. While the native-first rationale is defensible, it is suboptimal for this user's specific constraints and timeline."
+            }
+          },
+          "raw_score": 6,
+          "max_raw": 10,
+          "weighted_contribution": 6.0
+        }
+      },
+      "D6": {
+        "name": "Curriculum Structural Depth & Clarity",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 provides weekly micro-goals, monthly time budgets broken into theory/practice/project hours, specific curated resources with search terms, and clear milestone deliverables for each month. This level of structural detail is significantly higher than Plan 2. Plan 2 provides monthly topic lists, project exercises, and estimated hours per week, but lacks weekly granularity, resource curation, and explicit milestone deliverables. Plan 1's subtopics are more actionable (e.g., 'implement user authentication with Firebase Auth, real-time event creation/listing using Firestore') versus Plan 2's more generic lists (e.g., 'Data Storage: Shared Preferences, Room Persistence Library'). Both plans have logical module ordering, but Plan 1's clarity advantage is decisive.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1's weekly micro-goals, hour-level time budgets, curated resources with specific search terms, and explicit milestone deliverables provide substantially more actionable structural clarity than Plan 2.",
+        "Plan_1": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 5,
+              "max": 5,
+              "justification": "Modules build perfectly: Dart OOP \u2192 Flutter basics \u2192 advanced UI/state \u2192 APIs/persistence \u2192 Firebase/architecture \u2192 testing/deployment. Each month's content is a direct prerequisite for the next."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 5,
+              "max": 5,
+              "justification": "Subtopics are highly specific and actionable: 'Implement user authentication (email/password, Google Sign-In)', 'Cloud Firestore CRUD and real-time data synchronization', 'Generate signed Android APK/AAB'. Resources include specific YouTube channels and search terms."
+            },
+            "clear_learning_outcomes": {
+              "score": 5,
+              "max": 5,
+              "justification": "Every month has a named milestone deliverable (e.g., 'A weather app consuming a REST API and an updated To-Do app with local data persistence, both on GitHub'). Weekly micro-goals are specific and measurable."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 4,
+              "max": 5,
+              "justification": "Monthly topics build logically within each stack (Kotlin fundamentals \u2192 Android UI \u2192 data/networking \u2192 Flutter). The Kotlin-to-Flutter pivot is the only structural discontinuity, but within each phase the ordering is sound."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 3,
+              "max": 5,
+              "justification": "Topics are listed at a reasonable level of specificity (e.g., 'RecyclerView for displaying lists', 'Kotlin Coroutines') but lack the actionable depth of Plan 1. No specific resources, search terms, or curated tutorials are provided. Project descriptions are brief."
+            },
+            "clear_learning_outcomes": {
+              "score": 3,
+              "max": 5,
+              "justification": "Projects are listed per month (e.g., 'Build a To-Do List app using RecyclerView') but there are no explicit milestone deliverables, no weekly granularity, and no measurable outcomes beyond project completion. The final month's outcomes are vague ('polish 2-3 strongest portfolio projects')."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 15,
+          "weighted_contribution": 10.0
+        }
+      },
+      "D7": {
+        "name": "Career Execution Readiness",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 integrates career execution actions throughout all 5 months: LinkedIn optimization in month 1, GitHub README refinement in month 2, resume updates in month 3, behavioral prep (STAR method) and mock interviews in month 4, and a full job hunt sprint with daily application targets (5-10 jobs/day) in month 5. Plan 2 concentrates career prep almost entirely in month 5, with only brief mentions of networking and LinkedIn in the job preparation strategy section. Plan 1 explicitly schedules mock technical and behavioral interviews, while Plan 2 mentions 'practice coding challenges' and 'interview preparation' without scheduling specifics. Plan 1's application strategy (5-10 jobs/day, recruiter outreach, elevator pitch) is more concrete and actionable.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 distributes career execution actions across all 5 months with specific targets and explicit mock interview scheduling, versus Plan 2's month-5-concentrated and vaguely specified career prep.",
+        "Plan_1": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 4,
+              "max": 4,
+              "justification": "LinkedIn optimization with specific keywords in month 1, GitHub README refinement in month 2, resume updates with specific skills in month 3, and resume/cover letter finalization in month 5. Explicitly scheduled and progressive throughout the plan."
+            },
+            "mock_interviews_included": {
+              "score": 3,
+              "max": 3,
+              "justification": "Mock technical and behavioral interviews explicitly scheduled in month 4 ('Begin practicing mock technical interviews with peers or online platforms') and month 5 ('Conduct multiple mock technical and behavioral interviews'). DSA practice in Dart starts month 1 and escalates consistently."
+            },
+            "application_strategy": {
+              "score": 3,
+              "max": 3,
+              "justification": "Month 5 specifies 'actively apply to 5-10 jobs daily', recruiter/hiring manager LinkedIn outreach, elevator pitch preparation, and tailored cover letters. Company research starts in month 1. Concrete, volume-based strategy with networking components."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 2,
+              "max": 4,
+              "justification": "Resume/CV preparation and LinkedIn optimization are mentioned in month 5 topics and job preparation strategy, but not scheduled progressively. No specific timing for LinkedIn keyword optimization or GitHub README work until the final month."
+            },
+            "mock_interviews_included": {
+              "score": 1,
+              "max": 3,
+              "justification": "Interview preparation is mentioned in month 5 ('practice coding challenges, LeetCode easy/medium') and job preparation strategy ('practice explaining your projects') but no explicit mock interview sessions are scheduled. No behavioral interview prep cadence is defined."
+            },
+            "application_strategy": {
+              "score": 2,
+              "max": 3,
+              "justification": "Job preparation strategy mentions networking, customized resumes, and understanding the market, but lacks specific application volume targets, timing, or platform recommendations. Networking advice is generic ('attend virtual meetups, connect on LinkedIn')."
+            }
+          },
+          "raw_score": 5,
+          "max_raw": 10,
+          "weighted_contribution": 5.0
+        }
+      }
+    },
+    "final_scores": {
+      "Plan_1": {
+        "total_weighted_score": 89.0,
+        "dimension_wins": [
+          "D1",
+          "D2",
+          "D3",
+          "D4",
+          "D5",
+          "D6",
+          "D7"
+        ],
+        "strengths": [
+          "Single-stack Flutter/Dart focus maximizes depth and minimizes context-switching for a C-only beginner",
+          "Explicit hour-level time budgeting with 36-hour buffer perfectly fits the 360-hour constraint",
+          "Progressive capstone (Social Event Planner) with Firebase, clean architecture, testing, and signed APK is highly employer-worthy",
+          "Career execution actions distributed across all 5 months with specific targets (5-10 jobs/day, STAR method, mock interviews)",
+          "Weekly micro-goals, curated resources with search terms, and milestone deliverables provide exceptional structural clarity",
+          "DSA practice in Dart starts month 1 and escalates consistently, reducing late-stage interview prep risk"
+        ],
+        "critical_gaps": [
+          "No native Android (Kotlin) coverage, which some employers may require for Android-specific roles",
+          "Clean architecture and Repository Pattern in month 4 may be slightly advanced for a 5-month beginner plan",
+          "No live Play Store submission \u2014 only APK/AAB generation"
+        ]
+      },
+      "Plan_2": {
+        "total_weighted_score": 61.0,
+        "dimension_wins": [],
+        "strengths": [
+          "Dual-stack coverage (Kotlin + Flutter) broadens market appeal for Android-specific and cross-platform roles",
+          "Native Android fundamentals (MVVM, Room, Retrofit, Coroutines) are industry-standard and globally demanded",
+          "Logical within-stack module ordering for both Kotlin and Flutter phases",
+          "Acknowledges the C-to-mobile transition clearly in key recommendations"
+        ],
+        "critical_gaps": [
+          "Hour budget overrun: 21 hours/week \u00d7 5 months \u2248 420+ hours, exceeding the user's 360-hour availability by ~60 hours",
+          "Flutter coverage compressed into one month (month 4) is insufficient for junior-level mastery",
+          "Interview prep and career execution concentrated in month 5 creates high late-stage risk for a fast-job seeker",
+          "No Firebase or backend integration, weakening the portfolio's full-stack appeal",
+          "No explicit milestone deliverables, weekly granularity, or curated resources \u2014 significantly lower actionability",
+          "Dual-language learning (Kotlin then Dart) doubles the language transition burden for a C-only beginner"
+        ]
+      }
+    },
+    "verdict": {
+      "winner": "Plan_1",
+      "score_gap": 28.0,
+      "margin_interpretation": "decisive",
+      "winner_key_advantages": [
+        "Correct hour budgeting with explicit buffer versus Plan 2's ~60-hour overrun",
+        "Single-stack focus (Flutter/Dart) reduces cognitive load and accelerates portfolio readiness for a C-only beginner",
+        "Firebase-backed capstone with testing and deployment is materially more employer-worthy than Plan 2's lighter, backend-free apps",
+        "Distributed interview prep and career execution actions across all 5 months versus Plan 2's month-5 concentration",
+        "Superior structural clarity: weekly micro-goals, curated resources, and milestone deliverables make Plan 1 immediately executable"
+      ],
+      "loser_salvageable_strengths": [
+        "Plan 2's Kotlin/native Android coverage could be valuable for Android-specific job applications",
+        "Plan 2's MVVM architecture and Coroutines are industry-standard skills worth incorporating",
+        "Plan 2's dual-stack breadth could be a differentiator if the user has more than 5 months available"
+      ],
+      "shared_gaps_in_both_plans": [
+        "Neither plan covers Swift/iOS native development, limiting pure iOS role applications",
+        "Neither plan includes system design interview preparation, though this is less critical at junior level",
+        "Neither plan addresses live app store submission (Google Play or App Store) with actual user testing",
+        "Neither plan covers CI/CD pipelines or automated deployment, which are increasingly expected in global roles"
+      ],
+      "final_recommendation": "Plan 1 is decisively superior for this user's profile and should be followed as the primary learning path. Its single-stack Flutter/Dart approach, correct time budgeting, progressive Firebase-backed capstone, and distributed career execution actions are all optimally aligned with a C-only beginner who needs fast global employment in 5 months. The user should supplement Plan 1 with brief exposure to Kotlin basics (1-2 weeks self-study) to remain competitive for Android-specific roles, but should not deviate from Plan 1's core Flutter-first structure."
+    }
+  },
+  "winner": "Plan_1",
+  "plan_1_score": 89.0,
+  "plan_2_score": 61.0
+}

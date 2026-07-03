@@ -1,0 +1,430 @@
+{
+  "generated_at": "2026-04-02T22:55:55.763333",
+  "model": "claude-sonnet-4-6",
+  "temperature": 0.0,
+  "prompt_version": "v1.0-comparative-dimension-first",
+  "user_profile": {
+    "role": "Any type of role (software engineering)",
+    "experience": "University Final Year CSE Student",
+    "preparation_time_months": 3,
+    "study_hours_per_day": 3,
+    "Market_Focus": "Global",
+    "other_preferences": "Need remote job, prefer flutter development., Intermediate (Built small projects), familiar with python,Java,C languages and familiar with React framework. Also build some academic projects."
+  },
+  "result": {
+    "evaluation_methodology": "comparative \u2014 both plans analyzed together per dimension before scoring",
+    "user_profile_summary": "Final-year CSE student targeting remote software engineering roles globally, with a strong preference for Flutter development. Has intermediate experience with Python, Java, C, and React, plus academic projects. 3 months, 3 hours/day (216 total hours) available.",
+    "dimensions": {
+      "D1": {
+        "name": "Hiring Readiness Optimization",
+        "weight": 0.25,
+        "comparative_analysis": "Plan 1 builds a single cohesive capstone ('Remote Dev Connect') that evolves from Firebase MVP to a full-stack Node.js/MySQL/Flutter app with deployment to app stores and cloud hosting \u2014 a genuinely employer-worthy artifact. DSA is woven throughout all 3 months with escalating difficulty (Easy \u2192 Medium \u2192 Hard), and behavioral/mock interviews are explicitly scheduled. Plan 2 covers Flutter fundamentals well and includes DSA, but DSA is compressed into a single week (Week 8), which is insufficient for interview readiness. Plan 2's portfolio project is introduced late (Month 3) and lacks the full-stack backend depth that global remote employers expect. Plan 1's interview prep is more systematic and its portfolio is significantly stronger in terms of deployment and architectural complexity.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 delivers a deployed, full-stack capstone with consistent DSA preparation across all 3 months, whereas Plan 2 compresses DSA into one week and introduces the portfolio project too late for meaningful polish.",
+        "Plan_1": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Covers Dart, Flutter, Node.js/Express, MySQL, Firebase, TypeScript, JWT, CI/CD, and testing \u2014 a comprehensive full-stack mobile stack appropriate for a graduate-level remote role. Minor gap: TypeScript is introduced mid-plan which adds cognitive load."
+            },
+            "interview_prep_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "DSA practice is distributed across all 3 months with increasing difficulty, mock technical interviews are explicitly scheduled in Months 2 and 3, and behavioral prep (STAR method) is included. System design is mentioned but not deeply structured."
+            },
+            "portfolio_project_strength": {
+              "score": 8,
+              "max": 9,
+              "justification": "A single progressive capstone deployed to app stores and cloud hosting, with full-stack architecture, testing, CI/CD, and a demo video. Highly employer-worthy. Minor deduction: migrating from Firebase to custom backend mid-project adds risk of incomplete delivery."
+            }
+          },
+          "raw_score": 22,
+          "max_raw": 25,
+          "weighted_contribution": 22.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "Covers Flutter/Dart thoroughly including state management, Firebase, and testing. However, backend development is absent \u2014 no custom API or database work \u2014 which limits full-stack readiness for global remote roles."
+            },
+            "interview_prep_readiness": {
+              "score": 4,
+              "max": 8,
+              "justification": "DSA is confined to Weeks 8 and 10 only, which is insufficient for competitive SWE interview preparation. Mock interviews are mentioned in Week 11 but not structured with frequency or format. Behavioral prep is present but brief."
+            },
+            "portfolio_project_strength": {
+              "score": 5,
+              "max": 9,
+              "justification": "Portfolio project starts in Week 9 (Month 3), leaving only 2 weeks for development before job applications begin. No custom backend, no app store deployment specified. Deployment to Firebase Hosting/APK is mentioned but not guaranteed. Less impressive for global remote SWE roles."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 25,
+          "weighted_contribution": 15.0
+        }
+      },
+      "D2": {
+        "name": "Time-Constrained Feasibility",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 explicitly accounts for 190 planned hours out of 216 available, with a 26-hour buffer \u2014 demonstrating careful hour budgeting. However, the scope is ambitious: migrating a Firebase app to a custom Node.js/MySQL backend while learning TypeScript, advanced Flutter, and DSA simultaneously in Month 2 is cognitively dense. Plan 2 estimates 60-70 hours per month (180-210 total), which fits the constraint, and its weekly scope is more modular and digestible. Plan 2 avoids the backend complexity that Plan 1 introduces, making each week more achievable. Both plans have some overloading, but Plan 1's Month 2 is particularly risky for a 3-hour/day schedule.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2's weekly scope is more consistently achievable within 3 hours/day, while Plan 1's Month 2 stacks backend migration, advanced Flutter, TypeScript, and DSA simultaneously in a way that risks incomplete delivery.",
+        "Plan_1": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Explicitly budgets 190 hours with a 26-hour buffer from 216 available. Hour accounting is transparent and well-structured."
+            },
+            "cognitive_load_realism": {
+              "score": 3,
+              "max": 5,
+              "justification": "Month 2 requires learning TypeScript, Node.js/Express, MySQL/ORM, JWT auth, advanced Flutter animations, and DP/Graph DSA simultaneously \u2014 this is very heavy for 3 hours/day. Month 1 is also dense with Dart, Flutter, Firebase, and DSA in parallel."
+            },
+            "overengineering_avoidance": {
+              "score": 3,
+              "max": 5,
+              "justification": "TypeScript introduction, Firebase-to-backend migration, CI/CD with Fastlane, and app store deployment are all valuable but collectively push the boundary of what's achievable in 3 months at 3 hours/day for a student also managing final year coursework."
+            }
+          },
+          "raw_score": 11,
+          "max_raw": 15,
+          "weighted_contribution": 11.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Estimates 60-70 hours/month (180-210 total), fitting within 216 hours. No explicit buffer calculation, but the range accommodates variance."
+            },
+            "cognitive_load_realism": {
+              "score": 4,
+              "max": 5,
+              "justification": "Weekly topics are focused and modular \u2014 each week has 3-4 topics with clear activities. The progression from basics to advanced is gradual. Week 6 (Firebase + FCM + Storage) is slightly dense but manageable."
+            },
+            "overengineering_avoidance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Avoids backend development entirely, keeping scope Flutter-focused. No TypeScript, no custom server, no app store deployment complexity. Slightly underengineered for full-stack roles but realistic for the timeline."
+            }
+          },
+          "raw_score": 12,
+          "max_raw": 15,
+          "weighted_contribution": 12.0
+        }
+      },
+      "D3": {
+        "name": "Personalization & Preference Alignment",
+        "weight": 0.15,
+        "comparative_analysis": "Both plans acknowledge the user's Flutter preference and existing skills. Plan 1 explicitly leverages the user's Python/Java/C/React background to justify the Node.js/TypeScript backend choice and frames the plan as a transition from academia to production. It also addresses the remote job requirement with specific job hunt actions and a remote-focused capstone name. Plan 2 acknowledges existing skills in a list but doesn't meaningfully adapt the curriculum to skip beginner content the user already knows \u2014 for example, Week 1 covers basic Dart syntax and layout widgets that a React-familiar intermediate developer could move through faster. Plan 1 better contextualizes why each technology choice serves the user's specific goal.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 explicitly connects the user's existing React/Java/Python background to new technologies and justifies stack choices in the context of remote Flutter roles, while Plan 2 lists existing skills but doesn't meaningfully accelerate past beginner content.",
+        "Plan_1": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 4,
+              "max": 5,
+              "justification": "Acknowledges intermediate level and skips basic programming fundamentals, jumping into advanced Dart features (async, null safety) and SOLID principles from Week 1. Could more explicitly fast-track through content the user already knows from React/Java."
+            },
+            "preference_integration": {
+              "score": 5,
+              "max": 5,
+              "justification": "Flutter is the primary focus throughout all 3 months. Remote job requirement is addressed with LinkedIn optimization, remote-specific job boards, and a capstone named 'Remote Dev Connect'. Global market focus is reflected in deployment targets."
+            },
+            "stack_justification_quality": {
+              "score": 4,
+              "max": 5,
+              "justification": "Node.js/TypeScript backend choice is justified by the user's existing JavaScript-adjacent (React) knowledge. Firebase-first then custom backend migration is explained as a learning progression. Could be more explicit about why MySQL over NoSQL for this use case."
+            }
+          },
+          "raw_score": 13,
+          "max_raw": 15,
+          "weighted_contribution": 13.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 3,
+              "max": 5,
+              "justification": "Week 1 starts with basic Dart syntax and layout widgets \u2014 content an intermediate React developer could cover in 1-2 days, not a full week. The plan doesn't meaningfully compress beginner content for someone with existing programming experience."
+            },
+            "preference_integration": {
+              "score": 4,
+              "max": 5,
+              "justification": "Flutter is central throughout. Remote job boards are listed in resources. However, the plan doesn't deeply tailor activities to remote work specifics (e.g., async communication, distributed team tools) beyond listing job boards."
+            },
+            "stack_justification_quality": {
+              "score": 3,
+              "max": 5,
+              "justification": "Technology choices (Provider, Bloc/Riverpod, Firebase) are presented without explicit justification tied to the user's goals or existing knowledge. The choice to omit backend development is not explained or justified."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 15,
+          "weighted_contribution": 10.0
+        }
+      },
+      "D4": {
+        "name": "Market Alignment",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 targets a full-stack Flutter developer profile with Node.js/TypeScript backend skills, which aligns well with global remote job postings that often require Flutter developers to also handle API integration or backend work. CI/CD, cloud deployment, and JWT auth are all market-relevant. Plan 2 focuses purely on Flutter/Firebase, which is a valid but narrower skill set \u2014 many remote Flutter roles do expect some backend awareness. Both plans include DSA for interviews, but Plan 1's coverage is more thorough. For global remote SWE roles, Plan 1's broader stack is more competitive.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1's full-stack profile (Flutter + Node.js/TypeScript + MySQL + cloud deployment) is more competitive for global remote SWE roles than Plan 2's Flutter-only approach.",
+        "Plan_1": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Flutter, Dart, Node.js/Express, TypeScript, MySQL, Firebase, JWT, CI/CD, and cloud deployment are all in-demand skills for global remote SWE roles. The combination of mobile + backend is a strong differentiator."
+            },
+            "regional_global_alignment": {
+              "score": 4,
+              "max": 5,
+              "justification": "Covers the full-stack mobile profile that global remote employers seek. App store deployment and cloud hosting demonstrate production readiness. System design depth is limited, which is a minor gap for senior-leaning global roles."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 10,
+          "weighted_contribution": 9.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Flutter, Dart, Firebase, state management (Bloc/Riverpod), and testing are all relevant and in-demand. Missing backend/API development skills that many global remote Flutter roles require."
+            },
+            "regional_global_alignment": {
+              "score": 3,
+              "max": 5,
+              "justification": "Flutter-only profile is competitive for junior remote roles but less so for mid-level global positions. No cloud deployment, no custom backend, and limited system design exposure reduces competitiveness in the global market."
+            }
+          },
+          "raw_score": 7,
+          "max_raw": 10,
+          "weighted_contribution": 7.0
+        }
+      },
+      "D5": {
+        "name": "Strategic Prioritization Quality",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 starts DSA from Week 1 alongside Flutter fundamentals \u2014 a high-ROI decision since DSA is critical for SWE interviews and benefits from distributed practice over time. The capstone project begins in Month 1 and grows progressively, ensuring maximum polish time. Plan 2 delays DSA to Week 8 (Month 2, Week 4) and the portfolio project to Month 3 \u2014 both are late placements for high-ROI activities. However, Plan 2's phasing within Flutter learning (basics \u2192 advanced \u2192 Firebase \u2192 testing) is logically clean. Plan 1's phasing is more strategically sound for job readiness, while Plan 2's phasing is more pedagogically clean for Flutter mastery.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 front-loads DSA and starts the capstone in Month 1, maximizing time for both interview preparation and portfolio polish \u2014 the two highest-ROI activities for SWE job hunting.",
+        "Plan_1": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 5,
+              "max": 5,
+              "justification": "DSA starts Week 1 and runs throughout all 3 months. Capstone begins Month 1. Job hunt actions start Month 1 (LinkedIn, resume draft). These are the highest-ROI activities for SWE hiring and are correctly front-loaded."
+            },
+            "logical_phasing": {
+              "score": 4,
+              "max": 5,
+              "justification": "Foundation (Dart/Flutter/DSA) \u2192 Full-Stack Build (Node.js/MySQL/Advanced Flutter) \u2192 Production/Job Hunt is a coherent arc. The Firebase-to-custom-backend migration in Month 2 is slightly disruptive to the phasing flow but serves a learning purpose."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 10,
+          "weighted_contribution": 9.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 3,
+              "max": 5,
+              "justification": "DSA is delayed to Week 8 and Week 10, which is too late for consistent interview preparation. Portfolio project starts Week 9, leaving minimal time for polish. These are the two most critical activities for SWE hiring and are deprioritized."
+            },
+            "logical_phasing": {
+              "score": 4,
+              "max": 5,
+              "justification": "Flutter fundamentals \u2192 Advanced Flutter \u2192 Firebase \u2192 Testing \u2192 DSA \u2192 Portfolio \u2192 Job Hunt is pedagogically logical for Flutter skill building. However, the DSA and portfolio placement is strategically suboptimal for interview readiness."
+            }
+          },
+          "raw_score": 7,
+          "max_raw": 10,
+          "weighted_contribution": 7.0
+        }
+      },
+      "D6": {
+        "name": "Curriculum Structural Depth & Clarity",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 1 provides detailed weekly narrative descriptions with specific technical goals, time budgets broken down by activity type, and clear milestone deliverables per month. Each week's goals are written as actionable outcomes. Plan 2 provides clean structured lists of topics and activities per week, with specific resource recommendations and a well-organized resource section. Plan 2's structure is easier to follow at a glance, but Plan 1's narrative depth and explicit time budgeting provide more actionable guidance. Both plans have clear module ordering, but Plan 1's deliverables are more concrete and measurable.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1's explicit time budgets, narrative weekly goals, and concrete milestone deliverables per month provide more actionable and measurable structure than Plan 2's topic lists.",
+        "Plan_1": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 5,
+              "max": 5,
+              "justification": "Modules build correctly: Dart/Flutter basics + DSA \u2192 Advanced Flutter + Backend \u2192 Testing/Deployment/Job Hunt. Each week's content logically depends on the previous week's foundation."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 4,
+              "max": 5,
+              "justification": "Weekly micro-goals are detailed narratives with specific technologies and outcomes. Time budgets are broken into theory/practice/project categories. Could include more specific LeetCode problem counts or Flutter widget lists for maximum actionability."
+            },
+            "clear_learning_outcomes": {
+              "score": 5,
+              "max": 5,
+              "justification": "Each month has a named milestone deliverable with specific features described (e.g., 'user authentication, profile creation, basic content display backed by Firebase'). Monthly deliverables are concrete and verifiable."
+            }
+          },
+          "raw_score": 14,
+          "max_raw": 15,
+          "weighted_contribution": 14.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 5,
+              "max": 5,
+              "justification": "Flutter basics \u2192 Advanced widgets \u2192 Networking \u2192 State management \u2192 Advanced state \u2192 Firebase \u2192 Testing \u2192 DSA \u2192 Portfolio \u2192 Job Hunt is a clean, logical progression. Each week builds on the previous."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 4,
+              "max": 5,
+              "justification": "Topics and activities are specific and actionable (e.g., 'Integrate with OpenWeatherMap API', 'Write comprehensive unit tests for data models'). Resource recommendations are named and specific. Slightly less depth in explaining why each topic matters."
+            },
+            "clear_learning_outcomes": {
+              "score": 3,
+              "max": 5,
+              "justification": "Activities describe what to do but monthly milestones are not explicitly defined. No concrete deliverable is specified per month \u2014 the portfolio project outcome is vague ('substantial portfolio project'). Measurability is weaker than Plan 1."
+            }
+          },
+          "raw_score": 12,
+          "max_raw": 15,
+          "weighted_contribution": 12.0
+        }
+      },
+      "D7": {
+        "name": "Career Execution Readiness",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 1 integrates job hunt actions into every month: LinkedIn optimization in Month 1, resume tailoring and networking in Month 2, and daily applications (5-10/day) with salary negotiation prep in Month 3. Mock interviews are explicitly scheduled in Months 2 and 3 with format specified (DSA + system design + behavioral). Plan 2 addresses resume/cover letter in Week 11 and job applications in Week 12 \u2014 both are concentrated in the final two weeks, which is late and rushed. Plan 2 lists remote job boards in resources but doesn't schedule application volume or networking cadence. Plan 1's career execution is significantly more distributed and actionable.",
+        "dimension_winner": "Plan_1",
+        "winner_reason": "Plan 1 distributes career preparation across all 3 months with explicit mock interview scheduling and daily application targets, while Plan 2 concentrates all career activities into the final two weeks.",
+        "Plan_1": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 4,
+              "max": 4,
+              "justification": "LinkedIn optimization is scheduled in Month 1, resume tailoring in Month 2, and final resume polish with elevator pitch in Month 3. Career preparation is genuinely distributed and progressive."
+            },
+            "mock_interviews_included": {
+              "score": 3,
+              "max": 3,
+              "justification": "First mock technical interview (DSA focus) in Month 2, followed by 2-3 mock interviews (DSA + system design) in Month 3. Behavioral prep with STAR method is explicitly included. Format and frequency are specified."
+            },
+            "application_strategy": {
+              "score": 3,
+              "max": 3,
+              "justification": "Daily application targets (5-10/day) in Month 3, active follow-up strategy, networking on LinkedIn and communities, salary negotiation prep, and company research starting Month 1. Comprehensive and actionable."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 2,
+              "max": 4,
+              "justification": "Resume and cover letter are addressed in Week 11 only. LinkedIn is mentioned in general recommendations but not scheduled as a specific action item with timing. Late and not progressive."
+            },
+            "mock_interviews_included": {
+              "score": 2,
+              "max": 3,
+              "justification": "Mock interviews are mentioned in Week 11 ('practice mock interviews with peers or mentors') but not structured with frequency, format, or specific focus areas. No explicit DSA mock or system design mock scheduled."
+            },
+            "application_strategy": {
+              "score": 2,
+              "max": 3,
+              "justification": "Job applications start Week 12 with remote job boards listed in resources. No application volume targets, no follow-up strategy, no salary negotiation prep. Networking is mentioned but not scheduled with specific actions."
+            }
+          },
+          "raw_score": 6,
+          "max_raw": 10,
+          "weighted_contribution": 6.0
+        }
+      }
+    },
+    "final_scores": {
+      "Plan_1": {
+        "total_weighted_score": 88.0,
+        "dimension_wins": [
+          "D1",
+          "D3",
+          "D4",
+          "D5",
+          "D6",
+          "D7"
+        ],
+        "strengths": [
+          "Progressive capstone project deployed to app stores and cloud with full-stack architecture \u2014 highly employer-worthy",
+          "DSA preparation distributed across all 3 months with escalating difficulty",
+          "Career execution integrated throughout all 3 months with explicit mock interview scheduling and daily application targets",
+          "Full-stack profile (Flutter + Node.js/TypeScript + MySQL) is more competitive for global remote SWE roles",
+          "Explicit hour budgeting with buffer and concrete monthly milestone deliverables"
+        ],
+        "critical_gaps": [
+          "Month 2 cognitive load is very high \u2014 learning TypeScript, Node.js, MySQL, ORM, JWT, advanced Flutter, and DP/Graphs simultaneously in 3 hours/day is risky",
+          "Firebase-to-custom-backend migration mid-project adds delivery risk",
+          "System design preparation is mentioned but not deeply structured for global SWE interviews",
+          "TypeScript introduction adds scope that may not be necessary for a Flutter-focused role"
+        ]
+      },
+      "Plan_2": {
+        "total_weighted_score": 69.0,
+        "dimension_wins": [
+          "D2"
+        ],
+        "strengths": [
+          "More feasible weekly cognitive load \u2014 modular and digestible weekly structure",
+          "Clean Flutter learning progression from basics to advanced to Firebase to testing",
+          "Specific named resources (Angela Yu, Reso Coder, Fireship.io) are high quality and actionable",
+          "Avoids backend complexity, keeping the plan focused and achievable"
+        ],
+        "critical_gaps": [
+          "DSA compressed into only 2 weeks \u2014 insufficient for competitive SWE interview preparation",
+          "Portfolio project starts Week 9, leaving only 2 weeks for development before job applications \u2014 insufficient polish time",
+          "No backend/API development \u2014 limits competitiveness for full-stack remote SWE roles globally",
+          "Career preparation concentrated in final 2 weeks \u2014 too late and too rushed",
+          "No explicit mock interview structure with format, frequency, or focus areas"
+        ]
+      }
+    },
+    "verdict": {
+      "winner": "Plan_1",
+      "score_gap": 19.0,
+      "margin_interpretation": "decisive",
+      "winner_key_advantages": [
+        "Distributed DSA preparation across all 3 months vs. 2-week compression in Plan 2",
+        "Full-stack capstone deployed to app stores and cloud vs. late-stage, Firebase-only portfolio in Plan 2",
+        "Career execution integrated throughout all months vs. concentrated in final 2 weeks in Plan 2",
+        "Broader full-stack skill set (Flutter + Node.js + MySQL) more competitive for global remote SWE roles",
+        "Explicit hour budgeting, time buffers, and concrete monthly milestone deliverables"
+      ],
+      "loser_salvageable_strengths": [
+        "Plan 2's weekly cognitive load is more realistic and could be adopted as a pacing model",
+        "Plan 2's specific named resource recommendations (Angela Yu, Reso Coder, Fireship.io) are high quality",
+        "Plan 2's clean Flutter learning progression (basics \u2192 advanced \u2192 Firebase \u2192 testing) is pedagogically sound",
+        "Plan 2's general recommendations section on community engagement and soft skills is practical"
+      ],
+      "shared_gaps_in_both_plans": [
+        "Neither plan adequately addresses system design preparation, which is increasingly expected in global SWE interviews",
+        "Neither plan explicitly addresses the challenges of final-year university coursework competing for study time",
+        "Neither plan includes contribution to open-source Flutter projects as a portfolio differentiator beyond a brief mention",
+        "Neither plan addresses portfolio website creation, which is a strong differentiator for remote job applications"
+      ],
+      "final_recommendation": "Plan 1 is the clear winner and should be followed as the primary roadmap. However, the user should be aware that Month 2's scope is ambitious and may need to be trimmed \u2014 specifically, TypeScript could be deferred or simplified to plain JavaScript for the Node.js backend to reduce cognitive load. The Firebase-to-custom-backend migration could also be simplified by building the custom backend as a separate service rather than replacing Firebase entirely. The user should adopt Plan 2's specific resource recommendations (Angela Yu, Reso Coder) and its modular weekly pacing approach to avoid burnout. Adding a basic system design study component (even 2-3 hours/week in Month 3) would further strengthen interview readiness for global remote roles."
+    }
+  },
+  "winner": "Plan_1",
+  "plan_1_score": 88.0,
+  "plan_2_score": 69.0
+}

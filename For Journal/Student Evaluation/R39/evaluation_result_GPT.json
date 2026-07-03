@@ -1,0 +1,408 @@
+{
+  "generated_at": "2026-04-03T03:13:50.312058",
+  "model": "gpt-4o-2024-08-06",
+  "temperature": 0.0,
+  "prompt_version": "v1.0-comparative-dimension-first",
+  "user_profile": {
+    "role": "Business Intelligence (BI) Analyst/AI Engineer",
+    "experience": "University Recent CSE Graduate",
+    "preparation_time_months": 4,
+    "study_hours_per_day": 3,
+    "Market_Focus": "Global",
+    "other_preferences": " want remote job, Basic (Completed some courses / small exercises) coding experience, familiar with C++,JavaScript,PHP Language and familiar with dot-net Framework. build some academic projects.Preferable language is Python."
+  },
+  "result": {
+    "evaluation_methodology": "comparative \u2014 both plans analyzed together per dimension before scoring",
+    "user_profile_summary": "The user is a recent CSE graduate aiming for a BI Analyst/AI Engineer role, with a preference for Python and a global remote job market focus. They have basic coding experience and are familiar with C++, JavaScript, PHP, and the .NET Framework.",
+    "dimensions": {
+      "D1": {
+        "name": "Hiring Readiness Optimization",
+        "weight": 0.25,
+        "comparative_analysis": "Both plans cover core technical skills like SQL, Python, and BI tools, but Plan 2 emphasizes advanced SQL and integrates cloud and deployment skills, which are crucial for AI Engineering. Plan 1 provides a broader foundation in BI and ML fundamentals but lacks the depth in deployment and cloud integration. Interview preparation is more structured in Plan 2, with specific goals and mock interviews. Both plans include portfolio projects, but Plan 2's focus on a Capstone project with deployment aspects makes it more employer-ready.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 offers deeper technical readiness and a more structured approach to interview preparation and portfolio development.",
+        "Plan_1": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 6,
+              "max": 8,
+              "justification": "Covers BI and ML fundamentals but lacks depth in deployment and cloud skills."
+            },
+            "interview_prep_readiness": {
+              "score": 5,
+              "max": 8,
+              "justification": "Includes mock interviews but less structured compared to Plan 2."
+            },
+            "portfolio_project_strength": {
+              "score": 7,
+              "max": 9,
+              "justification": "Includes integrated projects but lacks deployment focus."
+            }
+          },
+          "raw_score": 18,
+          "max_raw": 25,
+          "weighted_contribution": 18.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "core_technical_readiness": {
+              "score": 8,
+              "max": 8,
+              "justification": "Includes advanced SQL, cloud, and deployment skills, crucial for AI Engineering."
+            },
+            "interview_prep_readiness": {
+              "score": 7,
+              "max": 8,
+              "justification": "Structured interview prep with specific goals and mock interviews."
+            },
+            "portfolio_project_strength": {
+              "score": 8,
+              "max": 9,
+              "justification": "Focus on a Capstone project with deployment aspects makes it employer-ready."
+            }
+          },
+          "raw_score": 23,
+          "max_raw": 25,
+          "weighted_contribution": 23.0
+        }
+      },
+      "D2": {
+        "name": "Time-Constrained Feasibility",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 2 provides a clear breakdown of hours with buffer time, ensuring feasibility within the user's constraints. It also emphasizes active practice over passive learning, which is realistic for the user's daily study hours. Plan 1 is comprehensive but may be overly ambitious without explicit buffer time, potentially leading to cognitive overload.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 includes buffer hours and a realistic approach to cognitive load management.",
+        "Plan_1": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 3,
+              "max": 5,
+              "justification": "Fits within available hours but lacks explicit buffer time."
+            },
+            "cognitive_load_realism": {
+              "score": 3,
+              "max": 5,
+              "justification": "Comprehensive but may lead to cognitive overload without buffer."
+            },
+            "overengineering_avoidance": {
+              "score": 4,
+              "max": 5,
+              "justification": "Avoids overengineering but could be more focused."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 15,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "hour_compliance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Includes buffer hours and fits within available time."
+            },
+            "cognitive_load_realism": {
+              "score": 5,
+              "max": 5,
+              "justification": "Realistic approach with emphasis on active practice."
+            },
+            "overengineering_avoidance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Focused on essential skills without overengineering."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        }
+      },
+      "D3": {
+        "name": "Personalization & Preference Alignment",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 2 is highly personalized, leveraging the user's existing skills and preferences, such as Python and remote work focus. It integrates the user's background in C++/JavaScript/PHP into the learning path. Plan 1 aligns with the user's preferences but lacks the same level of integration and justification for technology choices.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 offers a more personalized approach, integrating the user's existing skills and preferences effectively.",
+        "Plan_1": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 3,
+              "max": 5,
+              "justification": "Aligns with user preferences but lacks deep integration of existing skills."
+            },
+            "preference_integration": {
+              "score": 3,
+              "max": 5,
+              "justification": "Uses preferred language but less focus on remote work and global market."
+            },
+            "stack_justification_quality": {
+              "score": 3,
+              "max": 5,
+              "justification": "Technology choices are relevant but not deeply justified."
+            }
+          },
+          "raw_score": 9,
+          "max_raw": 15,
+          "weighted_contribution": 9.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "experience_adaptation": {
+              "score": 5,
+              "max": 5,
+              "justification": "Leverages existing skills and adapts to user preferences effectively."
+            },
+            "preference_integration": {
+              "score": 5,
+              "max": 5,
+              "justification": "Strong focus on remote work and global market alignment."
+            },
+            "stack_justification_quality": {
+              "score": 5,
+              "max": 5,
+              "justification": "Technology choices are well-justified and aligned with user goals."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        }
+      },
+      "D4": {
+        "name": "Market Alignment",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 2 aligns well with global market demands by incorporating advanced SQL, cloud skills, and deployment, which are increasingly important for BI and AI roles. Plan 1 covers essential skills but lacks the same emphasis on emerging tools and technologies that differentiate candidates in the global market.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 better aligns with global market demands by including advanced and emerging skills.",
+        "Plan_1": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 3,
+              "max": 5,
+              "justification": "Covers essential skills but lacks emphasis on emerging tools."
+            },
+            "regional_global_alignment": {
+              "score": 3,
+              "max": 5,
+              "justification": "Aligns with basic global requirements but not as comprehensive as Plan 2."
+            }
+          },
+          "raw_score": 6,
+          "max_raw": 10,
+          "weighted_contribution": 6.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "skill_demand_relevance": {
+              "score": 5,
+              "max": 5,
+              "justification": "Includes advanced SQL, cloud, and deployment skills, aligning with market demands."
+            },
+            "regional_global_alignment": {
+              "score": 5,
+              "max": 5,
+              "justification": "Comprehensively aligns with global market requirements for BI and AI roles."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        }
+      },
+      "D5": {
+        "name": "Strategic Prioritization Quality",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 2 prioritizes high-impact skills early, such as advanced SQL and Python, and follows a logical progression from foundational skills to deployment. Plan 1 also follows a logical sequence but starts with more foundational topics, potentially delaying exposure to high-impact skills.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 prioritizes high-impact skills early and follows a logical progression suitable for the target roles.",
+        "Plan_1": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 3,
+              "max": 5,
+              "justification": "Starts with foundational topics, delaying high-impact skills."
+            },
+            "logical_phasing": {
+              "score": 4,
+              "max": 5,
+              "justification": "Follows a logical sequence but could prioritize high-impact skills earlier."
+            }
+          },
+          "raw_score": 7,
+          "max_raw": 10,
+          "weighted_contribution": 7.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "high_roi_topics_prioritized": {
+              "score": 5,
+              "max": 5,
+              "justification": "Prioritizes high-impact skills early, such as advanced SQL and Python."
+            },
+            "logical_phasing": {
+              "score": 5,
+              "max": 5,
+              "justification": "Follows a logical progression from foundational skills to deployment."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        }
+      },
+      "D6": {
+        "name": "Curriculum Structural Depth & Clarity",
+        "weight": 0.15,
+        "comparative_analysis": "Plan 2 provides detailed weekly goals and clear deliverables, ensuring clarity and depth in the learning process. Plan 1 offers a comprehensive structure but lacks the same level of detail in subtopics and measurable outcomes.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 offers more detailed and clear learning outcomes with specific weekly goals.",
+        "Plan_1": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 4,
+              "max": 5,
+              "justification": "Modules are logically ordered but lack detailed subtopic breakdown."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 3,
+              "max": 5,
+              "justification": "Subtopics are comprehensive but not as detailed as Plan 2."
+            },
+            "clear_learning_outcomes": {
+              "score": 3,
+              "max": 5,
+              "justification": "Learning outcomes are present but not as specific or measurable."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 15,
+          "weighted_contribution": 10.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "logical_module_ordering": {
+              "score": 5,
+              "max": 5,
+              "justification": "Modules are logically ordered with clear progression."
+            },
+            "meaningful_subtopic_detail": {
+              "score": 5,
+              "max": 5,
+              "justification": "Subtopics are detailed and actionable."
+            },
+            "clear_learning_outcomes": {
+              "score": 5,
+              "max": 5,
+              "justification": "Each week has specific, measurable deliverables."
+            }
+          },
+          "raw_score": 15,
+          "max_raw": 15,
+          "weighted_contribution": 15.0
+        }
+      },
+      "D7": {
+        "name": "Career Execution Readiness",
+        "weight": 0.1,
+        "comparative_analysis": "Plan 2 includes a comprehensive job application strategy, networking, and mock interviews, ensuring readiness for the job market. Plan 1 covers these aspects but with less emphasis on networking and application strategy.",
+        "dimension_winner": "Plan_2",
+        "winner_reason": "Plan 2 provides a more comprehensive approach to career execution readiness, including networking and application strategy.",
+        "Plan_1": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 3,
+              "max": 4,
+              "justification": "Includes resume preparation but less focus on LinkedIn."
+            },
+            "mock_interviews_included": {
+              "score": 2,
+              "max": 3,
+              "justification": "Mock interviews are included but not as structured."
+            },
+            "application_strategy": {
+              "score": 2,
+              "max": 3,
+              "justification": "Covers application strategy but lacks depth in networking."
+            }
+          },
+          "raw_score": 7,
+          "max_raw": 10,
+          "weighted_contribution": 7.0
+        },
+        "Plan_2": {
+          "subcriteria": {
+            "resume_linkedin_preparation": {
+              "score": 4,
+              "max": 4,
+              "justification": "Comprehensive preparation for resume and LinkedIn."
+            },
+            "mock_interviews_included": {
+              "score": 3,
+              "max": 3,
+              "justification": "Structured mock interviews included."
+            },
+            "application_strategy": {
+              "score": 3,
+              "max": 3,
+              "justification": "Detailed application strategy with networking focus."
+            }
+          },
+          "raw_score": 10,
+          "max_raw": 10,
+          "weighted_contribution": 10.0
+        }
+      }
+    },
+    "final_scores": {
+      "Plan_1": {
+        "total_weighted_score": 67.0,
+        "dimension_wins": [],
+        "strengths": [
+          "Comprehensive coverage of BI and ML fundamentals",
+          "Logical module ordering"
+        ],
+        "critical_gaps": [
+          "Lacks depth in deployment and cloud skills",
+          "Less structured interview preparation"
+        ]
+      },
+      "Plan_2": {
+        "total_weighted_score": 98.0,
+        "dimension_wins": [
+          "Hiring Readiness Optimization",
+          "Time-Constrained Feasibility",
+          "Personalization & Preference Alignment",
+          "Market Alignment",
+          "Strategic Prioritization Quality",
+          "Curriculum Structural Depth & Clarity",
+          "Career Execution Readiness"
+        ],
+        "strengths": [
+          "Advanced SQL, cloud, and deployment skills",
+          "Structured interview preparation",
+          "Comprehensive job application strategy"
+        ],
+        "critical_gaps": []
+      }
+    },
+    "verdict": {
+      "winner": "Plan_2",
+      "score_gap": 31.0,
+      "margin_interpretation": "decisive",
+      "winner_key_advantages": [
+        "Advanced technical readiness",
+        "Structured interview and career preparation",
+        "Comprehensive market alignment"
+      ],
+      "loser_salvageable_strengths": [
+        "Comprehensive coverage of BI and ML fundamentals",
+        "Logical module ordering"
+      ],
+      "shared_gaps_in_both_plans": [],
+      "final_recommendation": "Plan 2 is recommended for its advanced technical readiness, structured approach to interview and career preparation, and comprehensive market alignment, making it the superior choice for achieving the user's career goals."
+    }
+  },
+  "winner": "Plan_2",
+  "plan_1_score": 67.0,
+  "plan_2_score": 98.0
+}

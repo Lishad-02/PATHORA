@@ -1,0 +1,326 @@
+{
+    "b1": "B1_ZS",
+    "model": "",
+    "user_profile": {
+        "role": "Any type of role (Data Analyst/ Analytics / AI Engineer)",
+        "months": 3,
+        "hours_per_day": 5,
+        "experience": "University Recent CSE Graduate",
+        "other_preferences": "Want to focus global market.Intermediate (Built small projects) coding experience, familiar with python Language and familiar with tensorflow framework. build some academic projects."
+    },
+    "prompt_used": "",
+    "generated_plan": {
+        "learning_plan_title": "3-Month Accelerated Plan for Data Analyst / Analytics Engineer / AI Engineer (Global Market)",
+        "target_roles": [
+            "Data Analyst",
+            "Analytics Engineer",
+            "AI Engineer"
+        ],
+        "timeline_in_months": 3,
+        "daily_study_hours": 5,
+        "current_experience": {
+            "level": "University Recent CSE Graduate",
+            "coding_experience": "Intermediate (Built small projects)",
+            "languages": "Python",
+            "frameworks": "TensorFlow (familiar)"
+        },
+        "general_advice": [
+            "Prioritize Learning by Doing: Spend more time coding, building, and debugging than just consuming content.",
+            "Document Everything: Create clear READMEs for your GitHub projects, explaining your thought process, challenges, and solutions.",
+            "Network Actively: Connect with professionals on LinkedIn, follow industry leaders, and engage in online communities.",
+            "Stay Updated: The data/AI field is dynamic. Read blogs, follow news, and explore new tools.",
+            "Focus on Problem Solving: Understand the 'why' behind techniques, not just the 'how'.",
+            "Balance & Well-being: Avoid burnout. Take regular breaks and maintain a healthy routine.",
+            "Be Flexible: This plan is a guideline. Adjust it based on your learning pace, interests, and career aspirations. It is recommended to choose 1-2 primary paths for deeper specialization after Month 1."
+        ],
+        "daily_study_breakdown": {
+            "learning_new_concepts": "1.5 - 2 hours (Courses, tutorials, readings)",
+            "hands_on_practice": "1.5 - 2 hours (Coding exercises, SQL queries, tool practice)",
+            "project_work_review_problem_solving": "1 hour (Building, debugging, documenting, reviewing, or networking)"
+        },
+        "monthly_breakdown": [
+            {
+                "month": 1,
+                "focus": "Foundational Skills & Data Fundamentals (Common to all roles)",
+                "weeks": [
+                    {
+                        "week": 1,
+                        "topic": "SQL Mastery (Data Retrieval & Manipulation)",
+                        "sub_topics": [
+                            "Basic to Intermediate SQL (SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY, JOINs (INNER, LEFT, RIGHT, FULL), UNION, Subqueries, Common aggregate functions)"
+                        ],
+                        "practice": [
+                            "LeetCode SQL (Easy/Medium)",
+                            "StrataScratch (basic)",
+                            "HackerRank SQL",
+                            "Work with diverse public datasets"
+                        ],
+                        "resources": [
+                            "Mode Analytics SQL Tutorial",
+                            "SQLZoo",
+                            "DataCamp/Coursera SQL courses"
+                        ]
+                    },
+                    {
+                        "week": 2,
+                        "topic": "Python for Data Analysis (Pandas & NumPy)",
+                        "sub_topics": [
+                            "Pandas DataFrames/Series",
+                            "Data loading (CSV, Excel)",
+                            "Indexing, selection, filtering, grouping, merging, pivoting",
+                            "Cleaning missing data, basic feature engineering",
+                            "NumPy arrays for numerical operations"
+                        ],
+                        "practice": [
+                            "Kaggle notebooks (explore and replicate analyses)",
+                            "Small data cleaning projects"
+                        ],
+                        "resources": [
+                            "\"Python for Data Analysis\" by Wes McKinney",
+                            "DataCamp/Coursera Pandas courses"
+                        ]
+                    },
+                    {
+                        "week": 3,
+                        "topic": "Data Visualization & Storytelling (Matplotlib/Seaborn)",
+                        "sub_topics": [
+                            "Creating various plot types (scatter, line, bar, histogram, box plot)",
+                            "Customizing plots, understanding visualization best practices",
+                            "Telling a story with data"
+                        ],
+                        "practice": [
+                            "Visualize a dataset from Kaggle",
+                            "Practice explaining insights from visualizations"
+                        ],
+                        "resources": [
+                            "Seaborn documentation",
+                            "\"Storytelling with Data\" by Cole Nussbaumer Knaflic (book for concepts)"
+                        ]
+                    },
+                    {
+                        "week": 4,
+                        "topic": "Statistics, Probability & Version Control (Git)",
+                        "sub_topics": [
+                            "Descriptive statistics (mean, median, mode, variance, std dev)",
+                            "Inferential statistics (hypothesis testing basics, t-tests, ANOVA)",
+                            "Probability distributions (normal, binomial)",
+                            "Git basics (init, add, commit, push, pull, branch, merge)"
+                        ],
+                        "practice": [
+                            "Apply statistical tests to small datasets",
+                            "Set up a Git repository for all your projects, practice branching and merging"
+                        ],
+                        "resources": [
+                            "Khan Academy Statistics",
+                            "StatQuest with Josh Starmer (YouTube)",
+                            "Git documentation/tutorials"
+                        ],
+                        "mini_project": "End of Month 1: Create a small data analysis project. Clean a dataset, perform EDA, visualize findings, and upload it to GitHub with a clear README."
+                    }
+                ],
+                "decision_point": "By the end of Month 1, you should have a clearer idea of which role(s) (Data Analyst, Analytics Engineer, or AI Engineer) you find most appealing. It's recommended to pick 1-2 primary paths for deeper specialization in Month 2."
+            },
+            {
+                "month": 2,
+                "focus": "Specialization & Deep Dive (Choose your path)",
+                "paths": [
+                    {
+                        "path_name": "Data Analyst / Analytics Engineer Focus",
+                        "weeks": [
+                            {
+                                "week": 5,
+                                "topic": "Advanced SQL & Data Warehousing Concepts",
+                                "sub_topics": [
+                                    "Window functions (ROW_NUMBER, RANK, LAG, LEAD)",
+                                    "Common Table Expressions (CTEs)",
+                                    "Stored Procedures/Functions (basics)",
+                                    "Performance Tuning SQL queries",
+                                    "Introduction to Data Warehousing (DW) concepts (STAR/Snowflake schema, Kimball methodology, OLAP vs OLTP)"
+                                ],
+                                "practice": [
+                                    "Complex SQL challenges (e.g., Maven Analytics, advanced LeetCode SQL)",
+                                    "Design a simple star schema for a business scenario"
+                                ],
+                                "resources": [
+                                    "Advanced SQL specific courses",
+                                    "Blog posts on DW design principles"
+                                ]
+                            },
+                            {
+                                "week": 6,
+                                "topic": "Business Intelligence Tools (Tableau/Power BI) / ETL with dbt (for AE)",
+                                "sub_topics": [
+                                    "For Data Analyst: Hands-on with Tableau or Power BI (creating dashboards, interactive visualizations, calculated fields).",
+                                    "For Analytics Engineer: Introduction to dbt (data build tool) for data transformation, modularity, testing, and documentation in SQL."
+                                ],
+                                "practice": [
+                                    "DA: Build a complex interactive dashboard on a public dataset.",
+                                    "AE: Implement a small data pipeline using dbt to transform raw data."
+                                ],
+                                "resources": [
+                                    "Official Tableau/Power BI tutorials",
+                                    "dbt documentation & online courses"
+                                ]
+                            },
+                            {
+                                "week": 7,
+                                "topic": "Cloud Data Warehouses & Data Modeling (for AE) / A/B Testing & Communication (for DA)",
+                                "sub_topics": [
+                                    "For Analytics Engineer: Overview of cloud data warehouses (Snowflake, BigQuery, Redshift), practical exposure to one (e.g., BigQuery free tier). Data Modeling best practices.",
+                                    "For Data Analyst: Fundamentals of A/B testing, hypothesis formulation, interpreting results. Focusing on clear, concise communication of insights to non-technical stakeholders."
+                                ],
+                                "practice": [
+                                    "AE: Load data into a cloud DW, run complex queries.",
+                                    "DA: Analyze an A/B test dataset, prepare a presentation with recommendations."
+                                ],
+                                "resources": [
+                                    "Cloud provider documentation (GCP BigQuery tutorials)",
+                                    "\"Data Story\" by Nancy Duarte (for communication)"
+                                ]
+                            },
+                            {
+                                "week": 8,
+                                "topic": "Project Work & Further Skill Refinement",
+                                "sub_topics": [
+                                    "Start a significant end-to-end project showcasing your chosen specialization."
+                                ],
+                                "project_ideas": [
+                                    "**DA Project:** Find a messy business dataset (e.g., customer churn, sales data), clean it, perform in-depth exploratory data analysis, build a compelling interactive dashboard (Tableau/Power BI), and present findings with actionable recommendations.",
+                                    "**AE Project:** Design and implement a small data pipeline that extracts data from a source (e.g., CSV, public API), loads it into a cloud data warehouse, transforms it using dbt, and makes it ready for analytics. Document the pipeline thoroughly."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "path_name": "AI Engineer Focus",
+                        "weeks": [
+                            {
+                                "week": 5,
+                                "topic": "Advanced Machine Learning & Deep Learning Refresher",
+                                "sub_topics": [
+                                    "Review of ML concepts (supervised, unsupervised), deeper dive into DL architectures (CNNs, RNNs, Transformers basics).",
+                                    "Reinforcement Learning basics.",
+                                    "Revisit TensorFlow, introduce PyTorch (if new) – understanding their ecosystems."
+                                ],
+                                "practice": [
+                                    "Implement more complex models (e.g., image classification with a pre-trained CNN, simple sequence prediction with RNN).",
+                                    "Experiment with transfer learning."
+                                ],
+                                "resources": [
+                                    "fast.ai courses",
+                                    "\"Deep Learning with Python\" by Francois Chollet",
+                                    "PyTorch/TensorFlow official tutorials"
+                                ]
+                            },
+                            {
+                                "week": 6,
+                                "topic": "MLOps Fundamentals - Model Serving & Deployment",
+                                "sub_topics": [
+                                    "Introduction to MLOps concepts (model versioning, reproducibility, deployment).",
+                                    "Docker for containerization.",
+                                    "Building simple APIs for model inference using Flask/FastAPI."
+                                ],
+                                "practice": [
+                                    "Containerize a trained model using Docker.",
+                                    "Build a simple web API to serve predictions from your model locally."
+                                ],
+                                "resources": [
+                                    "Docker documentation",
+                                    "FastAPI tutorials",
+                                    "\"Designing Machine Learning Systems\" (book for concepts)"
+                                ]
+                            },
+                            {
+                                "week": 7,
+                                "topic": "MLOps - Monitoring, CI/CD for ML & Cloud ML Platforms",
+                                "sub_topics": [
+                                    "Model monitoring (data/concept drift detection basics), CI/CD principles for ML (testing code, data, models).",
+                                    "Overview of cloud ML platforms (AWS SageMaker, GCP Vertex AI, Azure ML) - focus on one free tier for hands-on."
+                                ],
+                                "practice": [
+                                    "Set up a basic CI/CD pipeline (e.g., GitHub Actions) for your model code.",
+                                    "Deploy a simple model using a cloud ML platform's free tier (e.g., GCP Vertex AI Workbench)."
+                                ],
+                                "resources": [
+                                    "Cloud provider ML documentation (e.g., GCP MLOps guides)",
+                                    "MLOps Community resources"
+                                ]
+                            },
+                            {
+                                "week": 8,
+                                "topic": "Project Work & Further Skill Refinement",
+                                "sub_topics": [
+                                    "Start a significant end-to-end project showcasing your chosen specialization."
+                                ],
+                                "project_ideas": [
+                                    "**AI Engineer Project:** Choose a dataset (e.g., image classification, NLP sentiment analysis). Build, train, and evaluate a robust deep learning model. Containerize it with Docker, build a FastAPI/Flask endpoint, and deploy it (e.g., on a cloud free tier or services like Render for simplicity). Implement basic model versioning or monitoring."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "month": 3,
+                "focus": "Portfolio Building, Advanced Topics & Interview Preparation",
+                "weeks": [
+                    {
+                        "week": 9,
+                        "topic": "Advanced Topics / Deep Dive into Chosen Role",
+                        "sub_topics": [
+                            "**DA/AE:** Advanced analytical techniques, stakeholder management, dashboard optimization, advanced data governance concepts, data observability.",
+                            "**AI Eng:** More advanced ML algorithms (e.g., transformers for NLP, advanced CV architectures), distributed ML (basics of Spark/Dask for large datasets), ethical AI considerations, advanced system design for ML.",
+                            "**ALL:** Work on a second, more complex project in your chosen area, or significantly refine your first project. Aim to solve a real-world problem or replicate a research paper."
+                        ],
+                        "practice": [
+                            "Deep dive into a specific sub-area of interest (e.g., time series analysis for DA/AE, generative AI for AI Eng).",
+                            "Enhance current projects with more features, better performance, or more robust testing."
+                        ]
+                    },
+                    {
+                        "week": 10,
+                        "topic": "Portfolio & Online Presence",
+                        "sub_topics": [
+                            "Polish your GitHub portfolio (ensure clear READMEs, well-commented code, relevant links).",
+                            "Create a professional LinkedIn profile (highlight skills, projects, network).",
+                            "Build a simple personal website/blog to showcase projects (optional but recommended for global market), hosting your resume and project links."
+                        ],
+                        "action": [
+                            "Review and refine all project documentation and code.",
+                            "Start connecting with professionals and recruiters on LinkedIn."
+                        ]
+                    },
+                    {
+                        "week": 11,
+                        "topic": "Technical Interview Prep (Role-Specific)",
+                        "sub_topics": [
+                            "**DA/AE:** Advanced SQL (LeetCode/StrataScratch), Python for Data (Pandas exercises, data manipulation), case study questions (how would you approach a business problem?), dashboard design discussions.",
+                            "**AI Eng:** Algorithms & Data Structures (LeetCode Medium), Python coding, ML fundamentals (theory, model selection, metrics), ML System Design (how to build an ML system for X problem, scaling, monitoring).",
+                            "**ALL:** Practice explaining your projects concisely, highlighting your contributions, technical challenges, and business impact."
+                        ],
+                        "practice": [
+                            "Consistent practice of coding problems (LeetCode, HackerRank).",
+                            "Reviewing fundamental concepts and common interview questions for your chosen role."
+                        ]
+                    },
+                    {
+                        "week": 12,
+                        "topic": "Behavioral, System Design (General), Networking & Applications",
+                        "sub_topics": [
+                            "Common behavioral questions (STAR method).",
+                            "Resume & cover letter optimization (tailor to each application).",
+                            "For AI Eng: Deeper dive into system design principles relevant to ML (scalability, reliability, latency, cost).",
+                            "Networking and job application strategies."
+                        ],
+                        "action": [
+                            "Conduct mock interviews (with peers, mentors, or online platforms).",
+                            "Start actively applying to relevant roles.",
+                            "Attend virtual meetups, webinars, or career fairs related to your chosen field.",
+                            "Refine your elevator pitch for your skills and aspirations."
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
