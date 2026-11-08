@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="images/main.png" alt="Pathora" width="180"/>
+<img src="Images/main.png" alt="Pathora" width="180"/>
 
 # Pathora
 
@@ -52,7 +52,7 @@
 ## System Overview
 
 <div align="center">
-  <img src="images/flowchart.png" alt="Pathora system overview" width="90%"/>
+  <img src="Images/flowchart.jpg" alt="Pathora system overview" width="90%"/>
 </div>
 
 <br/>
