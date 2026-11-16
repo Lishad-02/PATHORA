@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📘 Learning Plan</title>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <style>
+    body {
+      background: linear-gradient(180deg, #0f1222 0%, #0b0d1a 100%);
+      color: #e8ebff;
+      font-family: "Inter", system-ui, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #7c9cff;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .timestamp {
+      text-align: center;
+      font-size: 13px;
+      color: #7c9cff;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      background: #181c2f;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 25px auto;
+      max-width: 850px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    }
+
+    .section h2 {
+      color: #9fb5ff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 0;
+    }
+
+    .overview {
+      background: #1b1f36;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .stage-card {
+      background: #1c2140;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .stage-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
+    }
+
+    .stage-card h3 {
+      color: #b1c2ff;
+      border-bottom: 1px solid #2a2f4f;
+      padding-bottom: 4px;
+      margin-top: 14px;
+      font-size: 1.05rem;
+    }
+
+    .theme {
+      font-style: italic;
+      color: #7c9cff;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style-type: "🔹 ";
+      padding-left: 20px;
+    }
+
+    .hours {
+      text-align: right;
+      font-size: 13px;
+      color: #8ea1ff;
+      margin-top: 10px;
+    }
+
+    .project {
+      background: #20254a;
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin: 8px 0;
+    }
+
+    .project strong {
+      color: #a8b8ff;
+    }
+
+    .tips {
+      background: #1b1f36;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 25px;
+    }
+
+    .tips h3 {
+      color: #9fb5ff;
+      border-bottom: 1px solid #2a2f4f;
+      padding-bottom: 6px;
+    }
+
+    .tips ul {
+      list-style-type: "💡 ";
+      line-height: 1.6;
+    }
+
+    /* --- CALIBRATION STYLES --- */
+    .calibration {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .calibration p {
+      background: #13172a;
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin: 0;
+      line-height: 1.7;
+      border: 1px solid #21263f;
+    }
+
+    .calibration p strong {
+      color: #9fb5ff;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .recommend {
+      background: #1c2140;
+      padding: 20px;
+      border-radius: 10px;
+      white-space: normal;
+      color: #e8ebff;
+      margin-top: 10px;
+      border-left: 5px solid #7c9cff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .recommend strong {
+      display: block;
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #2a2f4f;
+    }
+
+    /* --- GENERIC FORMATTING STYLES --- */
+    .rec-header {
+      display: block;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 1.05rem;
+      border-left: 4px solid #7c9cff;
+      padding-left: 10px;
+      color: #fff;
+    }
+
+    .header-green {
+      border-left-color: #4caf50;
+      color: #e8f5e9;
+    }
+
+    .header-red {
+      border-left-color: #ff5252;
+      color: #ffebee;
+    }
+
+    .rec-list-row {
+      display: flex;
+      align-items: baseline;
+      margin-top: 8px;
+    }
+
+    .rec-marker {
+      flex-shrink: 0;
+      width: 35px;
+      color: #7c9cff;
+      font-weight: bold;
+    }
+
+    .rec-content {
+      flex-grow: 1;
+    }
+
+    /* --- DOWNLOAD BUTTON STYLES --- */
+    .action-bar {
+      margin-top: 40px;
+      text-align: center;
+      border-top: 1px solid #334155;
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding-bottom: 40px;
+    }
+
+    .btn {
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary { background: #2563eb; }
+    .btn-primary:hover { background: #1d4ed8; }
+
+    .btn-secondary { background: #475569; }
+    .btn-secondary:hover { background: #334155; }
+
+    /* Hides buttons when using native browser print (Ctrl+P) */
+    @media print {
+      .action-bar { display: none !important; }
+      body { -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="printable-area">
+    <h1>📘 Your Personalized Learning Plan</h1>
+    <div class="timestamp" id="timestamp"></div>
+
+    <div class="section">
+      <h2>🎯 Learning Plan</h2>
+      <div id="plan">Loading...</div>
+    </div>
+
+    <div class="section">
+      <h2>⏱️ Learning Plan Feasibility & Recommendations </h2>
+      <div id="calibration"></div>
+    </div>
+  </div>
+
+  <div class="action-bar" data-html2canvas-ignore="true">
+    <button id="nativePrintBtn" class="btn btn-primary">
+      <span>🖨️ Print / Save PDF</span>
+    </button>
+
+    <button id="downloadPdfBtn" class="btn btn-secondary">
+      <span>⬇ Download Image PDF</span>
+    </button>
+  </div>
+
+  <script>
+    const BASE_URL = "/api/career";
+
+    function makeList(arr) {
+      return Array.isArray(arr) && arr.length
+        ? `<ul>${arr.map((x) => `<li>${x}</li>`).join("")}</ul>`
+        : "<p style='color:#888;'>None</p>";
+    }
+
+    // Text formatter
+    function formatText(text) {
+      if (!text) return "N/A";
+
+      let formatted = text;
+
+      // 1. Format HEADERS
+      formatted = formatted.replace(
+        /(?:^|\s)((?:Good news|Feasible|Realistic|Pros)[:])/gi,
+        '<span class="rec-header header-green">$1</span>'
+      );
+      formatted = formatted.replace(
+        /(?:^|\s)((?:Bad news|Caveat|Important|Warning|Shortfall|Cons)[:])/gi,
+        '<span class="rec-header header-red">$1</span>'
+      );
+      formatted = formatted.replace(
+        /(?:^|\s)((?:Alternatively|Suggestion|Recommendation|Analysis|Note|Option|Conclusion|Practical suggestion)[:])/gi,
+        '<span class="rec-header">$1</span>'
+      );
+
+      // 2. Format LISTS
+      const markerRegex = /(?:^|[\.\:\n]\s*)(\([A-Z0-9]+\)|\d+\)|\•|\-)(\s)/g;
+      formatted = formatted.replace(markerRegex, "___SPLIT___$1___END___");
+      const parts = formatted.split("___SPLIT___");
+      let finalHtml = parts[0];
+
+      for (let i = 1; i < parts.length; i++) {
+        const part = parts[i];
+        const splitPart = part.split("___END___");
+        const marker = splitPart[0]; 
+        const content = splitPart[1]; 
+
+        finalHtml += `
+      <div class="rec-list-row">
+        <div class="rec-marker">${marker}</div>
+        <div class="rec-content">${content}</div>
+      </div>
+    `;
+      }
+      return finalHtml;
+    }
+
+    async function loadPlan() {
+      const planDiv = document.getElementById("plan");
+      const calDiv = document.getElementById("calibration");
+
+      try {
+        const res = await fetch(`${BASE_URL}/get_learning_plan`);
+        const data = await res.json();
+
+        if (data.error) {
+          planDiv.textContent = data.error;
+          return;
+        }
+
+        const plan = data.plan;
+        const calibration = data.calibration;
+
+        // --- Overview ---
+        let html = `<div class="overview"><h3>📖 Overview</h3><p>${plan.overview}</p></div>`;
+
+        // --- Quarters or Months ---
+        plan.plan.forEach((p, i) => {
+          const label = p.quarter
+            ? `Quarter ${p.quarter}`
+            : p.month
+              ? `Month ${p.month}`
+              : `Stage ${i + 1}`;
+
+          const extraInfo = p.months_covered
+            ? p.months_covered
+            : p.months
+              ? `Months ${p.months}`
+              : p.duration_months
+                ? `${p.duration_months} month${p.duration_months > 1 ? "s" : ""}`
+                : "";
+
+          const hrs = p.available_hours || p.estimated_hours || "";
+
+          html += `
+      <div class="stage-card">
+        <h3>📅 ${label}${extraInfo ? ` <span style='font-size:0.9rem;color:#9aa0c5;'>(${extraInfo})</span>` : ""}</h3>
+        <div class="theme">${p.theme || ""}</div>
+
+        <h3>🎯 Skills Focus</h3>${makeList(p.skills_focus)}
+        <h3>📚 Topics</h3>${makeList(p.topics)}
+        <h3>🎓 Objectives</h3>${makeList(p.objectives)}
+
+        <h3>🧩 Projects</h3>
+        ${Array.isArray(p.projects)
+              ? p.projects
+                .map((x) =>
+                  typeof x === "string"
+                    ? `<div class="project">${x}</div>`
+                    : `<div class="project"><strong>${x.name}</strong><br><em>${x.description}</em><br><span style="color:#9aa0c5;">${x.expected_output ? `📝 ${x.expected_output}` : ""}</span></div>`
+                )
+                .join("")
+              : "<p style='color:#888;'>None</p>"
+            }
+
+        <h3>📘 Resources</h3>${makeList(p.resources)}
+        ${hrs ? `<div class="hours">⏱ Estimated Hours: ${hrs}</div>` : ""}
+      </div>`;
+        });
+
+        // --- Tips ---
+        if (Array.isArray(plan.tips) && plan.tips.length) {
+          html += `<div class="tips"><h3>💡 Tips for Success</h3><ul>${plan.tips
+            .map((t) => `<li>${t}</li>`)
+            .join("")}</ul></div>`;
+        }
+
+        planDiv.innerHTML = html;
+
+        // --- Calibration ---
+        if (calibration) {
+          const rec = calibration.recommendation || {};
+
+          const formattedAnalysis = formatText(calibration.analysis);
+          const formattedRec = formatText(rec.message_to_user);
+
+          calDiv.innerHTML = `
+        <div class="calibration">
+          <p><strong>Feasibility:</strong> ${calibration.feasibility || "N/A"}</p>
+          
+          <p>
+            <strong>Analysis:</strong><br>
+            <div style="margin-top:5px;">${formattedAnalysis}</div>
+          </p>
+          
+          <div class="recommend">
+            <strong>Recommendation:</strong><br>
+            <div style="margin-top:5px;">${formattedRec}</div>
+          </div>
+        </div>`;
+        } else {
+          calDiv.innerHTML = "<p style='color:#888;'>No calibration data.</p>";
+        }
+
+        // --- Timestamp ---
+        const now = new Date();
+        document.getElementById("timestamp").textContent =
+          `Last updated: ${now.toLocaleString()}`;
+      } catch (e) {
+        planDiv.textContent = "⚠️ Failed to load plan.";
+        console.error("Error loading plan:", e);
+      }
+    }
+
+    loadPlan();
+
+    // --- PDF DOWNLOAD LOGIC ---
+    
+    // 1. Native Print (Ctrl+P style)
+    document.getElementById('nativePrintBtn').addEventListener('click', () => {
+      window.print();
+    });
+
+    // 2. Image-based PDF (Looks exactly like the screen)
+    document.getElementById('downloadPdfBtn').addEventListener('click', () => {
+      const element = document.getElementById('printable-area');
+      const btn = document.getElementById('downloadPdfBtn');
+      const originalText = btn.innerHTML;
+      
+      btn.innerHTML = "Generating...";
+
+      const opt = {
+        margin:       [10, 10, 10, 10], 
+        filename:     'My_Learning_Plan.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { 
+          scale: 2, 
+          useCORS: true, 
+          scrollY: 0,
+          backgroundColor: '#0f1222' // Matches the dark theme background
+        },
+        pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] },
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+
+      html2pdf().set(opt).from(element).save().then(() => {
+        btn.innerHTML = originalText;
+      });
+    });
+  </script>
+
+</body>
+
+</html>
