@@ -12,7 +12,7 @@
   <img src="https://img.shields.io/badge/Bangladesh_+_Global_Market-1E1E2E?style=flat-square" alt="Markets"/>
 </p>
 
-<a href="https://YOUR-PATHORA-WEBSITE.com">
+<a href="https://pathora-lishad.vercel.app/">
   <img src="https://img.shields.io/badge/Try_Pathora_Live_→-6C5CE7?style=for-the-badge" alt="Try Pathora Live" height="38"/>
 </a>
 
@@ -121,7 +121,7 @@
 
 ```
 app.py                    Web entrypoint, mounts both agent APIs
-local.py                  Runs the full site on your machine
+local.py                  Runs the full site
 public/                   Website (landing page, career chat, skill evaluation)
 career_guidance_agent/    Agent 1: skill recommendation and learning plan
 ques_ans_agent/           Agent 2: adaptive skill assessment
@@ -129,29 +129,7 @@ ques_ans_agent/           Agent 2: adaptive skill assessment
 
 <br/>
 
-## Run Locally
 
-```bash
-python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-cp .env.example .env             # then add your API keys
-python local.py
-```
-
-Open http://127.0.0.1:8000
-
-<br/>
-
-## Deploy on Vercel
-
-1. Push this repository to GitHub.
-2. In Vercel, choose **Add New → Project** and import the repository. Keep the default settings.
-3. Under **Environment Variables**, add `OPENAI_API_KEY` and `GOOGLE_API_KEY`.
-4. Click **Deploy**.
-5. Open the project's **Storage** tab, create an **Upstash for Redis** database (free plan), connect it to the project and redeploy. This keeps each visitor's session available across serverless instances.
-
-<br/>
 
 <div align="center">
 
