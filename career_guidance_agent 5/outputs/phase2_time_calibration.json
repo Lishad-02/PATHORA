@@ -1,9 +1,0 @@
-{
-    "feasibility": "realistic",
-    "analysis": "Total estimated learning load = 6 months × 180 h/month = 1,080 hours. With your schedule (6.0 h/day) over 6 months (assume 6 months ≈ 180 days) your total available study time = 6.0 × 180 = 1,080 hours. Difference = 0% (fits exactly). Caveat: this match requires studying 6 hours every single day for six months with no regular days off, no extra time for unexpected delays, job search, interview prep, or deeper practice on hard topics. If you plan to take one rest day per week (i.e., 5 study days/week), available hours drop to 6 × (5 days/week × 26 weeks) = 780 hours, creating a 300-hour shortfall.",
-    "recommendation": {
-        "suggested_daily_hours": "6.0 (if you study every day — no weekly day off)",
-        "suggested_duration_months": "6",
-        "message_to_user": "Mathematically your plan fits exactly if you study 6 hours every day for six months (total 1,080 hours). Practically, that leaves zero buffer. Two realistic choices: (A) Keep 6 months but accept an intense every-day rhythm, or increase study hours on study days if you want weekly days off — e.g., if you want 1 day off per week (5 study days/week) you would need ~8.5 hours/day on your study days to hit 1,080 hours across 6 months (1080 / 130 study days ≈ 8.3 → ~8.5). (B) Keep 6 hours/day but add slack by extending duration: with 6 h/day and 5 study days/week you'll need ~36 weeks ≈ 8.5 months (round up to 9 months recommended) to reach 1,080 hours. My practical recommendation: either (1) commit to 6 h/day every day and build deliberate recovery/contingency into your weekly routine, or (2) plan for ~9 months at 6 h/day with regular weekly rest — this is healthier and aligns with the reviewer’s suggestion for deeper consolidation."
-    }
-}
