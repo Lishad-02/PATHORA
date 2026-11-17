@@ -12,7 +12,7 @@
   <img src="https://img.shields.io/badge/Bangladesh_+_Global_Market-1E1E2E?style=flat-square" alt="Markets"/>
 </p>
 
-<a href="https://pathora-lishad.vercel.app/">
+<a href="https://pathora-theta-livid.vercel.app/">
   <img src="https://img.shields.io/badge/Try_Pathora_Live_→-6C5CE7?style=for-the-badge" alt="Try Pathora Live" height="38"/>
 </a>
 
